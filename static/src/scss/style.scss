@@ -1,0 +1,641 @@
+// HotCodes Brand Variables
+:root {
+
+   // Framer-style spacing system (8px grid)
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  
+  // Framer-style typography scale
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+  --text-4xl: 48px;
+  --text-5xl: 64px;
+  // HotCodes Palette (Fire Theme)
+  --hotcodes-primary: #FF6B35;
+  --hotcodes-secondary: #FF4500;
+  --hotcodes-accent: #FFD700;
+  --hotcodes-glow: rgba(255, 107, 53, 0.5);
+  
+  // Dark Theme
+  --bg-dark: #0A0A0A;
+  --bg-darker: #050505;
+  --bg-card: rgba(15, 15, 15, 0.7);
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --border-color: rgba(255, 107, 53, 0.15);
+  
+  // Typography (Thinner, Modern Aesthetic)
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  // Thinner font weights for premium, elegant appearance
+  --font-weight-light: 200;      // Extra light - for subtle text
+  --font-weight-regular: 300;    // Light - default body text (was 400)
+  --font-weight-medium: 400;     // Regular - emphasis text (was 600)
+  --font-weight-semibold: 500;   // Medium - headings (was 700)
+  --font-weight-bold: 600;       // Semibold - strong emphasis (was 800)
+  --font-weight-extrabold: 700;  // Bold - maximum emphasis
+}
+
+// HotCodes Logo Component
+.hotcodes-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-semibold); // Changed from bold to semibold (500)
+    font-size: 14px;
+    color: white;
+    
+    // Fallback if SVG fails
+    &::after {
+      content: "HC";
+    }
+    
+    // Actual logo SVG
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+  }
+
+  .logo-text {
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+// HotCodes Header (Framer Clone)
+.s_hotcodes_header {
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg-darker);
+  color: var(--text-primary);
+  overflow: hidden;
+  font-family: var(--font-family);
+
+  // Framer-style Glassmorphism Navbar
+  .hotcodes-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0;
+    // Smooth transitions for background and shadow (Framer-style)
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    // Always visible - no transform transitions
+    will-change: background-color, box-shadow;
+
+    // Initial state to prevent FOUC
+    opacity: 0;
+    transform: translateY(-100px);
+
+    // Loaded state (applied by JS or after page load)
+    &.loaded {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                  background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .container {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .navbar-nav {
+      gap: 2px;
+
+      .nav-item {
+        position: relative;
+      }
+
+      .nav-link {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: var(--font-weight-regular); // Changed from 500 to 300 for thinner look
+        font-size: 14px;
+        padding: 8px 14px;
+        border-radius: 8px;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        letter-spacing: -0.01em;
+
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+          background: rgba(255, 255, 255, 0.05);
+        }
+
+        &.dropdown-toggle::after {
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          margin-left: 4px;
+          background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' stroke='rgba(255,255,255,0.5)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: center;
+          border: none;
+          vertical-align: middle;
+          transition: transform 0.2s ease;
+        }
+      }
+
+      .mega-dropdown:hover .nav-link.dropdown-toggle::after {
+        transform: rotate(180deg);
+      }
+
+      // Framer-style Mega Dropdown
+      .mega-dropdown {
+        position: static;
+
+        .dropdown-menu {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%) translateY(16px);
+          width: 640px;
+          max-width: 90vw;
+          background: rgba(15, 15, 15, 0.95);
+          backdrop-filter: blur(32px) saturate(180%);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 16px;
+          padding: 8px;
+          margin-top: 8px;
+          box-shadow:
+            0 0 0 1px rgba(0, 0, 0, 0.1),
+            0 20px 40px rgba(0, 0, 0, 0.6),
+            0 0 80px rgba(255, 107, 53, 0.1);
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          z-index: 1000;
+        }
+
+        &:hover .dropdown-menu {
+          opacity: 1 !important;
+          visibility: visible !important;
+          pointer-events: all !important;
+          transform: translateX(-50%) translateY(0) !important;
+        }
+
+        .dropdown-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 4px;
+
+          &.single-col {
+            grid-template-columns: 1fr;
+          }
+
+          .dropdown-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+
+            // Initial state for animation (will be animated by JS)
+            opacity: 1;
+            transform: translateY(0);
+
+            &::before {
+              content: '';
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(135deg,
+                rgba(255, 107, 53, 0.03),
+                rgba(255, 69, 0, 0.03));
+              opacity: 0;
+              transition: opacity 0.2s ease;
+            }
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.03);
+              transform: translateY(-2px);
+
+              &::before {
+                opacity: 1;
+              }
+
+              .card-icon {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(255, 107, 53, 0.3);
+              }
+
+              h4 {
+                color: var(--hotcodes-primary);
+              }
+            }
+
+            .card-icon {
+              width: 44px;
+              height: 44px;
+              background: linear-gradient(135deg,
+                var(--hotcodes-primary),
+                var(--hotcodes-secondary));
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              flex-shrink: 0;
+              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+              box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+
+              svg {
+                width: 22px;
+                height: 22px;
+              }
+            }
+
+            div {
+              flex: 1;
+            }
+
+            h4 {
+              margin: 0 0 4px 0;
+              font-size: 14px;
+              font-weight: var(--font-weight-medium); // Changed from 600 to 400 for thinner look
+              color: var(--text-primary);
+              letter-spacing: -0.01em;
+              transition: color 0.2s ease;
+            }
+
+            p {
+              margin: 0;
+              font-size: 13px;
+              line-height: 1.5;
+              color: rgba(255, 255, 255, 0.5);
+            }
+          }
+        }
+
+        // Resources menu (single column, narrower)
+        .dropdown-menu.resources-menu {
+          width: 320px;
+        }
+      }
+    }
+
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 12px;
+
+      .btn-text {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        font-weight: var(--font-weight-regular); // Changed from 500 to 300 for thinner look
+        padding: 8px 14px;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        letter-spacing: -0.01em;
+
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+          background: rgba(255, 255, 255, 0.05);
+        }
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary));
+        border: none;
+        border-radius: 9px;
+        padding: 9px 16px;
+        font-size: 14px;
+        font-weight: var(--font-weight-medium); // Changed from 600 to 400 for thinner look
+        color: white;
+        text-decoration: none;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        letter-spacing: -0.01em;
+        box-shadow: 0 2px 8px rgba(255, 107, 53, 0.2);
+
+        &:hover {
+          transform: translateY(-1px);
+          box-shadow:
+            0 4px 12px rgba(255, 107, 53, 0.3),
+            0 0 24px rgba(255, 107, 53, 0.2);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+
+        svg {
+          width: 14px;
+          height: 14px;
+          stroke: white;
+          stroke-width: 2;
+        }
+      }
+    }
+
+    // Mobile responsive
+    @media (max-width: 1199px) {
+      .navbar-collapse {
+        background: rgba(15, 15, 15, 0.98);
+        backdrop-filter: blur(24px);
+        border-radius: 16px;
+        margin-top: 12px;
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .navbar-nav {
+        gap: 4px;
+      }
+
+      .navbar-actions {
+        margin-left: 0;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        flex-direction: column;
+        width: 100%;
+
+        .btn-text,
+        .btn-primary {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      .mega-dropdown .dropdown-menu {
+        position: static;
+        transform: none !important;
+        width: 100%;
+        margin-top: 8px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        display: none;
+      }
+
+      .mega-dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+
+  // Hero Section with HotCodes Branding
+  .hotcodes-hero {
+    position: relative;
+    height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+
+      .noise-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        opacity: 0.1;
+      }
+
+      .grid-overlay {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 107, 53, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 107, 53, 0.02) 1px, transparent 1px);
+        background-size: 40px 40px;
+        opacity: 0.2;
+      }
+
+      .gradient-sphere {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.4;
+
+        &.sphere-1 {
+          width: 500px;
+          height: 500px;
+          top: -250px;
+          right: -100px;
+          background: radial-gradient(circle, var(--hotcodes-primary), transparent 60%);
+        }
+
+        &.sphere-2 {
+          width: 400px;
+          height: 400px;
+          bottom: -200px;
+          left: -50px;
+          background: radial-gradient(circle, var(--hotcodes-accent), transparent 60%);
+        }
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding-top: 60px;
+
+      .hero-title {
+        font-size: clamp(2.5rem, 8vw, 5.5rem);
+        font-weight: var(--font-weight-bold);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        margin-bottom: 24px;
+        color: var(--text-primary);
+
+        // Initial state to prevent FOUC
+        opacity: 0;
+
+        &.loaded {
+          opacity: 1;
+        }
+
+        .gradient-text {
+          background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-accent));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          background-size: 200% 200%;
+          animation: gradientShift 4s ease infinite;
+
+          // Initial state for individual characters
+          .char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(40px);
+
+            &.loaded {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+
+        @keyframes gradientShift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+      }
+
+      .hero-subtitle {
+        font-size: 20px;
+        font-weight: var(--font-weight-regular);
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 32px;
+        line-height: 1.5;
+
+        // Initial state to prevent FOUC
+        opacity: 0;
+        transform: translateY(20px);
+
+        &.loaded {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-actions {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 32px;
+
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          border-radius: 14px;
+          padding: 16px 32px;
+          font-size: 16px;
+          font-weight: var(--font-weight-medium);
+          transition: all 0.2s ease;
+
+          // Initial state to prevent FOUC
+          opacity: 0;
+          transform: translateY(20px);
+
+          &.loaded {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+          &.btn-primary {
+            background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary));
+            border: none;
+            color: white;
+
+            &:hover {
+              transform: scale(1.02);
+              box-shadow: 0 10px 30px var(--hotcodes-glow);
+            }
+          }
+
+          &.btn-outline {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+
+            &:hover {
+              background: rgba(255, 107, 53, 0.1);
+              border-color: var(--hotcodes-primary);
+            }
+          }
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .hero-note {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-top: 24px;
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 1200px) {
+    .mega-dropdown .dropdown-menu {
+      width: 90vw;
+      max-width: 800px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hotcodes-navbar .navbar-nav {
+      margin-top: 16px;
+    }
+
+    .mega-dropdown .dropdown-menu {
+      position: static !important;
+      transform: none !important;
+      width: 100% !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      background: rgba(15, 15, 15, 0.5);
+      backdrop-filter: none;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      margin-top: 8px;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: center;
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+      }
+    }
+  }
+}

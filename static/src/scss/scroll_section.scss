@@ -1,0 +1,670 @@
+// ============================================
+// HotCodes Scroll Animation Section
+// Framer-style scroll-linked animations with glassmorphism
+// ============================================
+
+// Main Scroll Section Container
+.hotcodes-scroll-section {
+  position: relative;
+  min-height: 400vh; // Creates scroll space for 4 states
+  padding-bottom: 100px; // Ensure last state is fully visible on desktop
+  background: var(--bg-darker);
+  overflow: visible;
+  isolation: isolate; // Create new stacking context
+
+  // Ambient glow effects (Fire-style)
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.12) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  // The fixed wrapper that stays in viewport
+  .scroll-section-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+    pointer-events: none; // Allow scroll through
+    z-index: 1; // Above ambient glows
+
+    > * {
+      pointer-events: auto; // Re-enable for content
+    }
+  }
+
+  // Left Side: Text Content
+  .scroll-text-container {
+    flex: 0 0 45%;
+    max-width: 580px;
+
+    .scroll-text-content {
+      position: relative;
+      height: 280px; // Fixed height for text transitions
+    }
+
+    .scroll-state {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .scroll-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: var(--font-weight-medium);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--hotcodes-primary);
+      margin-bottom: 20px;
+    }
+
+    .scroll-heading {
+      font-size: clamp(2.5rem, 5vw, 4rem); // Up to 64px
+      font-weight: 300; // Thin, futuristic weight
+      font-family: 'Space Grotesk', 'Outfit', 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 20px 0;
+
+      // Solid white color with subtle text shadow for fire effect
+      color: #ffffff;
+      text-shadow:
+        0 0 20px rgba(255, 107, 53, 0.3),
+        0 0 40px rgba(255, 107, 53, 0.2);
+
+      // Word animation wrapper
+      .word {
+        display: inline-block;
+        margin-right: 0.3em;
+        will-change: transform, opacity;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .scroll-description {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+  }
+
+  // Right Side: Visual Content
+  .scroll-visual-container {
+    flex: 0 0 45%;
+    max-width: 580px;
+
+    .scroll-visual-content {
+      position: relative;
+      height: 500px; // Fixed height for visuals
+    }
+
+    .scroll-visual {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 500px;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    // Visual Card Base Styles (Glassmorphism)
+    .visual-card {
+      width: 100%;
+      height: 100%;
+      background: var(--bg-card);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%); // Safari support
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      position: relative;
+
+      // Fallback for browsers without backdrop-filter support
+      @supports not (backdrop-filter: blur(24px)) {
+        background: rgba(15, 15, 15, 0.95);
+      }
+    }
+
+    // Visual Elements Container
+    .visual-elements {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    // Gradient backgrounds for each state (Fire theme)
+    .visual-gradient {
+      position: absolute;
+      inset: 0;
+      opacity: 0.5;
+      filter: blur(60px);
+      z-index: 1;
+      animation: gradientPulse 4s ease-in-out infinite;
+
+      &.gradient-1 {
+        background: radial-gradient(circle at 30% 30%, rgba(255, 107, 53, 0.3) 0%, transparent 60%);
+      }
+
+      &.gradient-2 {
+        background: radial-gradient(circle at 70% 40%, rgba(255, 69, 0, 0.3) 0%, transparent 60%);
+      }
+
+      &.gradient-3 {
+        background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.25) 0%, transparent 60%);
+      }
+
+      &.gradient-4 {
+        background: radial-gradient(circle at 60% 60%, rgba(255, 107, 53, 0.28) 0%, transparent 60%);
+      }
+    }
+
+    // State 1: Design System Grid
+    .element-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 60px;
+      height: 100%;
+
+      .grid-item {
+        aspect-ratio: 1;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+
+        // Subtle inner glow (Fire theme)
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+          opacity: 0;
+          transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        &:hover {
+          transform: translateY(-4px);
+          border-color: var(--hotcodes-primary);
+          box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    // State 2: Device Mockup
+    .device-mockup {
+      width: 260px;
+      height: 420px;
+      margin: 40px auto;
+      background: #1a1a1a;
+      border: 2px solid var(--border-color);
+      border-radius: 32px;
+      padding: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+      // Subtle floating animation
+      .scroll-visual[data-state="2"].active & {
+        animation: deviceFloat 3s ease-in-out infinite;
+      }
+
+      .device-screen {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0f0f0f, #050505);
+        border-radius: 22px;
+        border: 1px solid var(--border-color);
+        position: relative;
+        overflow: hidden;
+
+        // Subtle screen glow (Fire theme)
+        &::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at 50% 30%, rgba(255, 107, 53, 0.08) 0%, transparent 60%);
+        }
+      }
+    }
+
+    // State 3: Performance Bars
+    .performance-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      padding: 80px 60px;
+
+      .perf-bar {
+        height: 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+
+        // Animated fill bar using ::after pseudo-element
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 0;
+          background: linear-gradient(90deg, var(--hotcodes-primary), var(--hotcodes-secondary));
+          border-radius: 7px;
+          transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        // Animate when parent visual is active
+        &:nth-child(1)::after {
+          animation: fillBar1 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        &:nth-child(2)::after {
+          background: linear-gradient(90deg, var(--hotcodes-secondary), var(--hotcodes-accent));
+          animation: fillBar2 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+        }
+        &:nth-child(3)::after {
+          background: linear-gradient(90deg, var(--hotcodes-accent), var(--hotcodes-primary));
+          animation: fillBar3 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+        }
+      }
+    }
+
+    // Performance bar animations (triggered when visual becomes active)
+    .scroll-visual[data-state="3"].active .perf-bar {
+      &:nth-child(1)::after {
+        width: 96%;
+      }
+      &:nth-child(2)::after {
+        width: 89%;
+      }
+      &:nth-child(3)::after {
+        width: 94%;
+      }
+    }
+
+    // State 4: Code Window
+    .code-window {
+      width: 340px;
+      height: 280px;
+      margin: 40px auto;
+      background: #0f0f0f;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+
+      .code-line {
+        height: 10px;
+        background: linear-gradient(90deg, var(--hotcodes-primary), var(--hotcodes-secondary));
+        border-radius: 5px;
+        margin-bottom: 14px;
+        opacity: 0;
+        transform: translateX(-10px);
+
+        // Animate when parent visual is active
+        .scroll-visual[data-state="4"].active & {
+          animation: codeFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        &:nth-child(1) {
+          width: 75%;
+          animation-delay: 0.1s;
+        }
+        &:nth-child(2) {
+          width: 55%;
+          margin-left: 30px;
+          animation-delay: 0.2s;
+        }
+        &:nth-child(3) {
+          width: 65%;
+          margin-left: 30px;
+          animation-delay: 0.3s;
+        }
+      }
+    }
+
+    // Code line animation when state 4 is active
+    .scroll-visual[data-state="4"].active .code-line {
+      opacity: 0.6;
+      transform: translateX(0);
+    }
+  }
+
+  // Progress Indicator
+  .scroll-progress-indicator {
+    position: fixed;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1040;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    // Show when scroll section is in viewport
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .progress-dot {
+      width: 8px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &.active {
+        height: 32px;
+        border-radius: 4px;
+        background: var(--hotcodes-primary);
+        box-shadow: 0 0 16px var(--hotcodes-glow);
+      }
+
+      &:hover {
+        transform: scale(1.3);
+        background: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+
+  // ============================================
+  // MOBILE/TABLET: Static Stacked Layout (Framer-style)
+  // ============================================
+  // Disable scroll animations and show simple stacked cards
+  @media (max-width: 1024px) {
+    // Remove sticky positioning - make it flow normally
+    position: relative;
+    height: auto;
+    padding: 60px 0 80px 0; // Added bottom padding to ensure last card is fully visible
+
+    // Disable ambient glows on mobile for cleaner look
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    // Container becomes simple vertical stack
+    .scroll-section-wrapper {
+      position: relative;
+      flex-direction: column;
+      padding: 0 5%;
+      gap: 0;
+      height: auto;
+      min-height: auto;
+    }
+
+    // Text container: show all states as stacked cards
+    .scroll-text-container {
+      position: relative;
+      flex: 0 0 auto;
+      max-width: 100%;
+
+      .scroll-text-content {
+        position: relative;
+        height: auto;
+        min-height: auto;
+      }
+
+      // Show ALL states as visible stacked cards
+      .scroll-state {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        margin-bottom: 40px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 107, 53, 0.1);
+        border-radius: 16px;
+        backdrop-filter: blur(12px);
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.04);
+          border-color: rgba(255, 107, 53, 0.2);
+          transform: translateY(-2px);
+        }
+
+        // Keep margin on last child for better spacing
+        &:last-child {
+          margin-bottom: 0; // This is fine since we have section bottom padding
+        }
+      }
+    }
+
+    // Visual container: show simplified visuals inline with each text block
+    .scroll-visual-container {
+      display: none; // Hide the separate visual container on mobile
+    }
+
+    // Add small visual preview inside each text card
+    .scroll-state {
+      .scroll-state-inner {
+        position: relative;
+      }
+
+      // Optional: Add small icon or visual indicator per state
+      &[data-state="1"] .scroll-label::before {
+        content: "🎨";
+        margin-right: 8px;
+      }
+
+      &[data-state="2"] .scroll-label::before {
+        content: "📱";
+        margin-right: 8px;
+      }
+
+      &[data-state="3"] .scroll-label::before {
+        content: "⚡";
+        margin-right: 8px;
+      }
+
+      &[data-state="4"] .scroll-label::before {
+        content: "💻";
+        margin-right: 8px;
+      }
+    }
+
+    // Hide progress indicator on mobile
+    .scroll-progress-indicator {
+      display: none;
+    }
+  }
+
+  // Mobile refinements
+  @media (max-width: 768px) {
+    padding: 40px 0 60px 0; // Increased bottom padding for mobile
+
+    .scroll-section-wrapper {
+      padding: 0 4%;
+    }
+
+    .scroll-text-container {
+      .scroll-state {
+        padding: 24px;
+        margin-bottom: 30px;
+      }
+
+      .scroll-label {
+        font-size: 11px;
+        padding: 6px 14px;
+      }
+
+      .scroll-heading {
+        font-size: 1.75rem !important;
+        margin-bottom: 14px;
+      }
+
+      .scroll-description {
+        font-size: 15px !important;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  // Small mobile refinements
+  @media (max-width: 480px) {
+    padding: 30px 0 50px 0; // Increased bottom padding for small mobile
+
+    .scroll-section-wrapper {
+      padding: 0 4%;
+    }
+
+    .scroll-text-container {
+      .scroll-state {
+        padding: 20px;
+        margin-bottom: 24px;
+      }
+
+      .scroll-label {
+        font-size: 10px;
+        padding: 5px 12px;
+      }
+
+      .scroll-heading {
+        font-size: 1.5rem !important;
+        margin-bottom: 12px;
+      }
+
+      .scroll-description {
+        font-size: 14px !important;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// ============================================
+// Keyframe Animations
+// ============================================
+
+@keyframes fillBar1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 96%;
+  }
+}
+
+@keyframes fillBar2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 89%;
+  }
+}
+
+@keyframes fillBar3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 94%;
+  }
+}
+
+@keyframes gradientPulse {
+  0%, 100% {
+    opacity: 0.5;
+    filter: blur(60px);
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(80px);
+  }
+}
+
+@keyframes codeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 0.6;
+    transform: translateX(0);
+  }
+}
+
+@keyframes deviceFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}

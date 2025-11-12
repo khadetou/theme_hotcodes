@@ -1,0 +1,55 @@
+//------------------------------------------------------------------------------
+// HotCodes Theme - Color Palette and Font Configuration
+//------------------------------------------------------------------------------
+// This file defines the custom "hotcodes" color palette and applies the "Inter"
+// font for the HotCodes theme in Odoo 19.
+
+//------------------------------------------------------------------------------
+// Colors
+//------------------------------------------------------------------------------
+
+// Define the HotCodes color palette using the standard Odoo structure (Fire Theme)
+$o-color-palettes: map-merge($o-color-palettes,
+    (
+        'hotcodes': (
+            'o-color-1': #FF6B35,    // Primary (HotCodes bright orange)
+            'o-color-2': #FF4500,    // Secondary (HotCodes deep red-orange)
+            'o-color-3': #FFD700,    // Accent (HotCodes gold)
+            'o-color-4': #ffffff,    // White
+            'o-color-5': #0A0A0A,    // Dark background
+
+            // Menu and footer configuration
+            'menu': 5,               // Use color combination 5 (dark) for menu
+            'footer': 5,             // Use color combination 5 (dark) for footer
+            'copyright': 4,          // Use color combination 4 (white) for copyright
+        ),
+    )
+);
+
+// Add the palette to the list of selectable palettes in the website builder
+$o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'hotcodes');
+
+//------------------------------------------------------------------------------
+// Website customizations
+//------------------------------------------------------------------------------
+
+$o-website-values-palettes: (
+    (
+        'color-palettes-name': 'hotcodes',
+        'font': 'Inter',
+        'headings-font': 'Inter',
+    ),
+);
+
+//------------------------------------------------------------------------------
+// Font Weight Configuration
+//------------------------------------------------------------------------------
+// Note: Font weight variables are defined in style.scss
+// Inter font supports weights: 100, 200, 300, 400, 500, 600, 700, 800, 900
+// Current configuration uses thinner weights for a modern, elegant appearance:
+//   --font-weight-light: 200      (Extra light)
+//   --font-weight-regular: 300    (Light - default body text)
+//   --font-weight-medium: 400     (Regular - emphasis text)
+//   --font-weight-semibold: 500   (Medium - headings)
+//   --font-weight-bold: 600       (Semibold - strong emphasis)
+//   --font-weight-extrabold: 700  (Bold - maximum emphasis)

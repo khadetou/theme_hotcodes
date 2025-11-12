@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--    Template customized for header-->
+    <template id="ecom_header" inherit_id="website.layout" name="Ecom Header" active="True">
+        <xpath expr="//header" position="replace">
+            <header>
+                <section class="s_hotcodes_header o_colored_level" data-vcss="001">
+                    <!-- Navigation -->
+                    <nav class="navbar navbar-expand-xl navbar-dark fixed-top hotcodes-navbar">
+                        <div class="container">
+                            <a class="navbar-brand hotcodes-logo" href="/">
+                                <!-- HotCodes Logo -->
+                                <div class="logo-icon">
+                                    <span style="color: white; font-weight: 600;">HC</span>
+                                </div>
+                                <span class="logo-text">HotCodes</span>
+                            </a>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/">Accueil</a>
+                                    </li>
+                                    <li class="nav-item mega-dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                                            Produits
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mega-dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                                            Services
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/about">À Propos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/contact">Contact</a>
+                                    </li>
+                                </ul>
+
+                                <div class="navbar-actions">
+                                    <a href="/contact" class="btn btn-text">Nous Contacter</a>
+                                    <a href="/produits/saytu" class="btn btn-primary"> Essai Gratuit <svg
+                                            width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 17L17 7M17 7H7M17 7V17"
+                                                stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- Hero Section -->
+                    <div class="hotcodes-hero d-flex align-items-center">
+                        <div class="hero-background">
+                            <div class="noise-overlay"></div>
+                            <div class="grid-overlay"></div>
+                            <div class="gradient-sphere sphere-1"></div>
+                            <div class="gradient-sphere sphere-2"></div>
+                        </div>
+
+                        <div class="container hero-content">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-center">
+                                    <h1 class="hero-title mb-4">
+                                        <span class="gradient-text">Transformez</span> Votre
+                                        Entreprise Avec <span class="gradient-text">HotCodes</span>
+                                    </h1>
+
+                                    <p class="hero-subtitle mb-5">
+                                        Solutions ERP et développement sur mesure pour les
+                                        entreprises sénégalaises.
+                                        De la PME à la grande entreprise, nous digitalisons votre
+                                        activité.
+                                    </p>
+
+                                    <div class="hero-actions mb-4">
+                                        <a href="/produits/saytu"
+                                            class="btn btn-primary btn-lg me-3 mb-3"> Découvrir
+                                            Saytu <i class="fa fa-arrow-right ms-2"></i>
+                                        </a>
+                                        <a href="/services" class="btn btn-outline btn-lg mb-3">
+                                            Nos Services
+                                        </a>
+                                    </div>
+
+                                    <p class="hero-note mt-4">
+                                        🎁 Essai gratuit 30 jours • Sans carte bancaire • Support en
+                                        français
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </header>
+
+        </xpath>
+    </template>
+</odoo>

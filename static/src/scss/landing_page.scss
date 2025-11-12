@@ -1,0 +1,331 @@
+// Landing Page Sections Styles
+// Styles for all new sections on the HotCodes homepage
+
+// ============================================================================
+// Services Section
+// ============================================================================
+.hotcodes-services-section {
+  .service-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 107, 53, 0.4) !important;
+      box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
+    }
+
+    .service-icon {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .service-icon {
+      transform: scale(1.1);
+    }
+
+    a {
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--hotcodes-secondary) !important;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// Products Section
+// ============================================================================
+.hotcodes-products-section {
+  .product-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(255, 107, 53, 0.3);
+    }
+
+    .product-badge {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .product-icon {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .product-icon {
+      transform: scale(1.15) rotate(5deg);
+    }
+
+    .product-actions a {
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+// ============================================================================
+// Why HotCodes Section
+// ============================================================================
+.hotcodes-why-section {
+  .why-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 107, 53, 0.3) !important;
+      background: rgba(15, 15, 15, 0.7) !important;
+      box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+    }
+
+    .why-icon {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .why-icon {
+      transform: scale(1.2);
+    }
+  }
+}
+
+// ============================================================================
+// Testimonials Section
+// ============================================================================
+.hotcodes-testimonials-section {
+  .testimonial-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 107, 53, 0.25) !important;
+      box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+    }
+
+    .testimonial-rating {
+      font-size: 1.25rem;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+// ============================================================================
+// CTA Section
+// ============================================================================
+.hotcodes-cta-section {
+  .cta-actions a {
+    &:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+// ============================================================================
+// Footer
+// ============================================================================
+.hotcodes-footer {
+  a {
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--hotcodes-primary) !important;
+    }
+  }
+
+  .social-links a {
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--hotcodes-secondary) !important;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// ============================================================================
+// Responsive Adjustments
+// ============================================================================
+
+// Tablet (≤1024px)
+@media (max-width: 1024px) {
+  .hotcodes-services-section,
+  .hotcodes-products-section,
+  .hotcodes-why-section,
+  .hotcodes-testimonials-section {
+    .section-title {
+      font-size: 2rem !important;
+    }
+
+    .section-subtitle {
+      font-size: 1rem !important;
+    }
+  }
+
+  .hotcodes-products-section {
+    .product-card {
+      .product-badge {
+        font-size: 0.7rem !important;
+        padding: 0.4rem 0.8rem !important;
+      }
+
+      h3 {
+        font-size: 1.75rem !important;
+      }
+    }
+  }
+
+  .hotcodes-cta-section {
+    h2 {
+      font-size: 2rem !important;
+    }
+
+    p {
+      font-size: 1.125rem !important;
+    }
+  }
+}
+
+// Mobile (≤768px)
+@media (max-width: 768px) {
+  .hotcodes-services-section,
+  .hotcodes-products-section,
+  .hotcodes-why-section,
+  .hotcodes-testimonials-section {
+    .section-title {
+      font-size: 1.75rem !important;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem !important;
+    }
+  }
+
+  .hotcodes-products-section {
+    .product-card {
+      padding: 2rem 1.5rem !important;
+
+      .product-badge {
+        position: static !important;
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.5rem !important;
+      }
+
+      .product-actions {
+        flex-direction: column;
+
+        a {
+          width: 100% !important;
+          min-width: auto !important;
+        }
+      }
+    }
+  }
+
+  .hotcodes-why-section {
+    .why-card {
+      padding: 1.5rem !important;
+    }
+  }
+
+  .hotcodes-cta-section {
+    h2 {
+      font-size: 1.75rem !important;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+
+      a {
+        width: 100%;
+        padding: 1rem 2rem !important;
+      }
+    }
+  }
+
+  .hotcodes-footer {
+    .footer-bottom {
+      .row {
+        text-align: center !important;
+
+        .col-md-6 {
+          text-align: center !important;
+        }
+
+        ul {
+          flex-direction: column !important;
+          gap: 0.75rem !important;
+        }
+      }
+    }
+  }
+}
+
+// Small Mobile (≤480px)
+@media (max-width: 480px) {
+  .hotcodes-services-section,
+  .hotcodes-products-section,
+  .hotcodes-why-section,
+  .hotcodes-testimonials-section {
+    .section-title {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  .hotcodes-products-section {
+    .product-card {
+      .product-icon {
+        font-size: 2.5rem !important;
+      }
+
+      h3 {
+        font-size: 1.35rem !important;
+      }
+    }
+  }
+
+  .hotcodes-cta-section {
+    h2 {
+      font-size: 1.5rem !important;
+    }
+  }
+}
+
+// ============================================================================
+// Animation Classes (for Motion.js)
+// ============================================================================
+.service-card,
+.product-card,
+.why-card,
+.testimonial-card {
+  // Initial state for animations
+  &.animate-in {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  // Animated state
+  &.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

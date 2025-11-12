@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Scroll-Linked Animation Section Template -->
+    <template id="scroll_animation_section" name="Scroll Animation Section">
+        <section class="hotcodes-scroll-section" id="scrollAnimationSection">
+            <div class="scroll-section-wrapper">
+                <!-- Left Side: Text Content -->
+                <div class="scroll-text-container">
+                    <div class="scroll-text-content">
+                        <!-- State 1 -->
+                        <div class="scroll-state" data-state="1">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">Design System</span>
+                                <h2 class="scroll-heading">Build with confidence</h2>
+                                <p class="scroll-description">
+                                    Create stunning, consistent interfaces with our comprehensive
+                                    design system.
+                                    Every component is crafted with precision and attention to
+                                    detail.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 2 -->
+                        <div class="scroll-state" data-state="2">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">Responsive Layouts</span>
+                                <h2 class="scroll-heading">Adapt to any screen</h2>
+                                <p class="scroll-description">
+                                    Seamlessly responsive designs that look perfect on every device.
+                                    From mobile to desktop, your content shines everywhere.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 3 -->
+                        <div class="scroll-state" data-state="3">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">Performance</span>
+                                <h2 class="scroll-heading">Lightning fast</h2>
+                                <p class="scroll-description">
+                                    Optimized for speed and efficiency. Smooth animations and
+                                    instant
+                                    interactions create an exceptional user experience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 4 -->
+                        <div class="scroll-state" data-state="4">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">Developer Experience</span>
+                                <h2 class="scroll-heading">Built for developers</h2>
+                                <p class="scroll-description">
+                                    Clean, maintainable code with comprehensive documentation.
+                                    Start building in minutes, not hours.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Visual Content -->
+                <div class="scroll-visual-container">
+                    <div class="scroll-visual-content">
+                        <!-- Visual State 1 -->
+                        <div class="scroll-visual" data-state="1">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-1"></div>
+                                <div class="visual-elements">
+                                    <div class="element-grid">
+                                        <div class="grid-item"></div>
+                                        <div class="grid-item"></div>
+                                        <div class="grid-item"></div>
+                                        <div class="grid-item"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 2 -->
+                        <div class="scroll-visual" data-state="2">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-2"></div>
+                                <div class="visual-elements">
+                                    <div class="device-mockup">
+                                        <div class="device-screen"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 3 -->
+                        <div class="scroll-visual" data-state="3">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-3"></div>
+                                <div class="visual-elements">
+                                    <div class="performance-bars">
+                                        <div class="perf-bar"></div>
+                                        <div class="perf-bar"></div>
+                                        <div class="perf-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 4 -->
+                        <div class="scroll-visual" data-state="4">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-4"></div>
+                                <div class="visual-elements">
+                                    <div class="code-window">
+                                        <div class="code-line"></div>
+                                        <div class="code-line"></div>
+                                        <div class="code-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="scroll-progress-indicator">
+                <div class="progress-dot" data-state="1"></div>
+                <div class="progress-dot" data-state="2"></div>
+                <div class="progress-dot" data-state="3"></div>
+                <div class="progress-dot" data-state="4"></div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Add to homepage -->
+    <template id="ecom_homepage_with_scroll_section" inherit_id="theme_hotcodes.ecom_homepage">
+        <xpath expr="//div[@class='oe_structure oe_empty']" position="before">
+            <t t-call="theme_hotcodes.scroll_animation_section" />
+        </xpath>
+    </template>
+
+    <!-- French Version of Scroll Animation Section -->
+    <template id="scroll_animation_section_french" name="Scroll Animation Section (French)">
+        <section class="hotcodes-scroll-section" id="scrollAnimationSection">
+            <div class="scroll-section-wrapper">
+                <!-- Left Side: Text Content -->
+                <div class="scroll-text-container">
+                    <div class="scroll-text-content">
+                        <!-- State 1: Design -->
+                        <div class="scroll-state" data-state="1">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">Design Moderne</span>
+                                <h2 class="scroll-heading">Interface Intuitive</h2>
+                                <p class="scroll-description">
+                                    Des interfaces élégantes et faciles à utiliser, conçues pour
+                                    maximiser la
+                                    productivité de vos équipes. Chaque élément est pensé pour une
+                                    expérience
+                                    utilisateur optimale.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 2: Développement -->
+                        <div class="scroll-state" data-state="2">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">Développement Sur Mesure</span>
+                                <h2 class="scroll-heading">Solutions Personnalisées</h2>
+                                <p class="scroll-description">
+                                    Modules et fonctionnalités développés spécifiquement pour vos
+                                    besoins métier.
+                                    Notre équipe d'experts adapte chaque solution à votre contexte
+                                    sénégalais.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 3: Performance -->
+                        <div class="scroll-state" data-state="3">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">Performance Optimale</span>
+                                <h2 class="scroll-heading">Rapidité et Fiabilité</h2>
+                                <p class="scroll-description">
+                                    Systèmes optimisés pour fonctionner même avec une connexion
+                                    limitée.
+                                    Performance garantie et temps de réponse ultra-rapides pour
+                                    votre activité.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 4: Support -->
+                        <div class="scroll-state" data-state="4">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">Support Dédié</span>
+                                <h2 class="scroll-heading">Accompagnement Continu</h2>
+                                <p class="scroll-description">
+                                    Support technique en français, formation complète de vos équipes
+                                    et
+                                    accompagnement personnalisé. Nous sommes là pour votre réussite.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Visual Content (Same as English version) -->
+                <div class="scroll-visual-container">
+                    <div class="scroll-visual-content">
+                        <!-- Visual State 1 -->
+                        <div class="scroll-visual" data-state="1">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-1"></div>
+                                <div class="visual-elements">
+                                    <div class="element-grid">
+                                        <div class="grid-item"></div>
+                                        <div class="grid-item"></div>
+                                        <div class="grid-item"></div>
+                                        <div class="grid-item"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 2 -->
+                        <div class="scroll-visual" data-state="2">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-2"></div>
+                                <div class="visual-elements">
+                                    <div class="element-responsive">
+                                        <div class="device-frame desktop"></div>
+                                        <div class="device-frame tablet"></div>
+                                        <div class="device-frame mobile"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 3 -->
+                        <div class="scroll-visual" data-state="3">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-3"></div>
+                                <div class="visual-elements">
+                                    <div class="element-performance">
+                                        <div class="perf-bar"></div>
+                                        <div class="perf-bar"></div>
+                                        <div class="perf-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 4 -->
+                        <div class="scroll-visual" data-state="4">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-4"></div>
+                                <div class="visual-elements">
+                                    <div class="element-code">
+                                        <div class="code-line"></div>
+                                        <div class="code-line"></div>
+                                        <div class="code-line"></div>
+                                        <div class="code-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Indicator -->
+                <div class="scroll-progress-indicator">
+                    <div class="progress-dot" data-state="1"></div>
+                    <div class="progress-dot" data-state="2"></div>
+                    <div class="progress-dot" data-state="3"></div>
+                    <div class="progress-dot" data-state="4"></div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
