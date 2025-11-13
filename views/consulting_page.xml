@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="theme_hotcodes.page_consulting" model="website.page">
+        <field name="name">Conseil &amp; Implémentation ERP - Expertise Odoo</field>
+        <field name="type">qweb</field>
+        <field name="url">/services/consulting</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.consulting_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+
+                        <!-- Hero Section - Consulting -->
+                        <t t-call="theme_hotcodes.hotcodes_hero_hexagon_grid">
+                            <t t-set="hero_eyebrow" t-value="'🎯 Conseil &amp; Implémentation'" />
+                            <t t-set="hero_title_part1" t-value="'Conseil &amp; Implémentation'" />
+                            <t t-set="hero_title_part2" t-value="'ERP pour Votre'" />
+                            <t t-set="hero_title_part3" t-value="'Transformation'" />
+                            <t t-set="hero_subtitle" t-value="'Accompagnement expert pour réussir votre projet ERP. De l\'audit initial à l\'optimisation continue, nous vous guidons à chaque étape de votre transformation digitale.'" />
+                            <t t-set="hero_description" t-value="'Méthodologie éprouvée, expertise reconnue et accompagnement complet pour garantir le succès de votre transformation.'" />
+                            <t t-set="hero_cta_primary_text" t-value="'Planifier un Audit Gratuit'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contact'" />
+                            <t t-set="hero_cta_secondary_text" t-value="'Voir Notre Méthodologie'" />
+                            <t t-set="hero_cta_secondary_url" t-value="'#methodologie'" />
+                            <t t-set="hero_note" t-value="'✓ Expertise Reconnue • ✓ Méthodologie Éprouvée • ✓ Résultats Garantis'" />
+                        </t>
+
+                        <!-- Section 1: Notre Expertise Conseil -->
+                        <section class="consulting-intro-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row align-items-center g-5">
+                                    <div class="col-lg-6">
+                                        <div class="intro-badge mb-3" style="display: inline-block; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:chart-2-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                            Experts en Transformation ERP
+                                        </div>
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; line-height: 1.2;">
+                                            Réussissez Votre <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Projet ERP</span>
+                                        </h2>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1.5rem;">
+                                            L'implémentation d'un ERP est un projet stratégique qui nécessite <strong style="color: var(--hotcodes-accent);">expertise, méthodologie et accompagnement</strong>. Avec plus de 50 projets ERP réussis, nous maîtrisons tous les aspects de la transformation digitale.
+                                        </p>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 2rem;">
+                                            Notre approche combine <strong style="color: white;">conseil stratégique, expertise technique et conduite du changement</strong> pour garantir le succès de votre projet et l'adoption par vos équipes.
+                                        </p>
+
+                                        <div class="intro-stats row g-3">
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 12px; padding: 1.5rem;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary); margin-bottom: 0.25rem;">50+</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Projets Réussis</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 215, 0, 0.1); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 12px; padding: 1.5rem;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-accent); margin-bottom: 0.25rem;">95%</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Taux de Succès</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 12px; padding: 1.5rem;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary); margin-bottom: 0.25rem;">8+</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Ans d'Expérience</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="intro-visual" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 20px; padding: 2.5rem; position: relative; overflow: hidden;">
+                                            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, var(--hotcodes-primary), transparent 70%); opacity: 0.2; filter: blur(60px);"></div>
+
+                                            <div class="mb-4">
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.3em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                    Pourquoi Nous Choisir ?
+                                                </h4>
+                                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Expertise reconnue</strong> - Spécialiste Odoo depuis 8+ ans
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Méthodologie éprouvée</strong> - Processus structuré et efficace
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Connaissance locale</strong> - Expertise du contexte sénégalais
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Accompagnement complet</strong> - De l'audit à l'optimisation
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 0; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Support long terme</strong> - Relation durable et évolutive
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 2: Nos Services de Conseil -->
+                        <section class="consulting-services-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Nos Services de Conseil &amp; Implémentation
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Un accompagnement complet à chaque étape de votre projet ERP
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Service 1: Audit &amp; Conseil -->
+                                    <div class="col-lg-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2.5rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:document-text-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                Audit &amp; Conseil Stratégique
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                                                Analyse approfondie de vos processus métier, identification des opportunités d'amélioration et recommandations stratégiques.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Audit des processus existants
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Analyse des besoins métier
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Recommandations stratégiques
+                                                </li>
+                                                <li style="padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Feuille de route de transformation
+                                                </li>
+                                            </ul>
+                                            <div style="padding-top: 1rem; border-top: 1px solid rgba(255, 107, 53, 0.2);">
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin: 0;">
+                                                    <strong style="color: var(--hotcodes-accent);">Durée:</strong> 1-2 semaines • <strong style="color: var(--hotcodes-accent);">Livrable:</strong> Rapport d'audit complet
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service 2: Implémentation -->
+                                    <div class="col-lg-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2.5rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:settings-minimalistic-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                Implémentation ERP Complète
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                                                Déploiement complet de votre solution ERP avec configuration, personnalisation, migration de données et mise en production.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Configuration des modules
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Personnalisation &amp; développement
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Migration des données
+                                                </li>
+                                                <li style="padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Tests &amp; mise en production
+                                                </li>
+                                            </ul>
+                                            <div style="padding-top: 1rem; border-top: 1px solid rgba(255, 107, 53, 0.2);">
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin: 0;">
+                                                    <strong style="color: var(--hotcodes-accent);">Durée:</strong> 4-12 semaines • <strong style="color: var(--hotcodes-accent);">Livrable:</strong> ERP opérationnel
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service 3: Formation -->
+                                    <div class="col-lg-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2.5rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:users-group-two-rounded-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                Formation &amp; Conduite du Changement
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                                                Formation complète de vos équipes et accompagnement dans l'adoption de la nouvelle solution pour garantir le succès.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Formation utilisateurs finaux
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Formation administrateurs
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Documentation personnalisée
+                                                </li>
+                                                <li style="padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Accompagnement post-démarrage
+                                                </li>
+                                            </ul>
+                                            <div style="padding-top: 1rem; border-top: 1px solid rgba(255, 107, 53, 0.2);">
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin: 0;">
+                                                    <strong style="color: var(--hotcodes-accent);">Durée:</strong> 1-4 semaines • <strong style="color: var(--hotcodes-accent);">Livrable:</strong> Équipes autonomes
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service 4: Optimisation -->
+                                    <div class="col-lg-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2.5rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:chart-2-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                Optimisation &amp; Support Continu
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                                                Amélioration continue de votre ERP, nouvelles fonctionnalités, optimisation des performances et support technique.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Audit de performance
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Optimisation des processus
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Évolutions fonctionnelles
+                                                </li>
+                                                <li style="padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Support technique prioritaire
+                                                </li>
+                                            </ul>
+                                            <div style="padding-top: 1rem; border-top: 1px solid rgba(255, 107, 53, 0.2);">
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin: 0;">
+                                                    <strong style="color: var(--hotcodes-accent);">Durée:</strong> Continu • <strong style="color: var(--hotcodes-accent);">Livrable:</strong> ERP optimisé
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3: Notre Méthodologie -->
+                        <section id="methodologie" class="consulting-methodology-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Notre Méthodologie en 4 Étapes
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Un processus structuré et éprouvé pour garantir le succès de votre projet
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Phase 1 -->
+                                    <div class="col-lg-6">
+                                        <div class="methodology-phase" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; position: relative;">
+                                            <div class="phase-header d-flex align-items-center mb-3">
+                                                <div class="phase-number" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; color: white; margin-right: 1rem; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);">
+                                                    1
+                                                </div>
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin: 0;">
+                                                    Analyse &amp; Cadrage
+                                                </h4>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1rem;">
+                                                Audit complet de vos processus, identification des besoins, définition du périmètre et des objectifs du projet.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.95rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Ateliers de découverte</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Cartographie des processus</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Cahier des charges</li>
+                                                <li>✓ Planning &amp; budget détaillé</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phase 2 -->
+                                    <div class="col-lg-6">
+                                        <div class="methodology-phase" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; position: relative;">
+                                            <div class="phase-header d-flex align-items-center mb-3">
+                                                <div class="phase-number" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; color: white; margin-right: 1rem; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);">
+                                                    2
+                                                </div>
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin: 0;">
+                                                    Configuration &amp; Développement
+                                                </h4>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1rem;">
+                                                Mise en place de l'environnement, configuration des modules, développements spécifiques et personnalisations.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.95rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Installation &amp; configuration</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Développements sur mesure</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Intégrations tierces</li>
+                                                <li>✓ Tests unitaires &amp; fonctionnels</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phase 3 -->
+                                    <div class="col-lg-6">
+                                        <div class="methodology-phase" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; position: relative;">
+                                            <div class="phase-header d-flex align-items-center mb-3">
+                                                <div class="phase-number" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; color: white; margin-right: 1rem; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);">
+                                                    3
+                                                </div>
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin: 0;">
+                                                    Migration &amp; Formation
+                                                </h4>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1rem;">
+                                                Migration des données existantes, formation complète des équipes et préparation au démarrage.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.95rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Extraction &amp; nettoyage données</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Migration &amp; validation</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Formation utilisateurs</li>
+                                                <li>✓ Documentation complète</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phase 4 -->
+                                    <div class="col-lg-6">
+                                        <div class="methodology-phase" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; position: relative;">
+                                            <div class="phase-header d-flex align-items-center mb-3">
+                                                <div class="phase-number" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; color: white; margin-right: 1rem; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);">
+                                                    4
+                                                </div>
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin: 0;">
+                                                    Démarrage &amp; Support
+                                                </h4>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1rem;">
+                                                Mise en production, accompagnement au démarrage et support continu pour garantir le succès.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.95rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Mise en production</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Accompagnement intensif</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Support prioritaire</li>
+                                                <li>✓ Optimisation continue</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: Success Stories -->
+                        <section class="consulting-success-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Histoires de Réussite
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Des entreprises qui ont transformé leur gestion avec notre accompagnement
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Success Story 1 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="success-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div class="success-icon mb-3" style="width: 60px; height: 60px; background: rgba(255, 107, 53, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:buildings-2-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                Groupe Industriel - Dakar
+                                            </h4>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                                                Implémentation complète d'Odoo Enterprise pour 150 utilisateurs : ventes, stocks, fabrication, comptabilité et RH.
+                                            </p>
+                                            <div class="success-metrics">
+                                                <div class="metric mb-2" style="display: flex; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem;"></iconify-icon>
+                                                    <span>
+                                                        <strong style="color: white;">40%</strong> gain de productivité</span>
+                                                </div>
+                                                <div class="metric mb-2" style="display: flex; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem;"></iconify-icon>
+                                                    <span>
+                                                        <strong style="color: white;">3 mois</strong> de déploiement</span>
+                                                </div>
+                                                <div class="metric" style="display: flex; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem;"></iconify-icon>
+                                                    <span>
+                                                        <strong style="color: white;">ROI</strong> en 8 mois</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Success Story 2 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="success-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div class="success-icon mb-3" style="width: 60px; height: 60px; background: rgba(255, 215, 0, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:shop-2-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-accent);"></iconify-icon>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                Chaîne de Distribution - Thiès
+                                            </h4>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                                                Migration depuis un système legacy vers Odoo avec gestion multi-magasins et force de vente mobile.
+                                            </p>
+                                            <div class="success-metrics">
+                                                <div class="metric mb-2" style="display: flex; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem;"></iconify-icon>
+                                                    <span>
+                                                        <strong style="color: white;">60%</strong> réduction erreurs</span>
+                                                </div>
+                                                <div class="metric mb-2" style="display: flex; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem;"></iconify-icon>
+                                                    <span>
+                                                        <strong style="color: white;">15 magasins</strong> connectés</span>
+                                                </div>
+                                                <div class="metric" style="display: flex; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem;"></iconify-icon>
+                                                    <span>
+                                                        <strong style="color: white;">Temps réel</strong> visibilité stocks</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Success Story 3 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="success-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div class="success-icon mb-3" style="width: 60px; height: 60px; background: rgba(255, 107, 53, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:case-round-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                Société de Services - Saint-Louis
+                                            </h4>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                                                Déploiement Odoo pour gestion de projets, facturation, comptabilité et suivi de la rentabilité.
+                                            </p>
+                                            <div class="success-metrics">
+                                                <div class="metric mb-2" style="display: flex; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem;"></iconify-icon>
+                                                    <span>
+                                                        <strong style="color: white;">50%</strong> temps facturation</span>
+                                                </div>
+                                                <div class="metric mb-2" style="display: flex; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem;"></iconify-icon>
+                                                    <span>
+                                                        <strong style="color: white;">100%</strong> visibilité projets</span>
+                                                </div>
+                                                <div class="metric" style="display: flex; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem;"></iconify-icon>
+                                                    <span>
+                                                        <strong style="color: white;">+25%</strong> rentabilité</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 5: Industries We Serve -->
+                        <section class="consulting-industries-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <div class="mb-3">
+                                            <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                                NOS SECTEURS D'EXPERTISE
+                                            </span>
+                                        </div>
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Industries <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Que Nous Servons</span>
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Expertise sectorielle pour des solutions adaptées à vos enjeux métier
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Industry 1 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255,107,53,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:buildings-2-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Industrie &amp; Fabrication</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem; line-height: 1.7; font-size: 0.95rem;">Gestion de production, stocks, qualité et maintenance pour optimiser vos opérations industrielles.</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-primary); font-size: 1.1rem;"></iconify-icon>
+                                                    MRP &amp; Planification
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-primary); font-size: 1.1rem;"></iconify-icon>
+                                                    Gestion Qualité
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-primary); font-size: 1.1rem;"></iconify-icon>
+                                                    Maintenance GMAO
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Industry 2 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(138,43,226,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:shop-2-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Distribution &amp; Commerce</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem; line-height: 1.7; font-size: 0.95rem;">Solutions pour la gestion multi-magasins, force de vente et e-commerce intégré.</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #8A2BE2; font-size: 1.1rem;"></iconify-icon>
+                                                    Multi-magasins
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #8A2BE2; font-size: 1.1rem;"></iconify-icon>
+                                                    Force de Vente Mobile
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #8A2BE2; font-size: 1.1rem;"></iconify-icon>
+                                                    E-commerce Intégré
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Industry 3 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(59,130,246,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:case-round-bold-duotone" style="font-size: 2rem; color: #3B82F6;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Services &amp; Conseil</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem; line-height: 1.7; font-size: 0.95rem;">Gestion de projets, facturation au temps passé et suivi de la rentabilité.</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #3B82F6; font-size: 1.1rem;"></iconify-icon>
+                                                    Gestion de Projets
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #3B82F6; font-size: 1.1rem;"></iconify-icon>
+                                                    Temps &amp; Facturation
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #3B82F6; font-size: 1.1rem;"></iconify-icon>
+                                                    Analyse Rentabilité
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Industry 4 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,215,0,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255,215,0,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:health-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-accent);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Santé &amp; Pharmaceutique</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem; line-height: 1.7; font-size: 0.95rem;">Gestion des stocks pharmaceutiques, traçabilité et conformité réglementaire.</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-accent); font-size: 1.1rem;"></iconify-icon>
+                                                    Traçabilité Lots
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-accent); font-size: 1.1rem;"></iconify-icon>
+                                                    Gestion Péremption
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-accent); font-size: 1.1rem;"></iconify-icon>
+                                                    Conformité Réglementaire
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Industry 5 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255,107,53,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:delivery-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Logistique &amp; Transport</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem; line-height: 1.7; font-size: 0.95rem;">Gestion des entrepôts, transport et optimisation de la chaîne logistique.</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-primary); font-size: 1.1rem;"></iconify-icon>
+                                                    WMS Avancé
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-primary); font-size: 1.1rem;"></iconify-icon>
+                                                    Gestion Flotte
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-primary); font-size: 1.1rem;"></iconify-icon>
+                                                    Optimisation Routes
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Industry 6 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(138,43,226,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:diploma-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Éducation &amp; Formation</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem; line-height: 1.7; font-size: 0.95rem;">Gestion des inscriptions, planning, facturation et suivi pédagogique.</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #8A2BE2; font-size: 1.1rem;"></iconify-icon>
+                                                    Gestion Étudiants
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #8A2BE2; font-size: 1.1rem;"></iconify-icon>
+                                                    Planning Cours
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); padding-left: 1.5rem; position: relative; font-size: 0.9rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #8A2BE2; font-size: 1.1rem;"></iconify-icon>
+                                                    Suivi Pédagogique
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 7: CTA Final -->
+                        <section id="audit" class="consulting-cta-section py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; z-index: 1; overflow: hidden;">
+                            <div class="cta-background" style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;none&quot;/%3E%3Cpath d=&quot;M0 0L100 100M100 0L0 100&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;1&quot;/%3E%3C/svg%3E'); opacity: 0.3;">
+                            </div>
+
+                            <div class="container py-5" style="position: relative; z-index: 2;">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 text-center">
+                                        <div class="mb-4" style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:chart-2-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                            Conseil &amp; Implémentation ERP
+                                        </div>
+
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                                            Prêt à Transformer Votre Entreprise ?
+                                        </h2>
+                                        <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin-left: auto; margin-right: auto;">
+                                            Commencez par un audit gratuit de vos processus et découvrez comment optimiser votre gestion.
+                                        </p>
+
+                                        <div class="cta-actions d-flex gap-3 justify-content-center flex-wrap mb-4">
+                                            <a href="/contact?service=audit-gratuit" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                                <iconify-icon icon="solar:document-text-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Audit Gratuit
+                                            </a>
+                                            <a href="/contact?service=consulting" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid white; transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:phone-calling-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Nous Contacter
+                                            </a>
+                                        </div>
+
+                                        <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-top: 2rem;">
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Audit gratuit sans engagement •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Recommandations personnalisées •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Accompagnement complet
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 8: FAQ -->
+                        <section class="consulting-faq-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Questions Fréquentes
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Tout ce que vous devez savoir sur nos services de conseil et implémentation
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="faq-list">
+                                            <!-- FAQ 1 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Combien de temps prend une implémentation ERP ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    La durée varie selon la taille de l'entreprise et la complexité du projet. Pour une PME : 4-8 semaines. Pour une moyenne entreprise : 2-4 mois. Pour une grande entreprise : 4-12 mois. Nous établissons un planning détaillé dès la phase d'audit.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 2 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Quel est le coût d'une implémentation ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Le coût dépend du périmètre, du nombre d'utilisateurs et des personnalisations nécessaires. Une implémentation standard démarre à partir de 2 millions FCFA. Nous proposons un audit gratuit pour établir un devis précis adapté à vos besoins.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 3 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Comment gérez-vous la migration des données ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Nous suivons un processus rigoureux : extraction des données depuis vos systèmes actuels, nettoyage et validation, mapping vers Odoo, migration de test, validation par vos équipes, puis migration finale. Nous garantissons l'intégrité et la sécurité de vos données.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 4 -->
+                                            <div class="faq-item" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Proposez-vous un support après l'implémentation ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Oui, nous proposons plusieurs formules de support : accompagnement post-démarrage (1-3 mois), contrats de maintenance (TMA) avec différents niveaux de service, et support à la demande. Nous restons à vos côtés sur le long terme pour faire évoluer votre ERP.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>
+

@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="theme_hotcodes.page_developpement" model="website.page">
+        <field name="name">Développement Sur Mesure - Solutions Personnalisées</field>
+        <field name="type">qweb</field>
+        <field name="url">/services/developpement-sur-mesure</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.developpement_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+
+                        <!-- Hero Section - Code Matrix -->
+                        <t t-call="theme_hotcodes.hotcodes_hero_code_matrix">
+                            <t t-set="hero_eyebrow" t-value="'💻 DÉVELOPPEMENT SUR MESURE'" />
+                            <t t-set="hero_title_part1" t-value="'Code de Qualité,'" />
+                            <t t-set="hero_title_part2" t-value="'Solutions Sur Mesure'" />
+                            <t t-set="hero_subtitle" t-value="'Développement d\'applications web, mobiles et modules Odoo personnalisés pour transformer vos idées en solutions digitales performantes et évolutives.'" />
+                            <t t-set="hero_cta_primary_text" t-value="'Démarrer un Projet'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contact?service=developpement'" />
+                            <t t-set="hero_cta_secondary_text" t-value="'Voir Nos Réalisations'" />
+                            <t t-set="hero_cta_secondary_url" t-value="'/realisations'" />
+                            <t t-set="hero_note" t-value="'✓ Technologies Modernes • ✓ Code de Qualité • ✓ Support 24/7'" />
+                        </t>
+
+                        <!-- Section 1: Notre Expertise -->
+                        <section class="dev-intro-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row align-items-center g-5">
+                                    <div class="col-lg-6">
+                                        <div class="intro-badge mb-3" style="display: inline-block; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:code-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                            Développement de Qualité Entreprise
+                                        </div>
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; line-height: 1.2;">
+                                            Des Solutions <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Sur Mesure</span> pour Vos Besoins
+                                        </h2>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1.5rem;">
+                                            Chaque entreprise est unique. C'est pourquoi nous développons des <strong style="color: var(--hotcodes-accent);">solutions personnalisées</strong> qui s'adaptent parfaitement à vos processus métier, plutôt que de vous forcer à adapter vos processus à un logiciel standard.
+                                        </p>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 2rem;">
+                                            Notre équipe de développeurs expérimentés maîtrise les <strong style="color: white;">technologies modernes</strong> et les meilleures pratiques pour créer des applications robustes, évolutives et maintenables.
+                                        </p>
+
+                                        <div class="intro-stats row g-3">
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
+                                                    <iconify-icon icon="solar:code-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary); margin-bottom: 0.5rem;"></iconify-icon>
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary); margin-bottom: 0.25rem;">50+</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Projets Réalisés</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(138, 43, 226, 0.1); border: 1px solid rgba(138, 43, 226, 0.3); border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
+                                                    <iconify-icon icon="solar:programming-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-secondary); margin-bottom: 0.5rem;"></iconify-icon>
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-secondary); margin-bottom: 0.25rem;">15+</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Technologies</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
+                                                    <iconify-icon icon="solar:star-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-accent); margin-bottom: 0.5rem;"></iconify-icon>
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-accent); margin-bottom: 0.25rem;">100%</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Satisfaction</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="intro-visual" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 20px; padding: 2.5rem; position: relative; overflow: hidden;">
+                                            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, var(--hotcodes-primary), transparent 70%); opacity: 0.2; filter: blur(60px);"></div>
+
+                                            <div class="mb-4">
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.3em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                    Pourquoi Choisir HotCodes ?
+                                                </h4>
+                                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Équipe locale</strong> - Développeurs basés à Dakar, disponibles
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Technologies modernes</strong> - Stack technique à jour
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Code de qualité</strong> - Tests, documentation, bonnes pratiques
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Méthodologie agile</strong> - Livraisons itératives, feedback continu
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 0; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Support long terme</strong> - Maintenance et évolutions assurées
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 1.5: Technologies Stack -->
+                        <section class="dev-tech-section py-5" style="background: var(--bg-darker); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <div class="mb-3">
+                                            <span style="display: inline-block; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: #3B82F6; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                                STACK TECHNOLOGIQUE
+                                            </span>
+                                        </div>
+                                        <h2 class="mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Technologies <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Modernes</span>
+                                        </h2>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Nous maîtrisons les technologies les plus performantes du marché
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Backend -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="tech-category" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div style="font-size: 2.5rem; color: var(--hotcodes-primary); margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:server-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Backend</h4>
+                                            <div class="tech-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                                <span style="background: rgba(255,107,53,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Python</span>
+                                                <span style="background: rgba(255,107,53,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Node.js</span>
+                                                <span style="background: rgba(255,107,53,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Django</span>
+                                                <span style="background: rgba(255,107,53,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">FastAPI</span>
+                                                <span style="background: rgba(255,107,53,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">PHP</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Frontend -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="tech-category" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div style="font-size: 2.5rem; color: var(--hotcodes-secondary); margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:monitor-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Frontend</h4>
+                                            <div class="tech-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                                <span style="background: rgba(138,43,226,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">React</span>
+                                                <span style="background: rgba(138,43,226,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Vue.js</span>
+                                                <span style="background: rgba(138,43,226,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Angular</span>
+                                                <span style="background: rgba(138,43,226,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Next.js</span>
+                                                <span style="background: rgba(138,43,226,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">TypeScript</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mobile -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="tech-category" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div style="font-size: 2.5rem; color: var(--hotcodes-accent); margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:smartphone-2-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Mobile</h4>
+                                            <div class="tech-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                                <span style="background: rgba(59,130,246,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">React Native</span>
+                                                <span style="background: rgba(59,130,246,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Flutter</span>
+                                                <span style="background: rgba(59,130,246,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Swift</span>
+                                                <span style="background: rgba(59,130,246,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Kotlin</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Database & DevOps -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="tech-category" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(40,202,66,0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div style="font-size: 2.5rem; color: #28CA42; margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:database-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Database &amp; DevOps</h4>
+                                            <div class="tech-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                                <span style="background: rgba(40,202,66,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">PostgreSQL</span>
+                                                <span style="background: rgba(40,202,66,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">MongoDB</span>
+                                                <span style="background: rgba(40,202,66,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Docker</span>
+                                                <span style="background: rgba(40,202,66,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">Git</span>
+                                                <span style="background: rgba(40,202,66,0.1); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem;">AWS</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 2: Nos Services de Développement -->
+                        <section class="dev-services-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Nos Services de Développement
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Solutions complètes pour tous vos besoins de développement logiciel
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Service 1: Modules Odoo -->
+                                    <div class="col-lg-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2.5rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                Modules Odoo Personnalisés
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                                                Développement de modules Odoo sur mesure pour étendre les fonctionnalités de votre ERP selon vos besoins métier spécifiques.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Modules métier personnalisés
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Intégrations avec systèmes tiers
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Rapports et tableaux de bord avancés
+                                                </li>
+                                                <li style="padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Automatisation de processus
+                                                </li>
+                                            </ul>
+                                            <div style="padding-top: 1rem; border-top: 1px solid rgba(255, 107, 53, 0.2);">
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin: 0;">
+                                                    <strong style="color: var(--hotcodes-accent);">Technologies:</strong> Python, PostgreSQL, JavaScript, XML, QWeb
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service 2: Applications Web -->
+                                    <div class="col-lg-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2.5rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:monitor-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                Applications Web &amp; E-commerce
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                                                Sites web dynamiques, plateformes e-commerce, portails clients et applications web métier performantes et sécurisées.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Sites web corporate &amp; e-commerce
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Applications web métier (SaaS)
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Portails clients &amp; extranet
+                                                </li>
+                                                <li style="padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    APIs RESTful &amp; GraphQL
+                                                </li>
+                                            </ul>
+                                            <div style="padding-top: 1rem; border-top: 1px solid rgba(255, 107, 53, 0.2);">
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin: 0;">
+                                                    <strong style="color: var(--hotcodes-accent);">Technologies:</strong> React, Vue.js, Node.js, Django, Laravel
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service 3: Applications Mobiles -->
+                                    <div class="col-lg-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2.5rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:smartphone-2-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                Applications Mobiles
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                                                Applications mobiles natives et cross-platform pour iOS et Android, connectées à vos systèmes d'information.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Applications iOS &amp; Android
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Applications cross-platform
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Synchronisation offline
+                                                </li>
+                                                <li style="padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Intégration ERP/CRM
+                                                </li>
+                                            </ul>
+                                            <div style="padding-top: 1rem; border-top: 1px solid rgba(255, 107, 53, 0.2);">
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin: 0;">
+                                                    <strong style="color: var(--hotcodes-accent);">Technologies:</strong> React Native, Flutter, Swift, Kotlin
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service 4: Applications Desktop -->
+                                    <div class="col-lg-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2.5rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:laptop-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                Applications Desktop &amp; Automatisation
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                                                Logiciels desktop multi-plateformes, outils d'automatisation et scripts pour optimiser vos processus métier.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Logiciels Windows/Mac/Linux
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Automatisation de tâches
+                                                </li>
+                                                <li style="margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Outils de gestion de données
+                                                </li>
+                                                <li style="padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.1em;"></iconify-icon>
+                                                    Intégration IA &amp; Machine Learning
+                                                </li>
+                                            </ul>
+                                            <div style="padding-top: 1rem; border-top: 1px solid rgba(255, 107, 53, 0.2);">
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin: 0;">
+                                                    <strong style="color: var(--hotcodes-accent);">Technologies:</strong> Electron, Python, C#, Java, AI/ML
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3: Notre Processus -->
+                        <section class="dev-process-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Notre Processus de Développement
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Une méthodologie éprouvée pour garantir le succès de votre projet
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Étape 1 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="process-step text-center" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; position: relative;">
+                                            <div class="step-number" style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem; font-weight: 700; color: white; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);">
+                                                1
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                Découverte
+                                            </h4>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                                Analyse de vos besoins, définition du périmètre, estimation du budget et planning.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Étape 2 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="process-step text-center" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; position: relative;">
+                                            <div class="step-number" style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem; font-weight: 700; color: white; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);">
+                                                2
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                Conception
+                                            </h4>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                                Architecture technique, maquettes UI/UX, spécifications fonctionnelles détaillées.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Étape 3 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="process-step text-center" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; position: relative;">
+                                            <div class="step-number" style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem; font-weight: 700; color: white; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);">
+                                                3
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                Développement
+                                            </h4>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                                Développement agile par sprints, tests continus, démos régulières et ajustements.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Étape 4 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="process-step text-center" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; position: relative;">
+                                            <div class="step-number" style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem; font-weight: 700; color: white; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);">
+                                                4
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                Déploiement
+                                            </h4>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                                Mise en production, formation utilisateurs, documentation et support post-lancement.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: Portfolio / Exemples de Projets -->
+                        <section id="portfolio" class="dev-portfolio-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Exemples de Réalisations
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Quelques projets que nous avons développés pour nos clients
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Projet 1 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="portfolio-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; overflow: hidden; height: 100%; transition: all 0.3s ease;">
+                                            <div class="portfolio-image" style="height: 200px; background: linear-gradient(135deg, rgba(255, 107, 53, 0.3), rgba(255, 69, 0, 0.3)); display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 4rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <div style="padding: 2rem;">
+                                                <div class="portfolio-category mb-2" style="display: inline-block; background: rgba(255, 107, 53, 0.2); color: var(--hotcodes-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;">
+                                                    Module Odoo
+                                                </div>
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    Gestion de Flotte Automobile
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+                                                    Module complet de gestion de flotte avec suivi GPS, maintenance préventive, gestion carburant et rapports détaillés.
+                                                </p>
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem;">
+                                                    <strong style="color: var(--hotcodes-accent);">Client:</strong> Entreprise de Transport • Dakar
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Projet 2 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="portfolio-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; overflow: hidden; height: 100%; transition: all 0.3s ease;">
+                                            <div class="portfolio-image" style="height: 200px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 107, 53, 0.3)); display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:cart-large-2-bold-duotone" style="font-size: 4rem; color: var(--hotcodes-accent);"></iconify-icon>
+                                            </div>
+                                            <div style="padding: 2rem;">
+                                                <div class="portfolio-category mb-2" style="display: inline-block; background: rgba(255, 215, 0, 0.2); color: var(--hotcodes-accent); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;">
+                                                    E-commerce
+                                                </div>
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    Marketplace Multi-vendeurs
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+                                                    Plateforme e-commerce avec gestion multi-vendeurs, paiement mobile intégré et système de livraison.
+                                                </p>
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem;">
+                                                    <strong style="color: var(--hotcodes-accent);">Client:</strong> Startup E-commerce • Sénégal
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Projet 3 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="portfolio-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; overflow: hidden; height: 100%; transition: all 0.3s ease;">
+                                            <div class="portfolio-image" style="height: 200px; background: linear-gradient(135deg, rgba(255, 107, 53, 0.3), rgba(255, 215, 0, 0.3)); display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:smartphone-2-bold-duotone" style="font-size: 4rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <div style="padding: 2rem;">
+                                                <div class="portfolio-category mb-2" style="display: inline-block; background: rgba(255, 107, 53, 0.2); color: var(--hotcodes-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;">
+                                                    Application Mobile
+                                                </div>
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    App de Gestion Commerciale
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+                                                    Application mobile pour force de vente avec prise de commandes offline, géolocalisation et synchronisation ERP.
+                                                </p>
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem;">
+                                                    <strong style="color: var(--hotcodes-accent);">Client:</strong> Distributeur FMCG • Thiès
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 5: CTA Final -->
+                        <section id="contact" class="dev-cta-section py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; z-index: 1; overflow: hidden;">
+                            <div class="cta-background" style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;none&quot;/%3E%3Cpath d=&quot;M0 0L100 100M100 0L0 100&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;1&quot;/%3E%3C/svg%3E'); opacity: 0.3;">
+                            </div>
+
+                            <div class="container py-5" style="position: relative; z-index: 2;">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 text-center">
+                                        <div class="mb-4" style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:code-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                            Développement Sur Mesure
+                                        </div>
+
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                                            Prêt à Concrétiser Votre Projet ?
+                                        </h2>
+                                        <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin-left: auto; margin-right: auto;">
+                                            Discutons de vos besoins et transformons vos idées en solutions logicielles performantes.
+                                        </p>
+
+                                        <div class="cta-actions d-flex gap-3 justify-content-center flex-wrap mb-4">
+                                            <a href="/contact?service=developpement" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                                <iconify-icon icon="solar:chat-round-call-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Discuter de Mon Projet
+                                            </a>
+                                            <a href="/contact?action=devis-dev" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid white; transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:document-text-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Demander un Devis
+                                            </a>
+                                        </div>
+
+                                        <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-top: 2rem;">
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Consultation gratuite •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Devis détaillé •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Accompagnement complet
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 6: FAQ -->
+                        <section class="dev-faq-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Questions Fréquentes
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Tout ce que vous devez savoir sur nos services de développement
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="faq-list">
+                                            <!-- FAQ 1 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Combien coûte le développement d'une application sur mesure ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Le coût varie selon la complexité du projet, les fonctionnalités requises et le temps de développement. Un module Odoo simple peut démarrer à partir de 500 000 FCFA, tandis qu'une application web complète peut aller de 2 à 10 millions FCFA. Nous établissons un devis détaillé après analyse de vos besoins.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 2 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Combien de temps prend le développement ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    La durée dépend de la portée du projet. Un module Odoo simple : 2-4 semaines. Une application web : 2-4 mois. Une application mobile : 3-6 mois. Nous travaillons en sprints agiles avec des livraisons régulières pour que vous puissiez voir les progrès et donner votre feedback.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 3 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Quelles technologies utilisez-vous ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Nous utilisons des technologies modernes et éprouvées : Python/Odoo, React/Vue.js, Node.js, React Native/Flutter pour mobile, PostgreSQL/MongoDB pour bases de données. Nous choisissons la stack technique la plus adaptée à vos besoins et contraintes.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 4 -->
+                                            <div class="faq-item" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Proposez-vous de la maintenance après le développement ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Oui, nous proposons des contrats de maintenance et support (TMA) avec différents niveaux de service : correctif (bugs), évolutif (nouvelles fonctionnalités), et support utilisateurs. Nous assurons également l'hébergement et la surveillance de vos applications.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>
+

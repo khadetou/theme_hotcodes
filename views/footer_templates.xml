@@ -3,55 +3,38 @@
     <!-- HotCodes Footer Template -->
     <template id="hotcodes_footer" inherit_id="website.layout" name="HotCodes Footer">
         <xpath expr="//div[@id='footer']" position="replace">
-            <footer class="hotcodes-footer" id="footer"
-                style="background: linear-gradient(180deg, var(--bg-darker) 0%, #000000 100%); position: relative; z-index: 1;">
+            <footer class="hotcodes-footer" id="footer" style="background: linear-gradient(180deg, var(--bg-darker) 0%, #000000 100%); position: relative; z-index: 1;">
                 <div class="container py-5">
                     <div class="row g-4 py-4">
                         <!-- Colonne 1: HotCodes Brand -->
                         <div class="col-lg-3 col-md-6">
                             <div class="footer-brand mb-3">
-                                <h3
-                                    style="color: white; font-weight: 600; font-size: 1.5rem; margin-bottom: 1rem;">
-                                    <span
-                                        style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                                        HotCodes
-                                    </span>
-                                </h3>
-                                <p
-                                    style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1.5rem; font-size: 0.95rem;">
+
+                                <a href="/" class="o_footer_logo logo">
+                                    <img src="/website/static/src/img/website_logo.svg" class="img-fluid d-block me-auto" aria-label="Logo of MyCompany" title="MyCompany" role="img" style="width: 50% !important;"/>
+                                </a>
+
+                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1.5rem; font-size: 0.95rem;">
                                     Votre partenaire de confiance pour la transformation digitale au
                                     Sénégal.
                                 </p>
                             </div>
                             <div class="footer-social">
-                                <p
-                                    style="color: rgba(255,255,255,0.7); font-size: 0.875rem; margin-bottom: 0.75rem;">
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.875rem; margin-bottom: 0.75rem;">
                                     Suivez-nous:
                                 </p>
                                 <div class="social-links d-flex gap-3">
-                                    <a href="https://linkedin.com/company/hotcodes" target="_blank"
-                                        rel="noopener"
-                                        style="color: var(--hotcodes-primary); font-size: 1.5rem; transition: all 0.2s ease;"
-                                        title="LinkedIn">
-                                        <i class="fa fa-linkedin"></i>
+                                    <a href="https://linkedin.com/company/hotcodes" target="_blank" rel="noopener" style="color: var(--hotcodes-primary); font-size: 1.5rem; transition: all 0.2s ease;" title="LinkedIn">
+                                        <iconify-icon icon="ph:linkedin-logo-duotone"></iconify-icon>
                                     </a>
-                                    <a href="https://facebook.com/hotcodes" target="_blank"
-                                        rel="noopener"
-                                        style="color: var(--hotcodes-primary); font-size: 1.5rem; transition: all 0.2s ease;"
-                                        title="Facebook">
-                                        <i class="fa fa-facebook"></i>
+                                    <a href="https://facebook.com/hotcodes" target="_blank" rel="noopener" style="color: var(--hotcodes-primary); font-size: 1.5rem; transition: all 0.2s ease;" title="Facebook">
+                                        <iconify-icon icon="ph:facebook-logo-duotone"></iconify-icon>
                                     </a>
-                                    <a href="https://twitter.com/hotcodes" target="_blank"
-                                        rel="noopener"
-                                        style="color: var(--hotcodes-primary); font-size: 1.5rem; transition: all 0.2s ease;"
-                                        title="Twitter">
-                                        <i class="fa fa-twitter"></i>
+                                    <a href="https://twitter.com/hotcodes" target="_blank" rel="noopener" style="color: var(--hotcodes-primary); font-size: 1.5rem; transition: all 0.2s ease;" title="Twitter">
+                                        <iconify-icon icon="ph:twitter-logo-duotone"></iconify-icon>
                                     </a>
-                                    <a href="https://wa.me/221XXXXXXXXX" target="_blank"
-                                        rel="noopener"
-                                        style="color: var(--hotcodes-primary); font-size: 1.5rem; transition: all 0.2s ease;"
-                                        title="WhatsApp">
-                                        <i class="fa fa-whatsapp"></i>
+                                    <a href="https://wa.me/221775867968" target="_blank" rel="noopener" style="color: var(--hotcodes-primary); font-size: 1.5rem; transition: all 0.2s ease;" title="WhatsApp">
+                                        <iconify-icon icon="ph:whatsapp-logo-duotone"></iconify-icon>
                                     </a>
                                 </div>
                             </div>
@@ -59,32 +42,27 @@
 
                         <!-- Colonne 2: Produits -->
                         <div class="col-lg-2 col-md-6">
-                            <h4
-                                style="color: white; font-weight: 500; font-size: 1rem; margin-bottom: 1rem;">
+                            <h4 style="color: white; font-weight: 500; font-size: 1rem; margin-bottom: 1rem;">
                                 Produits
                             </h4>
                             <ul style="list-style: none; padding: 0; margin: 0;">
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/produits/saytu"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/produits/saytu" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Saytu ERP
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/produits/enterprise"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/produits/enterprise" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Odoo Enterprise
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/produits/comparaison"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/produits/comparaison" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Comparer les Offres
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/tarifs"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/tarifs" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Tarifs
                                     </a>
                                 </li>
@@ -93,39 +71,43 @@
 
                         <!-- Colonne 3: Services -->
                         <div class="col-lg-2 col-md-6">
-                            <h4
-                                style="color: white; font-weight: 500; font-size: 1rem; margin-bottom: 1rem;">
+                            <h4 style="color: white; font-weight: 500; font-size: 1rem; margin-bottom: 1rem;">
                                 Services
                             </h4>
                             <ul style="list-style: none; padding: 0; margin: 0;">
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/services/modules-odoo"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
-                                        Modules Odoo
+                                    <a href="/services/developpement-sur-mesure" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        Développement
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/services/applications"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
-                                        Applications
+                                    <a href="/services/applications-natives" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        Applications Natives
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/services/web"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
-                                        Développement Web
+                                    <a href="/services/sites-web" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        Sites Web
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/services/automatisation"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
-                                        Automatisation IA
+                                    <a href="/services/solutions-ia" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        Solutions IA
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/services/conseil"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
-                                        Conseil
+                                    <a href="/services/business-intelligence" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        Business Intelligence
+                                    </a>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="/services/consulting" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        Conseil &amp; Implémentation
+                                    </a>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="/services/support" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        Support &amp; Maintenance
                                     </a>
                                 </li>
                             </ul>
@@ -133,38 +115,32 @@
 
                         <!-- Colonne 4: Entreprise -->
                         <div class="col-lg-2 col-md-6">
-                            <h4
-                                style="color: white; font-weight: 500; font-size: 1rem; margin-bottom: 1rem;">
+                            <h4 style="color: white; font-weight: 500; font-size: 1rem; margin-bottom: 1rem;">
                                 Entreprise
                             </h4>
                             <ul style="list-style: none; padding: 0; margin: 0;">
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/about"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/about" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         À Propos
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/equipe"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/equipe" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Notre Équipe
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/realisations"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/realisations" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Réalisations
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/blog"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/blog" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Blog
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/carriere"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/carriere" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Carrière
                                     </a>
                                 </li>
@@ -173,67 +149,52 @@
 
                         <!-- Colonne 5: Contact -->
                         <div class="col-lg-3 col-md-6">
-                            <h4
-                                style="color: white; font-weight: 500; font-size: 1rem; margin-bottom: 1rem;">
+                            <h4 style="color: white; font-weight: 500; font-size: 1rem; margin-bottom: 1rem;">
                                 Contact
                             </h4>
                             <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li
-                                    style="margin-bottom: 0.75rem; color: rgba(255,255,255,0.7); font-size: 0.95rem;">
-                                    <i class="fa fa-map-marker"
-                                        style="color: var(--hotcodes-primary); margin-right: 0.5rem;"></i>
+                                <li style="margin-bottom: 0.75rem; color: rgba(255,255,255,0.7); font-size: 0.95rem;">
+                                    <iconify-icon icon="solar:map-point-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; font-size: 1.2em; vertical-align: middle;"></iconify-icon>
                                     Dakar, Sénégal </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="tel:+221XXXXXXXXX"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
-                                        <i class="fa fa-phone"
-                                            style="color: var(--hotcodes-primary); margin-right: 0.5rem;"></i>
-                                        +221 XX XXX XX XX </a>
+                                    <a href="tel:+221775867968" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        <iconify-icon icon="solar:phone-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; font-size: 1.2em; vertical-align: middle;"></iconify-icon>
+                                        +221 77 586 79 68 </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="mailto:contact@hotcodes.sn"
-                                        style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
-                                        <i class="fa fa-envelope"
-                                            style="color: var(--hotcodes-primary); margin-right: 0.5rem;"></i>
+                                    <a href="mailto:contact@hotcodes.sn" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        <iconify-icon icon="solar:letter-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; font-size: 1.2em; vertical-align: middle;"></iconify-icon>
                                         contact@hotcodes.sn </a>
                                 </li>
-                                <li
-                                    style="margin-bottom: 0.75rem; color: rgba(255,255,255,0.7); font-size: 0.95rem;">
-                                    <i class="fa fa-clock-o"
-                                        style="color: var(--hotcodes-primary); margin-right: 0.5rem;"></i>
+                                <li style="margin-bottom: 0.75rem; color: rgba(255,255,255,0.7); font-size: 0.95rem;">
+                                    <iconify-icon icon="solar:clock-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; font-size: 1.2em; vertical-align: middle;"></iconify-icon>
                                     Lun-Ven: 8h-18h </li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- Footer Bottom -->
-                    <div class="footer-bottom pt-4 mt-4"
-                        style="border-top: 1px solid rgba(255, 107, 53, 0.15);">
+                    <div class="footer-bottom pt-4 mt-4" style="border-top: 1px solid rgba(255, 107, 53, 0.15);">
                         <div class="row align-items-center">
                             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                                <p
-                                    style="color: rgba(255,255,255,0.6); margin: 0; font-size: 0.875rem;">
+                                <p style="color: rgba(255,255,255,0.6); margin: 0; font-size: 0.875rem;">
                                     © 2024 HotCodes. Tous droits réservés.
                                 </p>
                             </div>
                             <div class="col-md-6 text-center text-md-end">
-                                <ul
-                                    style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+                                <ul style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
                                     <li>
-                                        <a href="/mentions-legales"
-                                            style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
+                                        <a href="/mentions-legales" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
                                             Mentions Légales
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/confidentialite"
-                                            style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
+                                        <a href="/confidentialite" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
                                             Confidentialité
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/cgv"
-                                            style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
+                                        <a href="/cgv" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
                                             CGV
                                         </a>
                                     </li>

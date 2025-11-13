@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="theme_hotcodes.page_sites_web" model="website.page">
+        <field name="name">Sites Web &amp; E-commerce - Développement Web Professionnel</field>
+        <field name="type">qweb</field>
+        <field name="url">/services/sites-web</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.sites_web_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure" style="background: var(--bg-dark);">
+
+                        <!-- Hero Section - Morphing Blobs -->
+                        <t t-call="theme_hotcodes.hotcodes_hero_morphing_blobs">
+                            <t t-set="hero_eyebrow" t-value="'🌐 Développement Web Professionnel'" />
+                            <t t-set="hero_title_part1" t-value="'Sites Web Modernes'" />
+                            <t t-set="hero_title_part2" t-value="'&amp; E-commerce'" />
+                            <t t-set="hero_subtitle" t-value="'Créez une présence en ligne exceptionnelle avec des sites web performants, des boutiques e-commerce optimisées et des plateformes web sur mesure. Solutions modernes adaptées au marché sénégalais.'" />
+                            <t t-set="hero_cta_primary_text" t-value="'Démarrer Mon Projet Web'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contact'" />
+                            <t t-set="hero_cta_secondary_text" t-value="'Voir Nos Réalisations'" />
+                            <t t-set="hero_cta_secondary_url" t-value="'#portfolio'" />
+                            <t t-set="hero_mockup_type" t-value="'browser'" />
+                            <t t-set="hero_browser_url" t-value="'votresite.sn'" />
+                        </t>
+
+                        <!-- Introduction Section with Stats -->
+                        <section class="py-5" style="background: var(--bg-dark); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow Background -->
+                            <div data-motion="morph-blob" style="position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 mb-4 mb-lg-0">
+                                        <h2 data-motion="scroll-fade" style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                            Développement Web <span style="color: var(--hotcodes-primary);">Professionnel</span>
+                                        </h2>
+                                        <p data-motion="scroll-fade" style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                            Nous créons des sites web modernes, rapides et optimisés pour le référencement. De la simple vitrine à la plateforme e-commerce complexe,
+                                            nos solutions web sont conçues pour convertir vos visiteurs en clients.
+                                        </p>
+                                        <div class="row g-4" data-motion="scroll-stagger">
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div data-motion="counter" data-counter-target="100" data-counter-suffix="+" style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--hotcodes-primary);">0</div>
+                                                    <div style="font-size: clamp(0.75rem, 2vw, 0.875rem); color: rgba(255,255,255,0.6);">Sites développés</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div data-motion="counter" data-counter-target="98" data-counter-suffix="%" style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--hotcodes-primary);">0</div>
+                                                    <div style="font-size: clamp(0.75rem, 2vw, 0.875rem); color: rgba(255,255,255,0.6);">Satisfaction client</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--hotcodes-primary);">&lt;2s</div>
+                                                    <div style="font-size: clamp(0.75rem, 2vw, 0.875rem); color: rgba(255,255,255,0.6);">Temps de chargement</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div data-motion="counter" data-counter-target="100" data-counter-suffix="%" style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--hotcodes-primary);">0</div>
+                                                    <div style="font-size: clamp(0.75rem, 2vw, 0.875rem); color: rgba(255,255,255,0.6);">Responsive design</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- Web Development Mockup with Gradient Glow -->
+                                        <div data-motion="scroll-scale" style="position: relative;">
+                                            <!-- Gradient Glow -->
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, rgba(138, 43, 226, 0.1) 50%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+
+                                            <!-- Mockup Card -->
+                                            <div data-motion="card-tilt" style="position: relative; background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.3); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5); transform-style: preserve-3d;">
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                    <iconify-icon icon="solar:global-bold-duotone" style="font-size: 1.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                    <span style="font-weight: 600; color: white;">Site Web Moderne</span>
+                                                </div>
+                                                <div style="text-align: center; padding: 2rem 0;">
+                                                    <iconify-icon icon="solar:monitor-smartphone-bold-duotone" style="font-size: 4rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                    <div style="margin-top: 1rem; font-size: 1.125rem; font-weight: 600; color: white;">Design Responsive</div>
+                                                    <div style="margin-top: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.5);">Desktop • Tablet • Mobile</div>
+                                                    <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">React</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Vue.js</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">WordPress</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Odoo</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Sites Vitrine Feature -->
+                        <section class="py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(10,10,10,1) 100%); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div style="position: absolute; top: 50%; right: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 mb-4 mb-lg-0" data-motion="scroll-fade">
+                                        <div class="mb-3" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 20px;">
+                                            <iconify-icon icon="solar:global-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem;"></iconify-icon>
+                                            <span style="color: var(--hotcodes-primary); font-weight: 600; font-size: 0.875rem;">SITES VITRINE</span>
+                                        </div>
+                                        <h2 style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                            Sites Web <span style="color: var(--hotcodes-primary);">Professionnels</span>
+                                        </h2>
+                                        <p style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                            Créez une présence en ligne professionnelle avec un site vitrine moderne qui reflète l'identité de votre entreprise.
+                                            Design sur mesure, optimisé pour le référencement et la conversion.
+                                        </p>
+                                        <div class="mb-4">
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: var(--hotcodes-primary); font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Design Sur Mesure</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Interface unique adaptée à votre identité visuelle</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: var(--hotcodes-primary); font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">SEO Optimisé</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Référencement naturel pour être visible sur Google</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: var(--hotcodes-primary); font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Performance Maximale</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Chargement ultra-rapide et expérience utilisateur fluide</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div data-motion="scroll-scale" style="position: relative;">
+                                            <!-- Gradient Glow -->
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, rgba(138, 43, 226, 0.1) 50%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+
+                                            <!-- Browser Window Mockup with Website Preview -->
+                                            <div data-motion="card-tilt" style="position: relative; background: rgba(15,15,15,0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.3); border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); max-width: 550px; margin: 0 auto;">
+                                                <!-- Browser Chrome Header -->
+                                                <div style="background: rgba(30,30,30,0.95); padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 0.75rem;">
+                                                    <!-- Traffic Lights -->
+                                                    <div style="display: flex; gap: 0.4rem;">
+                                                        <div style="width: 10px; height: 10px; background: #FF5F57; border-radius: 50%;"></div>
+                                                        <div style="width: 10px; height: 10px; background: #FFBD2E; border-radius: 50%;"></div>
+                                                        <div style="width: 10px; height: 10px; background: #28CA42; border-radius: 50%;"></div>
+                                                    </div>
+                                                    <!-- Address Bar -->
+                                                    <div style="flex: 1; background: rgba(255,255,255,0.05); border-radius: 6px; padding: 0.4rem 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                                                        <iconify-icon icon="solar:lock-bold" style="color: rgba(255,255,255,0.4); font-size: 0.875rem;"></iconify-icon>
+                                                        <span style="color: rgba(255,255,255,0.6); font-size: 0.75rem; font-family: monospace;">votreentreprise.sn</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Website Preview Content -->
+                                                <div style="background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(250,250,250,0.98) 100%); padding: 2.5rem 2rem; min-height: 320px;">
+                                                    <!-- Website Header -->
+                                                    <div style="text-align: center; margin-bottom: 2rem;">
+                                                        <div style="display: inline-block; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); padding: 0.4rem 1rem; border-radius: 6px; margin-bottom: 1rem;">
+                                                            <span style="color: white; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px;">VOTRE LOGO</span>
+                                                        </div>
+                                                        <h1 style="font-size: 1.75rem; font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin: 0 0 0.75rem 0; line-height: 1.2;">
+                                                            Votre Entreprise
+                                                        </h1>
+                                                        <p style="color: rgba(0,0,0,0.6); font-size: 0.9rem; margin: 0; line-height: 1.5;">
+                                                            Présentation professionnelle
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- CTA Buttons -->
+                                                    <div style="display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 2rem;">
+                                                        <div style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); padding: 0.6rem 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(255,107,53,0.3);">
+                                                            <span style="color: white; font-size: 0.8rem; font-weight: 600;">Nos Services</span>
+                                                        </div>
+                                                        <div style="background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); padding: 0.6rem 1.5rem; border-radius: 8px;">
+                                                            <span style="color: var(--hotcodes-primary); font-size: 0.8rem; font-weight: 600;">Contact</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Feature Cards -->
+                                                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;">
+                                                        <div style="background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; padding: 1rem; text-align: center;">
+                                                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, rgba(255,107,53,0.2), rgba(138,43,226,0.2)); border-radius: 8px; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">
+                                                                <iconify-icon icon="solar:star-bold" style="color: var(--hotcodes-primary); font-size: 1rem;"></iconify-icon>
+                                                            </div>
+                                                            <div style="color: rgba(0,0,0,0.8); font-size: 0.7rem; font-weight: 600;">Qualité</div>
+                                                        </div>
+                                                        <div style="background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; padding: 1rem; text-align: center;">
+                                                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, rgba(138,43,226,0.2), rgba(59,130,246,0.2)); border-radius: 8px; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">
+                                                                <iconify-icon icon="solar:rocket-bold" style="color: #8A2BE2; font-size: 1rem;"></iconify-icon>
+                                                            </div>
+                                                            <div style="color: rgba(0,0,0,0.8); font-size: 0.7rem; font-weight: 600;">Rapidité</div>
+                                                        </div>
+                                                        <div style="background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; padding: 1rem; text-align: center;">
+                                                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(255,107,53,0.2)); border-radius: 8px; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">
+                                                                <iconify-icon icon="solar:shield-check-bold" style="color: #3B82F6; font-size: 1rem;"></iconify-icon>
+                                                            </div>
+                                                            <div style="color: rgba(0,0,0,0.8); font-size: 0.7rem; font-weight: 600;">Sécurité</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Tech Stack Footer - INSIDE the mockup -->
+                                                <div style="background: rgba(20,20,20,0.95); padding: 0.75rem 1rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+                                                    <span style="padding: 0.4rem 0.75rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.4); border-radius: 6px; font-size: 0.7rem; color: white; font-weight: 500; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                                        <iconify-icon icon="solar:code-file-bold" style="font-size: 0.875rem;"></iconify-icon>HTML5
+                                                    </span>
+                                                    <span style="padding: 0.4rem 0.75rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.4); border-radius: 6px; font-size: 0.7rem; color: white; font-weight: 500; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                                        <iconify-icon icon="solar:palette-bold" style="font-size: 0.875rem;"></iconify-icon>CSS3
+                                                    </span>
+                                                    <span style="padding: 0.4rem 0.75rem; background: rgba(255,215,0,0.2); border: 1px solid rgba(255,215,0,0.4); border-radius: 6px; font-size: 0.7rem; color: white; font-weight: 500; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                                        <iconify-icon icon="solar:programming-bold" style="font-size: 0.875rem;"></iconify-icon>JavaScript
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- E-commerce Feature -->
+                        <section class="py-5" style="background: rgba(10,10,10,1); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div style="position: absolute; top: 50%; left: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0" data-motion="scroll-fade">
+                                        <div class="mb-3" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 20px;">
+                                            <iconify-icon icon="solar:cart-large-2-bold-duotone" style="color: #8A2BE2; margin-right: 0.5rem;"></iconify-icon>
+                                            <span style="color: #8A2BE2; font-weight: 600; font-size: 0.875rem;">E-COMMERCE</span>
+                                        </div>
+                                        <h2 style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                            Boutiques en Ligne <span style="color: #8A2BE2;">Performantes</span>
+                                        </h2>
+                                        <p style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                            Lancez votre boutique en ligne avec une solution e-commerce complète. Paiement mobile money (Orange Money, Wave),
+                                            gestion des stocks, livraison et tableau de bord complet pour gérer vos ventes.
+                                        </p>
+                                        <div class="mb-4">
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: #8A2BE2; font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Paiement Mobile Money</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Intégration Orange Money, Wave, Free Money</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: #8A2BE2; font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Gestion Complète</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Stocks, commandes, clients, livraisons en un seul endroit</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: #8A2BE2; font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Marketing Intégré</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Promotions, codes promo, email marketing automatisé</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 order-lg-1">
+                                        <div data-motion="scroll-scale" style="position: relative;">
+                                            <!-- Gradient Glow -->
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, rgba(255, 107, 53, 0.1) 50%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+
+                                            <!-- Mockup Card -->
+                                            <div data-motion="card-tilt" style="position: relative; background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(138,43,226,0.3); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                    <iconify-icon icon="solar:shop-bold-duotone" style="font-size: 1.5rem; color: #8A2BE2;"></iconify-icon>
+                                                    <span style="font-weight: 600; color: white;">Boutique E-commerce</span>
+                                                </div>
+                                                <div style="text-align: center; padding: 2rem 0;">
+                                                    <iconify-icon icon="solar:cart-check-bold-duotone" style="font-size: 4rem; color: #8A2BE2;"></iconify-icon>
+                                                    <div style="margin-top: 1rem; font-size: 1.125rem; font-weight: 600; color: white;">Vente en Ligne</div>
+                                                    <div style="margin-top: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.5);">Paiement • Livraison • Gestion</div>
+                                                    <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">WooCommerce</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Shopify</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Odoo</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Custom</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Web Platforms Feature -->
+                        <section class="py-5" style="background: linear-gradient(180deg, rgba(10,10,10,1) 0%, var(--bg-dark) 100%); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div style="position: absolute; top: 50%; right: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 mb-4 mb-lg-0" data-motion="scroll-fade">
+                                        <div class="mb-3" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 20px;">
+                                            <iconify-icon icon="solar:programming-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem;"></iconify-icon>
+                                            <span style="color: var(--hotcodes-primary); font-weight: 600; font-size: 0.875rem;">PLATEFORMES WEB</span>
+                                        </div>
+                                        <h2 style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                            Applications Web <span style="color: var(--hotcodes-primary);">Sur Mesure</span>
+                                        </h2>
+                                        <p style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                            Développement d'applications web complexes et plateformes métier personnalisées. Portails clients, intranets,
+                                            SaaS, marketplaces - nous créons la solution qui correspond exactement à vos besoins.
+                                        </p>
+                                        <div class="mb-4">
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: var(--hotcodes-primary); font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Architecture Scalable</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Solutions qui grandissent avec votre entreprise</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: var(--hotcodes-primary); font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Sécurité Renforcée</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Protection des données et conformité RGPD</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: var(--hotcodes-primary); font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Intégrations API</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Connexion avec vos outils existants</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div data-motion="scroll-scale" style="position: relative;">
+                                            <!-- Gradient Glow -->
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, rgba(138, 43, 226, 0.1) 50%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+
+                                            <!-- Mockup Card -->
+                                            <div data-motion="card-tilt" style="position: relative; background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.3); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                    <iconify-icon icon="solar:server-bold-duotone" style="font-size: 1.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                    <span style="font-weight: 600; color: white;">Plateforme Web</span>
+                                                </div>
+                                                <div style="text-align: center; padding: 2rem 0;">
+                                                    <iconify-icon icon="solar:database-bold-duotone" style="font-size: 4rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                    <div style="margin-top: 1rem; font-size: 1.125rem; font-weight: 600; color: white;">Solution Métier</div>
+                                                    <div style="margin-top: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.5);">Backend • Frontend • API</div>
+                                                    <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Node.js</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Python</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">PHP</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">PostgreSQL</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Technologies Section -->
+                        <section class="py-5" style="background: var(--bg-dark); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(138, 43, 226, 0.08) 0%, transparent 70%); filter: blur(100px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="text-center mb-5" data-motion="scroll-fade">
+                                    <h2 style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1rem;">
+                                        Technologies <span style="color: var(--hotcodes-primary);">Modernes</span>
+                                    </h2>
+                                    <p style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">
+                                        Nous utilisons les dernières technologies web pour créer des sites performants et évolutifs
+                                    </p>
+                                </div>
+
+                                <div class="row g-4" data-motion="scroll-stagger">
+                                    <!-- Frontend Technologies -->
+                                    <div class="col-lg-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2.5rem); height: 100%;">
+                                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                    <iconify-icon icon="solar:palette-bold-duotone" style="font-size: 1.5rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="color: white; font-size: clamp(1.25rem, 3vw, 1.5rem); margin: 0;">Frontend</h3>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; font-size: clamp(0.875rem, 2vw, 1rem);">
+                                                Interfaces utilisateur modernes et réactives
+                                            </p>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">React</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Vue.js</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Next.js</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Tailwind CSS</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Bootstrap</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Backend Technologies -->
+                                    <div class="col-lg-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(138,43,226,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2.5rem); height: 100%;">
+                                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #8A2BE2 0%, var(--hotcodes-accent) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                    <iconify-icon icon="solar:server-bold-duotone" style="font-size: 1.5rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="color: white; font-size: clamp(1.25rem, 3vw, 1.5rem); margin: 0;">Backend</h3>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; font-size: clamp(0.875rem, 2vw, 1rem);">
+                                                Serveurs robustes et APIs performantes
+                                            </p>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Node.js</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Python</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">PHP</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Laravel</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Django</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CMS & E-commerce Platforms -->
+                                    <div class="col-lg-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2.5rem); height: 100%;">
+                                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                    <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 1.5rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="color: white; font-size: clamp(1.25rem, 3vw, 1.5rem); margin: 0;">CMS &amp; Plateformes</h3>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; font-size: clamp(0.875rem, 2vw, 1rem);">
+                                                Systèmes de gestion de contenu populaires
+                                            </p>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">WordPress</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Odoo</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Shopify</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">WooCommerce</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Strapi</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Database & Hosting -->
+                                    <div class="col-lg-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(138,43,226,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2.5rem); height: 100%;">
+                                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #8A2BE2 0%, var(--hotcodes-accent) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                    <iconify-icon icon="solar:database-bold-duotone" style="font-size: 1.5rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="color: white; font-size: clamp(1.25rem, 3vw, 1.5rem); margin: 0;">Base de Données</h3>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; font-size: clamp(0.875rem, 2vw, 1rem);">
+                                                Stockage sécurisé et performant
+                                            </p>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">PostgreSQL</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">MySQL</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">MongoDB</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 500;">Redis</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Use Cases Section -->
+                        <section class="py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(10,10,10,1) 100%); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div style="position: absolute; bottom: -200px; right: 50%; transform: translateX(50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="text-center mb-5" data-motion="scroll-fade">
+                                    <h2 style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1rem;">
+                                        Cas d'<span style="color: var(--hotcodes-primary);">Utilisation</span>
+                                    </h2>
+                                    <p style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">
+                                        Des solutions web adaptées à tous les secteurs d'activité
+                                    </p>
+                                </div>
+
+                                <div class="row g-4" data-motion="scroll-stagger">
+                                    <!-- Use Case 1 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2rem); height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:shop-2-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: clamp(1.125rem, 2.5vw, 1.25rem); margin-bottom: 1rem; font-weight: 600;">Commerce &amp; Retail</h3>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: clamp(0.875rem, 2vw, 1rem); line-height: 1.7; margin: 0;">
+                                                Boutiques en ligne, marketplaces, catalogues produits avec paiement mobile money intégré
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 2 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2rem); height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8A2BE2 0%, var(--hotcodes-accent) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:buildings-2-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: clamp(1.125rem, 2.5vw, 1.25rem); margin-bottom: 1rem; font-weight: 600;">Entreprises &amp; Services</h3>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: clamp(0.875rem, 2vw, 1rem); line-height: 1.7; margin: 0;">
+                                                Sites vitrine professionnels, portails clients, systèmes de réservation en ligne
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 3 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2rem); height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:book-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: clamp(1.125rem, 2.5vw, 1.25rem); margin-bottom: 1rem; font-weight: 600;">Éducation &amp; Formation</h3>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: clamp(0.875rem, 2vw, 1rem); line-height: 1.7; margin: 0;">
+                                                Plateformes e-learning, sites d'écoles, systèmes de gestion des étudiants
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 4 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2rem); height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8A2BE2 0%, var(--hotcodes-accent) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:health-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: clamp(1.125rem, 2.5vw, 1.25rem); margin-bottom: 1rem; font-weight: 600;">Santé &amp; Bien-être</h3>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: clamp(0.875rem, 2vw, 1rem); line-height: 1.7; margin: 0;">
+                                                Portails patients, prise de rendez-vous en ligne, téléconsultation
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 5 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2rem); height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:home-smile-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: clamp(1.125rem, 2.5vw, 1.25rem); margin-bottom: 1rem; font-weight: 600;">Immobilier</h3>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: clamp(0.875rem, 2vw, 1rem); line-height: 1.7; margin: 0;">
+                                                Portails immobiliers, gestion de biens, visites virtuelles 360°
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 6 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2rem); height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8A2BE2 0%, var(--hotcodes-accent) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:users-group-rounded-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: clamp(1.125rem, 2.5vw, 1.25rem); margin-bottom: 1rem; font-weight: 600;">Associations &amp; ONG</h3>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: clamp(0.875rem, 2vw, 1rem); line-height: 1.7; margin: 0;">
+                                                Sites institutionnels, plateformes de dons, gestion de membres
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Final CTA Section -->
+                        <section class="py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 50%, var(--hotcodes-accent) 100%); position: relative; overflow: hidden;">
+                            <!-- Animated Background Pattern -->
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 30px 30px; opacity: 0.3;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="text-center" data-motion="scroll-fade">
+                                    <h2 style="font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; color: white; margin-bottom: 1.5rem; line-height: 1.2;">
+                                        Prêt à Lancer Votre<br/>
+Projet Web ?
+                                    </h2>
+                                    <p style="font-size: clamp(1rem, 2.5vw, 1.25rem); color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto 3rem; line-height: 1.7;">
+                                        Discutons de votre projet et créons ensemble un site web qui propulsera votre activité
+                                    </p>
+                                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                        <a href="/contact" data-motion="magnetic" data-magnetic-strength="0.3" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: var(--hotcodes-primary); padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem); border-radius: 16px; text-decoration: none; font-weight: 700; font-size: clamp(1rem, 2vw, 1.25rem); box-shadow: 0 20px 60px rgba(0,0,0,0.3); transition: all 0.3s ease;">
+                                            <span>Démarrer Mon Projet</span>
+                                            <iconify-icon icon="solar:arrow-right-bold" style="font-size: clamp(1.25rem, 2vw, 1.5rem);"></iconify-icon>
+                                        </a>
+                                        <a href="#portfolio" data-motion="magnetic" data-magnetic-strength="0.2" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.15); backdrop-filter: blur(20px); color: white; padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem); border: 2px solid rgba(255,255,255,0.3); border-radius: 16px; text-decoration: none; font-weight: 700; font-size: clamp(1rem, 2vw, 1.25rem); transition: all 0.3s ease;">
+                                            <iconify-icon icon="solar:gallery-bold" style="font-size: clamp(1.25rem, 2vw, 1.5rem);"></iconify-icon>
+                                            <span>Voir Nos Réalisations</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!--    Template for customizing layout-->
-    <template id="hotcodes_custom_layout" inherit_id="website.layout"
-        name="Custom Layout">
+    <template id="hotcodes_custom_layout" inherit_id="website.layout" name="Custom Layout">
 
         <xpath expr="//head" position="inside">
-            <!-- <script
-                        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script> -->
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script> -->
             <script src="https://cdn.jsdelivr.net/npm/motion@11/dist/motion.js"></script>
+            <!-- Add Iconify CDN for backend -->
+            <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+
+            <!-- Force dark background for entire page -->
+            <style>
+                body, #wrapwrap, #wrapwrap > main {
+                    background-color: #0a0a0a !important;
+                    background: #0a0a0a !important;
+                }
+            </style>
         </xpath>
 
     </template>

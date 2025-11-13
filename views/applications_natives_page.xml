@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="theme_hotcodes.page_applications_natives" model="website.page">
+        <field name="name">Applications Natives - Développement Mobile &amp; Desktop</field>
+        <field name="type">qweb</field>
+        <field name="url">/services/applications-natives</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.applications_natives_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <!-- Hero Section - Morphing Blobs -->
+                        <t t-call="theme_hotcodes.hotcodes_hero_morphing_blobs">
+                            <t t-set="hero_eyebrow" t-value="'✨ Développement Mobile &amp; Desktop'" />
+                            <t t-set="hero_title_part1" t-value="'Applications Natives'" />
+                            <t t-set="hero_title_part2" t-value="'Haute Performance'" />
+                            <t t-set="hero_subtitle" t-value="'Créez des applications mobiles et desktop exceptionnelles pour iOS, Android, Windows, macOS et Linux. Solutions natives optimisées qui offrent une expérience utilisateur fluide et performante.'" />
+                            <t t-set="hero_cta_primary_text" t-value="'Démarrer Mon Projet'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contact'" />
+                            <t t-set="hero_cta_secondary_text" t-value="'Voir Nos Réalisations'" />
+                            <t t-set="hero_cta_secondary_url" t-value="'#portfolio'" />
+                        </t>
+                        <!-- Introduction Section with Stats -->
+                        <section class="py-5" style="background: var(--bg-dark); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow Background -->
+                            <div data-motion="morph-blob" style="position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 mb-4 mb-lg-0">
+                                        <h2 data-motion="scroll-fade" style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                            Développement <span style="color: var(--hotcodes-primary);">Multi-Plateforme</span> Expert
+                                        </h2>
+                                        <p data-motion="scroll-fade" style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                            Nous créons des applications natives et cross-platform de haute qualité pour iOS, Android et Desktop.
+                                            Nos solutions combinent performance native, design moderne et expérience utilisateur exceptionnelle.
+                                        </p>
+                                        <div class="row g-4" data-motion="scroll-stagger">
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div data-motion="counter" data-counter-target="50" data-counter-suffix="+" style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--hotcodes-primary);">0</div>
+                                                    <div style="font-size: clamp(0.75rem, 2vw, 0.875rem); color: rgba(255,255,255,0.6);">Apps développées</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div data-motion="counter" data-counter-target="95" data-counter-suffix="%" style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--hotcodes-primary);">0</div>
+                                                    <div style="font-size: clamp(0.75rem, 2vw, 0.875rem); color: rgba(255,255,255,0.6);">Satisfaction client</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--hotcodes-primary);">5+</div>
+                                                    <div style="font-size: clamp(0.75rem, 2vw, 0.875rem); color: rgba(255,255,255,0.6);">Plateformes supportées</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div data-motion="counter" data-counter-target="100" data-counter-suffix="%" style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--hotcodes-primary);">0</div>
+                                                    <div style="font-size: clamp(0.75rem, 2vw, 0.875rem); color: rgba(255,255,255,0.6);">Code natif optimisé</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- Mobile App Mockup with Gradient Glow -->
+                                        <div data-motion="scroll-scale" style="position: relative;">
+                                            <!-- Gradient Glow -->
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, rgba(138, 43, 226, 0.1) 50%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+
+                                            <!-- Mockup Card -->
+                                            <div data-motion="card-tilt" style="position: relative; background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.3); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5); transform-style: preserve-3d;">
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                    <iconify-icon icon="solar:smartphone-bold-duotone" style="font-size: 1.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                    <span style="font-weight: 600; color: white;">Application Mobile</span>
+                                                </div>
+                                                <div style="text-align: center; padding: 2rem 0;">
+                                                    <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 4rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                    <div style="margin-top: 1rem; font-size: 1.125rem; font-weight: 600; color: white;">Interface Native</div>
+                                                    <div style="margin-top: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.5);">Performance • Design • UX</div>
+                                                    <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Swift</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Kotlin</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">React Native</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Flutter</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- iOS & Android Development Feature -->
+                        <section class="py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(10,10,10,1) 100%); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div style="position: absolute; top: 50%; right: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 mb-4 mb-lg-0" data-motion="scroll-fade">
+                                        <div class="mb-3" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 20px;">
+                                            <iconify-icon icon="solar:smartphone-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem;"></iconify-icon>
+                                            <span style="color: var(--hotcodes-primary); font-weight: 600; font-size: 0.875rem;">MOBILE DEVELOPMENT</span>
+                                        </div>
+                                        <h2 style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                            Applications <span style="color: var(--hotcodes-primary);">iOS &amp; Android</span> Natives
+                                        </h2>
+                                        <p style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                            Développement d'applications mobiles natives avec Swift pour iOS et Kotlin pour Android, ou solutions cross-platform avec React Native et Flutter pour un déploiement rapide sur les deux plateformes.
+                                        </p>
+                                        <div class="mb-4">
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: var(--hotcodes-primary); font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Performance Native</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Accès complet aux APIs natives pour des performances optimales</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: var(--hotcodes-primary); font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Design Adaptatif</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Interfaces respectant les guidelines iOS et Material Design</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: var(--hotcodes-primary); font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Intégrations Avancées</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Push notifications, géolocalisation, caméra, paiements in-app</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div data-motion="scroll-scale" style="position: relative;">
+                                            <!-- Gradient Glow -->
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, rgba(138, 43, 226, 0.1) 50%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+
+                                            <!-- Mockup Card -->
+                                            <div data-motion="card-tilt" style="position: relative; background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.3); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                    <iconify-icon icon="solar:code-bold-duotone" style="font-size: 1.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                    <span style="font-weight: 600; color: white;">Mobile App Code</span>
+                                                </div>
+                                                <div style="background: rgba(0,0,0,0.5); border-radius: 12px; padding: 1.5rem; font-family: 'Courier New', monospace; font-size: 0.875rem;">
+                                                    <div style="color: #8A2BE2; margin-bottom: 0.5rem;">// Swift - iOS</div>
+                                                    <div style="color: #FF6B35;">class</div>
+                                                    <div style="color: white; display: inline;"> AppViewController {</div>
+                                                    <div style="color: rgba(255,255,255,0.7); margin-left: 1rem;">override func viewDidLoad() {</div>
+                                                    <div style="color: rgba(255,255,255,0.5); margin-left: 2rem;">super.viewDidLoad()</div>
+                                                    <div style="color: rgba(255,255,255,0.7); margin-left: 1rem;">}</div>
+                                                    <div style="color: white;">}</div>
+                                                    <div style="height: 1rem;"></div>
+                                                    <div style="color: #8A2BE2; margin-bottom: 0.5rem;">// Kotlin - Android</div>
+                                                    <div style="color: #FF6B35;">class</div>
+                                                    <div style="color: white; display: inline;"> MainActivity : Activity() {</div>
+                                                    <div style="color: rgba(255,255,255,0.7); margin-left: 1rem;">override fun onCreate() {</div>
+                                                    <div style="color: rgba(255,255,255,0.5); margin-left: 2rem;">super.onCreate()</div>
+                                                    <div style="color: rgba(255,255,255,0.7); margin-left: 1rem;">}</div>
+                                                    <div style="color: white;">}</div>
+                                                </div>
+                                                <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                                    <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">
+                                                        <iconify-icon icon="solar:apple-bold" style="margin-right: 0.25rem;"></iconify-icon>iOS
+                                                    </span>
+                                                    <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">
+                                                        <iconify-icon icon="solar:android-bold" style="margin-right: 0.25rem;"></iconify-icon>Android
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Desktop Development Feature -->
+                        <section class="py-5" style="background: rgba(10,10,10,1); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div style="position: absolute; top: 50%; left: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0" data-motion="scroll-fade">
+                                        <div class="mb-3" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 20px;">
+                                            <iconify-icon icon="solar:monitor-bold-duotone" style="color: #8A2BE2; margin-right: 0.5rem;"></iconify-icon>
+                                            <span style="color: #8A2BE2; font-weight: 600; font-size: 0.875rem;">DESKTOP DEVELOPMENT</span>
+                                        </div>
+                                        <h2 style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                            Applications <span style="color: #8A2BE2;">Desktop</span> Multi-OS
+                                        </h2>
+                                        <p style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                            Créez des applications desktop professionnelles pour Windows, macOS et Linux. Solutions natives avec .NET, WPF, Swift ou cross-platform avec Electron et Qt pour une portabilité maximale.
+                                        </p>
+                                        <div class="mb-4">
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: #8A2BE2; font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Multi-Plateforme</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Un seul code pour Windows, macOS et Linux avec Electron</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start mb-3">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: #8A2BE2; font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Interface Moderne</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">UI/UX professionnelle avec frameworks modernes</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <iconify-icon icon="solar:check-circle-bold" style="color: #8A2BE2; font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Intégration Système</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; margin: 0;">Accès fichiers, notifications, menus système, auto-updates</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 order-lg-1">
+                                        <div data-motion="scroll-scale" style="position: relative;">
+                                            <!-- Gradient Glow -->
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, rgba(255, 107, 53, 0.1) 50%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+
+                                            <!-- Mockup Card -->
+                                            <div data-motion="card-tilt" style="position: relative; background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(138,43,226,0.3); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                    <iconify-icon icon="solar:laptop-macbook-bold-duotone" style="font-size: 1.5rem; color: #8A2BE2;"></iconify-icon>
+                                                    <span style="font-weight: 600; color: white;">Desktop Application</span>
+                                                </div>
+                                                <div style="text-align: center; padding: 2rem 0;">
+                                                    <iconify-icon icon="solar:window-frame-bold-duotone" style="font-size: 4rem; color: #8A2BE2;"></iconify-icon>
+                                                    <div style="margin-top: 1rem; font-size: 1.125rem; font-weight: 600; color: white;">Interface Desktop</div>
+                                                    <div style="margin-top: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.5);">Windows • macOS • Linux</div>
+                                                    <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">.NET/WPF</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Electron</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Qt</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Swift</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Use Cases Section -->
+                        <section class="py-5" style="background: var(--bg-dark); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 800px; height: 400px; background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%); filter: blur(100px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="text-center mb-5">
+                                    <h2 data-motion="scroll-fade" style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1rem;">
+                                        Cas d'<span style="color: var(--hotcodes-primary);">Usage</span>
+                                    </h2>
+                                    <p data-motion="scroll-fade" style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">
+                                        Des applications natives pour tous vos besoins métier
+                                    </p>
+                                </div>
+
+                                <div class="row g-4" data-motion="scroll-stagger">
+                                    <!-- Use Case 1 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: rgba(255,107,53,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:cart-large-2-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem; font-weight: 600;">E-Commerce Mobile</h3>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+                                                Applications de vente en ligne avec paiement sécurisé, gestion de panier, notifications push et suivi de commandes.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 2 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: rgba(138,43,226,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:health-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem; font-weight: 600;">Santé &amp; Fitness</h3>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+                                                Apps de suivi santé, fitness tracking, intégration capteurs, synchronisation cloud et tableaux de bord personnalisés.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 3 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: rgba(255,107,53,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:chart-2-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem; font-weight: 600;">Gestion d'Entreprise</h3>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+                                                Solutions CRM, ERP mobile, gestion de projets, suivi d'équipe et reporting en temps réel pour PME et grandes entreprises.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 4 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: rgba(138,43,226,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:book-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem; font-weight: 600;">Éducation &amp; E-Learning</h3>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+                                                Plateformes d'apprentissage, cours vidéo, quiz interactifs, suivi de progression et certifications en ligne.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 5 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: rgba(255,107,53,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:map-point-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem; font-weight: 600;">Géolocalisation &amp; Maps</h3>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+                                                Apps de navigation, livraison, tracking GPS, cartes interactives et services basés sur la localisation.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Use Case 6 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div style="width: 60px; height: 60px; background: rgba(138,43,226,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:camera-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem; font-weight: 600;">Médias &amp; Streaming</h3>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+                                                Applications de streaming vidéo/audio, édition photo/vidéo, galeries et partage de contenu multimédia.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Technologies Section -->
+                        <section class="py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(10,10,10,1) 100%); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div style="position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="text-center mb-5">
+                                    <h2 data-motion="scroll-fade" style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1rem;">
+                                        Technologies &amp; <span style="color: var(--hotcodes-primary);">Frameworks</span>
+                                    </h2>
+                                    <p data-motion="scroll-fade" style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">
+                                        Nous utilisons les technologies les plus modernes et performantes
+                                    </p>
+                                </div>
+
+                                <div class="row g-4" data-motion="scroll-stagger">
+                                    <!-- Mobile Technologies -->
+                                    <div class="col-lg-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:smartphone-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                <h3 style="color: white; font-size: 1.5rem; margin: 0; font-weight: 600;">Mobile</h3>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Swift (iOS)</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Kotlin (Android)</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">React Native</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Flutter</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Xamarin</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Desktop Technologies -->
+                                    <div class="col-lg-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:monitor-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
+                                                <h3 style="color: white; font-size: 1.5rem; margin: 0; font-weight: 600;">Desktop</h3>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">.NET / WPF</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Electron</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Qt</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Swift (macOS)</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">GTK</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Backend & APIs -->
+                                    <div class="col-lg-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:server-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                <h3 style="color: white; font-size: 1.5rem; margin: 0; font-weight: 600;">Backend &amp; APIs</h3>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Node.js</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Python</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Firebase</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">GraphQL</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">REST APIs</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cloud & DevOps -->
+                                    <div class="col-lg-6">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <iconify-icon icon="solar:cloud-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
+                                                <h3 style="color: white; font-size: 1.5rem; margin: 0; font-weight: 600;">Cloud &amp; DevOps</h3>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">AWS</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Google Cloud</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Azure</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">Docker</span>
+                                                <span style="padding: 0.75rem 1.25rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; color: white; font-size: 0.9375rem; font-weight: 500;">CI/CD</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Final CTA Section -->
+                        <section class="py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); position: relative; overflow: hidden;">
+                            <!-- Animated Background Pattern -->
+                            <div style="position: absolute; inset: 0; opacity: 0.1; background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.1) 35px, rgba(255,255,255,0.1) 70px);"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="text-center">
+                                    <h2 data-motion="scroll-fade" style="font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: white; margin-bottom: 1rem;">
+                                        Prêt à Créer Votre Application ?
+                                    </h2>
+                                    <p data-motion="scroll-fade" style="font-size: clamp(1rem, 2.5vw, 1.125rem); color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem;">
+                                        Discutons de votre projet et créons ensemble une application native performante et innovante
+                                    </p>
+                                    <div data-motion="scroll-fade" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                        <a href="/contact" data-motion="magnetic" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.3s ease;">
+                                            <iconify-icon icon="solar:chat-round-call-bold"></iconify-icon>
+                                            Démarrer Mon Projet
+                                        </a>
+                                        <a href="#portfolio" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
+                                            <iconify-icon icon="solar:gallery-bold"></iconify-icon>
+                                            Voir Nos Réalisations
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>

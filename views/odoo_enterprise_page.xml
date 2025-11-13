@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="theme_hotcodes.page_odoo_enterprise" model="website.page">
+        <field name="name">Odoo Enterprise - Solution ERP Complète</field>
+        <field name="type">qweb</field>
+        <field name="url">/produits/odoo-enterprise</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.odoo_enterprise_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure" style="background: var(--bg-dark);">
+
+                        <!-- Hero Section - Split Screen with ERP Dashboard Mockup -->
+                        <t t-call="theme_hotcodes.hotcodes_hero_split_screen">
+                            <t t-set="hero_eyebrow" t-value="'🏆 Solution ERP Premium'" />
+                            <t t-set="hero_title_part1" t-value="'Odoo Enterprise'" />
+                            <t t-set="hero_title_part2" t-value="'La Puissance Complète'" />
+                            <t t-set="hero_title_part3" t-value="'Pour Votre Entreprise'" />
+                            <t t-set="hero_subtitle" t-value="'La plateforme ERP la plus complète du marché avec 50+ modules intégrés. Support premium, mises à jour automatiques et hébergement cloud sécurisé.'" />
+                            <t t-set="hero_description" t-value="'De la gestion des ventes à la comptabilité, du CRM aux ressources humaines - gérez tous les aspects de votre entreprise dans une seule plateforme puissante et intuitive.'" />
+                            <t t-set="hero_cta_primary_text" t-value="'Demander un Devis'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/produits/odoo-enterprise#devis'" />
+                            <t t-set="hero_cta_secondary_text" t-value="'Voir la Démo'" />
+                            <t t-set="hero_cta_secondary_url" t-value="'/produits/odoo-enterprise#demo'" />
+                            <t t-set="hero_note" t-value="'✓ 7M+ utilisateurs • ✓ 120+ pays • ✓ Support 24/7 • ✓ Accompagnement HotCodes'" />
+                        </t>
+
+                        <!-- Section 1: Qu'est-ce qu'Odoo Enterprise ? -->
+                        <section class="enterprise-intro-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row align-items-center g-5">
+                                    <div class="col-lg-6">
+                                        <div class="intro-badge mb-3" style="display: inline-block; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:crown-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                            Solution Premium pour Entreprises
+                                        </div>
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; line-height: 1.2;">
+                                            Pourquoi choisir <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Odoo Enterprise</span> ?
+                                        </h2>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1.5rem;">
+                                            Odoo Enterprise est la version premium de l'ERP le plus populaire au monde. Avec <strong style="color: var(--hotcodes-accent);">plus de 7 millions d'utilisateurs</strong> dans 120+ pays, Odoo Enterprise offre une solution complète pour gérer tous les aspects de votre entreprise.
+                                        </p>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 2rem;">
+                                            <strong style="color: white;">HotCodes</strong> est un expert indépendant spécialisé dans l'implémentation, la personnalisation et l'optimisation d'Odoo Enterprise pour les entreprises sénégalaises et africaines.
+                                        </p>
+
+                                        <div class="intro-stats row g-3">
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 12px; padding: 1.5rem;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary); margin-bottom: 0.25rem;">50+</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Modules Disponibles</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 215, 0, 0.1); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 12px; padding: 1.5rem;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-accent); margin-bottom: 0.25rem;">24/7</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Support Premium</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 12px; padding: 1.5rem;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary); margin-bottom: 0.25rem;">7M+</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Utilisateurs</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="intro-visual" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 20px; padding: 2.5rem; position: relative; overflow: hidden;">
+                                            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, var(--hotcodes-primary), transparent 70%); opacity: 0.2; filter: blur(60px);"></div>
+
+                                            <div class="mb-4">
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.3em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                    Avantages Odoo Enterprise
+                                                </h4>
+                                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Tous les modules</strong> - Accès illimité à 50+ applications
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Support officiel Odoo</strong> - Assistance directe de l'éditeur
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Mises à jour automatiques</strong> - Nouvelles fonctionnalités chaque trimestre
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Hébergement cloud</strong> - Infrastructure sécurisée et performante
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 0; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Accompagnement HotCodes</strong> - Expertise locale et support en français
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 2: Modules Principaux -->
+                        <section class="enterprise-features-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            50+ Modules pour Gérer Toute Votre Entreprise
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Une suite complète d'applications intégrées pour tous vos besoins métier
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Module 1: Ventes &amp; CRM -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:chart-2-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Ventes &amp; CRM Avancé
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Pipeline visuel, prévisions de ventes, gestion des commissions, portail client, signatures électroniques.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Automatisation des ventes</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Prévisions intelligentes</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Portail client intégré</li>
+                                                <li>✓ Signatures électroniques</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 2: Comptabilité Avancée -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:calculator-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Comptabilité &amp; Finance
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Comptabilité analytique, budgets, immobilisations, consolidation multi-sociétés, rapports financiers avancés.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Comptabilité analytique</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Gestion budgétaire</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Multi-devises &amp; multi-sociétés</li>
+                                                <li>✓ Rapports personnalisables</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 3: Inventaire &amp; Logistique -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Inventaire &amp; Logistique
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Gestion avancée des stocks, codes-barres, lots &amp; numéros de série, dropshipping, gestion d'entrepôts.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Codes-barres &amp; RFID</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Traçabilité lots/séries</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Multi-entrepôts avancé</li>
+                                                <li>✓ Dropshipping &amp; cross-docking</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 4: Fabrication &amp; MRP -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:settings-minimalistic-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Fabrication (MRP)
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Ordres de fabrication, nomenclatures, planification de production, gestion de la qualité, maintenance.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Nomenclatures multi-niveaux</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Planification MRP</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Contrôle qualité</li>
+                                                <li>✓ Maintenance préventive</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 5: Ressources Humaines -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:users-group-two-rounded-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Ressources Humaines
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Recrutement, congés, notes de frais, évaluations, paie, planning, gestion des talents.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Recrutement &amp; onboarding</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Gestion des congés</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Notes de frais</li>
+                                                <li>✓ Évaluations &amp; formations</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 6: E-commerce &amp; Marketing -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:cart-large-2-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                E-commerce &amp; Marketing
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Boutique en ligne, email marketing, marketing automation, événements, SMS marketing, réseaux sociaux.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Site e-commerce intégré</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Email &amp; SMS marketing</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Marketing automation</li>
+                                                <li>✓ Gestion d'événements</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3: Tarification -->
+                        <section id="devis" class="enterprise-pricing-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Tarification Odoo Enterprise
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Tarification officielle Odoo + accompagnement HotCodes
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4 justify-content-center">
+                                    <!-- Tarif Standard -->
+                                    <div class="col-lg-5 col-md-6">
+                                        <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative;">
+                                            <div class="mb-4">
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                                    Licence Odoo Enterprise
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                                                    Tarification officielle par utilisateur
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <div style="font-size: 2.5rem; font-weight: 700; color: var(--hotcodes-primary); line-height: 1;">
+                                                    Sur devis
+                                                </div>
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-top: 0.5rem;">
+                                                    Selon le nombre d'utilisateurs et modules
+                                                </p>
+                                            </div>
+
+                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Tous les modules Odoo
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Support officiel Odoo
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Mises à jour automatiques
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Hébergement cloud sécurisé
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Stockage illimité
+                                                </li>
+                                            </ul>
+
+                                            <a href="/contact?service=odoo-enterprise" style="display: block; background: rgba(255, 107, 53, 0.1); color: var(--hotcodes-primary); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; border: 1px solid var(--hotcodes-primary); transition: all 0.3s ease;">
+                                                Demander un Devis
+                                                <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pack Accompagnement HotCodes -->
+                                    <div class="col-lg-5 col-md-6">
+                                        <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 2px solid var(--hotcodes-primary); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative; transform: scale(1.05);">
+                                            <div class="product-badge" style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);">
+                                                ⭐ RECOMMANDÉ
+                                            </div>
+
+                                            <div class="mb-4 mt-3">
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                                    Licence + Accompagnement
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                                                    Solution clé en main avec HotCodes
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <div style="font-size: 2.5rem; font-weight: 700; color: var(--hotcodes-primary); line-height: 1;">
+                                                    Sur devis
+                                                </div>
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-top: 0.5rem;">
+                                                    Licence Odoo + services HotCodes
+                                                </p>
+                                            </div>
+
+                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Tout Odoo Enterprise inclus
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Implémentation complète
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Personnalisation &amp; développement
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Formation complète de l'équipe
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Support prioritaire HotCodes
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Maintenance &amp; optimisation
+                                                </li>
+                                            </ul>
+
+                                            <a href="/contact?service=odoo-enterprise-pack" style="display: block; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);">
+                                                Planifier un Rendez-vous
+                                                <iconify-icon icon="solar:calendar-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-lg-10 mx-auto">
+                                        <div class="text-center" style="background: rgba(255, 107, 53, 0.05); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 16px; padding: 2rem;">
+                                            <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:shield-check-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.5em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                <strong style="color: white;">Expert Odoo Enterprise</strong> • Implémentation garantie • Support en français • Formation incluse • Maintenance assurée • Accompagnement local
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: Témoignages -->
+                        <section class="enterprise-testimonials-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Ils Nous Font Confiance
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Des entreprises sénégalaises qui ont transformé leur gestion avec Odoo Enterprise
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Témoignage 1 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                                                "Odoo Enterprise a transformé notre entreprise. L'accompagnement de HotCodes a été exceptionnel, de l'implémentation à la formation de nos équipes."
+                                            </p>
+                                            <div class="testimonial-author">
+                                                <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
+                                                    Ibrahima Sarr
+                                                </p>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    Directeur Général, Groupe Industriel • Dakar
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Témoignage 2 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                                                "Une solution complète qui couvre tous nos besoins : ventes, stocks, comptabilité, RH. L'équipe HotCodes est toujours disponible et réactive."
+                                            </p>
+                                            <div class="testimonial-author">
+                                                <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
+                                                    Aïssatou Diop
+                                                </p>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    DRH, Entreprise de Distribution • Thiès
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Témoignage 3 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                                                "Le ROI a été immédiat. Nous avons gagné en productivité et en visibilité sur notre activité. Un investissement qui en vaut vraiment la peine."
+                                            </p>
+                                            <div class="testimonial-author">
+                                                <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
+                                                    Cheikh Mbaye
+                                                </p>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    CFO, Société de Services • Saint-Louis
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 5: CTA Final -->
+                        <section id="demo" class="enterprise-cta-section py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; z-index: 1; overflow: hidden;">
+                            <div class="cta-background" style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;none&quot;/%3E%3Cpath d=&quot;M0 0L100 100M100 0L0 100&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;1&quot;/%3E%3C/svg%3E'); opacity: 0.3;">
+                            </div>
+
+                            <div class="container py-5" style="position: relative; z-index: 2;">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 text-center">
+                                        <div class="mb-4" style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:crown-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                            Expert Odoo Enterprise
+                                        </div>
+
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                                            Prêt à Transformer Votre Entreprise ?
+                                        </h2>
+                                        <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin-left: auto; margin-right: auto;">
+                                            Discutons de vos besoins et découvrez comment Odoo Enterprise peut révolutionner votre gestion.
+                                        </p>
+
+                                        <div class="cta-actions d-flex gap-3 justify-content-center flex-wrap mb-4">
+                                            <a href="/contact?action=devis-enterprise" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                                <iconify-icon icon="solar:document-text-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Demander un Devis
+                                            </a>
+                                            <a href="/contact?action=demo-enterprise" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid white; transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:videocamera-record-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Voir une Démo
+                                            </a>
+                                        </div>
+
+                                        <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-top: 2rem;">
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Consultation gratuite •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Devis personnalisé •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Accompagnement complet
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 6: FAQ -->
+                        <section class="enterprise-faq-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Questions Fréquentes
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Tout ce que vous devez savoir sur Odoo Enterprise
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="faq-list">
+                                            <!-- FAQ 1 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Quelle est la différence entre Odoo Enterprise et Saytu ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Odoo Enterprise offre tous les modules avancés (50+), le support officiel Odoo, et des fonctionnalités premium. Saytu est basé sur Odoo Community avec les modules essentiels, idéal pour les PME/TPE à budget limité. Enterprise convient aux moyennes et grandes entreprises avec des besoins complexes.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 2 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Comment est calculé le prix d'Odoo Enterprise ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Le prix est basé sur le nombre d'utilisateurs actifs et les modules utilisés. Nous établissons un devis personnalisé selon vos besoins spécifiques. Contactez-nous pour une estimation gratuite adaptée à votre entreprise.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 3 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Combien de temps prend l'implémentation ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    La durée varie selon la complexité de votre projet : de 4 à 12 semaines en moyenne. Nous commençons par une phase d'analyse, puis configuration, migration des données, formation et mise en production. Un planning détaillé est établi dès le début du projet.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 4 -->
+                                            <div class="faq-item" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Quel type de support proposez-vous ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Vous bénéficiez du support officiel Odoo (24/7) + notre support local HotCodes en français (email, téléphone, WhatsApp). Nous proposons également des contrats de maintenance avec temps de réponse garantis et interventions sur site si nécessaire.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>
+

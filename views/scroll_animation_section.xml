@@ -63,57 +63,70 @@
                 <!-- Right Side: Visual Content -->
                 <div class="scroll-visual-container">
                     <div class="scroll-visual-content">
-                        <!-- Visual State 1 -->
+                        <!-- Visual State 1: Design System -->
                         <div class="scroll-visual" data-state="1">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-1"></div>
-                                <div class="visual-elements">
-                                    <div class="element-grid">
-                                        <div class="grid-item"></div>
-                                        <div class="grid-item"></div>
-                                        <div class="grid-item"></div>
-                                        <div class="grid-item"></div>
-                                    </div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:palette-2-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:pen-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:ruler-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:layers-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:figma-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Visual State 2 -->
+                        <!-- Visual State 2: Responsive Layouts -->
                         <div class="scroll-visual" data-state="2">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-2"></div>
-                                <div class="visual-elements">
-                                    <div class="device-mockup">
-                                        <div class="device-screen"></div>
-                                    </div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:code-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-accent); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:programming-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:code-file-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:widget-5-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:laptop-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Visual State 3 -->
+                        <!-- Visual State 3: Performance -->
                         <div class="scroll-visual" data-state="3">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-3"></div>
-                                <div class="visual-elements">
-                                    <div class="performance-bars">
-                                        <div class="perf-bar"></div>
-                                        <div class="perf-bar"></div>
-                                        <div class="perf-bar"></div>
-                                    </div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:speedometer-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:bolt-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:rocket-2-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:graph-up-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Visual State 4 -->
+                        <!-- Visual State 4: Developer Experience -->
                         <div class="scroll-visual" data-state="4">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-4"></div>
-                                <div class="visual-elements">
-                                    <div class="code-window">
-                                        <div class="code-line"></div>
-                                        <div class="code-line"></div>
-                                        <div class="code-line"></div>
-                                    </div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:headphones-round-sound-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-accent); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:chat-round-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:user-speak-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:phone-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:shield-check-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
@@ -132,11 +145,11 @@
     </template>
 
     <!-- Add to homepage -->
-    <template id="ecom_homepage_with_scroll_section" inherit_id="theme_hotcodes.ecom_homepage">
+    <!-- <template id="ecom_homepage_with_scroll_section" inherit_id="theme_hotcodes.ecom_homepage">
         <xpath expr="//div[@class='oe_structure oe_empty']" position="before">
             <t t-call="theme_hotcodes.scroll_animation_section" />
         </xpath>
-    </template>
+    </template> -->
 
     <!-- French Version of Scroll Animation Section -->
     <template id="scroll_animation_section_french" name="Scroll Animation Section (French)">
@@ -148,7 +161,10 @@
                         <!-- State 1: Design -->
                         <div class="scroll-state" data-state="1">
                             <div class="scroll-state-inner">
-                                <span class="scroll-label">Design Moderne</span>
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:palette-2-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                    Design Moderne
+                                </span>
                                 <h2 class="scroll-heading">Interface Intuitive</h2>
                                 <p class="scroll-description">
                                     Des interfaces élégantes et faciles à utiliser, conçues pour
@@ -163,7 +179,10 @@
                         <!-- State 2: Développement -->
                         <div class="scroll-state" data-state="2">
                             <div class="scroll-state-inner">
-                                <span class="scroll-label">Développement Sur Mesure</span>
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:code-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                    Développement Sur Mesure
+                                </span>
                                 <h2 class="scroll-heading">Solutions Personnalisées</h2>
                                 <p class="scroll-description">
                                     Modules et fonctionnalités développés spécifiquement pour vos
@@ -177,7 +196,10 @@
                         <!-- State 3: Performance -->
                         <div class="scroll-state" data-state="3">
                             <div class="scroll-state-inner">
-                                <span class="scroll-label">Performance Optimale</span>
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:speedometer-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                    Performance Optimale
+                                </span>
                                 <h2 class="scroll-heading">Rapidité et Fiabilité</h2>
                                 <p class="scroll-description">
                                     Systèmes optimisés pour fonctionner même avec une connexion
@@ -191,7 +213,10 @@
                         <!-- State 4: Support -->
                         <div class="scroll-state" data-state="4">
                             <div class="scroll-state-inner">
-                                <span class="scroll-label">Support Dédié</span>
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:headphones-round-sound-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                    Support Dédié
+                                </span>
                                 <h2 class="scroll-heading">Accompagnement Continu</h2>
                                 <p class="scroll-description">
                                     Support technique en français, formation complète de vos équipes
@@ -206,60 +231,70 @@
                 <!-- Right Side: Visual Content (Same as English version) -->
                 <div class="scroll-visual-container">
                     <div class="scroll-visual-content">
-                        <!-- Visual State 1 -->
+                        <!-- Visual State 1: Design Moderne -->
                         <div class="scroll-visual" data-state="1">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-1"></div>
-                                <div class="visual-elements">
-                                    <div class="element-grid">
-                                        <div class="grid-item"></div>
-                                        <div class="grid-item"></div>
-                                        <div class="grid-item"></div>
-                                        <div class="grid-item"></div>
-                                    </div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:palette-2-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:pen-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:ruler-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:layers-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:figma-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Visual State 2 -->
+                        <!-- Visual State 2: Développement Sur Mesure -->
                         <div class="scroll-visual" data-state="2">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-2"></div>
-                                <div class="visual-elements">
-                                    <div class="element-responsive">
-                                        <div class="device-frame desktop"></div>
-                                        <div class="device-frame tablet"></div>
-                                        <div class="device-frame mobile"></div>
-                                    </div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:code-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-accent); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:programming-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:code-file-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:widget-5-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:laptop-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Visual State 3 -->
+                        <!-- Visual State 3: Performance Optimale -->
                         <div class="scroll-visual" data-state="3">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-3"></div>
-                                <div class="visual-elements">
-                                    <div class="element-performance">
-                                        <div class="perf-bar"></div>
-                                        <div class="perf-bar"></div>
-                                        <div class="perf-bar"></div>
-                                    </div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:speedometer-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:bolt-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:rocket-2-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:graph-up-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Visual State 4 -->
+                        <!-- Visual State 4: Support Dédié -->
                         <div class="scroll-visual" data-state="4">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-4"></div>
-                                <div class="visual-elements">
-                                    <div class="element-code">
-                                        <div class="code-line"></div>
-                                        <div class="code-line"></div>
-                                        <div class="code-line"></div>
-                                        <div class="code-line"></div>
-                                    </div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:headphones-round-sound-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-accent); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:chat-round-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:user-speak-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:phone-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:shield-check-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>

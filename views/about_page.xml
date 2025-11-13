@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- About Us Page View - Define view first -->
+    <record id="about_page_view" model="ir.ui.view">
+        <field name="name">About Us Page</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_hotcodes.about_page_view</field>
+        <field name="arch" type="xml">
+            <t name="About Us" t-name="theme_hotcodes.about_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+
+                        <!-- Hero Section - About Us -->
+                        <t t-call="theme_hotcodes.hotcodes_hero_circular_orbit">
+                            <t t-set="hero_eyebrow" t-value="'🚀 À Propos de HotCodes'" />
+                            <t t-set="hero_title_part1" t-value="'Votre Partenaire de'" />
+                            <t t-set="hero_title_part2" t-value="'Transformation Digitale'" />
+                            <t t-set="hero_title_part3" t-value="'au Sénégal'" />
+                            <t t-set="hero_subtitle" t-value="'Depuis 2023, nous accompagnons les entreprises sénégalaises dans leur transformation digitale avec des solutions innovantes et adaptées au contexte local.'" />
+                            <t t-set="hero_description" t-value="'Une équipe passionnée, une expertise reconnue, et un engagement total pour votre réussite.'" />
+                            <t t-set="hero_cta_primary_text" t-value="'Découvrir Nos Services'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/services'" />
+                            <t t-set="hero_cta_secondary_text" t-value="'Nous Contacter'" />
+                            <t t-set="hero_cta_secondary_url" t-value="'/contact'" />
+                            <t t-set="hero_note" t-value="'✓ +2 Ans d\'Expérience • ✓ 100% Satisfaction Client • ✓ Support 24/7'" />
+                        </t>
+
+                        <!-- Section 1: Our Story -->
+                        <section class="about-story-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row align-items-center g-5">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                                NOTRE HISTOIRE
+                                            </span>
+                                        </div>
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Une Vision, <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Une Mission</span>
+                                        </h2>
+                                        <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;">
+                                            Fondée en 2023 à Dakar, HotCodes est née d'une vision simple mais ambitieuse : démocratiser l'accès aux technologies de gestion d'entreprise au Sénégal et en Afrique de l'Ouest.
+                                        </p>
+                                        <p style="color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 1.5rem;">
+                                            Nous avons constaté que de nombreuses entreprises locales peinaient à trouver des solutions ERP adaptées à leur contexte, leur budget et leurs besoins spécifiques. C'est ainsi que nous avons décidé de créer HotCodes.
+                                        </p>
+                                        <p style="color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 2rem;">
+                                            Aujourd'hui, nous continuons à innover et à développer des solutions sur mesure pour accompagner les entreprises dans leur transformation digitale avec excellence et professionnalisme.
+                                        </p>
+
+                                        <!-- Key Milestones -->
+                                        <div class="milestones">
+                                            <div class="d-flex align-items-start mb-3">
+                                                <div style="width: 50px; height: 50px; background: rgba(255,107,53,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 1rem;">
+                                                    <iconify-icon icon="solar:calendar-bold-duotone" style="font-size: 1.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.25rem; font-weight: 600;">2023</h4>
+                                                    <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.95rem;">Création de HotCodes à Dakar</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start mb-3">
+                                                <div style="width: 50px; height: 50px; background: rgba(138,43,226,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 1rem;">
+                                                    <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: 1.5rem; color: #8A2BE2;"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.25rem; font-weight: 600;">2024</h4>
+                                                    <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.95rem;">Lancement de Saytu ERP, notre solution locale</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <div style="width: 50px; height: 50px; background: rgba(59,130,246,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 1rem;">
+                                                    <iconify-icon icon="solar:cup-star-bold-duotone" style="font-size: 1.5rem; color: #3B82F6;"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.25rem; font-weight: 600;">2025</h4>
+                                                    <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.95rem;">Croissance continue et innovation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <!-- Team Image Placeholder -->
+                                        <div style="position: relative; border-radius: 20px; overflow: hidden; background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); padding: 3rem;">
+                                            <div style="text-align: center;">
+                                                <iconify-icon icon="solar:users-group-two-rounded-bold-duotone" style="font-size: 15rem; color: rgba(255,107,53,0.2);"></iconify-icon>
+                                            </div>
+                                            <div style="position: absolute; top: 2rem; right: 2rem; background: rgba(255,107,53,0.9); backdrop-filter: blur(10px); padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(255,107,53,0.3);">
+                                                <div style="font-size: 2rem; font-weight: 700; color: white; line-height: 1;">50+</div>
+                                                <div style="font-size: 0.875rem; color: rgba(255,255,255,0.9); margin-top: 0.25rem;">Projets</div>
+                                            </div>
+                                            <div style="position: absolute; bottom: 2rem; left: 2rem; background: rgba(138,43,226,0.9); backdrop-filter: blur(10px); padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(138,43,226,0.3);">
+                                                <div style="font-size: 2rem; font-weight: 700; color: white; line-height: 1;">2+</div>
+                                                <div style="font-size: 0.875rem; color: rgba(255,255,255,0.9); margin-top: 0.25rem;">Années</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 2: Our Values -->
+                        <section class="about-values-section py-5" style="background: var(--bg-darker); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <div class="mb-3">
+                                            <span style="display: inline-block; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); color: #8A2BE2; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                                NOS VALEURS
+                                            </span>
+                                        </div>
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Ce Qui Nous <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Anime</span>
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Des valeurs fortes qui guident chacune de nos actions
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Value 1 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="h-100 p-4 text-center" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3 mx-auto" style="width: 80px; height: 80px; background: rgba(255,107,53,0.15); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:star-bold-duotone" style="font-size: 2.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Excellence</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Nous visons l'excellence dans chaque projet, avec des solutions de qualité et un service irréprochable.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Value 2 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="h-100 p-4 text-center" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3 mx-auto" style="width: 80px; height: 80px; background: rgba(138,43,226,0.15); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:lightbulb-bolt-bold-duotone" style="font-size: 2.5rem; color: #8A2BE2;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Innovation</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Nous restons à la pointe de la technologie pour offrir des solutions innovantes et performantes.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Value 3 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="h-100 p-4 text-center" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3 mx-auto" style="width: 80px; height: 80px; background: rgba(59,130,246,0.15); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:hand-shake-bold-duotone" style="font-size: 2.5rem; color: #3B82F6;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Proximité</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Nous sommes à l'écoute de nos clients et construisons des relations durables basées sur la confiance.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Value 4 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="h-100 p-4 text-center" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(40,202,66,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3 mx-auto" style="width: 80px; height: 80px; background: rgba(40,202,66,0.15); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:shield-check-bold-duotone" style="font-size: 2.5rem; color: #28CA42;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Engagement</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Nous nous engageons pleinement dans la réussite de vos projets avec rigueur et professionnalisme.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3: Why Choose Us -->
+                        <section class="about-why-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <div class="mb-3">
+                                            <span style="display: inline-block; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: #3B82F6; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                                POURQUOI NOUS CHOISIR
+                                            </span>
+                                        </div>
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Ce Qui Nous <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Différencie</span>
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Des avantages concrets pour votre entreprise
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Advantage 1 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255,107,53,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:map-point-wave-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Expertise Locale</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Basés à Dakar, nous comprenons parfaitement le contexte sénégalais et les défis spécifiques des entreprises locales.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Advantage 2 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(138,43,226,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:diploma-verified-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Certifications Officielles</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Partenaire officiel Odoo avec des consultants certifiés pour garantir la qualité de nos prestations.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Advantage 3 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.2); border-radius: 16px;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(59,130,246,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:wallet-money-bold-duotone" style="font-size: 2rem; color: #3B82F6;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Tarifs Adaptés</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Des solutions accessibles avec des tarifs adaptés au marché local et des options de paiement flexibles.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Advantage 4 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(40,202,66,0.2); border-radius: 16px;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(40,202,66,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:headphones-round-sound-bold-duotone" style="font-size: 2rem; color: #28CA42;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Support Réactif</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Une équipe disponible en français et wolof, avec un support technique rapide et efficace.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Advantage 5 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,215,0,0.2); border-radius: 16px;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255,215,0,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:settings-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-accent);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Solutions Sur Mesure</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Développement de modules personnalisés adaptés à vos processus métier spécifiques.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Advantage 6 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255,107,53,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:users-group-rounded-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 600;">Formation Continue</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin: 0; line-height: 1.7; font-size: 0.95rem;">
+                                                Accompagnement et formation de vos équipes pour une adoption réussie des outils.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: CTA -->
+                        <section class="about-cta-section py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; z-index: 1; overflow: hidden;">
+                            <div class="cta-background" style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;none&quot;/%3E%3Cpath d=&quot;M0 0L100 100M100 0L0 100&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;1&quot;/%3E%3C/svg%3E'); opacity: 0.3;">
+                            </div>
+
+                            <div class="container py-5" style="position: relative; z-index: 2;">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 text-center">
+                                        <div class="mb-4" style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:rocket-2-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                            Prêt à Démarrer ?
+                                        </div>
+
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                                            Transformons Ensemble Votre Entreprise
+                                        </h2>
+                                        <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin-left: auto; margin-right: auto;">
+                                            Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons vous aider.
+                                        </p>
+
+                                        <div class="cta-actions d-flex gap-3 justify-content-center flex-wrap mb-4">
+                                            <a href="/contact" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                                <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Nous Contacter
+                                            </a>
+                                            <a href="/services" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid white; transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Découvrir Nos Services
+                                            </a>
+                                        </div>
+
+                                        <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-top: 2rem;">
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Consultation gratuite •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Devis personnalisé •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Réponse rapide
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+    <!-- About Us Page Record - Reference view after it's defined -->
+    <record id="page_about" model="website.page">
+        <field name="name">À Propos - HotCodes</field>
+        <field name="type">qweb</field>
+        <field name="url">/about</field>
+        <field name="website_published">true</field>
+        <field name="is_published">true</field>
+        <field name="view_id" ref="about_page_view"/>
+    </record>
+
+</odoo>
+

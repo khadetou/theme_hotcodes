@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+
+        <!-- PRODUCT MENU -->
+        <record id="product_menu" model="website.menu">
+            <field name="name">Produits</field>
+            <field name="url">/produits</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">10</field>
+            <field name="is_mega_menu">True</field>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_hotcodes pt-3 pb-3">
+                    <div class="container-fluid">
+                        <div class="hotcodes-mega-menu-grid">
+                            <a href="/produits/saytu" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:case-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Saytu</h4>
+                                    <p>Gestion d'entreprise tout-en-un pour PME sénégalaises</p>
+                                </div>
+                            </a>
+
+                            <a href="/produits/odoo-enterprise" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:buildings-2-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Odoo Enterprise</h4>
+                                    <p>ERP complet avec modules avancés</p>
+                                </div>
+                            </a>
+
+                            <a href="/services/applications-natives" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:smartphone-2-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Applications Natives</h4>
+                                    <p>Applications iOS et Android sur mesure</p>
+                                </div>
+                            </a>
+
+                            <a href="/services/sites-web" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:global-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Sites Web</h4>
+                                    <p>Sites professionnels modernes et performants</p>
+                                </div>
+                            </a>
+
+                            <a href="/services/solutions-ia" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:cpu-bolt-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Solutions IA</h4>
+                                    <p>Automatisation intelligente avec IA</p>
+                                </div>
+                            </a>
+
+                            <a href="/services/business-intelligence" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Business Intelligence</h4>
+                                    <p>Tableaux de bord et analytics avancés</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+
+        <!-- SERVICES MENU -->
+        <record id="services_menu" model="website.menu">
+            <field name="name">Services</field>
+            <field name="url">/services</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">20</field>
+            <field name="is_mega_menu">True</field>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_hotcodes pt-3 pb-3">
+                    <div class="container-fluid">
+                        <div class="hotcodes-mega-menu-grid">
+                            <a href="/services/applications-natives" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:smartphone-2-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Applications Natives</h4>
+                                    <p>Applications iOS et Android sur mesure</p>
+                                </div>
+                            </a>
+
+                            <a href="/services/sites-web" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:global-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Sites Web</h4>
+                                    <p>Sites professionnels modernes et performants</p>
+                                </div>
+                            </a>
+
+                            <a href="/services/solutions-ia" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:cpu-bolt-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Solutions IA</h4>
+                                    <p>Automatisation intelligente avec IA</p>
+                                </div>
+                            </a>
+
+                            <a href="/services/business-intelligence" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Business Intelligence</h4>
+                                    <p>Tableaux de bord et analytics avancés</p>
+                                </div>
+                            </a>
+
+                            <a href="/services/conseil-implementation" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:user-speak-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Conseil &amp; Implémentation</h4>
+                                    <p>Conseil stratégique et accompagnement ERP</p>
+                                </div>
+                            </a>
+
+                            <a href="/services/support" class="hotcodes-mega-card">
+                                <div class="hotcodes-card-icon">
+                                    <iconify-icon icon="solar:headphones-round-sound-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                </div>
+                                <div class="hotcodes-card-content">
+                                    <h4>Support &amp; Maintenance</h4>
+                                    <p>Support technique et maintenance continue</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+
+        <!-- ABOUT MENU -->
+        <record id="about_menu" model="website.menu">
+            <field name="name">À Propos</field>
+            <field name="url">/about</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">30</field>
+        </record>
+
+    </data>
+
+
+</odoo>

@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="theme_hotcodes.page_saytu" model="website.page">
+        <field name="name">Saytu - ERP pour PME/TPE</field>
+        <field name="type">qweb</field>
+        <field name="url">/produits/saytu</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.saytu_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+
+                        <!-- Hero Section - Saytu (Particle Network) -->
+                        <t t-call="theme_hotcodes.hotcodes_hero_particle_network">
+                            <t t-set="hero_title_part1" t-value="'Saytu - L\'ERP Accessible'" />
+                            <t t-set="hero_title_part2" t-value="'pour PME/TPE'" />
+                            <t t-set="hero_subtitle" t-value="'Solution de gestion d\'entreprise complète, simple et abordable. Spécialement conçue pour les petites et moyennes entreprises sénégalaises qui veulent digitaliser leur activité sans se ruiner.'" />
+
+                            <!-- Stats Cards -->
+                            <t t-set="stat_1_value" t-value="'15+'" />
+                            <t t-set="stat_1_label" t-value="'Modules Inclus'" />
+                            <t t-set="stat_2_value" t-value="'30j'" />
+                            <t t-set="stat_2_label" t-value="'Essai Gratuit'" />
+                            <t t-set="stat_3_value" t-value="'100%'" />
+                            <t t-set="stat_3_label" t-value="'Support FR'" />
+
+                            <!-- CTAs -->
+                            <t t-set="hero_cta_primary_text" t-value="'Essai Gratuit 30 Jours'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/produits/saytu#essai'" />
+                            <t t-set="hero_cta_secondary_text" t-value="'Voir la Démo'" />
+                            <t t-set="hero_cta_secondary_url" t-value="'/produits/saytu#demo'" />
+                        </t>
+
+                        <!-- Section 1: Qu'est-ce que Saytu ? -->
+                        <section class="saytu-intro-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row align-items-center g-5">
+                                    <div class="col-lg-6">
+                                        <div class="intro-badge mb-3" style="display: inline-block; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:star-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                            Solution Recommandée pour PME/TPE
+                                        </div>
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; line-height: 1.2;">
+                                            Qu'est-ce que <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Saytu</span> ?
+                                        </h2>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1.5rem;">
+                                            Saytu est une version optimisée d'<strong style="color: var(--hotcodes-accent);">Odoo Community</strong>, spécialement adaptée aux besoins des entreprises sénégalaises. Nous avons pris le meilleur d'Odoo et l'avons rendu plus accessible, plus simple et plus abordable.
+                                        </p>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 2rem;">
+                                            Avec Saytu, vous obtenez un <strong style="color: white;">ERP complet</strong> qui couvre tous vos besoins de gestion : ventes, achats, stocks, comptabilité, CRM, et bien plus encore.
+                                        </p>
+
+                                        <div class="intro-stats row g-3">
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 12px; padding: 1.5rem;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary); margin-bottom: 0.25rem;">15+</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Modules Inclus</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 215, 0, 0.1); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 12px; padding: 1.5rem;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-accent); margin-bottom: 0.25rem;">100%</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Open Source</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                <div class="stat-card text-center" style="background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 12px; padding: 1.5rem;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary); margin-bottom: 0.25rem;">24/7</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Disponibilité</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="intro-visual" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 20px; padding: 2.5rem; position: relative; overflow: hidden;">
+                                            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, var(--hotcodes-primary), transparent 70%); opacity: 0.2; filter: blur(60px);"></div>
+
+                                            <div class="mb-4">
+                                                <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.3em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                    Pourquoi choisir Saytu ?
+                                                </h4>
+                                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Prix abordable</strong> - Jusqu'à 70% moins cher qu'Odoo Enterprise
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Support local</strong> - Équipe basée à Dakar, assistance en français
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Adapté au Sénégal</strong> - Conformité SYSCOHADA, fiscalité locale
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Formation incluse</strong> - Prise en main rapide de votre équipe
+                                                    </li>
+                                                    <li style="color: rgba(255,255,255,0.8); margin-bottom: 0; padding-left: 2rem; position: relative;">
+                                                        <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                        <strong style="color: white;">Évolutif</strong> - Migrez vers Enterprise quand vous grandissez
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 2: Fonctionnalités Principales -->
+                        <section class="saytu-features-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Fonctionnalités Complètes pour Gérer Votre Entreprise
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Tous les outils dont vous avez besoin, réunis dans une seule plateforme
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Feature 1: Ventes &amp; CRM -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:chart-2-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Ventes &amp; CRM
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Gérez vos devis, commandes et factures. Suivez vos clients et opportunités commerciales en temps réel.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Devis et factures professionnels</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Suivi des opportunités</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Pipeline de ventes visuel</li>
+                                                <li>✓ Historique client complet</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Feature 2: Comptabilité -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:calculator-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Comptabilité SYSCOHADA
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Comptabilité conforme aux normes sénégalaises. Plan comptable SYSCOHADA pré-configuré.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Plan comptable SYSCOHADA</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Rapprochement bancaire</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ États financiers automatiques</li>
+                                                <li>✓ Déclarations fiscales</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Feature 3: Gestion des Stocks -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Gestion des Stocks
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Contrôlez vos stocks en temps réel. Évitez les ruptures et optimisez vos approvisionnements.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Inventaire en temps réel</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Multi-entrepôts</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Alertes de stock minimum</li>
+                                                <li>✓ Traçabilité complète</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Feature 4: Achats -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:cart-large-2-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Gestion des Achats
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Gérez vos fournisseurs, demandes de prix et bons de commande efficacement.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Demandes de prix</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Bons de commande</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Gestion fournisseurs</li>
+                                                <li>✓ Réceptions automatiques</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Feature 5: Facturation -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                                <iconify-icon icon="solar:document-text-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Facturation Professionnelle
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Créez des factures professionnelles en quelques clics. Suivez les paiements facilement.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ Factures personnalisables</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Relances automatiques</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Paiements en ligne</li>
+                                                <li>✓ Avoirs et remboursements</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Feature 6: Tableaux de Bord -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                            <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-accent);">
+                                                <iconify-icon icon="solar:graph-new-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                                Tableaux de Bord Analytiques
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Visualisez vos performances en temps réel. Prenez des décisions éclairées.
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.6); font-size: 0.9rem; list-style: none; padding: 0;">
+                                                <li style="margin-bottom: 0.5rem;">✓ KPIs personnalisables</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Graphiques interactifs</li>
+                                                <li style="margin-bottom: 0.5rem;">✓ Rapports automatiques</li>
+                                                <li>✓ Export Excel/PDF</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3: Tarification -->
+                        <section id="essai" class="saytu-pricing-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Tarification Simple et Transparente
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Choisissez la formule qui correspond à vos besoins. Pas de frais cachés.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4 justify-content-center">
+                                    <!-- Plan Starter -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative;">
+                                            <div class="mb-4">
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                                    Starter
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                                                    Pour les très petites entreprises
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <div style="font-size: 3rem; font-weight: 700; color: var(--hotcodes-primary); line-height: 1;">
+                                                    35 000
+                                                    <span style="font-size: 1.25rem; font-weight: 400; color: rgba(255,255,255,0.6);">FCFA/mois</span>
+                                                </div>
+                                            </div>
+
+                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    1 utilisateur
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Modules essentiels
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    5 Go de stockage
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Support email
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Formation de base
+                                                </li>
+                                            </ul>
+
+                                            <a href="/contact?plan=starter" style="display: block; background: rgba(255, 107, 53, 0.1); color: var(--hotcodes-primary); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; border: 1px solid var(--hotcodes-primary); transition: all 0.3s ease;">
+                                                Commencer
+                                                <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Plan Business (Recommandé) -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 2px solid var(--hotcodes-primary); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative; transform: scale(1.05);">
+                                            <div class="product-badge" style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);">
+                                                ⭐ RECOMMANDÉ
+                                            </div>
+
+                                            <div class="mb-4 mt-3">
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                                    Business
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                                                    Pour les PME en croissance
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <div style="font-size: 3rem; font-weight: 700; color: var(--hotcodes-primary); line-height: 1;">
+                                                    75 000
+                                                    <span style="font-size: 1.25rem; font-weight: 400; color: rgba(255,255,255,0.6);">FCFA/mois</span>
+                                                </div>
+                                            </div>
+
+                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    5 utilisateurs
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Tous les modules
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    50 Go de stockage
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Support prioritaire
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Formation complète
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Personnalisation incluse
+                                                </li>
+                                            </ul>
+
+                                            <a href="/contact?plan=business" style="display: block; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);">
+                                                Essai Gratuit 30 Jours
+                                                <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Plan Enterprise -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative;">
+                                            <div class="mb-4">
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                                    Enterprise
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                                                    Pour les grandes structures
+                                                </p>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <div style="font-size: 2.5rem; font-weight: 700; color: var(--hotcodes-accent); line-height: 1;">
+                                                    Sur devis
+                                                </div>
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-top: 0.5rem;">
+                                                    Tarification personnalisée
+                                                </p>
+                                            </div>
+
+                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Utilisateurs illimités
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Modules personnalisés
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Stockage illimité
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Support dédié 24/7
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
+                                                    Développement sur mesure
+                                                </li>
+                                            </ul>
+
+                                            <a href="/contact?plan=enterprise" style="display: block; background: rgba(255, 215, 0, 0.1); color: var(--hotcodes-accent); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; border: 1px solid var(--hotcodes-accent); transition: all 0.3s ease;">
+                                                Nous Contacter
+                                                <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-lg-10 mx-auto">
+                                        <div class="text-center" style="background: rgba(255, 107, 53, 0.05); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 16px; padding: 2rem;">
+                                            <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:gift-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.5em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                <strong style="color: white;">Tous les plans incluent :</strong> Essai gratuit 30 jours • Sans engagement • Sans carte bancaire • Formation incluse • Support en français • Mises à jour gratuites
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: Témoignages Saytu -->
+                        <section class="saytu-testimonials-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Ils Utilisent Déjà Saytu
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Des PME sénégalaises qui ont transformé leur gestion avec Saytu
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Témoignage 1 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                                                "Saytu a révolutionné notre gestion commerciale. En 3 mois, nous avons réduit nos erreurs de facturation de 80% et gagné un temps précieux."
+                                            </p>
+                                            <div class="testimonial-author">
+                                                <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
+                                                    Amadou Diallo
+                                                </p>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    Gérant, Import-Export • Dakar
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Témoignage 2 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                                                "Interface simple et intuitive. Mon équipe a été formée en 2 jours. Le support HotCodes est toujours disponible et réactif."
+                                            </p>
+                                            <div class="testimonial-author">
+                                                <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
+                                                    Fatou Seck
+                                                </p>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    Directrice, Boutique Mode • Thiès
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Témoignage 3 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                            <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                                                "Excellent rapport qualité-prix. Saytu nous offre toutes les fonctionnalités dont nous avons besoin à un prix très abordable."
+                                            </p>
+                                            <div class="testimonial-author">
+                                                <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
+                                                    Moussa Ndiaye
+                                                </p>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                                    Comptable, Cabinet Conseil • Saint-Louis
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 5: CTA Final -->
+                        <section id="demo" class="saytu-cta-section py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; z-index: 1; overflow: hidden;">
+                            <div class="cta-background" style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;none&quot;/%3E%3Cpath d=&quot;M0 0L100 100M100 0L0 100&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;1&quot;/%3E%3C/svg%3E'); opacity: 0.3;">
+                            </div>
+
+                            <div class="container py-5" style="position: relative; z-index: 2;">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 text-center">
+                                        <div class="mb-4" style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:rocket-2-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                            Offre Spéciale de Lancement
+                                        </div>
+
+                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                                            Essayez Saytu Gratuitement Pendant 30 Jours
+                                        </h2>
+                                        <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin-left: auto; margin-right: auto;">
+                                            Découvrez comment Saytu peut transformer la gestion de votre entreprise. Sans engagement, sans carte bancaire.
+                                        </p>
+
+                                        <div class="cta-actions d-flex gap-3 justify-content-center flex-wrap mb-4">
+                                            <a href="/contact?action=trial" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                                <iconify-icon icon="solar:play-circle-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Démarrer l'Essai Gratuit
+                                            </a>
+                                            <a href="/contact?action=demo" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid white; transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:videocamera-record-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Demander une Démo
+                                            </a>
+                                        </div>
+
+                                        <div class="cta-features row g-3 mt-4" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+                                            <div class="col-md-4">
+                                                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 12px; padding: 1rem;">
+                                                    <iconify-icon icon="solar:shield-check-bold-duotone" style="font-size: 2rem; color: white; margin-bottom: 0.5rem;"></iconify-icon>
+                                                    <p style="color: white; font-size: 0.875rem; margin: 0; font-weight: 500;">
+                                                        Sans Engagement
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 12px; padding: 1rem;">
+                                                    <iconify-icon icon="solar:user-speak-bold-duotone" style="font-size: 2rem; color: white; margin-bottom: 0.5rem;"></iconify-icon>
+                                                    <p style="color: white; font-size: 0.875rem; margin: 0; font-weight: 500;">
+                                                        Support Inclus
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 12px; padding: 1rem;">
+                                                    <iconify-icon icon="solar:diploma-bold-duotone" style="font-size: 2rem; color: white; margin-bottom: 0.5rem;"></iconify-icon>
+                                                    <p style="color: white; font-size: 0.875rem; margin: 0; font-weight: 500;">
+                                                        Formation Gratuite
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-top: 2rem;">
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Accès complet à toutes les fonctionnalités •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Données sécurisées •
+                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Annulation en 1 clic
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 6: FAQ -->
+                        <section class="saytu-faq-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                            <div class="container py-5">
+                                <div class="row mb-5">
+                                    <div class="col-lg-8 mx-auto text-center">
+                                        <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                                            Questions Fréquentes
+                                        </h2>
+                                        <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                            Tout ce que vous devez savoir sur Saytu
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="faq-list">
+                                            <!-- FAQ 1 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Quelle est la différence entre Saytu et Odoo Enterprise ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Saytu est basé sur Odoo Community (open-source) et optimisé pour les PME sénégalaises. Il offre les fonctionnalités essentielles à un prix très abordable. Odoo Enterprise inclut des modules avancés et un support officiel Odoo, mais coûte beaucoup plus cher.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 2 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Puis-je migrer vers Odoo Enterprise plus tard ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Oui, absolument ! Saytu est conçu pour évoluer avec votre entreprise. Quand vous serez prêt, nous vous accompagnerons dans la migration vers Odoo Enterprise sans perte de données.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 3 -->
+                                            <div class="faq-item mb-3" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Mes données sont-elles sécurisées ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Oui, vos données sont hébergées sur des serveurs sécurisés avec sauvegarde quotidienne automatique. Nous utilisons le chiffrement SSL et respectons les normes de sécurité internationales.
+                                                </p>
+                                            </div>
+
+                                            <!-- FAQ 4 -->
+                                            <div class="faq-item" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                                    <iconify-icon icon="solar:question-circle-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                    Quel type de support proposez-vous ?
+                                                </h4>
+                                                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+                                                    Nous offrons un support en français par email, téléphone et WhatsApp. Le plan Business inclut un support prioritaire avec temps de réponse garanti sous 2h en jours ouvrés.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>

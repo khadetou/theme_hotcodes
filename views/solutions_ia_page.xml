@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="theme_hotcodes.page_solutions_ia" model="website.page">
+        <field name="name">Solutions IA &amp; Automatisation - n8n Expert</field>
+        <field name="type">qweb</field>
+        <field name="url">/services/solutions-ia</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.solutions_ia_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <!-- Hero Section - Animated Floating Cards -->
+                        <t t-call="theme_hotcodes.hotcodes_hero_floating_cards">
+                            <t t-set="hero_title_part1" t-value="'Automatisation IA'" />
+                            <t t-set="hero_title_part2" t-value="'avec n8n'" />
+                            <t t-set="hero_title_part3" t-value="'Transformez votre entreprise.'" />
+                            <t t-set="feature_1" t-value="'500+ intégrations disponibles (OpenAI, Claude, Gemini, Slack, etc.)'" />
+                            <t t-set="feature_2" t-value="'Économisez 80% de temps sur les tâches répétitives et manuelles'" />
+                            <t t-set="feature_3" t-value="'Support expert n8n et formation complète de votre équipe'" />
+                            <t t-set="hero_cta_primary_text" t-value="'Automatiser Mon Entreprise'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contact'" />
+                            <t t-set="hero_cta_secondary_text" t-value="'Voir les Cas d\'Usage'" />
+                            <t t-set="hero_cta_secondary_url" t-value="'#use-cases'" />
+                        </t>
+
+                        <!-- Introduction Section with Stats -->
+                        <section class="py-5" style="background: var(--bg-dark); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow Background -->
+                            <div data-motion="morph-blob" style="position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 mb-4 mb-lg-0">
+                                        <h2 data-motion="scroll-fade" style="font-size: 2.5rem; font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                            L'Automatisation <span style="color: var(--hotcodes-primary);">Intelligente</span> pour Votre Entreprise
+                                        </h2>
+                                        <p data-motion="scroll-fade" style="font-size: 1.125rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                            Nous utilisons <strong style="color: white;">n8n</strong>, la plateforme d'automatisation open-source la plus puissante,
+                                            combinée à l'IA générative (OpenAI, Claude, Gemini) pour créer des workflows intelligents qui transforment
+                                            votre façon de travailler.
+                                        </p>
+                                        <div class="row g-4" data-motion="scroll-stagger">
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div data-motion="counter" data-counter-target="500" data-counter-suffix="+" style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary);">0</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.6);">Intégrations disponibles</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div data-motion="counter" data-counter-target="80" data-counter-suffix="%" style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary);">0</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.6);">Gain de temps moyen</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary);">24/7</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.6);">Automatisation continue</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3" style="background: rgba(255,107,53,0.1); border-left: 3px solid var(--hotcodes-primary); border-radius: 8px;">
+                                                    <div data-motion="counter" data-counter-target="100" data-counter-suffix="%" style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary);">0</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.6);">Open-source &amp; flexible</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- n8n Workflow Mockup with Gradient Glow -->
+                                        <div data-motion="scroll-scale" style="position: relative;">
+                                            <!-- Gradient Glow -->
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, rgba(138, 43, 226, 0.1) 50%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+
+                                            <!-- Mockup Card -->
+                                            <div data-motion="card-tilt" style="position: relative; background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.3); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5); transform-style: preserve-3d;">
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #FF5F56;"></div>
+                                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #FFBD2E;"></div>
+                                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #27C93F;"></div>
+                                                    <span style="margin-left: auto; font-size: 0.875rem; color: rgba(255,255,255,0.5);">n8n Workflow</span>
+                                                </div>
+                                                <div style="text-align: center; padding: 2rem 0;">
+                                                    <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 4rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                    <div style="margin-top: 1rem; font-size: 1.125rem; font-weight: 600; color: white;">Workflow Automatisé</div>
+                                                    <div style="margin-top: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.5);">Trigger → IA → Action → Notification</div>
+                                                    <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Webhook</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">OpenAI</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Database</span>
+                                                        <span style="padding: 0.5rem 1rem; background: rgba(138,43,226,0.2); border: 1px solid rgba(138,43,226,0.3); border-radius: 8px; font-size: 0.75rem; color: white;">Email</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- AI Email Assistant Feature -->
+                        <section class="py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, #0a0a0a 100%); position: relative; overflow: hidden;">
+                            <!-- Gradient Glow -->
+                            <div data-motion="morph-blob" style="position: absolute; top: 0; left: 20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%); filter: blur(100px); pointer-events: none;"></div>
+
+                            <div class="container py-5" style="position: relative; z-index: 1;">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 mb-4 mb-lg-0">
+                                        <!-- AI Email Assistant Mockup -->
+                                        <div data-motion="scroll-scale" style="position: relative;">
+                                            <!-- Glow Effect -->
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 350px; height: 350px; background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                                            <!-- Mockup -->
+                                            <div data-motion="card-tilt" style="position: relative; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 24px; padding: 2rem; box-shadow: 0 25px 70px rgba(0,0,0,0.6); transform-style: preserve-3d;">
+                                                <!-- Header -->
+                                                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                                        <iconify-icon icon="solar:letter-opened-bold-duotone" style="font-size: 1.5rem; color: #3B82F6;"></iconify-icon>
+                                                        <span style="font-weight: 600; color: white;">Assistant Email IA</span>
+                                                    </div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.5);">
+                                                        <iconify-icon icon="solar:check-circle-bold" style="color: #10B981;"></iconify-icon>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Email Content -->
+                                                <div style="background: rgba(0,0,0,0.4); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem;">
+                                                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                                        <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); display: flex; align-items: center; justify-content: center;">
+                                                            <iconify-icon icon="solar:user-bold" style="color: white; font-size: 1rem;"></iconify-icon>
+                                                        </div>
+                                                        <div>
+                                                            <div style="font-size: 0.875rem; color: white; font-weight: 500;">Nouveau client</div>
+                                                            <div style="font-size: 0.75rem; color: rgba(255,255,255,0.5);">contact@entreprise.com</div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7); line-height: 1.6;">
+                                                        "Bonjour, je souhaite automatiser mes processus de vente..."
+                                                    </div>
+                                                </div>
+
+                                                <!-- AI Response -->
+                                                <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 12px; padding: 1rem; margin-bottom: 1rem;">
+                                                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                                        <iconify-icon icon="solar:magic-stick-3-bold-duotone" style="color: #3B82F6; font-size: 1rem;"></iconify-icon>
+                                                        <span style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">Réponse générée par IA</span>
+                                                    </div>
+                                                    <div style="font-size: 0.875rem; color: white; line-height: 1.5;">
+                                                        ✓ Analyse du besoin<br/>
+                                                        ✓ Proposition personnalisée<br/>
+                                                        ✓ Rendez-vous planifié
+                                                </div>
+                                            </div>
+
+                                            <!-- Action Button -->
+                                            <button data-motion="magnetic" data-magnetic-strength="0.2" style="width: 100%; padding: 0.875rem; background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); border: none; border-radius: 10px; color: white; font-weight: 500; cursor: pointer;">
+                                                    Envoyer la réponse
+                                            </button>
+
+                                            <!-- Processing Indicator -->
+                                            <div style="margin-top: 1rem; display: flex; align-items: center; gap: 0.5rem; justify-content: center;">
+                                                <div style="width: 6px; height: 6px; border-radius: 50%; background: #3B82F6; animation: pulse 1.5s ease-in-out infinite;"></div>
+                                                <span style="font-size: 0.75rem; color: rgba(255,255,255,0.5);">Workflow n8n actif...</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div style="max-width: 500px;">
+                                        <h2 data-motion="scroll-fade" style="font-size: 2.5rem; font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                                Assistant Email <span style="color: #3B82F6;">Intelligent</span>
+                                        </h2>
+                                        <p data-motion="scroll-fade" style="font-size: 1.125rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                                Automatisez vos réponses emails avec l'IA. Analysez, catégorisez et répondez automatiquement à vos clients avec des réponses personnalisées et contextuelles.
+                                        </p>
+                                        <ul data-motion="scroll-stagger" style="list-style: none; padding: 0; margin: 0 0 2rem 0;">
+                                            <li style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:check-circle-bold" style="font-size: 1.5rem; color: #3B82F6; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <div style="color: white; font-weight: 500; margin-bottom: 0.25rem;">Analyse intelligente</div>
+                                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">L'IA comprend l'intention et le contexte de chaque email</div>
+                                                </div>
+                                            </li>
+                                            <li style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:check-circle-bold" style="font-size: 1.5rem; color: #3B82F6; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <div style="color: white; font-weight: 500; margin-bottom: 0.25rem;">Réponses personnalisées</div>
+                                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">Génération automatique adaptée à votre ton et style</div>
+                                                </div>
+                                            </li>
+                                            <li style="display: flex; align-items: start; gap: 1rem;">
+                                                <iconify-icon icon="solar:check-circle-bold" style="font-size: 1.5rem; color: #3B82F6; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <div style="color: white; font-weight: 500; margin-bottom: 0.25rem;">Intégration complète</div>
+                                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">Gmail, Outlook, CRM - workflow n8n automatisé</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <a href="/contact" data-motion="magnetic flare" data-magnetic-strength="0.3" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); border-radius: 12px; color: white; text-decoration: none; font-weight: 600;">
+                                                Automatiser mes Emails
+                                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Data Processing & Analytics Feature -->
+                    <section class="py-5" style="background: #0a0a0a; position: relative; overflow: hidden;">
+                        <!-- Gradient Glow -->
+                        <div data-motion="morph-blob" style="position: absolute; top: 0; right: 20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%); filter: blur(100px); pointer-events: none;"></div>
+
+                        <div class="container py-5" style="position: relative; z-index: 1;">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 mb-4 mb-lg-0 order-lg-2">
+                                    <!-- Data Processing Mockup -->
+                                    <div data-motion="scroll-scale" style="position: relative;">
+                                        <!-- Glow Effect -->
+                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 350px; height: 350px; background: radial-gradient(circle, rgba(236, 72, 153, 0.3) 0%, rgba(59, 130, 246, 0.2) 50%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                                        <!-- Mockup -->
+                                        <div data-motion="card-tilt" style="position: relative; background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 24px; padding: 2rem; box-shadow: 0 25px 70px rgba(0,0,0,0.6); transform-style: preserve-3d;">
+                                            <!-- Header -->
+                                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="font-size: 1.5rem; color: #EC4899;"></iconify-icon>
+                                                    <span style="font-weight: 600; color: white;">Traitement de Données</span>
+                                                </div>
+                                                <div style="font-size: 0.875rem; color: rgba(255,255,255,0.5);">
+                                                    <iconify-icon icon="solar:play-circle-bold" style="color: #10B981;"></iconify-icon>
+                                                </div>
+                                            </div>
+
+                                            <!-- Workflow Steps -->
+                                            <div style="background: rgba(0,0,0,0.5); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem;">
+                                                <div style="font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-bottom: 1rem;">Pipeline actif</div>
+                                                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                                                    <!-- Step 1 -->
+                                                    <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px;">
+                                                        <iconify-icon icon="solar:database-bold-duotone" style="color: #3B82F6; font-size: 1.25rem;"></iconify-icon>
+                                                        <div style="flex: 1;">
+                                                            <div style="color: white; font-size: 0.875rem; font-weight: 500;">Extraction</div>
+                                                            <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">1,247 lignes</div>
+                                                        </div>
+                                                        <iconify-icon icon="solar:check-circle-bold" style="color: #10B981; font-size: 1rem;"></iconify-icon>
+                                                    </div>
+                                                    <!-- Step 2 -->
+                                                    <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 8px;">
+                                                        <iconify-icon icon="solar:magic-stick-3-bold-duotone" style="color: #EC4899; font-size: 1.25rem;"></iconify-icon>
+                                                        <div style="flex: 1;">
+                                                            <div style="color: white; font-size: 0.875rem; font-weight: 500;">Analyse IA</div>
+                                                            <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">En cours...</div>
+                                                        </div>
+                                                        <div style="width: 16px; height: 16px; border: 2px solid #EC4899; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                                                    </div>
+                                                    <!-- Step 3 -->
+                                                    <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; opacity: 0.5;">
+                                                        <iconify-icon icon="solar:document-add-bold-duotone" style="color: rgba(255,255,255,0.5); font-size: 1.25rem;"></iconify-icon>
+                                                        <div style="flex: 1;">
+                                                            <div style="color: white; font-size: 0.875rem; font-weight: 500;">Export</div>
+                                                            <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">En attente</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Stats -->
+                                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                                                <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 8px; padding: 0.75rem; text-align: center;">
+                                                    <div style="font-size: 1.25rem; font-weight: 700; color: #3B82F6;">98%</div>
+                                                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">Précision</div>
+                                                </div>
+                                                <div style="background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.2); border-radius: 8px; padding: 0.75rem; text-align: center;">
+                                                    <div style="font-size: 1.25rem; font-weight: 700; color: #EC4899;">2.3s</div>
+                                                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">Temps moyen</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 order-lg-1">
+                                    <div style="max-width: 500px;">
+                                        <h2 data-motion="scroll-fade" style="font-size: 2.5rem; font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                            Traitement de Données <span style="color: #EC4899;">Intelligent</span>
+                                        </h2>
+                                        <p data-motion="scroll-fade" style="font-size: 1.125rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                            Automatisez l'extraction, la transformation et l'analyse de vos données avec l'IA. Créez des pipelines intelligents qui traitent des milliers de lignes en quelques secondes.
+                                        </p>
+                                        <ul data-motion="scroll-stagger" style="list-style: none; padding: 0; margin: 0 0 2rem 0;">
+                                            <li style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:check-circle-bold" style="font-size: 1.5rem; color: #EC4899; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <div style="color: white; font-weight: 500; margin-bottom: 0.25rem;">ETL automatisé</div>
+                                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">Extraction, transformation et chargement de données en temps réel</div>
+                                                </div>
+                                            </li>
+                                            <li style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:check-circle-bold" style="font-size: 1.5rem; color: #EC4899; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <div style="color: white; font-weight: 500; margin-bottom: 0.25rem;">Analyse prédictive</div>
+                                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">IA pour détecter les tendances et anomalies</div>
+                                                </div>
+                                            </li>
+                                            <li style="display: flex; align-items: start; gap: 1rem;">
+                                                <iconify-icon icon="solar:check-circle-bold" style="font-size: 1.5rem; color: #EC4899; flex-shrink: 0;"></iconify-icon>
+                                                <div>
+                                                    <div style="color: white; font-weight: 500; margin-bottom: 0.25rem;">Intégrations multiples</div>
+                                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">Excel, CSV, API, bases de données - workflow n8n</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <a href="/contact" data-motion="magnetic flare" data-magnetic-strength="0.3" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%); border-radius: 12px; color: white; text-decoration: none; font-weight: 600;">
+                                            Automatiser mes Données
+                                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- n8n Use Cases Section -->
+                    <section id="use-cases" class="py-5" style="background: var(--bg-dark); position: relative; overflow: hidden;">
+                        <!-- Gradient Glow -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%); filter: blur(120px); pointer-events: none;"></div>
+
+                        <div class="container py-5" style="position: relative; z-index: 1;">
+                            <div class="text-center mb-5">
+                                <h2 style="font-size: 2.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                        Cas d'Usage <span style="color: var(--hotcodes-primary);">n8n</span>
+                                </h2>
+                                <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">
+                                        Découvrez comment nous utilisons n8n pour automatiser vos processus métier
+                                </p>
+                            </div>
+
+                            <div class="row g-4">
+                                <!-- Use Case 1: AI Chatbot -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div style="height: 100%; background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: 2rem; transition: all 0.3s ease;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(255,107,53,0.2) 0%, rgba(138,43,226,0.2) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                            <iconify-icon icon="solar:chat-round-call-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                        </div>
+                                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Chatbot IA Intelligent</h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Créez des assistants virtuels qui comprennent le contexte, répondent aux questions et automatisent le support client 24/7.
+                                        </p>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                            <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">OpenAI</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">WhatsApp</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">Telegram</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Use Case 2: Data Processing -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div style="height: 100%; background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: 2rem; transition: all 0.3s ease;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(147,51,234,0.2) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                            <iconify-icon icon="solar:database-bold-duotone" style="font-size: 2rem; color: #3B82F6;"></iconify-icon>
+                                        </div>
+                                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Traitement de Données IA</h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Analysez, enrichissez et transformez vos données automatiquement avec l'IA. Extraction, classification et insights en temps réel.
+                                        </p>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                            <span style="padding: 0.5rem 1rem; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">Claude</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">PostgreSQL</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">Sheets</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Use Case 3: Content Generation -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div style="height: 100%; background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: 2rem; transition: all 0.3s ease;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(236,72,153,0.2) 0%, rgba(255,107,53,0.2) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                            <iconify-icon icon="solar:pen-new-square-bold-duotone" style="font-size: 2rem; color: #EC4899;"></iconify-icon>
+                                        </div>
+                                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Génération de Contenu</h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Créez automatiquement du contenu marketing, des articles de blog, des descriptions produits et des posts réseaux sociaux.
+                                        </p>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                            <span style="padding: 0.5rem 1rem; background: rgba(236,72,153,0.15); border: 1px solid rgba(236,72,153,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">GPT-4</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(236,72,153,0.15); border: 1px solid rgba(236,72,153,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">WordPress</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(236,72,153,0.15); border: 1px solid rgba(236,72,153,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">Social Media</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Use Case 4: Email Automation -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div style="height: 100%; background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: 2rem; transition: all 0.3s ease;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(34,197,94,0.2) 0%, rgba(59,130,246,0.2) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                            <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 2rem; color: #22C55E;"></iconify-icon>
+                                        </div>
+                                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Automatisation Email IA</h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Triez, répondez et gérez vos emails automatiquement. L'IA analyse le contenu et prend les actions appropriées.
+                                        </p>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                            <span style="padding: 0.5rem 1rem; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">Gmail</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">OpenAI</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">CRM</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Use Case 5: Image Processing -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div style="height: 100%; background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: 2rem; transition: all 0.3s ease;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(168,85,247,0.2) 0%, rgba(236,72,153,0.2) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                            <iconify-icon icon="solar:gallery-bold-duotone" style="font-size: 2rem; color: #A855F7;"></iconify-icon>
+                                        </div>
+                                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Traitement d'Images IA</h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Générez, analysez et optimisez des images automatiquement. Reconnaissance, classification et création d'images.
+                                        </p>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                            <span style="padding: 0.5rem 1rem; background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">DALL-E</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">Vision AI</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">Storage</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Use Case 6: Workflow Automation -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div style="height: 100%; background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 20px; padding: 2rem; transition: all 0.3s ease;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(255,107,53,0.2) 0%, rgba(34,197,94,0.2) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                            <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                        </div>
+                                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Workflows Intelligents</h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                Automatisez vos processus métier complexes avec des workflows qui s'adaptent et apprennent de vos données.
+                                        </p>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                            <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">n8n</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">API</span>
+                                            <span style="padding: 0.5rem 1rem; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.8);">Webhooks</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- AI Plugins Section (Framer-inspired) -->
+                    <section class="py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, #0a0a0a 100%); position: relative; overflow: hidden;">
+                        <!-- Gradient Glow -->
+                        <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%); filter: blur(100px); pointer-events: none;"></div>
+
+                        <div class="container py-5" style="position: relative; z-index: 1;">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 mb-4 mb-lg-0">
+                                    <div style="max-width: 500px;">
+                                        <h2 style="font-size: 2.5rem; font-weight: 600; color: white; margin-bottom: 1.5rem;">
+                                                AI Plugins
+                                        </h2>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.8;">
+                                                Build your own 3rd party AI plugins in Framer—connect with top models like OpenAI, Anthropic, and Gemini!
+                                        </p>
+                                        <div style="margin-bottom: 2rem;">
+                                            <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255,107,53,0.2) 0%, rgba(138,43,226,0.2) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                    <iconify-icon icon="simple-icons:openai" style="font-size: 1.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <div style="color: white; font-weight: 600; margin-bottom: 0.5rem;">OpenAI Integration</div>
+                                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">GPT-4, DALL-E, Whisper et plus encore</div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(147,51,234,0.2) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                    <iconify-icon icon="simple-icons:anthropic" style="font-size: 1.5rem; color: #3B82F6;"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <div style="color: white; font-weight: 600; margin-bottom: 0.5rem;">Anthropic Claude</div>
+                                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">Claude 3 Opus, Sonnet et Haiku</div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; align-items: start; gap: 1rem;">
+                                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(236,72,153,0.2) 0%, rgba(255,107,53,0.2) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                    <iconify-icon icon="simple-icons:google" style="font-size: 1.5rem; color: #EC4899;"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <div style="color: white; font-weight: 600; margin-bottom: 0.5rem;">Google Gemini</div>
+                                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">Gemini Pro et Ultra pour vos projets</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <!-- AI Plugins Visual Mockup -->
+                                    <div style="position: relative;">
+                                        <!-- Glow Effect -->
+                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, rgba(255, 107, 53, 0.2) 50%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+
+                                        <!-- Mockup Grid -->
+                                        <div style="position: relative; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                                            <!-- Card 1 -->
+                                            <div style="background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.3); border-radius: 16px; padding: 1.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #FF6B35 0%, #8A2BE2 100%); border-radius: 12px; margin-bottom: 1rem;"></div>
+                                                <div style="color: white; font-weight: 600; margin-bottom: 0.5rem;">Visual Electric</div>
+                                                <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">AI Image Generation</div>
+                                            </div>
+                                            <!-- Card 2 -->
+                                            <div style="background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(59,130,246,0.3); border-radius: 16px; padding: 1.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); border-radius: 12px; margin-bottom: 1rem;"></div>
+                                                <div style="color: white; font-weight: 600; margin-bottom: 0.5rem;">ChatGPT</div>
+                                                <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">Conversational AI</div>
+                                            </div>
+                                            <!-- Card 3 -->
+                                            <div style="background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(236,72,153,0.3); border-radius: 16px; padding: 1.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%); border-radius: 12px; margin-bottom: 1rem;"></div>
+                                                <div style="color: white; font-weight: 600; margin-bottom: 0.5rem;">Midjourney</div>
+                                                <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">Creative AI Art</div>
+                                            </div>
+                                            <!-- Card 4 -->
+                                            <div style="background: rgba(15,15,15,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(34,197,94,0.3); border-radius: 16px; padding: 1.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #22C55E 0%, #3B82F6 100%); border-radius: 12px; margin-bottom: 1rem;"></div>
+                                                <div style="color: white; font-weight: 600; margin-bottom: 0.5rem;">Custom Plugin</div>
+                                                <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">Your AI Solution</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- Never Start From Scratch Section -->
+                    <section class="py-5" style="background: #0a0a0a; position: relative; overflow: hidden;">
+                        <!-- Gradient Glow -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(236, 72, 153, 0.05) 50%, transparent 70%); filter: blur(120px); pointer-events: none;"></div>
+
+                        <div class="container py-5" style="position: relative; z-index: 1;">
+                            <div class="text-center mb-5">
+                                <h2 style="font-size: 3rem; font-weight: 700; color: white; margin-bottom: 1.5rem;">
+                                        Never start<br/>
+from scratch
+                                </h2>
+                                <div style="max-width: 600px; margin: 0 auto 2rem;">
+                                    <input type="text" placeholder="Create a landing page for..." style="width: 100%; padding: 1rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: white; font-size: 1rem;" />
+                                </div>
+                                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2rem;">
+                                    <button style="padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: rgba(255,255,255,0.7); font-size: 0.875rem; cursor: pointer;">Personal Page</button>
+                                    <button style="padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: rgba(255,255,255,0.7); font-size: 0.875rem; cursor: pointer;">Landing Page</button>
+                                    <button style="padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: rgba(255,255,255,0.7); font-size: 0.875rem; cursor: pointer;">About Page</button>
+                                    <button style="padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: rgba(255,255,255,0.7); font-size: 0.875rem; cursor: pointer;">Resume</button>
+                                    <button style="padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: rgba(255,255,255,0.7); font-size: 0.875rem; cursor: pointer;">Portfolio</button>
+                                </div>
+                                <a href="/contact" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: white; border-radius: 12px; color: #0a0a0a; text-decoration: none; font-weight: 600;">
+                                        See All AI tools
+                                    <iconify-icon icon="solar:arrow-down-linear"></iconify-icon>
+                                </a>
+                            </div>
+
+                            <!-- Workflow Templates Grid -->
+                            <div class="row g-4 mt-5">
+                                <div class="col-lg-3 col-md-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(255,107,53,0.2) 0%, rgba(138,43,226,0.2) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                            <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                        </div>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Workflow Templates</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">200+ templates prêts à l'emploi</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(147,51,234,0.2) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                            <iconify-icon icon="solar:code-bold-duotone" style="font-size: 2rem; color: #3B82F6;"></iconify-icon>
+                                        </div>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Custom Code</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Intégrations sur mesure</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(236,72,153,0.2) 0%, rgba(255,107,53,0.2) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                            <iconify-icon icon="solar:cloud-bold-duotone" style="font-size: 2rem; color: #EC4899;"></iconify-icon>
+                                        </div>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Cloud Hosting</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Déploiement automatique</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(34,197,94,0.2) 0%, rgba(59,130,246,0.2) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                            <iconify-icon icon="solar:shield-check-bold-duotone" style="font-size: 2rem; color: #22C55E;"></iconify-icon>
+                                        </div>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Support 24/7</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Assistance technique continue</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Technologies Section -->
+                    <section class="py-5" style="background: var(--bg-dark); position: relative; overflow: hidden;">
+                        <div class="container py-5">
+                            <div class="text-center mb-5">
+                                <h2 style="font-size: 2.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                        Technologies <span style="color: var(--hotcodes-primary);">IA &amp; Automatisation</span>
+                                </h2>
+                                <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                        Nous utilisons les meilleures technologies du marché
+                                </p>
+                            </div>
+
+                            <div class="row g-4">
+                                <!-- n8n -->
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; text-align: center; height: 100%;">
+                                        <div style="font-size: 3rem; margin-bottom: 1rem;">🔗</div>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">n8n</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Workflow Automation</p>
+                                    </div>
+                                </div>
+                                <!-- OpenAI -->
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; text-align: center; height: 100%;">
+                                        <iconify-icon icon="simple-icons:openai" style="font-size: 3rem; color: var(--hotcodes-primary); margin-bottom: 1rem;"></iconify-icon>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">OpenAI</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">GPT-4, DALL-E</p>
+                                    </div>
+                                </div>
+                                <!-- Claude -->
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; text-align: center; height: 100%;">
+                                        <iconify-icon icon="simple-icons:anthropic" style="font-size: 3rem; color: #3B82F6; margin-bottom: 1rem;"></iconify-icon>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Claude</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Anthropic AI</p>
+                                    </div>
+                                </div>
+                                <!-- Gemini -->
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; text-align: center; height: 100%;">
+                                        <iconify-icon icon="simple-icons:google" style="font-size: 3rem; color: #EC4899; margin-bottom: 1rem;"></iconify-icon>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Gemini</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Google AI</p>
+                                    </div>
+                                </div>
+                                <!-- Make -->
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; text-align: center; height: 100%;">
+                                        <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Make</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Visual Automation</p>
+                                    </div>
+                                </div>
+                                <!-- Zapier -->
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; text-align: center; height: 100%;">
+                                        <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Zapier</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">App Integration</p>
+                                    </div>
+                                </div>
+                                <!-- Hugging Face -->
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; text-align: center; height: 100%;">
+                                        <div style="font-size: 3rem; margin-bottom: 1rem;">🤗</div>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">Hugging Face</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">ML Models</p>
+                                    </div>
+                                </div>
+                                <!-- LangChain -->
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; padding: 2rem; text-align: center; height: 100%;">
+                                        <div style="font-size: 3rem; margin-bottom: 1rem;">🦜</div>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 0.5rem;">LangChain</h4>
+                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">LLM Framework</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Final CTA Section -->
+                    <section class="py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); position: relative; overflow: hidden;">
+                        <!-- Animated Gradient Glow -->
+                        <div style="position: absolute; top: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+                        <div style="position: absolute; bottom: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); filter: blur(60px); pointer-events: none;"></div>
+
+                        <div class="container py-5 text-center" style="position: relative; z-index: 1;">
+                            <h2 class="mb-4" style="font-size: 3rem; font-weight: 700; color: white;">
+                                    Prêt à Automatiser<br/>
+Votre Entreprise ?
+                            </h2>
+                            <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto 2.5rem;">
+                                    Discutons de vos besoins en automatisation et IA. Nous créons des solutions sur mesure avec n8n et les meilleurs modèles d'IA.
+                            </p>
+                            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                <a href="/contact" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+                                    <iconify-icon icon="solar:chat-round-call-bold"></iconify-icon>
+                                        Discuter de Mon Projet
+                                </a>
+                                <a href="#use-cases" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem;">
+                                    <iconify-icon icon="solar:eye-bold"></iconify-icon>
+                                        Voir les Cas d'Usage
+                                </a>
+                            </div>
+
+                            <!-- Trust Indicators -->
+                            <div class="mt-5 pt-4" style="border-top: 1px solid rgba(255,255,255,0.2);">
+                                <div class="row g-4">
+                                    <div class="col-md-4">
+                                        <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">500+</div>
+                                        <div style="color: rgba(255,255,255,0.8);">Intégrations disponibles</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">24/7</div>
+                                        <div style="color: rgba(255,255,255,0.8);">Automatisation continue</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">100%</div>
+                                        <div style="color: rgba(255,255,255,0.8);">Open-source &amp; flexible</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Custom CSS for animations -->
+                    <style>
+                            @keyframes pulse {
+                                0%, 100% { opacity: 0.4; }
+                                50% { opacity: 1; }
+                            }
+                    </style>
+                </div>
+            </t>
+        </t>
+    </field>
+</record>
+</odoo>

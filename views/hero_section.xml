@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Reusable Hero Section Template -->
+    <template id="hotcodes_hero_section" name="HotCodes Hero Section">
+        <section class="s_hotcodes_header o_colored_level" data-vcss="001">
+            <!-- Hero Section -->
+            <div class="hotcodes-hero d-flex align-items-center">
+                <div class="hero-background">
+                    <div class="noise-overlay"></div>
+                    <div class="grid-overlay"></div>
+                    <div class="gradient-sphere sphere-1"></div>
+                    <div class="gradient-sphere sphere-2"></div>
+                </div>
+
+                <div class="container hero-content">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 text-center">
+                            <h1 class="hero-title mb-4">
+                                <span class="gradient-text" t-out="hero_title_part1 or 'Transformez'"></span>
+                                <t t-out="hero_title_middle or ' Votre Entreprise Avec '"></t>
+                                <span class="gradient-text" t-out="hero_title_part2 or 'HotCodes'"></span>
+                            </h1>
+
+                            <p class="hero-subtitle mb-5" t-out="hero_subtitle or 'Solutions ERP et développement sur mesure pour les entreprises sénégalaises. De la PME à la grande entreprise, nous digitalisons votre activité.'">
+                            </p>
+
+                            <div class="hero-actions mb-4">
+                                <a t-att-href="hero_cta_primary_url or '/produits/saytu'" class="btn btn-primary btn-lg me-3 mb-3">
+                                    <t t-out="hero_cta_primary_text or 'Découvrir Saytu'"></t>
+                                    <iconify-icon icon="solar:arrow-right-bold-duotone" class="ms-2" style="font-size: 1.2em; vertical-align: middle;"></iconify-icon>
+                                </a>
+                                <a t-att-href="hero_cta_secondary_url or '/services'" class="btn btn-outline btn-lg mb-3">
+                                    <iconify-icon icon="solar:case-minimalistic-bold-duotone" class="me-2" style="font-size: 1.2em; vertical-align: middle;"></iconify-icon>
+                                    <t t-out="hero_cta_secondary_text or 'Nos Services'"></t>
+                                </a>
+                            </div>
+
+                            <p class="hero-note mt-4">
+                                <iconify-icon icon="solar:gift-bold-duotone" style="font-size: 1.2em; vertical-align: middle; color: var(--hotcodes-accent);"></iconify-icon>
+                                <t t-out="hero_note or ' Essai gratuit 30 jours • Sans carte bancaire • Support en français'"></t>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Default Homepage Hero Section (with default content) -->
+    <template id="hotcodes_hero_homepage" name="HotCodes Homepage Hero">
+        <t t-call="theme_hotcodes.hotcodes_hero_section">
+            <t t-set="hero_title_part1" t-value="'Transformez'" />
+            <t t-set="hero_title_middle" t-value="' Votre Entreprise Avec '" />
+            <t t-set="hero_title_part2" t-value="'HotCodes'" />
+            <t t-set="hero_subtitle" t-value="'Solutions ERP et développement sur mesure pour les entreprises sénégalaises. De la PME à la grande entreprise, nous digitalisons votre activité.'" />
+            <t t-set="hero_cta_primary_text" t-value="'Découvrir Saytu'" />
+            <t t-set="hero_cta_primary_url" t-value="'/produits/saytu'" />
+            <t t-set="hero_cta_secondary_text" t-value="'Nos Services'" />
+            <t t-set="hero_cta_secondary_url" t-value="'/services'" />
+            <t t-set="hero_note" t-value="'🎁 Essai gratuit 30 jours • Sans carte bancaire • Support en français'" />
+        </t>
+    </template>
+</odoo>
+

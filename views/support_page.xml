@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="theme_hotcodes.page_support" model="website.page">
+        <field name="name">Support &amp; Maintenance - Assistance Technique Continue</field>
+        <field name="type">qweb</field>
+        <field name="url">/services/support</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.support_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <!-- Hero Section: Floating Cards -->
+                        <t t-call="theme_hotcodes.hotcodes_hero_gradient_waves">
+                            <t t-set="hero_eyebrow" t-value="'🛟 Support &amp; Maintenance'" />
+                            <t t-set="hero_title_part1" t-value="'Assistance Technique'" />
+                            <t t-set="hero_title_part2" t-value="'Continue'" />
+                            <t t-set="hero_title_part3" t-value="'Pour Votre Tranquillité'" />
+                            <t t-set="hero_subtitle" t-value="'Support réactif 24/7, maintenance proactive et accompagnement sur le long terme pour assurer la disponibilité et la performance de vos solutions.'" />
+                            <t t-set="hero_description" t-value="'Équipe locale en français, interventions rapides, SLA garantis et expertise technique pour vous accompagner au quotidien.'" />
+                            <t t-set="hero_cta_primary_text" t-value="'Demander un Support'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contact'" />
+                            <t t-set="hero_cta_secondary_text" t-value="'Voir Nos Formules'" />
+                            <t t-set="hero_cta_secondary_url" t-value="'#services'" />
+                            <t t-set="hero_note" t-value="'✓ Support 24/7 • ✓ Équipe Locale • ✓ SLA Garantis'" />
+                        </t>
+
+                        <!-- Stats Section -->
+                        <section class="py-5" style="background: var(--bg-dark); position: relative;">
+                            <div class="container py-5">
+                                <div class="row g-4 text-center">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="p-4">
+                                            <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">24/7</div>
+                                            <div style="color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;">Support Disponible</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="p-4">
+                                            <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">&lt;2h</div>
+                                            <div style="color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;">Temps de Réponse Moyen</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="p-4">
+                                            <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">99.9%</div>
+                                            <div style="color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;">Disponibilité Garantie</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="p-4">
+                                            <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">200+</div>
+                                            <div style="color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;">Clients Accompagnés</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Services Section -->
+                        <section id="services" class="py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); position: relative;">
+                            <div class="container py-5">
+                                <div class="text-center mb-5">
+                                    <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">NOS SERVICES</span>
+                                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: white; margin-bottom: 1rem;">Formules de <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Support</span>
+                                    </h2>
+                                    <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">Un accompagnement adapté à vos besoins</p>
+                                </div>
+                                <div class="row g-4">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255,107,53,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:headphones-round-sound-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Support Technique</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.7;">Assistance technique par téléphone, email et chat. Résolution rapide des incidents et accompagnement utilisateurs.</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-primary); font-size: 1.2rem;"></iconify-icon>
+                                                    Support multicanal
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-primary); font-size: 1.2rem;"></iconify-icon>
+                                                    Équipe francophone
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: var(--hotcodes-primary); font-size: 1.2rem;"></iconify-icon>
+                                                    Résolution rapide
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(138,43,226,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:settings-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Maintenance</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.7;">Maintenance corrective et évolutive, mises à jour régulières, optimisations et surveillance proactive.</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #8A2BE2; font-size: 1.2rem;"></iconify-icon>
+                                                    Mises à jour régulières
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #8A2BE2; font-size: 1.2rem;"></iconify-icon>
+                                                    Surveillance proactive
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #8A2BE2; font-size: 1.2rem;"></iconify-icon>
+                                                    Optimisations continues
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(59,130,246,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:shield-check-bold-duotone" style="font-size: 2rem; color: #3B82F6;"></iconify-icon>
+                                            </div>
+                                            <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Contrats TMA</h3>
+                                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.7;">Tierce Maintenance Applicative avec SLA garantis, support prioritaire et interventions planifiées.</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #3B82F6; font-size: 1.2rem;"></iconify-icon>
+                                                    SLA garantis
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #3B82F6; font-size: 1.2rem;"></iconify-icon>
+                                                    Support prioritaire
+                                                </li>
+                                                <li style="color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                                    <iconify-icon icon="solar:check-circle-bold" style="position: absolute; left: 0; color: #3B82F6; font-size: 1.2rem;"></iconify-icon>
+                                                    Interventions planifiées
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Support Channels Section -->
+                        <section class="py-5" style="background: var(--bg-dark); position: relative;">
+                            <div class="container py-5">
+                                <div class="text-center mb-5">
+                                    <span style="display: inline-block; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); color: #8A2BE2; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">CANAUX DE SUPPORT</span>
+                                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: white; margin-bottom: 1rem;">Contactez-Nous <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Facilement</span>
+                                    </h2>
+                                    <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">Plusieurs moyens pour nous joindre rapidement</p>
+                                </div>
+                                <div class="row g-4">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="text-center p-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                            <iconify-icon icon="solar:phone-calling-bold-duotone" style="font-size: 3rem; color: var(--hotcodes-primary); margin-bottom: 1rem;"></iconify-icon>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Téléphone</h4>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Support vocal immédiat</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="text-center p-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                            <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 3rem; color: #8A2BE2; margin-bottom: 1rem;"></iconify-icon>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Email</h4>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Réponse sous 2h</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="text-center p-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                            <iconify-icon icon="solar:chat-round-dots-bold-duotone" style="font-size: 3rem; color: #3B82F6; margin-bottom: 1rem;"></iconify-icon>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Chat Live</h4>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Assistance en temps réel</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="text-center p-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                            <iconify-icon icon="solar:ticket-bold-duotone" style="font-size: 3rem; color: #FFD700; margin-bottom: 1rem;"></iconify-icon>
+                                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Tickets</h4>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Suivi détaillé</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Benefits Section -->
+                        <section class="py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); position: relative;">
+                            <div class="container py-5">
+                                <div class="row align-items-center g-5">
+                                    <div class="col-lg-6">
+                                        <span style="display: inline-block; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: #3B82F6; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">AVANTAGES</span>
+                                        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; color: white; margin-bottom: 1.5rem; line-height: 1.2;">Pourquoi Choisir Notre <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Support</span>
+                                        </h2>
+                                        <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.7;">Un accompagnement professionnel qui fait la différence</p>
+                                        <div class="mb-4">
+                                            <div class="d-flex align-items-start mb-3">
+                                                <div style="width: 48px; height: 48px; background: rgba(255,107,53,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 1rem;">
+                                                    <iconify-icon icon="solar:user-speak-bold-duotone" style="font-size: 1.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Équipe Locale Francophone</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); margin: 0; line-height: 1.6;">Support en français par des experts locaux qui comprennent vos enjeux.</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start mb-3">
+                                                <div style="width: 48px; height: 48px; background: rgba(138,43,226,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 1rem;">
+                                                    <iconify-icon icon="solar:bolt-bold-duotone" style="font-size: 1.5rem; color: #8A2BE2;"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Intervention Rapide</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); margin: 0; line-height: 1.6;">Temps de réponse moyen &lt;2h et résolution prioritaire des incidents critiques.</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <div style="width: 48px; height: 48px; background: rgba(59,130,246,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 1rem;">
+                                                    <iconify-icon icon="solar:shield-check-bold-duotone" style="font-size: 1.5rem; color: #3B82F6;"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">SLA Garantis</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); margin: 0; line-height: 1.6;">Engagements contractuels sur les temps de réponse et de résolution.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- Support Mockup -->
+                                        <div style="position: relative; background: rgba(15,15,15,0.95); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; box-shadow: 0 30px 80px rgba(0,0,0,0.5);">
+                                            <div class="mb-3">
+                                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                                    <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin: 0;">Support Dashboard</h4>
+                                                    <span style="background: rgba(40,202,66,0.2); color: #28CA42; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">ONLINE</span>
+                                                </div>
+                                                <!-- Ticket Cards -->
+                                                <div class="mb-3">
+                                                    <div style="background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; padding: 1rem; margin-bottom: 0.75rem;">
+                                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                                            <span style="color: white; font-size: 0.875rem; font-weight: 600;">Ticket #1247</span>
+                                                            <span style="background: rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.7rem; font-weight: 600;">URGENT</span>
+                                                        </div>
+                                                        <div style="color: rgba(255,255,255,0.7); font-size: 0.8rem; margin-bottom: 0.5rem;">Problème de connexion base de données</div>
+                                                        <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">Assigné à: Jean Dupont • Il y a 15 min</div>
+                                                    </div>
+                                                    <div style="background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; padding: 1rem; margin-bottom: 0.75rem;">
+                                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                                            <span style="color: white; font-size: 0.875rem; font-weight: 600;">Ticket #1246</span>
+                                                            <span style="background: rgba(138,43,226,0.3); color: #8A2BE2; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.7rem; font-weight: 600;">NORMAL</span>
+                                                        </div>
+                                                        <div style="color: rgba(255,255,255,0.7); font-size: 0.8rem; margin-bottom: 0.5rem;">Demande de nouvelle fonctionnalité</div>
+                                                        <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">Assigné à: Marie Martin • Il y a 1h</div>
+                                                    </div>
+                                                    <div style="background: rgba(40,202,66,0.1); border: 1px solid rgba(40,202,66,0.3); border-radius: 10px; padding: 1rem;">
+                                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                                            <span style="color: white; font-size: 0.875rem; font-weight: 600;">Ticket #1245</span>
+                                                            <span style="background: rgba(40,202,66,0.3); color: #28CA42; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.7rem; font-weight: 600;">RÉSOLU</span>
+                                                        </div>
+                                                        <div style="color: rgba(255,255,255,0.7); font-size: 0.8rem; margin-bottom: 0.5rem;">Mise à jour module comptabilité</div>
+                                                        <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">Résolu par: Pierre Dubois • Il y a 3h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Process Section -->
+                        <section class="py-5" style="background: var(--bg-dark); position: relative;">
+                            <div class="container py-5">
+                                <div class="text-center mb-5">
+                                    <span style="display: inline-block; background: rgba(255,215,0,0.15); border: 1px solid rgba(255,215,0,0.3); color: #FFD700; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">NOTRE PROCESSUS</span>
+                                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: white; margin-bottom: 1rem;">Comment Nous <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Intervenons</span>
+                                    </h2>
+                                    <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">Un processus structuré pour une résolution efficace</p>
+                                </div>
+                                <div class="row g-4">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="text-center p-4">
+                                            <div style="width: 80px; height: 80px; background: rgba(255,107,53,0.15); border: 2px solid rgba(255,107,53,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                                                <span style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary);">1</span>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Réception</h4>
+                                            <p style="color: rgba(255,255,255,0.6); line-height: 1.6;">Votre demande est enregistrée et qualifiée selon son niveau de priorité.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="text-center p-4">
+                                            <div style="width: 80px; height: 80px; background: rgba(138,43,226,0.15); border: 2px solid rgba(138,43,226,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                                                <span style="font-size: 2rem; font-weight: 700; color: #8A2BE2;">2</span>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Analyse</h4>
+                                            <p style="color: rgba(255,255,255,0.6); line-height: 1.6;">Diagnostic approfondi du problème par nos experts techniques.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="text-center p-4">
+                                            <div style="width: 80px; height: 80px; background: rgba(59,130,246,0.15); border: 2px solid rgba(59,130,246,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                                                <span style="font-size: 2rem; font-weight: 700; color: #3B82F6;">3</span>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Résolution</h4>
+                                            <p style="color: rgba(255,255,255,0.6); line-height: 1.6;">Intervention rapide et correction du problème identifié.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="text-center p-4">
+                                            <div style="width: 80px; height: 80px; background: rgba(40,202,66,0.15); border: 2px solid rgba(40,202,66,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                                                <span style="font-size: 2rem; font-weight: 700; color: #28CA42;">4</span>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Suivi</h4>
+                                            <p style="color: rgba(255,255,255,0.6); line-height: 1.6;">Vérification de la résolution et documentation complète.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- CTA Section -->
+                        <section class="py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%); filter: blur(80px);"></div>
+                            <div style="position: absolute; bottom: -50%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,0,0,0.2), transparent 70%); filter: blur(80px);"></div>
+                            <div class="container py-5 text-center" style="position: relative; z-index: 2;">
+                                <h2 class="mb-4" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: white;">Besoin d'Assistance ?</h2>
+                                <p class="mb-4" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin: 0 auto 2rem;">Notre équipe est prête à vous accompagner. Contactez-nous pour discuter de vos besoins en support.</p>
+                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                    <a href="/contact" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                                        <iconify-icon icon="solar:phone-calling-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                        Nous Contacter
+                                    </a>
+                                    <a href="#services" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease;">
+                                        <iconify-icon icon="solar:eye-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                        Voir les Formules
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>

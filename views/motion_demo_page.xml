@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Motion.js Demo Page -->
+    <template id="hotcodes_motion_demo_page" name="Motion.js Demo Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                
+                <!-- Hero Section with Text Reveal -->
+                <section style="min-height: 100vh; background: #000; display: flex; align-items: center; position: relative; overflow: hidden; padding: 4rem 0;">
+                    <!-- Morphing Background Blobs -->
+                    <div data-motion="morph-blob" style="position: absolute; top: -10%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,107,53,0.3) 0%, transparent 70%); filter: blur(100px);"></div>
+                    <div data-motion="morph-blob" style="position: absolute; bottom: -10%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(138,43,226,0.3) 0%, transparent 70%); filter: blur(100px);"></div>
+                    
+                    <div class="container" style="position: relative; z-index: 10;">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto text-center">
+                                <!-- Character-by-character reveal -->
+                                <h1 data-motion="text-reveal" style="font-size: 5rem; font-weight: 900; color: white; margin-bottom: 2rem; line-height: 1.1;">
+                                    Motion.js
+                                </h1>
+                                
+                                <!-- Word-by-word reveal -->
+                                <p data-motion="word-reveal" style="font-size: 1.5rem; color: rgba(255,255,255,0.8); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                                    Create stunning animations with just HTML attributes
+                                </p>
+                                
+                                <!-- Magnetic button with flare -->
+                                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                                    <button data-motion="magnetic flare" data-magnetic-strength="0.3" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1.5rem 3rem; border: none; border-radius: 14px; font-size: 1.25rem; font-weight: 700; cursor: pointer; box-shadow: 0 20px 60px rgba(255,107,53,0.4);">
+                                        Get Started
+                                    </button>
+                                    <button data-motion="magnetic" data-magnetic-strength="0.3" style="background: transparent; color: white; padding: 1.5rem 3rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 14px; font-size: 1.25rem; font-weight: 700; cursor: pointer;">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Scroll Fade Section -->
+                <section style="padding: 8rem 0; background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);">
+                    <div class="container">
+                        <div class="row mb-5">
+                            <div class="col-12 text-center">
+                                <h2 data-motion="scroll-fade" style="font-size: 3.5rem; font-weight: 900; color: white; margin-bottom: 1rem;">
+                                    Scroll Animations
+                                </h2>
+                                <p data-motion="scroll-fade" style="font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
+                                    Elements animate as you scroll down the page
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Stagger Grid -->
+                        <div data-motion="scroll-stagger" class="row g-4">
+                            <div class="col-md-4">
+                                <div style="background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(255,107,53,0.05)); border: 1px solid rgba(255,107,53,0.3); border-radius: 24px; padding: 3rem; text-align: center;">
+                                    <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: 4rem; color: var(--hotcodes-primary); margin-bottom: 1.5rem;"></iconify-icon>
+                                    <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Fast</h3>
+                                    <p style="color: rgba(255,255,255,0.7);">Lightning-fast animations powered by the Web Animations API</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="background: linear-gradient(135deg, rgba(138,43,226,0.1), rgba(138,43,226,0.05)); border: 1px solid rgba(138,43,226,0.3); border-radius: 24px; padding: 3rem; text-align: center;">
+                                    <iconify-icon icon="solar:code-bold-duotone" style="font-size: 4rem; color: var(--hotcodes-secondary); margin-bottom: 1.5rem;"></iconify-icon>
+                                    <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Simple</h3>
+                                    <p style="color: rgba(255,255,255,0.7);">Just add data attributes - no JavaScript required</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(59,130,246,0.05)); border: 1px solid rgba(59,130,246,0.3); border-radius: 24px; padding: 3rem; text-align: center;">
+                                    <iconify-icon icon="solar:star-bold-duotone" style="font-size: 4rem; color: #3B82F6; margin-bottom: 1.5rem;"></iconify-icon>
+                                    <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Powerful</h3>
+                                    <p style="color: rgba(255,255,255,0.7);">Professional animations used by top companies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3D Card Tilt Section -->
+                <section style="padding: 8rem 0; background: #000;">
+                    <div class="container">
+                        <div class="row mb-5">
+                            <div class="col-12 text-center">
+                                <h2 data-motion="scroll-fade" style="font-size: 3.5rem; font-weight: 900; color: white; margin-bottom: 1rem;">
+                                    3D Card Tilt
+                                </h2>
+                                <p data-motion="scroll-fade" style="font-size: 1.25rem; color: rgba(255,255,255,0.7);">
+                                    Hover over the cards to see the 3D effect
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-4">
+                                <div data-motion="card-tilt scroll-scale" style="background: linear-gradient(135deg, #FF6B35, #FF8C61); border-radius: 32px; padding: 3rem; min-height: 400px; transform-style: preserve-3d; box-shadow: 0 30px 80px rgba(0,0,0,0.5);">
+                                    <h3 style="color: white; font-size: 2rem; font-weight: 900; margin-bottom: 1.5rem;">Premium</h3>
+                                    <p style="color: rgba(255,255,255,0.9); font-size: 1.125rem; margin-bottom: 2rem;">Perfect for small teams and startups</p>
+                                    <div style="font-size: 3rem; font-weight: 900; color: white; margin-bottom: 2rem;">$49<span style="font-size: 1.25rem; font-weight: 400;">/mo</span></div>
+                                    <button style="background: white; color: #FF6B35; padding: 1rem 2rem; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; width: 100%;">Choose Plan</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div data-motion="card-tilt scroll-scale" style="background: linear-gradient(135deg, #8A2BE2, #A855F7); border-radius: 32px; padding: 3rem; min-height: 400px; transform-style: preserve-3d; box-shadow: 0 30px 80px rgba(0,0,0,0.5);">
+                                    <h3 style="color: white; font-size: 2rem; font-weight: 900; margin-bottom: 1.5rem;">Enterprise</h3>
+                                    <p style="color: rgba(255,255,255,0.9); font-size: 1.125rem; margin-bottom: 2rem;">For large organizations and agencies</p>
+                                    <div style="font-size: 3rem; font-weight: 900; color: white; margin-bottom: 2rem;">$99<span style="font-size: 1.25rem; font-weight: 400;">/mo</span></div>
+                                    <button style="background: white; color: #8A2BE2; padding: 1rem 2rem; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; width: 100%;">Choose Plan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Animated Counters Section -->
+                <section style="padding: 8rem 0; background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);">
+                    <div class="container">
+                        <div class="row mb-5">
+                            <div class="col-12 text-center">
+                                <h2 data-motion="scroll-fade" style="font-size: 3.5rem; font-weight: 900; color: white; margin-bottom: 1rem;">
+                                    Our Impact
+                                </h2>
+                            </div>
+                        </div>
+                        
+                        <div data-motion="scroll-stagger" class="row text-center">
+                            <div class="col-md-4">
+                                <h2 style="font-size: 5rem; font-weight: 900; color: var(--hotcodes-primary); margin-bottom: 1rem;">
+                                    <span data-motion="counter" data-counter-target="500" data-counter-suffix="+" data-counter-duration="2.5">0</span>
+                                </h2>
+                                <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7);">Happy Clients</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h2 style="font-size: 5rem; font-weight: 900; color: var(--hotcodes-secondary); margin-bottom: 1rem;">
+                                    <span data-motion="counter" data-counter-target="1000" data-counter-suffix="+" data-counter-duration="2.5">0</span>
+                                </h2>
+                                <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7);">Projects Completed</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h2 style="font-size: 5rem; font-weight: 900; color: #3B82F6; margin-bottom: 1rem;">
+                                    <span data-motion="counter" data-counter-target="99" data-counter-suffix="%" data-counter-duration="2.5">0</span>
+                                </h2>
+                                <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7);">Client Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+    <!-- Website Page Record -->
+    <record id="hotcodes_motion_demo_page_record" model="website.page">
+        <field name="name">Motion.js Demo</field>
+        <field name="website_published" eval="True"/>
+        <field name="url">/motion-demo</field>
+        <field name="view_id" ref="hotcodes_motion_demo_page"/>
+    </record>
+
+</odoo>
+

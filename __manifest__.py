@@ -20,25 +20,41 @@
 #
 #############################################################################
 {
-    'name': 'Theme Hotcdoes',
-    'version': '19.0.1.0.0',
-    'category': 'Theme/Hotcdoesmerce',
-    'summary': "Theme Hotcdoes is an attractive and modern Hotcdoesmerce Website theme",
-    'description': "Theme Hotcdoes is new kind of Theme.The theme is very "
-                   "user-friendly and suitable for your eCommerce website "
-                   "with blog",
-    'author': 'Hotcodes Agency',
-    'company': 'Hotcodes Agency',
-    'maintainer': 'Hotcodes Agency',
-    'website': "https://www.hotcodes.io",
-    'depends': ['website','website_blog', 'website_sale_wishlist', 'website_sale',
-                'website_sale_comparison'],
-    'data': [
-        'views/layout_templates.xml',
+    "name": "Theme Hotcdoes",
+    "version": "19.0.1.0.0",
+    "category": "Theme/Hotcdoesmerce",
+    "summary": "Theme Hotcdoes is an attractive and modern Hotcdoesmerce Website theme",
+    "description": "Theme Hotcdoes is new kind of Theme.The theme is very "
+    "user-friendly and suitable for your eCommerce website "
+    "with blog",
+    "author": "Hotcodes Agency",
+    "company": "Hotcodes Agency",
+    "maintainer": "Hotcodes Agency",
+    "website": "https://www.hotcodes.io",
+    "depends": [
+        "website",
+        "website_blog",
+    ],
+    "data": [
+        "views/layout_templates.xml",
+        "views/header_templates.xml",
+        "views/hero_section.xml",
+        "views/hero_sections_animated.xml",
         "views/hotcodes_homepage.xml",
-        'views/header_templates.xml',
-        'views/scroll_animation_section.xml',
-        'views/footer_templates.xml',
+        "views/scroll_animation_section.xml",
+        "views/footer_templates.xml",
+        "views/menues.xml",
+        "views/saytu_page.xml",
+        "views/odoo_enterprise_page.xml",
+        "views/developpement_page.xml",
+        "views/consulting_page.xml",
+        "views/applications_natives_page.xml",
+        "views/sites_web_page.xml",
+        "views/solutions_ia_page.xml",
+        "views/business_intelligence_page.xml",
+        "views/support_page.xml",
+        "views/about_page.xml",
+        "views/motion_demo_page.xml",
         # 'security/ir.model.access.csv',
         # 'data/boec_config_data.xml',
         # 'views/about.xml',
@@ -62,14 +78,16 @@
         # 'views/snippets/product_tab.xml',
         # 'views/snippets/product_tab_demo.xml',
     ],
-    'assets': {
-        'web.assets_frontend': [
+    "assets": {
+        "web.assets_frontend": [
             "theme_hotcodes/static/src/scss/style.scss",
             "theme_hotcodes/static/src/scss/scroll_section.scss",
             "theme_hotcodes/static/src/scss/landing_page.scss",
             "theme_hotcodes/static/src/js/main.js",
             "theme_hotcodes/static/src/js/scroll_animation.js",
             "theme_hotcodes/static/src/js/text_animations.js",
+            "theme_hotcodes/static/src/js/motion_animations.js",
+            "theme_hotcodes/static/src/css/style.css",
             # 'theme_boec/static/src/js/sale_utils.js',
             # "/theme_boec/static/src/css/style.css",
             # "/theme_boec/static/src/css/style.css.map",
@@ -86,16 +104,16 @@
             # "/theme_boec/static/src/js/custom.js",
             # 'https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css',
         ],
-        'web._assets_primary_variables': [
-            'theme_hotcodes/static/src/scss/primary_variables.scss',
+        "web._assets_primary_variables": [
+            "theme_hotcodes/static/src/scss/primary_variables.scss",
         ],
     },
-    'images': [
+    "images": [
         # 'static/description/banner.jpg',
         # 'static/description/theme_screenshot.jpg',
     ],
-    'license': 'AGPL-3',
-    'installable': True,
-    'auto_install': False,
-    'application': False,
+    "license": "AGPL-3",
+    "installable": True,
+    "auto_install": False,
+    "application": False,
 }
