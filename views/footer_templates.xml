@@ -2,8 +2,8 @@
 <odoo>
     <!-- HotCodes Footer Template -->
     <template id="hotcodes_footer" inherit_id="website.layout" name="HotCodes Footer">
-        <xpath expr="//div[@id='footer']" position="replace">
-            <footer class="hotcodes-footer" id="footer" style="background: linear-gradient(180deg, var(--bg-darker) 0%, #000000 100%); position: relative; z-index: 1;">
+        <xpath expr="//footer" position="replace">
+            <footer t-if="not no_footer" class="hotcodes-footer" id="footer" style="background: linear-gradient(180deg, var(--bg-darker) 0%, #000000 100%); position: relative; z-index: 1;">
                 <div class="container py-5">
                     <div class="row g-4 py-4">
                         <!-- Colonne 1: HotCodes Brand -->
@@ -11,7 +11,7 @@
                             <div class="footer-brand mb-3">
 
                                 <a href="/" class="o_footer_logo logo">
-                                    <img src="/website/static/src/img/website_logo.svg" class="img-fluid d-block me-auto" aria-label="Logo of MyCompany" title="MyCompany" role="img" style="width: 50% !important;"/>
+                                    <img src="/theme_hotcodes/static/src/img/logo.svg" class="img-fluid d-block me-auto" aria-label="Logo of MyCompany" title="MyCompany" role="img" style="width: 50% !important;"/>
                                 </a>
 
                                 <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1.5rem; font-size: 0.95rem;">

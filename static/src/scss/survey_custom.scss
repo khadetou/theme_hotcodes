@@ -1,0 +1,452 @@
+/* ============================================ */
+/* HOTCODES SURVEY CUSTOM STYLES */
+/* ============================================ */
+
+/* Animated Background for Survey */
+.o_survey_background {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  overflow-x: hidden;
+}
+
+.o_survey_background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image: linear-gradient(
+      rgba(255, 107, 53, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 107, 53, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.o_survey_background::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Gradient Spheres Animation */
+.o_survey_background #wrapwrap::before,
+.o_survey_background #wrapwrap::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 20s ease-in-out infinite;
+}
+
+.o_survey_background #wrapwrap::before {
+  width: 500px;
+  height: 500px;
+  top: -250px;
+  right: -100px;
+  background: radial-gradient(circle, #ff6b35, transparent 60%);
+  animation-delay: 0s;
+}
+
+.o_survey_background #wrapwrap::after {
+  width: 400px;
+  height: 400px;
+  bottom: -200px;
+  left: -50px;
+  background: radial-gradient(circle, #ff4500, transparent 60%);
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+/* Hide header and footer for survey pages */
+.o_survey_background header,
+.o_survey_background footer {
+  display: none !important;
+}
+
+/* Hide alerts that appear before wrapwrap (in header area) */
+body > .alert,
+body > div > .alert:first-child {
+  display: none !important;
+}
+
+/* Show alerts inside survey content (but respect d-none class) */
+/* IMPORTANT: Don't force display on .o_survey_question_error - it uses height: 0 to hide */
+#wrapwrap .alert:not(.d-none):not(.o_survey_question_error),
+.o_survey_form .alert:not(.d-none):not(.o_survey_question_error),
+.o_survey_wrap .alert:not(.d-none):not(.o_survey_question_error) {
+  display: block !important;
+}
+
+/* Global Alert Styling */
+.alert {
+  border-radius: 12px !important;
+  margin-bottom: 1rem !important;
+  padding: 1rem 1.5rem !important;
+}
+
+.alert-info {
+  background: rgba(13, 110, 253, 0.1) !important;
+  border: 1px solid rgba(13, 110, 253, 0.3) !important;
+  color: #0d6efd !important;
+}
+
+.alert-warning {
+  background: rgba(255, 193, 7, 0.1) !important;
+  border: 1px solid rgba(255, 193, 7, 0.3) !important;
+  color: #ffc107 !important;
+}
+
+.alert-danger {
+  background: rgba(220, 53, 69, 0.1) !important;
+  border: 1px solid rgba(220, 53, 69, 0.3) !important;
+  color: #dc3545 !important;
+}
+
+.alert-success {
+  background: rgba(40, 167, 69, 0.1) !important;
+  border: 1px solid rgba(40, 167, 69, 0.3) !important;
+  border-radius: 12px !important;
+  color: #28a745 !important;
+}
+
+/* Survey Container Spacing */
+.o_survey_wrap {
+  padding: 6rem 0 8rem 0 !important;
+  min-height: calc(100vh - 100px) !important;
+  color: #ffffff !important;
+}
+
+.o_survey_form {
+  margin-bottom: 0 !important;
+  color: #ffffff !important;
+}
+
+/* All text elements in survey should be white */
+.o_survey_form *,
+.o_survey_wrap *,
+.js_question-wrapper *,
+.o_survey_wrap h1,
+.o_survey_wrap h2,
+.o_survey_wrap h3,
+.o_survey_wrap h4,
+.o_survey_wrap h5,
+.o_survey_wrap h6 {
+  color: #ffffff !important;
+}
+
+/* Specific text elements */
+.o_survey_form span,
+.o_survey_form div,
+.o_survey_wrap span,
+.o_survey_wrap div,
+.o_survey_wrap p {
+  color: #ffffff !important;
+}
+
+/* Survey title and headers */
+.o_survey_wrap .o_survey_title,
+.o_survey_wrap h1.o_survey_title {
+  color: #ffffff !important;
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Question Title Styling with Gradient */
+.o_survey_question_title,
+.js_question-wrapper h2,
+.js_question-wrapper .h2,
+.o_survey_form h2,
+.o_survey_form .h2,
+.o_survey_form h3,
+.o_survey_form .h3,
+.o_survey_form h4,
+.o_survey_form .h4,
+.o_survey_wrap h2,
+.o_survey_wrap h3,
+.o_survey_wrap h4 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1.75rem !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.4 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Displayed answers (previous answers shown) */
+.o_survey_form .o_survey_answer,
+.o_survey_form .o_survey_answer_value,
+.o_survey_wrap .o_survey_answer,
+.o_survey_wrap .o_survey_answer_value {
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+}
+
+/* Question Description */
+.o_survey_question_description,
+.js_question-wrapper p,
+.o_survey_form p,
+.o_survey_form .text-muted,
+.o_survey_form small,
+.o_survey_form .small {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* "or press Enter" text and similar helper texts */
+.o_survey_form .text-muted,
+.o_survey_form .o_survey_submit_text,
+.o_survey_form button + span,
+.o_survey_form .btn + span {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.9rem !important;
+}
+
+/* Question Container */
+.js_question-wrapper {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Remove red background from question wrapper */
+.js_question-wrapper.bg-danger-subtle {
+  background: transparent !important;
+}
+
+/* Style error alerts - Odoo handles visibility with height: 0 / height: 4rem */
+.o_survey_question_error {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Style error alerts when they slide in (when there's an actual error) */
+.o_survey_question_error.slide_in {
+  background: rgba(220, 53, 69, 0.1) !important;
+  border: 1px solid rgba(220, 53, 69, 0.3) !important;
+  border-radius: 10px !important;
+  color: #dc3545 !important;
+  padding: 0.75rem 1rem !important;
+  margin-top: 0.5rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Survey Question Containers */
+.o_survey_question_wrapper {
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.o_survey_question_wrapper:hover {
+  border-color: rgba(255, 107, 53, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
+}
+
+/* Question Title */
+.o_survey_question_title {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Fields - Match contact_us form style */
+.o_survey_form input[type="text"],
+.o_survey_form input[type="email"],
+.o_survey_form input[type="number"],
+.o_survey_form input[type="date"],
+.o_survey_form input[type="datetime-local"],
+.o_survey_form textarea,
+.o_survey_form select,
+.o_survey_form .form-control {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  padding: 0.875rem 1.25rem !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+  font-size: 1rem !important;
+}
+
+/* Textarea specific - Increase height for multi-line answers */
+.o_survey_form textarea,
+.o_survey_form textarea.form-control {
+  min-height: 150px !important;
+  resize: vertical !important;
+  line-height: 1.6 !important;
+}
+
+.o_survey_form input[type="text"]:focus,
+.o_survey_form input[type="email"]:focus,
+.o_survey_form input[type="number"]:focus,
+.o_survey_form input[type="date"]:focus,
+.o_survey_form input[type="datetime-local"]:focus,
+.o_survey_form textarea:focus,
+.o_survey_form select:focus,
+.o_survey_form .form-control:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 107, 53, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1) !important;
+  outline: none !important;
+}
+
+/* Placeholder styling */
+.o_survey_form input::placeholder,
+.o_survey_form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Radio and Checkbox Buttons */
+.o_survey_form input[type="radio"],
+.o_survey_form input[type="checkbox"] {
+  width: 22px !important;
+  height: 22px !important;
+  accent-color: #ff6b35 !important;
+  cursor: pointer !important;
+  margin-right: 0.75rem !important;
+}
+
+/* Choice Labels - Match contact_us form style */
+.o_survey_form label,
+.o_survey_form .form-check-label,
+.o_survey_answer_wrapper label,
+.o_survey_form .form-label {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  font-size: 1.05rem !important;
+  cursor: pointer !important;
+  transition: color 0.2s ease !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.o_survey_form label:hover,
+.o_survey_form .form-check-label:hover {
+  color: #ff6b35 !important;
+}
+
+/* Choice Items Container */
+.o_survey_form .form-check,
+.o_survey_answer_wrapper .form-check {
+  padding: 0.75rem 1rem !important;
+  margin-bottom: 0.5rem !important;
+  border-radius: 10px !important;
+  transition: all 0.2s ease !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.o_survey_form .form-check:hover,
+.o_survey_answer_wrapper .form-check:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 107, 53, 0.3) !important;
+}
+
+/* Submit Buttons - Hotcodes Style */
+.o_survey_form button[type="submit"],
+.o_survey_form .btn-primary,
+.o_survey_form input[type="submit"] {
+  background: linear-gradient(135deg, #ff6b35, #ff4500) !important;
+  color: white !important;
+  border: none !important;
+  padding: 1rem 2.5rem !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  font-size: 1.125rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3) !important;
+  cursor: pointer !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.o_survey_form button[type="submit"]::before,
+.o_survey_form .btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.o_survey_form button[type="submit"]:hover::before,
+.o_survey_form .btn-primary:hover::before {
+  left: 100%;
+}
+
+.o_survey_form button[type="submit"].disabled {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+/* Submit Buttons Hover Effect */
+.o_survey_form button[type="submit"]:hover:not(.disabled),
+.o_survey_form .btn-primary:hover:not(.disabled) {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5) !important;
+}
+
+.o_survey_form button[type="submit"]:active:not(.disabled),
+.o_survey_form .btn-primary:active:not(.disabled) {
+  transform: translateY(0) !important;
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3) !important;
+}
+
+/* Progress Bar */
+.o_survey_progress_wrapper {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+}
+
+.o_survey_progress_bar {
+  background: linear-gradient(90deg, #ff6b35, #ff4500) !important;
+  border-radius: 8px !important;
+  transition: width 0.5s ease !important;
+}

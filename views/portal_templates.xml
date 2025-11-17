@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Hotcodes Portal Frontend Layout - Global CSS for ALL portal pages -->
+    <template id="hotcodes_portal_frontend_layout" name="Hotcodes Portal Frontend Layout" inherit_id="portal.frontend_layout">
+        <!-- Add global CSS for ALL portal pages - White text and orange links -->
+        <xpath expr="//head" position="inside">
+            <style>
+                /* ========================================
+                   GLOBAL PORTAL THEME - WHITE TEXT AND ORANGE LINKS
+                   Applied to ALL /my pages (home, orders, invoices, tickets, account, security, etc.)
+                   ======================================== */
+
+                /* Main portal content - White text for all elements */
+                .o_portal,
+                .o_portal h1,
+                .o_portal h2,
+                .o_portal h3,
+                .o_portal h4,
+                .o_portal h5,
+                .o_portal h6,
+                .o_portal p,
+                .o_portal span,
+                .o_portal div,
+                .o_portal td,
+                .o_portal th,
+                .o_portal strong,
+                .o_portal em,
+                .o_portal label,
+                .o_portal li {
+                    color: white !important;
+                }
+
+                /* Portal sidebar content */
+                .o_portal_sidebar,
+                .o_portal_sidebar_content,
+                .o_portal_sidebar_content h1,
+                .o_portal_sidebar_content h2,
+                .o_portal_sidebar_content h3,
+                .o_portal_sidebar_content h4,
+                .o_portal_sidebar_content h5,
+                .o_portal_sidebar_content h6,
+                .o_portal_sidebar_content p,
+                .o_portal_sidebar_content span,
+                .o_portal_sidebar_content div,
+                .o_portal_sidebar_content td,
+                .o_portal_sidebar_content th,
+                .o_portal_sidebar_content strong,
+                .o_portal_sidebar_content em,
+                .o_portal_sidebar_content label {
+                    color: white !important;
+                }
+
+                /* Specific portal sections */
+                #portal_sale_content,
+                #portal_sale_content h1,
+                #portal_sale_content h2,
+                #portal_sale_content h3,
+                #portal_sale_content h4,
+                #portal_sale_content h5,
+                #portal_sale_content h6,
+                #portal_sale_content p,
+                #portal_sale_content span,
+                #portal_sale_content div,
+                #portal_sale_content td,
+                #portal_sale_content th,
+                #portal_sale_content strong,
+                #portal_sale_content em,
+                #portal_sale_content label {
+                    color: white !important;
+                }
+
+                /* Communication history section */
+                #sale_order_communication,
+                #sale_order_communication h1,
+                #sale_order_communication h2,
+                #sale_order_communication h3,
+                #sale_order_communication h4,
+                #sale_order_communication h5,
+                #sale_order_communication h6 {
+                    color: white !important;
+                }
+
+                /* Invoice portal content */
+                #invoice_content,
+                #invoice_content h1,
+                #invoice_content h2,
+                #invoice_content h3,
+                #invoice_content h4,
+                #invoice_content h5,
+                #invoice_content h6,
+                #invoice_content p,
+                #invoice_content span,
+                #invoice_content div,
+                #invoice_content td,
+                #invoice_content th {
+                    color: white !important;
+                }
+
+                /* Ticket portal content */
+                #ticket_content,
+                #ticket_content h1,
+                #ticket_content h2,
+                #ticket_content h3,
+                #ticket_content h4,
+                #ticket_content h5,
+                #ticket_content h6,
+                #ticket_content p,
+                #ticket_content span,
+                #ticket_content div,
+                #ticket_content td,
+                #ticket_content th {
+                    color: white !important;
+                }
+
+                /* Muted text in lighter white */
+                .o_portal .text-muted,
+                .o_portal_sidebar_content .text-muted,
+                #portal_sale_content .text-muted,
+                #invoice_content .text-muted,
+                #ticket_content .text-muted {
+                    color: rgba(255, 255, 255, 0.7) !important;
+                }
+
+                /* ========================================
+                   LINKS - ORANGE COLOR (#ff6b35)
+                   Document references, navigation links, etc.
+                   ======================================== */
+
+                /* All portal links - Orange */
+                .o_portal a,
+                .o_portal_sidebar_content a,
+                #portal_sale_content a,
+                #invoice_content a,
+                #ticket_content a,
+                #sale_invoices a, div[name="delivery_order"] a, div[name="return"] a,
+                .o_portal_my_home a,
+                .o_portal_docs a {
+                    color: #ff6b35 !important;
+                    text-decoration: none !important;
+                }
+
+                /* Link hover state - Lighter orange with underline */
+                .o_portal a:hover,
+                .o_portal_sidebar_content a:hover,
+                #portal_sale_content a:hover,
+                #invoice_content a:hover,
+                #ticket_content a:hover,
+                #sale_invoices a:hover, div[name="delivery_order"] a:hover, div[name="return"] a:hover,
+                .o_portal_my_home a:hover,
+                .o_portal_docs a:hover {
+                    color: #ff8555 !important;
+                    text-decoration: underline !important;
+                }
+
+                /* ========================================
+                   BUTTONS
+                   ======================================== */
+
+                /* Button text - White */
+                .o_portal .btn,
+                .o_portal_sidebar_content .btn,
+                #portal_sale_content .btn,
+                #invoice_content .btn,
+                #ticket_content .btn,
+                #sale_order_communication .btn,
+                button.btn-primary,
+                button.btn-secondary,
+                .o_portal button {
+                    color: white !important;
+                }
+
+                /* Specific fix for "Envoyer" button in communication history */
+                #sale_order_communication button[type="submit"],
+                .o_portal_chatter button[type="submit"],
+                button.o_portal_chatter_composer_btn {
+                    color: white !important;
+                    background-color: #ff6b35 !important;
+                    border-color: #ff6b35 !important;
+                }
+
+                #sale_order_communication button[type="submit"]:hover,
+                .o_portal_chatter button[type="submit"]:hover,
+                button.o_portal_chatter_composer_btn:hover {
+                    background-color: #ff8555 !important;
+                    border-color: #ff8555 !important;
+                }
+
+                /* ========================================
+                   STATUS BADGES - PROPER CONTRAST
+                   ======================================== */
+
+                /* Default badge text - White */
+                .o_portal .badge,
+                .badge.text-bg-success,
+                .badge.text-bg-danger,
+                .badge.text-bg-primary,
+                .badge.text-bg-secondary,
+                .badge.rounded-pill.text-bg-success,
+                .badge.rounded-pill.text-bg-danger,
+                .badge.rounded-pill.text-bg-primary,
+                .badge.rounded-pill.text-bg-secondary {
+                    color: white !important;
+                }
+
+                /* Info badges (blue) - Black text for better contrast */
+                .o_portal .badge.text-bg-info,
+                .o_portal .badge.rounded-pill.text-bg-info,
+                .badge.text-bg-info,
+                .badge.rounded-pill.text-bg-info {
+                    background-color: #0dcaf0 !important;
+                    color: #000 !important;
+                }
+
+                /* Warning badges (yellow) - Black text for better contrast */
+                .o_portal .badge.text-bg-warning,
+                .o_portal .badge.rounded-pill.text-bg-warning,
+                .badge.text-bg-warning,
+                .badge.rounded-pill.text-bg-warning {
+                    background-color: #ffc107 !important;
+                    color: #000 !important;
+                }
+
+                /* ========================================
+                   DEBRANDING - HIDE ODOO BRANDING
+                   ======================================== */
+
+                /* Hide "Powered by Odoo" footer on ALL portal pages */
+                .o_portal_sidebar_content .text-muted.small,
+                .o_portal .text-muted.small:has(a[href*="odoo.com"]),
+                footer .text-muted:has(a[href*="odoo.com"]) {
+                    display: none !important;
+                }
+
+                /* Hide Odoo logo in portal footer */
+                .o_portal footer img[src*="logo"],
+                .o_portal footer img[alt*="Odoo"] {
+                    display: none !important;
+                }
+            </style>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Portal Layout - Custom Dark Theme -->
+    <template id="hotcodes_portal_layout" name="Hotcodes Portal Layout" inherit_id="portal.portal_layout">
+        <!-- Add more space at the top for breadcrumb container -->
+        <xpath expr="//div[contains(@class, 'o_portal') and contains(@class, 'container')]" position="attributes">
+            <attribute name="style">margin-top: 6rem !important;</attribute>
+        </xpath>
+
+        <!-- Add custom styling to portal wrap -->
+        <xpath expr="//div[@id='wrap']" position="attributes">
+            <attribute name="style">background: transparent; min-height: calc(100vh - 200px);</attribute>
+        </xpath>
+
+        <!-- Customize container with dark theme styling -->
+        <xpath expr="//div[@id='wrap']/div[@class='container pt-3 pb-5']" position="attributes">
+            <attribute name="style">padding-top: 6rem !important; padding-bottom: 6rem !important;</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Portal Breadcrumbs - Custom Styling -->
+    <template id="hotcodes_portal_breadcrumbs" name="Hotcodes Portal Breadcrumbs" inherit_id="portal.portal_breadcrumbs">
+        <xpath expr="//ol[@class='o_portal_submenu breadcrumb mb-0 flex-grow-1 px-0']" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 10px; padding: 0.75rem 1.5rem;</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Portal My Home - Custom Card Design -->
+    <template id="hotcodes_portal_my_home" name="Hotcodes Portal My Home" inherit_id="portal.portal_my_home">
+        <!-- Add animated background and title -->
+        <xpath expr="//div[@class='o_portal_my_home']" position="before">
+            <!-- Animated Background Pattern -->
+            <div style="position: fixed; inset: 0; background-image: linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0;"></div>
+
+            <!-- Floating Icons -->
+            <div style="position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0;">
+                <iconify-icon icon="solar:user-circle-bold-duotone" style="position: absolute; top: 15%; left: 10%; font-size: 4rem; color: rgba(255,107,53,0.1); animation: floatIcon 8s ease-in-out infinite;"></iconify-icon>
+                <iconify-icon icon="solar:shield-check-bold-duotone" style="position: absolute; top: 60%; right: 15%; font-size: 5rem; color: rgba(138,43,226,0.1); animation: floatIcon 10s ease-in-out infinite 2s;"></iconify-icon>
+                <iconify-icon icon="solar:settings-bold-duotone" style="position: absolute; bottom: 20%; left: 20%; font-size: 3.5rem; color: rgba(59,130,246,0.1); animation: floatIcon 12s ease-in-out infinite 4s;"></iconify-icon>
+            </div>
+
+            <style>
+                @keyframes floatIcon {
+                    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+                    25% { transform: translate(10px, -10px) rotate(5deg); }
+                    50% { transform: translate(-5px, 5px) rotate(-5deg); }
+                    75% { transform: translate(5px, 10px) rotate(3deg); }
+                }
+            </style>
+
+            <!-- Add custom title -->
+            <h3 class="my-3" style="color: white; font-size: 2rem; font-weight: 700;">
+                <iconify-icon icon="solar:user-circle-bold-duotone" style="color: #ff6b35; margin-right: 0.5rem; font-size: 2.5rem; vertical-align: middle;"></iconify-icon>
+                Mon Compte
+            </h3>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Portal Docs Entry - Glassmorphism Cards -->
+    <template id="hotcodes_portal_docs_entry" name="Hotcodes Portal Docs Entry" inherit_id="portal.portal_docs_entry">
+        <xpath expr="//a" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)) !important; backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 15px; padding: 1.5rem; transition: all 0.3s ease; text-decoration: none; color: white;</attribute>
+            <attribute name="onmouseover">this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(255,107,53,0.4)'; this.style.boxShadow='0 10px 30px rgba(255,107,53,0.2)';</attribute>
+            <attribute name="onmouseout">this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,107,53,0.15)'; this.style.boxShadow='none';</attribute>
+        </xpath>
+
+        <xpath expr="//a/div[2]" position="attributes">
+            <attribute name="style">color: white;</attribute>
+        </xpath>
+
+        <xpath expr="//a/div[2]/div[1]" position="attributes">
+            <attribute name="style">color: white; font-weight: 600;</attribute>
+        </xpath>
+
+        <xpath expr="//a/div[2]/div[2]" position="attributes">
+            <attribute name="style">color: rgba(255,255,255,0.7);</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Portal Searchbar - Custom Styling -->
+    <template id="hotcodes_portal_searchbar" name="Hotcodes Portal Searchbar" inherit_id="portal.portal_searchbar">
+        <!-- Target the nav element directly (it has t-attf-class, not class) -->
+        <xpath expr="//nav" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 15px; padding: 1.5rem;</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Portal Table - Custom Styling -->
+    <template id="hotcodes_portal_table" name="Hotcodes Portal Table" inherit_id="portal.portal_table">
+        <!-- Target the first div (has t-attf-class, not class) -->
+        <xpath expr="//div[1]" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 15px; padding: 1rem;</attribute>
+        </xpath>
+
+        <xpath expr="//table" position="attributes">
+            <attribute name="style">color: white;</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Portal Contact - Custom Styling -->
+    <template id="hotcodes_portal_contact" name="Hotcodes Portal Contact" inherit_id="portal.portal_contact">
+        <xpath expr="//div[@class='o_portal_contact_details mb-5']" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 15px; padding: 1.5rem;</attribute>
+        </xpath>
+
+        <xpath expr="//div[@class='o_portal_contact_details mb-5']/h5" position="attributes">
+            <attribute name="style">color: #ff6b35; font-weight: 700;</attribute>
+        </xpath>
+
+        <xpath expr="//div[@class='o_portal_contact_details mb-5']/h6" position="attributes">
+            <attribute name="style">color: white; font-weight: 600;</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Portal Security Page - Custom Styling -->
+    <template id="hotcodes_portal_security" name="Hotcodes Portal Security" inherit_id="portal.portal_my_security">
+        <!-- Customize main title -->
+        <xpath expr="//h3[@class='my-0']" position="replace">
+            <h3 class="my-0" style="color: white; font-weight: 700;">
+                <iconify-icon icon="solar:shield-check-bold-duotone" style="color: #ff6b35; margin-right: 0.5rem; font-size: 2rem; vertical-align: middle;"></iconify-icon>
+                Connexion &amp; Sécurité
+            </h3>
+        </xpath>
+
+        <!-- Customize Change Password section title -->
+        <xpath expr="//section[@name='portal_change_password']/h4" position="replace">
+            <h4 style="color: white; font-weight: 600; margin-top: 2rem;">
+                <iconify-icon icon="solar:lock-password-bold-duotone" style="color: #ff6b35; margin-right: 0.5rem;"></iconify-icon>
+                Changer le mot de passe
+            </h4>
+        </xpath>
+
+        <!-- Customize form -->
+        <xpath expr="//form[@class='oe_reset_password_form']" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 15px; padding: 2rem; margin-top: 1rem;</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Side Content - Custom Styling -->
+    <template id="hotcodes_side_content" name="Hotcodes Side Content" inherit_id="portal.side_content">
+        <!-- Style the side content container -->
+        <xpath expr="//div[contains(@class, 'o_portal_my_details')]" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 15px; padding: 1.5rem; margin-top: 1rem;</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Record Pager - Custom Styling -->
+    <template id="hotcodes_record_pager" name="Hotcodes Record Pager" inherit_id="portal.record_pager">
+        <!-- Target the div with both classes: record_pager and btn-group -->
+        <xpath expr="//div[contains(@class, 'record_pager')]" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 10px; overflow: hidden;</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Pager - Custom Styling -->
+    <template id="hotcodes_pager" name="Hotcodes Pager" inherit_id="portal.pager">
+        <!-- Target ul directly (it has t-attf-class, not class) -->
+        <xpath expr="//ul" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 10px; padding: 0.5rem;</attribute>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Portal Addresses - Glassmorphism Design -->
+    <template id="hotcodes_portal_my_addresses" name="Hotcodes Portal My Addresses" inherit_id="portal.my_addresses">
+        <!-- Add custom CSS for glassmorphism address cards -->
+        <xpath expr="//section[@class='o_portal_addresses']" position="before">
+            <style>
+                /* ========================================
+                   PORTAL ADDRESSES - GLASSMORPHISM DESIGN
+                   ======================================== */
+
+                /* Address section styling */
+                .o_portal_addresses {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                /* Address card - Container */
+                .o_address_card {
+                    background: transparent !important;
+                    border: none !important;
+                    border-radius: 16px !important;
+                    transition: all 0.3s ease !important;
+                    overflow: hidden;
+                }
+
+                /* Address card body - Dark Glassmorphism effect */
+                .o_address_card .card-body {
+                    background: linear-gradient(135deg,
+                        rgba(20, 20, 20, 0.8) 0%,
+                        rgba(15, 15, 15, 0.7) 100%) !important;
+                    backdrop-filter: blur(30px) saturate(180%) !important;
+                    -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+                    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                    border-radius: 16px !important;
+                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+                    color: white !important;
+                    padding: 1.5rem !important;
+                    transition: all 0.3s ease !important;
+                }
+
+                /* Address card body hover effect */
+                .o_address_card:hover .card-body {
+                    transform: translateY(-4px) !important;
+                    box-shadow: 0 12px 48px rgba(255, 107, 53, 0.2) !important;
+                    border-color: rgba(255, 107, 53, 0.3) !important;
+                }
+
+                /* Selected address card body - Orange glow */
+                .o_address_card.bg-400.border-primary .card-body {
+                    background: linear-gradient(135deg,
+                        rgba(255, 107, 53, 0.15) 0%,
+                        rgba(255, 107, 53, 0.05) 100%) !important;
+                    border: 2px solid rgba(255, 107, 53, 0.5) !important;
+                    box-shadow: 0 8px 32px rgba(255, 107, 53, 0.3) !important;
+                }
+
+                /* Address text styling */
+                .o_address_card .card-body div,
+                .o_address_card .card-body span,
+                .o_address_card .card-body address {
+                    color: white !important;
+                }
+
+                /* Badge styling - Info badges with dark glassmorphism */
+                .o_address_card .badge.text-bg-info {
+                    background: linear-gradient(135deg,
+                        rgba(13, 202, 240, 0.25) 0%,
+                        rgba(13, 202, 240, 0.15) 100%) !important;
+                    backdrop-filter: blur(15px) saturate(180%) !important;
+                    border: 1px solid rgba(13, 202, 240, 0.5) !important;
+                    color: #0dcaf0 !important;
+                    font-weight: 600 !important;
+                    padding: 0.5rem 1rem !important;
+                    border-radius: 8px !important;
+                    box-shadow: 0 4px 16px rgba(13, 202, 240, 0.2) !important;
+                }
+
+                /* Section headers */
+                .o_portal_addresses h5 {
+                    color: white !important;
+                    font-weight: 600 !important;
+                    font-size: 1.25rem !important;
+                }
+
+                /* Add Address button - Dark orange glassmorphism */
+                .o_address_card_add_new.btn {
+                    background: linear-gradient(135deg,
+                        rgba(255, 107, 53, 0.25) 0%,
+                        rgba(255, 107, 53, 0.15) 100%) !important;
+                    backdrop-filter: blur(15px) saturate(180%) !important;
+                    border: 1px solid rgba(255, 107, 53, 0.5) !important;
+                    color: #ff6b35 !important;
+                    font-weight: 600 !important;
+                    padding: 0.5rem 1.25rem !important;
+                    border-radius: 8px !important;
+                    transition: all 0.3s ease !important;
+                    box-shadow: 0 4px 16px rgba(255, 107, 53, 0.15) !important;
+                }
+
+                .o_address_card_add_new.btn:hover {
+                    background: linear-gradient(135deg,
+                        rgba(255, 107, 53, 0.4) 0%,
+                        rgba(255, 107, 53, 0.25) 100%) !important;
+                    border-color: rgba(255, 107, 53, 0.7) !important;
+                    color: white !important;
+                    transform: translateY(-2px) !important;
+                    box-shadow: 0 6px 24px rgba(255, 107, 53, 0.35) !important;
+                }
+
+                .o_address_card_add_new.btn i {
+                    color: inherit !important;
+                }
+
+                /* Form switch - Custom styling */
+                .form-check-input {
+                    background-color: rgba(255, 255, 255, 0.1) !important;
+                    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+                    cursor: pointer !important;
+                }
+
+                .form-check-input:checked {
+                    background-color: #ff6b35 !important;
+                    border-color: #ff6b35 !important;
+                }
+
+                .form-check label {
+                    color: white !important;
+                    font-weight: 500 !important;
+                    cursor: pointer !important;
+                }
+
+                /* Edit and Delete buttons on address cards */
+                .o_address_card a.btn,
+                .o_address_card button.btn {
+                    background: linear-gradient(135deg,
+                        rgba(255, 107, 53, 0.2) 0%,
+                        rgba(255, 107, 53, 0.1) 100%) !important;
+                    backdrop-filter: blur(15px) saturate(180%) !important;
+                    border: 1px solid rgba(255, 107, 53, 0.4) !important;
+                    color: #ff6b35 !important;
+                    font-size: 0.875rem !important;
+                    padding: 0.375rem 0.75rem !important;
+                    border-radius: 6px !important;
+                    transition: all 0.3s ease !important;
+                    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.1) !important;
+                }
+
+                .o_address_card a.btn:hover,
+                .o_address_card button.btn:hover {
+                    background: linear-gradient(135deg,
+                        rgba(255, 107, 53, 0.35) 0%,
+                        rgba(255, 107, 53, 0.2) 100%) !important;
+                    border-color: rgba(255, 107, 53, 0.6) !important;
+                    color: white !important;
+                    transform: translateY(-1px) !important;
+                    box-shadow: 0 4px 16px rgba(255, 107, 53, 0.25) !important;
+                }
+            </style>
+        </xpath>
+    </template>
+
+</odoo>

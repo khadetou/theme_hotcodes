@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="contact_us" name="Nous Contacter" inherit_id="website.contactus">
+        <xpath expr="//div[hasclass('oe_structure')]" position="replace">
+            <div class="oe_structure"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('oe_structure')]" position="after">
+            <div id="wrap" class="oe_structure oe_empty" style="background: #000;">
+
+                <!-- Hero Section - Contact -->
+                <section class="contact-hero" style="min-height: 50vh; background: linear-gradient(135deg, #000 0%, #0a0a0a 100%); position: relative; overflow: hidden; display: flex; align-items: center; padding: 6rem 0 4rem;">
+
+                    <!-- Animated Background Pattern -->
+                    <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,107,53,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.05) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none;"></div>
+
+                    <!-- Floating Icons -->
+                    <div style="position: absolute; inset: 0; pointer-events: none; overflow: hidden;">
+                        <div style="position: absolute; top: 20%; left: 10%; font-size: 3rem; color: rgba(255,107,53,0.1); animation: floatIcon 8s ease-in-out infinite;">
+                            <iconify-icon icon="solar:letter-bold-duotone"></iconify-icon>
+                        </div>
+                        <div style="position: absolute; top: 60%; right: 15%; font-size: 2.5rem; color: rgba(138,43,226,0.1); animation: floatIcon 10s ease-in-out infinite 2s;">
+                            <iconify-icon icon="solar:phone-bold-duotone"></iconify-icon>
+                        </div>
+                        <div style="position: absolute; bottom: 20%; left: 20%; font-size: 2rem; color: rgba(59,130,246,0.1); animation: floatIcon 12s ease-in-out infinite 4s;">
+                            <iconify-icon icon="solar:chat-round-bold-duotone"></iconify-icon>
+                        </div>
+                    </div>
+
+                    <div class="container" style="position: relative; z-index: 10;">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-8">
+                                <!-- Eyebrow Badge -->
+                                <div class="mb-3">
+                                    <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                        📧 CONTACTEZ-NOUS
+                                    </span>
+                                </div>
+
+                                <!-- Title -->
+                                <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; color: white;">
+                                    Parlons de Votre <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Projet</span>
+                                </h1>
+
+                                <!-- Subtitle -->
+                                <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 700px; margin: 0 auto;">
+                                    Notre équipe est à votre écoute pour discuter de vos besoins et vous proposer des solutions adaptées
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Main Contact Section -->
+                <section class="contact-main py-5" style="background: var(--bg-dark); position: relative;">
+                    <div class="container py-5">
+                        <div class="row g-5">
+
+                            <!-- Left Side - Contact Form -->
+                            <div class="col-lg-7">
+                                <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 20px; padding: 2.5rem;">
+                                    <h3 style="color: white; font-size: 1.75rem; font-weight: 600; margin-bottom: 1rem;">
+                                        Envoyez-nous un Message
+                                    </h3>
+                                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">
+                                        Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais
+                                    </p>
+
+                                    <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                                        <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-pre-fill="true">
+                                            <div class="s_website_form_rows row g-3 s_col_no_bgcolor">
+                                                <!-- Name -->
+                                                <div class="col-md-6 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="contact1">
+                                                        <span class="s_website_form_label_content">Nom Complet</span>
+                                                        <span class="s_website_form_mark" style="color: var(--hotcodes-primary);"> *</span>
+                                                    </label>
+                                                    <input id="contact1" type="text" class="form-control s_website_form_input" name="name" required="" data-fill-with="name" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="Votre nom"/>
+                                                </div>
+
+                                                <!-- Phone -->
+                                                <div class="col-md-6 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="contact2">
+                                                        <span class="s_website_form_label_content">Téléphone</span>
+                                                    </label>
+                                                    <input id="contact2" type="tel" class="form-control s_website_form_input" name="phone" data-fill-with="phone" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="+221 XX XXX XX XX"/>
+                                                </div>
+
+                                                <!-- Email -->
+                                                <div class="col-md-6 s_website_form_field s_website_form_required s_website_form_model_required" data-type="email" data-name="Field">
+                                                    <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="contact3">
+                                                        <span class="s_website_form_label_content">Email</span>
+                                                        <span class="s_website_form_mark" style="color: var(--hotcodes-primary);"> *</span>
+                                                    </label>
+                                                    <input id="contact3" type="email" class="form-control s_website_form_input" name="email_from" required="" data-fill-with="email" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="votre@email.com"/>
+                                                </div>
+
+                                                <!-- Company -->
+                                                <div class="col-md-6 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="contact4">
+                                                        <span class="s_website_form_label_content">Entreprise</span>
+                                                    </label>
+                                                    <input id="contact4" type="text" class="form-control s_website_form_input" name="company" data-fill-with="commercial_company_name" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="Nom de votre entreprise"/>
+                                                </div>
+
+                                                <!-- Subject -->
+                                                <div class="col-12 s_website_form_field s_website_form_required s_website_form_model_required" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="contact5">
+                                                        <span class="s_website_form_label_content">Sujet</span>
+                                                        <span class="s_website_form_mark" style="color: var(--hotcodes-primary);"> *</span>
+                                                    </label>
+                                                    <input id="contact5" type="text" class="form-control s_website_form_input" name="subject" required="" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="De quoi souhaitez-vous parler ?"/>
+                                                </div>
+
+                                                <!-- Message -->
+                                                <div class="col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                                                    <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="contact6">
+                                                        <span class="s_website_form_label_content">Message</span>
+                                                        <span class="s_website_form_mark" style="color: var(--hotcodes-primary);"> *</span>
+                                                    </label>
+                                                    <textarea id="contact6" class="form-control s_website_form_input" name="description" required="" rows="6" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px; resize: vertical;" placeholder="Décrivez votre projet ou votre besoin..."></textarea>
+                                                </div>
+
+                                                <!-- Hidden Email To -->
+                                                <div class="mb-3 col-12 s_website_form_field s_website_form_dnone">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label col-sm-auto s_website_form_label" for="contact7">
+                                                            <span class="s_website_form_label_content">Email To</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="contact7" type="hidden" class="form-control s_website_form_input" name="email_to"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Submit Button -->
+                                                <div class="mb-0 py-2 col-12 s_website_form_submit s_website_form_no_submit_label" data-name="Submit Button">
+                                                    <a href="#" role="button" class="btn s_website_form_send" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2.5rem; border-radius: 10px; font-weight: 600; font-size: 1.125rem; border: none; width: 100%; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-block; text-align: center; text-decoration: none;">
+                                                        <iconify-icon icon="solar:letter-bold-duotone" style="vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                        Envoyer le Message
+                                                    </a>
+                                                    <span id="s_website_form_result"></span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!-- Right Side - Contact Info -->
+                            <div class="col-lg-5">
+                                <!-- Contact Cards -->
+                                <div class="contact-info-cards" style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+                                    <!-- Card 1: Coordonnées -->
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 16px; padding: 2rem;">
+                                        <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                                <iconify-icon icon="solar:map-point-bold-duotone" style="font-size: 1.5rem; color: white;"></iconify-icon>
+                                            </div>
+                                            Coordonnées
+                                        </h4>
+
+                                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                                            <!-- Address -->
+                                            <div style="display: flex; align-items: start; gap: 1rem;">
+                                                <div style="width: 36px; height: 36px; background: rgba(255,107,53,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                    <iconify-icon icon="solar:map-point-bold-duotone" style="font-size: 1.25rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <div style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-bottom: 0.25rem;">Adresse</div>
+                                                    <div style="color: white; font-weight: 500;">Dakar, Sénégal</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Phone -->
+                                            <div style="display: flex; align-items: start; gap: 1rem;">
+                                                <div style="width: 36px; height: 36px; background: rgba(138,43,226,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                    <iconify-icon icon="solar:phone-bold-duotone" style="font-size: 1.25rem; color: var(--hotcodes-secondary);"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <div style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-bottom: 0.25rem;">Téléphone</div>
+                                                    <a href="tel:+221775867968" style="color: white; font-weight: 500; text-decoration: none;">+221 77 586 79 68</a>
+                                                </div>
+                                            </div>
+
+                                            <!-- Email -->
+                                            <div style="display: flex; align-items: start; gap: 1rem;">
+                                                <div style="width: 36px; height: 36px; background: rgba(59,130,246,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                    <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 1.25rem; color: var(--hotcodes-accent);"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <div style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-bottom: 0.25rem;">Email</div>
+                                                    <a href="mailto:contact@hotcodes.sn" style="color: white; font-weight: 500; text-decoration: none;">contact@hotcodes.sn</a>
+                                                </div>
+                                            </div>
+
+                                            <!-- Hours -->
+                                            <div style="display: flex; align-items: start; gap: 1rem;">
+                                                <div style="width: 36px; height: 36px; background: rgba(40,202,66,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                    <iconify-icon icon="solar:clock-circle-bold-duotone" style="font-size: 1.25rem; color: #28CA42;"></iconify-icon>
+                                                </div>
+                                                <div>
+                                                    <div style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-bottom: 0.25rem;">Horaires</div>
+                                                    <div style="color: white; font-weight: 500;">Lun-Ven: 8h-18h</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 2: WhatsApp Contact -->
+                                    <div style="background: linear-gradient(135deg, rgba(37,211,102,0.1), rgba(37,211,102,0.05)); backdrop-filter: blur(10px); border: 1px solid rgba(37,211,102,0.3); border-radius: 16px; padding: 2rem;">
+                                        <div style="text-align: center;">
+                                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                                <iconify-icon icon="ph:whatsapp-logo-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">
+                                                Contactez-nous sur WhatsApp
+                                            </h4>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                                                Besoin d'une réponse rapide ? Écrivez-nous directement sur WhatsApp
+                                            </p>
+                                            <a href="https://wa.me/221775867968?text=Bonjour%20HotCodes,%20je%20souhaite%20discuter%20d'un%20projet" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(37,211,102,0.3);">
+                                                <iconify-icon icon="ph:whatsapp-logo-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                                Ouvrir WhatsApp
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 3: Social Media -->
+                                    <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 16px; padding: 2rem;">
+                                        <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">
+                                            Suivez-nous
+                                        </h4>
+                                        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                                            <a href="https://linkedin.com/company/hotcodes" target="_blank" rel="noopener" style="width: 50px; height: 50px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--hotcodes-primary); font-size: 1.5rem; transition: all 0.3s ease; text-decoration: none;" title="LinkedIn">
+                                                <iconify-icon icon="ph:linkedin-logo-duotone"></iconify-icon>
+                                            </a>
+                                            <a href="https://facebook.com/hotcodes" target="_blank" rel="noopener" style="width: 50px; height: 50px; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--hotcodes-secondary); font-size: 1.5rem; transition: all 0.3s ease; text-decoration: none;" title="Facebook">
+                                                <iconify-icon icon="ph:facebook-logo-duotone"></iconify-icon>
+                                            </a>
+                                            <a href="https://twitter.com/hotcodes" target="_blank" rel="noopener" style="width: 50px; height: 50px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--hotcodes-accent); font-size: 1.5rem; transition: all 0.3s ease; text-decoration: none;" title="Twitter">
+                                                <iconify-icon icon="ph:twitter-logo-duotone"></iconify-icon>
+                                            </a>
+                                            <a href="https://instagram.com/hotcodes" target="_blank" rel="noopener" style="width: 50px; height: 50px; background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #FFD700; font-size: 1.5rem; transition: all 0.3s ease; text-decoration: none;" title="Instagram">
+                                                <iconify-icon icon="ph:instagram-logo-duotone"></iconify-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

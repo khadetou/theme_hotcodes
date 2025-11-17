@@ -1,0 +1,249 @@
+/* ============================================ */
+/* HOTCODES AUTH CUSTOM STYLES (LOGIN/REGISTER) */
+/* ============================================ */
+
+/* Animated Background for Auth Pages */
+body.bg-100 {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body.bg-100::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image: linear-gradient(
+      rgba(255, 107, 53, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 107, 53, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+body.bg-100::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Gradient Spheres - REMOVED */
+
+/* Auth Card Styling */
+.card.o_database_list {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 20, 0.95),
+    rgba(15, 15, 15, 0.9)
+  ) !important;
+  backdrop-filter: blur(30px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+  border: 1px solid rgba(255, 107, 53, 0.3) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 10px 40px rgba(255, 107, 53, 0.15) !important;
+  max-width: 450px !important;
+  position: relative;
+  z-index: 1;
+}
+
+.card-body {
+  padding: 3rem !important;
+}
+
+/* Logo Styling */
+.card-body img {
+  max-height: 80px !important;
+  filter: brightness(1.2) !important;
+}
+
+/* Form Styling */
+.oe_login_form,
+.oe_signup_form,
+.oe_reset_password_form {
+  color: #ffffff !important;
+}
+
+/* Labels */
+.form-label,
+.col-form-label,
+label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Input Fields */
+input.form-control,
+select.form-control,
+textarea.form-control {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  padding: 0.875rem 1.25rem !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  font-size: 1rem !important;
+}
+
+input.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 107, 53, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1) !important;
+  outline: none !important;
+}
+
+input.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Input Group (password show/hide button) */
+.input-group .btn {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  border-radius: 0 12px 12px 0 !important;
+}
+
+.input-group .btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Primary Button (Login/Sign up) */
+.btn-primary {
+  background: linear-gradient(135deg, #ff6b35, #ff4500) !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.875rem 2rem !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5) !important;
+}
+
+.btn-primary:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3) !important;
+}
+
+/* Link Buttons */
+.btn-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.btn-link:hover {
+  color: #ff6b35 !important;
+}
+
+/* Alerts */
+.alert-danger {
+  background: rgba(220, 53, 69, 0.1) !important;
+  border: 1px solid rgba(220, 53, 69, 0.3) !important;
+  color: #ff6b6b !important;
+  border-radius: 12px !important;
+}
+
+.alert-success {
+  background: rgba(40, 167, 69, 0.1) !important;
+  border: 1px solid rgba(40, 167, 69, 0.3) !important;
+  color: #51cf66 !important;
+  border-radius: 12px !important;
+}
+
+/* Footer Links */
+.text-center.small {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-center.small a {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.text-center.small a:hover {
+  color: #ff6b35 !important;
+}
+
+/* Border Dividers */
+.border-top,
+.border-bottom {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.border-end {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* OAuth Login Options */
+.o_login_auth {
+  margin-top: 1.5rem !important;
+}
+
+.o_login_auth em {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.list-group-item {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 12px !important;
+  margin-bottom: 0.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.list-group-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 107, 53, 0.3) !important;
+  transform: translateY(-2px) !important;
+}

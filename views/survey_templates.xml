@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- ============================================ -->
+    <!-- HOTCODES SURVEY CUSTOM TEMPLATES -->
+    <!-- ============================================ -->
+
+    <!-- Override Survey Layout -->
+    <template id="hotcodes_survey_layout" name="Hotcodes Survey Layout" inherit_id="survey.layout">
+      <!-- Ensure no header and no footer -->
+      <xpath expr="//header" position="before">
+        <t t-set="no_header" t-value="True"/>
+        <t t-set="no_footer" t-value="True"/>
+      </xpath>
+
+      <!-- Add custom dark theme styling -->
+      <xpath expr="//div[@id='wrapwrap']" position="attributes">
+        <attribute name="style" add="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); min-height: 100vh;" separator=" "/>
+      </xpath>
+
+      <!-- Remove only the "Généré par Odoo" text, keep navigation wrapper -->
+      <xpath expr="//div[hasclass('o_survey_brand_message')]" position="replace">
+        <div class="o_survey_brand_message float-end rounded me-3" style="border: none; background: transparent;">
+          <!-- Remove the brand promotion message, keep only navigation -->
+          <div t-if="not no_survey_navigation" class="o_survey_navigation_wrapper d-inline-block d-print-none">
+            <t t-call="survey.survey_navigation"/>
+          </div>
+        </div>
+      </xpath>
+    </template>
+
+    <!-- Override Survey Main Page -->
+    <template id="hotcodes_survey_page_fill" name="Hotcodes Survey Main Page" inherit_id="survey.survey_page_fill">
+      <!-- Add padding to the wrap container -->
+      <xpath expr="//div[hasclass('o_survey_wrap')]" position="attributes">
+        <attribute name="style" add="padding: 6rem 0 8rem 0; min-height: calc(100vh - 100px);" separator=" "/>
+      </xpath>
+
+      <!-- Style the survey form container with enhanced glassmorphism -->
+      <xpath expr="//div[hasclass('o_survey_form')]" position="attributes">
+        <attribute name="style" add="
+          background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(15, 15, 15, 0.85));
+          backdrop-filter: blur(30px) saturate(180%);
+          -webkit-backdrop-filter: blur(30px) saturate(180%);
+          border: 1px solid rgba(255, 107, 53, 0.3);
+          border-radius: 28px;
+          padding: 3.5rem;
+          box-shadow:
+            0 30px 90px rgba(0, 0, 0, 0.6),
+            0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+            0 10px 40px rgba(255, 107, 53, 0.15);
+          margin-bottom: 0;
+          position: relative;
+          overflow: hidden;
+        " separator=" "/>
+      </xpath>
+    </template>
+
+    <!-- Override Survey Button Form View (Test Entry Alert) -->
+    <template id="hotcodes_survey_button_form_view" name="Hotcodes Survey Test Alert" inherit_id="survey.survey_button_form_view">
+      <!-- Style the test entry alert (blue) -->
+      <xpath expr="//div[hasclass('alert-info')]" position="attributes">
+        <attribute name="class" remove="border-0 rounded-0 mb-0" separator=" "/>
+        <attribute name="style" add="
+          background: rgba(13, 110, 253, 0.1) !important;
+          border: 1px solid rgba(13, 110, 253, 0.3) !important;
+          border-radius: 12px !important;
+          color: #0d6efd !important;
+          margin: 1rem auto !important;
+          max-width: 1200px !important;
+        " separator=" "/>
+      </xpath>
+
+      <!-- Style the scoring warning alert (yellow) -->
+      <xpath expr="//div[hasclass('alert-warning')]" position="attributes">
+        <attribute name="class" remove="border-0 rounded-0 mb-0" separator=" "/>
+        <attribute name="style" add="
+          background: rgba(255, 193, 7, 0.1) !important;
+          border: 1px solid rgba(255, 193, 7, 0.3) !important;
+          border-radius: 12px !important;
+          color: #ffc107 !important;
+          margin: 1rem auto !important;
+          max-width: 1200px !important;
+        " separator=" "/>
+      </xpath>
+    </template>
+
+    <!-- Override Survey Start Screen -->
+    <template id="hotcodes_survey_fill_form_start" name="Hotcodes Survey Start Screen" inherit_id="survey.survey_fill_form_start">
+      <!-- Replace the entire start screen content -->
+      <xpath expr="//div[hasclass('o_survey_start')]" position="replace">
+        <div class="wrap o_survey_start" style="padding: 2rem 0;">
+          <!-- Survey Title with Gradient -->
+          <div class="mb-5 text-center">
+            <h1 t-out="survey.title" class="o_survey_main_title pb-3" style="
+                font-size: 3rem;
+                font-weight: 800;
+                background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+              " />
+
+            <!-- Survey Description -->
+            <div t-field="survey.description" class="oe_no_empty pb-3 text-break" style="
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 1.1rem;
+                line-height: 1.8;
+                max-width: 700px;
+                margin: 0 auto;
+              " />
+
+            <!-- Session Info -->
+            <t t-if="answer.is_session_answer">
+              <div class="fw-bold mt-4 p-4" style="
+                  background: rgba(255, 107, 53, 0.1);
+                  border: 1px solid rgba(255, 107, 53, 0.3);
+                  border-radius: 12px;
+                  color: #ff6b35;
+                ">
+                <i class="fa fa-clock-o me-2"></i>
+                The session will begin automatically when the host starts.
+              </div>
+            </t>
+
+            <!-- Time Limit Info -->
+            <t t-else="">
+              <div t-if="survey.is_time_limited" class="mt-4">
+                <div class="p-3" style="
+                    background: rgba(220, 53, 69, 0.1);
+                    border: 1px solid rgba(220, 53, 69, 0.3);
+                    border-radius: 12px;
+                    display: inline-block;
+                  ">
+                  <i class="fa fa-hourglass-half me-2" style="color: #dc3545;"></i>
+                  <span t-if="not survey.certification" style="color: rgba(255, 255, 255, 0.9);">
+                    Time limit for this survey:
+                  </span>
+                  <span t-else="" style="color: rgba(255, 255, 255, 0.9);">
+                    Time limit for this certification:
+                  </span>
+                  <span class="fw-bold ms-2" style="color: #dc3545;" t-field="survey.time_limit" t-options="{'widget': 'duration', 'unit': 'minute'}"></span>
+                </div>
+              </div>
+
+              <!-- Start Button with Gradient -->
+              <div class="mt-5">
+                <button type="submit" value="start" class="btn btn-lg disabled" style="
+                    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+                    border: none;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    padding: 1rem 3rem;
+                    border-radius: 50px;
+                    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                  " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 15px 40px rgba(255, 107, 53, 0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(255, 107, 53, 0.4)';">
+                  <i class="fa fa-play-circle me-2"></i>
+                  <t t-if="survey.certification">Start Certification</t>
+                  <t t-else="">Lancer le sondage</t>
+                </button>
+
+                <div class="mt-3">
+                  <span class="o_survey_enter fw-bold d-none d-md-inline" style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+                    or press Enter
+                  </span>
+                </div>
+              </div>
+            </t>
+          </div>
+        </div>
+      </xpath>
+    </template>
+
+    <!-- Override Survey Questions In Progress -->
+    <template id="hotcodes_survey_fill_form_in_progress" name="Hotcodes Survey Questions" inherit_id="survey.survey_fill_form_in_progress">
+      <!-- Style the submit buttons -->
+      <xpath expr="//button[@type='submit']" position="attributes">
+        <attribute name="style" add="
+          background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+          border: none;
+          color: white;
+          font-weight: 600;
+          padding: 0.75rem 2rem;
+          border-radius: 50px;
+          box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+          transition: all 0.3s ease;
+        " separator=" "/>
+      </xpath>
+
+      <!-- Style section titles -->
+      <xpath expr="//h2[hasclass('o_survey_title')]" position="attributes">
+        <attribute name="style" add="
+          color: #ff6b35;
+          font-weight: 700;
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+        " separator=" "/>
+      </xpath>
+    </template>
+
+    <!-- Override Survey Header -->
+    <template id="hotcodes_survey_fill_header" name="Hotcodes Survey Header" inherit_id="survey.survey_fill_header">
+      <!-- Style the main title -->
+      <xpath expr="//h1[hasclass('o_survey_main_title')]" position="attributes">
+        <attribute name="style" add="
+          background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-weight: 800;
+        " separator=" "/>
+      </xpath>
+    </template>
+
+    <!-- Override Survey Form to style error alert -->
+    <template id="hotcodes_survey_fill_form" name="Hotcodes Survey Form" inherit_id="survey.survey_fill_form">
+      <!-- Style the error alert -->
+      <xpath expr="//div[hasclass('o_survey_error')]" position="attributes">
+        <attribute name="style" add="
+          background: rgba(220, 53, 69, 0.1);
+          border: 1px solid rgba(220, 53, 69, 0.3);
+          border-radius: 12px;
+          color: #dc3545;
+          margin-bottom: 1.5rem;
+        " separator=" "/>
+      </xpath>
+    </template>
+
+    <!-- Custom CSS for Survey - Additional inline styles -->
+    <template id="hotcodes_survey_custom_css" name="Hotcodes Survey Custom CSS" inherit_id="survey.layout">
+      <xpath expr="//head" position="inside">
+        <style>
+          /* Timer */
+          .o_survey_timer_container {
+            color: #ff6b35;
+            font-weight: 700;
+          }
+
+          /* Start button specific styling */
+          .o_survey_start button[type="submit"] {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%) !important;
+            border: none !important;
+            color: white !important;
+            font-weight: 700 !important;
+            font-size: 1.2rem !important;
+            padding: 1rem 3rem !important;
+            border-radius: 50px !important;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4) !important;
+            transition: all 0.3s ease !important;
+            cursor: pointer !important;
+          }
+
+          .o_survey_start button[type="submit"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6) !important;
+          }
+
+          /* Scrollbar Styling */
+          .o_survey_form textarea::-webkit-scrollbar {
+            width: 8px;
+          }
+
+          .o_survey_form textarea::-webkit-scrollbar-track {
+            background: rgba(20, 20, 20, 0.5);
+            border-radius: 10px;
+          }
+
+          .o_survey_form textarea::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            border-radius: 10px;
+          }
+
+          .o_survey_form textarea::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #f7931e 0%, #ff6b35 100%);
+          }
+        </style>
+      </xpath>
+    </template>
+
+  </data>
+</odoo>
+

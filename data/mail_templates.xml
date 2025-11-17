@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Email Template: Demo Request Notification (to Sales Team) -->
+        <record id="email_template_demo_request_notification" model="mail.template">
+            <field name="name">Demo Request - Notification Interne</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">{{ (object.user_id.email_formatted or user.email_formatted) }}</field>
+            <field name="email_to">{{ (object.team_id.user_id.email or object.user_id.email or 'contact@hotcodes.io') }}</field>
+            <field name="subject">🎯 Nouvelle Demande de Démonstration - {{ object.partner_name or object.contact_name }}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" style="padding-top: 16px; background-color: #0a0a0a; font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #ffffff; width: 100%; border-collapse:separate;">
+                    <tr>
+                        <td align="center">
+                            <table border="0" cellpadding="0" cellspacing="0" width="600" style="padding: 32px; background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; color: #ffffff; border-collapse:separate; margin: 20px auto;">
+                                <tbody>
+                                    <!-- HEADER -->
+                                    <tr>
+                                        <td align="center" style="padding-bottom: 24px; border-bottom: 1px solid rgba(255,107,53,0.2);">
+                                            <div style="font-size: 48px; margin-bottom: 16px;">🎯</div>
+                                            <h1 style="margin: 0; font-size: 28px; font-weight: 700; background: linear-gradient(135deg, #ff6b35, #f7931e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                                Nouvelle Demande de Démonstration
+                                            </h1>
+                                            <p style="margin: 8px 0 0 0; color: rgba(255,255,255,0.7); font-size: 14px;">
+                                Saytu - Demande reçue le <span t-out="datetime.datetime.now().strftime('%d/%m/%Y à %H:%M')"></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- CONTACT INFO -->
+                                    <tr>
+                                        <td style="padding: 24px 0;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="padding: 16px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.2); border-radius: 12px; margin-bottom: 16px;">
+                                                        <h2 style="margin: 0 0 16px 0; font-size: 18px; font-weight: 600; color: #ff6b35;">
+                                            👤 Informations du Contact
+                                                        </h2>
+                                                        <table width="100%" cellpadding="4" cellspacing="0">
+                                                            <tr>
+                                                                <td style="color: rgba(255,255,255,0.6); font-size: 14px; width: 140px;">Nom Complet:</td>
+                                                                <td style="color: #ffffff; font-size: 14px; font-weight: 600;">
+                                                                    <span t-out="object.contact_name or 'N/A'"></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="color: rgba(255,255,255,0.6); font-size: 14px;">Email:</td>
+                                                                <td style="color: #ffffff; font-size: 14px; font-weight: 600;">
+                                                                    <a t-att-href="'mailto:' + (object.email_from or '')" style="color: #ff6b35; text-decoration: none;">
+                                                                        <span t-out="object.email_from or 'N/A'"></span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="color: rgba(255,255,255,0.6); font-size: 14px;">Téléphone:</td>
+                                                                <td style="color: #ffffff; font-size: 14px; font-weight: 600;">
+                                                                    <a t-att-href="'tel:' + (object.phone or '')" style="color: #ff6b35; text-decoration: none;">
+                                                                        <span t-out="object.phone or 'N/A'"></span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr t-if="object.function">
+                                                                <td style="color: rgba(255,255,255,0.6); font-size: 14px;">Fonction:</td>
+                                                                <td style="color: #ffffff; font-size: 14px; font-weight: 600;">
+                                                                    <span t-out="object.function"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- COMPANY INFO -->
+                                    <tr>
+                                        <td style="padding: 0 0 24px 0;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="padding: 16px; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.2); border-radius: 12px;">
+                                                        <h2 style="margin: 0 0 16px 0; font-size: 18px; font-weight: 600; color: #8a2be2;">
+                                            🏢 Informations de l'Entreprise
+                                                        </h2>
+                                                        <table width="100%" cellpadding="4" cellspacing="0">
+                                                            <tr>
+                                                                <td style="color: rgba(255,255,255,0.6); font-size: 14px; width: 140px;">Entreprise:</td>
+                                                                <td style="color: #ffffff; font-size: 14px; font-weight: 600;">
+                                                                    <span t-out="object.partner_name or 'N/A'"></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr t-if="object.x_employee_count">
+                                                                <td style="color: rgba(255,255,255,0.6); font-size: 14px;">Taille:</td>
+                                                                <td style="color: #ffffff; font-size: 14px; font-weight: 600;">
+                                                                    <span t-out="dict(object._fields['x_employee_count'].selection).get(object.x_employee_count, 'N/A')"></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr t-if="object.x_industry">
+                                                                <td style="color: rgba(255,255,255,0.6); font-size: 14px;">Secteur:</td>
+                                                                <td style="color: #ffffff; font-size: 14px; font-weight: 600;">
+                                                                    <span t-out="dict(object._fields['x_industry'].selection).get(object.x_industry, 'N/A')"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- MESSAGE -->
+                                    <tr t-if="object.description">
+                                        <td style="padding: 0 0 24px 0;">
+                                            <div style="padding: 16px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); border-radius: 12px;">
+                                                <h2 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 600; color: #3b82f6;">
+                                    💬 Message / Besoins
+                                                </h2>
+                                                <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 14px; line-height: 1.6; white-space: pre-wrap;">
+                                                    <span t-out="object.description"></span>
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- CTA BUTTON -->
+                                    <tr>
+                                        <td align="center" style="padding: 24px 0; border-top: 1px solid rgba(255,107,53,0.2);">
+                                            <a t-attf-href="/web#id={{object.id}}&amp;model=crm.lead&amp;view_type=form" style="display: inline-block; padding: 14px 32px; background: linear-gradient(135deg, #ff6b35, #f7931e); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 16px; box-shadow: 0 10px 30px rgba(255,107,53,0.3);">
+                                📊 Voir l'Opportunité dans Odoo
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <!-- FOOTER -->
+                                    <tr>
+                                        <td align="center" style="padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+                                            <p style="margin: 0; color: rgba(255,255,255,0.5); font-size: 12px;">
+                                Cet email a été généré automatiquement par le système de demande de démonstration Saytu
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <!-- Email Template: Demo Request Confirmation (to Customer) -->
+        <record id="email_template_demo_request_confirmation" model="mail.template">
+            <field name="name">Demo Request - Confirmation Client</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">{{ (object.company_id.email_formatted or 'HotCodes &lt;contact@hotcodes.io&gt;') }}</field>
+            <field name="email_to">{{ object.email_from }}</field>
+            <field name="subject">✅ Votre demande de démonstration Saytu a été reçue</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" style="padding-top: 16px; background-color: #0a0a0a; font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #ffffff; width: 100%; border-collapse:separate;">
+                    <tr>
+                        <td align="center">
+                            <table border="0" cellpadding="0" cellspacing="0" width="600" style="padding: 32px; background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); border: 1px solid rgba(34,197,94,0.3); border-radius: 16px; color: #ffffff; border-collapse:separate; margin: 20px auto;">
+                                <tbody>
+                                    <!-- HEADER -->
+                                    <tr>
+                                        <td align="center" style="padding-bottom: 24px; border-bottom: 1px solid rgba(34,197,94,0.2);">
+                                            <div style="font-size: 64px; margin-bottom: 16px;">✅</div>
+                                            <h1 style="margin: 0; font-size: 28px; font-weight: 700; color: #22c55e;">
+                                Demande Reçue !
+                                            </h1>
+                                            <p style="margin: 12px 0 0 0; color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.6;">
+                                Merci <strong t-out="object.contact_name or 'pour votre intérêt'"></strong> pour votre demande de démonstration de Saytu
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- MAIN MESSAGE -->
+                                    <tr>
+                                        <td style="padding: 32px 0;">
+                                            <div style="padding: 24px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.2); border-radius: 12px; text-align: center;">
+                                                <div style="font-size: 48px; margin-bottom: 16px;">⏰</div>
+                                                <h2 style="margin: 0 0 12px 0; font-size: 22px; font-weight: 600; color: #ff6b35;">
+                                    Vous recevrez le lien de démonstration dans les 3 prochaines heures
+                                                </h2>
+                                                <p style="margin: 0; color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.6;">
+                                    Notre équipe prépare votre démonstration personnalisée de Saytu.<br/>
+                                    Vous recevrez un email avec le lien d'accès et toutes les informations nécessaires.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- WHAT'S NEXT -->
+                                    <tr>
+                                        <td style="padding: 0 0 32px 0;">
+                                            <h3 style="margin: 0 0 20px 0; font-size: 20px; font-weight: 600; color: #ffffff; text-align: center;">
+                                📋 Prochaines Étapes
+                                            </h3>
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; margin-bottom: 12px;">
+                                                        <div style="display: flex; align-items: flex-start;">
+                                                            <div style="flex-shrink: 0; width: 40px; height: 40px; background: rgba(255,107,53,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 16px; font-size: 20px; font-weight: 700; color: #ff6b35;">1</div>
+                                                            <div>
+                                                                <h4 style="margin: 0 0 4px 0; font-size: 16px; font-weight: 600; color: #ffffff;">Vérifiez votre email</h4>
+                                                                <p style="margin: 0; font-size: 14px; color: rgba(255,255,255,0.7);">Vous recevrez une confirmation avec le lien de démonstration</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; margin-bottom: 12px;">
+                                                        <div style="display: flex; align-items: flex-start;">
+                                                            <div style="flex-shrink: 0; width: 40px; height: 40px; background: rgba(255,107,53,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 16px; font-size: 20px; font-weight: 700; color: #ff6b35;">2</div>
+                                                            <div>
+                                                                <h4 style="margin: 0 0 4px 0; font-size: 16px; font-weight: 600; color: #ffffff;">Accédez à la démonstration</h4>
+                                                                <p style="margin: 0; font-size: 14px; color: rgba(255,255,255,0.7);">Cliquez sur le lien reçu pour découvrir Saytu</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px;">
+                                                        <div style="display: flex; align-items: flex-start;">
+                                                            <div style="flex-shrink: 0; width: 40px; height: 40px; background: rgba(255,107,53,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 16px; font-size: 20px; font-weight: 700; color: #ff6b35;">3</div>
+                                                            <div>
+                                                                <h4 style="margin: 0 0 4px 0; font-size: 16px; font-weight: 600; color: #ffffff;">Explorez toutes les fonctionnalités</h4>
+                                                                <p style="margin: 0; font-size: 14px; color: rgba(255,255,255,0.7);">Testez Saytu et découvrez comment il peut transformer votre entreprise</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- CONTACT SUPPORT -->
+                                    <tr>
+                                        <td style="padding: 0 0 24px 0;">
+                                            <div style="padding: 20px; background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.2); border-radius: 12px; text-align: center;">
+                                                <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 600; color: #25D366;">
+                                    💬 Besoin d'Aide Immédiate?
+                                                </h3>
+                                                <p style="margin: 0 0 16px 0; color: rgba(255,255,255,0.8); font-size: 14px;">
+                                    Contactez-nous directement sur WhatsApp
+                                                </p>
+                                                <a href="https://wa.me/221775867968?text=Bonjour%20HotCodes,%20j'ai%20demandé%20une%20démonstration%20de%20Saytu" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 15px; box-shadow: 0 10px 30px rgba(37,211,102,0.3);">
+                                    📱 Contacter sur WhatsApp
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- FOOTER -->
+                                    <tr>
+                                        <td align="center" style="padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+                                            <p style="margin: 0 0 8px 0; color: rgba(255,255,255,0.7); font-size: 14px;">
+                                                <strong>HotCodes</strong> - Solutions Digitales Innovantes
+                                            </p>
+                                            <p style="margin: 0; color: rgba(255,255,255,0.5); font-size: 12px;">
+                                Email: contact@hotcodes.io | Tél: +221 77 586 79 68
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+    </data>
+</odoo>

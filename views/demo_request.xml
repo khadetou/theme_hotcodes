@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Demo Request Page -->
+    <record id="page_demo_request" model="website.page">
+        <field name="name">Demande de Démonstration</field>
+        <field name="type">qweb</field>
+        <field name="url">/demande-demo</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.demo_request_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty" style="background: #000;">
+
+                        <!-- Hero Section - Demo Request -->
+                        <section class="demo-hero" style="min-height: 50vh; background: linear-gradient(135deg, #000 0%, #0a0a0a 100%); position: relative; overflow: hidden; display: flex; align-items: center; padding: 6rem 0 4rem;">
+
+                            <!-- Animated Background Pattern -->
+                            <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,107,53,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.05) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none;"></div>
+
+                            <!-- Floating Icons -->
+                            <div style="position: absolute; inset: 0; pointer-events: none; overflow: hidden;">
+                                <div style="position: absolute; top: 20%; left: 10%; font-size: 3rem; color: rgba(255,107,53,0.1); animation: floatIcon 8s ease-in-out infinite;">
+                                    <iconify-icon icon="solar:play-circle-bold-duotone"></iconify-icon>
+                                </div>
+                                <div style="position: absolute; top: 60%; right: 15%; font-size: 2.5rem; color: rgba(138,43,226,0.1); animation: floatIcon 10s ease-in-out infinite 2s;">
+                                    <iconify-icon icon="solar:monitor-bold-duotone"></iconify-icon>
+                                </div>
+                                <div style="position: absolute; bottom: 20%; left: 20%; font-size: 2rem; color: rgba(59,130,246,0.1); animation: floatIcon 12s ease-in-out infinite 4s;">
+                                    <iconify-icon icon="solar:calendar-mark-bold-duotone"></iconify-icon>
+                                </div>
+                            </div>
+
+                            <div class="container" style="position: relative; z-index: 10;">
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-lg-8">
+                                        <!-- Eyebrow Badge -->
+                                        <div class="mb-3">
+                                            <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                                🎯 DEMANDE DE DÉMONSTRATION
+                                            </span>
+                                        </div>
+
+                                        <!-- Title -->
+                                        <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; color: white;">
+                                            Découvrez <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Saytu</span> en Action
+                                        </h1>
+
+                                        <!-- Subtitle -->
+                                        <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 700px; margin: 0 auto;">
+                                            Réservez une démonstration personnalisée et découvrez comment Saytu peut transformer votre entreprise
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Main Demo Request Section -->
+                        <section class="demo-main py-5" style="background: var(--bg-dark); position: relative;">
+                            <div class="container py-5">
+                                <div class="row g-5 justify-content-center">
+
+                                    <!-- Demo Request Form -->
+                                    <div class="col-lg-8">
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(40px); border: 1px solid rgba(255,107,53,0.15); border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+                                            <div class="text-center mb-4">
+                                                <iconify-icon icon="solar:video-frame-play-vertical-bold-duotone" style="font-size: 3rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                <h3 style="color: white; font-size: 1.75rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                                    Demandez Votre Démonstration Gratuite
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.6); margin-bottom: 0;">
+                                                    Remplissez le formulaire ci-dessous et recevez le lien de démonstration dans les 3 prochaines heures
+                                                </p>
+                                            </div>
+
+                                            <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                                                <form id="demo_request_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/demo-thank-you" data-pre-fill="true">
+
+                                                    <!-- Hidden fields for CRM integration -->
+                                                    <input type="hidden" name="medium_id" t-att-value="request.env.ref('utm.utm_medium_website').id"/>
+                                                    <input type="hidden" name="type" value="opportunity"/>
+                                                    <input type="hidden" name="name" value="Demo Request - Saytu"/>
+                                                    <input type="hidden" name="priority" value="1"/>
+
+                                                    <div class="s_website_form_rows row g-3 s_col_no_bgcolor">
+
+                                                        <!-- Full Name -->
+                                                        <div class="col-md-6 s_website_form_field s_website_form_required s_website_form_model_required" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="demo_contact_name">
+                                                                <span class="s_website_form_label_content">Nom Complet</span>
+                                                                <span class="s_website_form_mark" style="color: var(--hotcodes-primary);"> *</span>
+                                                            </label>
+                                                            <input id="demo_contact_name" type="text" class="form-control s_website_form_input" name="contact_name" required="" data-fill-with="name" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="Prénom et Nom"/>
+                                                        </div>
+
+                                                        <!-- Email -->
+                                                        <div class="col-md-6 s_website_form_field s_website_form_required s_website_form_model_required" data-type="email" data-name="Field">
+                                                            <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="demo_email">
+                                                                <span class="s_website_form_label_content">Email</span>
+                                                                <span class="s_website_form_mark" style="color: var(--hotcodes-primary);"> *</span>
+                                                            </label>
+                                                            <input id="demo_email" type="email" class="form-control s_website_form_input" name="email_from" required="" data-fill-with="email" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="votre@email.com"/>
+                                                        </div>
+
+                                                        <!-- Phone -->
+                                                        <div class="col-md-6 s_website_form_field s_website_form_required s_website_form_model_required" data-type="tel" data-name="Field">
+                                                            <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="demo_phone">
+                                                                <span class="s_website_form_label_content">Téléphone</span>
+                                                                <span class="s_website_form_mark" style="color: var(--hotcodes-primary);"> *</span>
+                                                            </label>
+                                                            <input id="demo_phone" type="tel" class="form-control s_website_form_input" name="phone" required="" data-fill-with="phone" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="+221 XX XXX XX XX"/>
+                                                        </div>
+
+                                                        <!-- Company Name -->
+                                                        <div class="col-md-6 s_website_form_field s_website_form_required s_website_form_model_required" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="demo_company">
+                                                                <span class="s_website_form_label_content">Entreprise</span>
+                                                                <span class="s_website_form_mark" style="color: var(--hotcodes-primary);"> *</span>
+                                                            </label>
+                                                            <input id="demo_company" type="text" class="form-control s_website_form_input" name="partner_name" required="" data-fill-with="commercial_company_name" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="Nom de votre entreprise"/>
+                                                        </div>
+
+                                                        <!-- Job Title -->
+                                                        <div class="col-md-6 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="demo_function">
+                                                                <span class="s_website_form_label_content">Fonction / Poste</span>
+                                                            </label>
+                                                            <input id="demo_function" type="text" class="form-control s_website_form_input" name="function" data-fill-with="job_title" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;" placeholder="Directeur, Manager, etc."/>
+                                                        </div>
+
+                                                        <!-- Number of Employees -->
+                                                        <div class="col-md-6 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="demo_employees">
+                                                                <span class="s_website_form_label_content">Nombre d'Employés</span>
+                                                            </label>
+                                                            <select id="demo_employees" class="form-select s_website_form_input" name="x_employee_count" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;">
+                                                                <option value="" style="background: #1a1a1a; color: white;">Sélectionnez...</option>
+                                                                <option value="1-10" style="background: #1a1a1a; color: white;">1-10 employés</option>
+                                                                <option value="11-50" style="background: #1a1a1a; color: white;">11-50 employés</option>
+                                                                <option value="51-200" style="background: #1a1a1a; color: white;">51-200 employés</option>
+                                                                <option value="201-500" style="background: #1a1a1a; color: white;">201-500 employés</option>
+                                                                <option value="500+" style="background: #1a1a1a; color: white;">500+ employés</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <!-- Industry -->
+                                                        <div class="col-12 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="demo_industry">
+                                                                <span class="s_website_form_label_content">Secteur d'Activité</span>
+                                                            </label>
+                                                            <select id="demo_industry" class="form-select s_website_form_input" name="x_industry" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;">
+                                                                <option value="" style="background: #1a1a1a; color: white;">Sélectionnez votre secteur...</option>
+                                                                <option value="retail" style="background: #1a1a1a; color: white;">Commerce / Retail</option>
+                                                                <option value="services" style="background: #1a1a1a; color: white;">Services</option>
+                                                                <option value="manufacturing" style="background: #1a1a1a; color: white;">Industrie / Manufacturing</option>
+                                                                <option value="technology" style="background: #1a1a1a; color: white;">Technologie / IT</option>
+                                                                <option value="healthcare" style="background: #1a1a1a; color: white;">Santé</option>
+                                                                <option value="education" style="background: #1a1a1a; color: white;">Éducation</option>
+                                                                <option value="finance" style="background: #1a1a1a; color: white;">Finance / Banque</option>
+                                                                <option value="real_estate" style="background: #1a1a1a; color: white;">Immobilier</option>
+                                                                <option value="hospitality" style="background: #1a1a1a; color: white;">Hôtellerie / Restauration</option>
+                                                                <option value="other" style="background: #1a1a1a; color: white;">Autre</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <!-- Message / Additional Information -->
+                                                        <div class="col-12 s_website_form_field s_website_form_custom" data-type="text" data-name="Field">
+                                                            <label class="s_website_form_label form-label" style="color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 0.5rem;" for="demo_message">
+                                                                <span class="s_website_form_label_content">Message / Besoins Spécifiques</span>
+                                                            </label>
+                                                            <textarea id="demo_message" class="form-control s_website_form_input" name="description" rows="4" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px; resize: vertical;" placeholder="Décrivez vos besoins ou questions spécifiques..."></textarea>
+                                                        </div>
+
+                                                        <!-- Submit Button -->
+                                                        <div class="mb-0 py-2 col-12 s_website_form_submit s_website_form_no_submit_label" data-name="Submit Button">
+                                                            <a href="#" role="button" class="btn s_website_form_send" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2.5rem; border-radius: 10px; font-weight: 600; font-size: 1.125rem; border: none; width: 100%; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-block; text-align: center; text-decoration: none;">
+                                                                <iconify-icon icon="solar:play-circle-bold-duotone" style="vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                                Demander une Démonstration
+                                                            </a>
+                                                            <span id="s_website_form_result"></span>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </section>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>
+

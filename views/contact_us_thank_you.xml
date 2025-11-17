@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website.contactus_thanks" model="website.page">
+        <field name="name">Thanks (Contact us)</field>
+        <field name="type">qweb</field>
+        <field name="url">/contactus-thank-you</field>
+        <field name="website_indexed" eval="False"/>
+        <field name="is_published">True</field>
+        <field name="key">website.contactus_thanks</field>
+        <field name="arch" type="xml">
+            <t name="Thanks (Contact us)" t-name="website.contactus_thanks">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty" style="background: #000;">
+
+                        <!-- Thank You Hero Section -->
+                        <section class="thank-you-hero" style="min-height: 100vh; background: linear-gradient(135deg, #000 0%, #0a0a0a 100%); position: relative; overflow: hidden; display: flex; align-items: center; padding: 8rem 0;">
+
+                            <!-- Animated Background Pattern -->
+                            <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,107,53,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.05) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none;"></div>
+
+                            <!-- Success Animation Circle - Background Pulse -->
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 70%); border-radius: 50%; animation: pulse 3s ease-in-out infinite; pointer-events: none;"></div>
+
+                            <!-- Floating Confetti Icons -->
+                            <div style="position: absolute; inset: 0; pointer-events: none; overflow: hidden;">
+                                <div style="position: absolute; top: 15%; left: 15%; font-size: 2rem; color: rgba(255,107,53,0.3); animation: floatConfetti 6s ease-in-out infinite;">
+                                    ✨
+                                </div>
+                                <div style="position: absolute; top: 25%; right: 20%; font-size: 2.5rem; color: rgba(138,43,226,0.3); animation: floatConfetti 7s ease-in-out infinite 1s;">
+                                    🎉
+                                </div>
+                                <div style="position: absolute; bottom: 30%; left: 25%; font-size: 2rem; color: rgba(59,130,246,0.3); animation: floatConfetti 8s ease-in-out infinite 2s;">
+                                    ⭐
+                                </div>
+                                <div style="position: absolute; top: 40%; right: 15%; font-size: 2rem; color: rgba(255,215,0,0.3); animation: floatConfetti 9s ease-in-out infinite 3s;">
+                                    💫
+                                </div>
+                                <div style="position: absolute; bottom: 20%; right: 30%; font-size: 2.5rem; color: rgba(40,202,66,0.3); animation: floatConfetti 7s ease-in-out infinite 1.5s;">
+                                    🚀
+                                </div>
+                            </div>
+
+                            <div class="container" style="position: relative; z-index: 10;">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 text-center">
+
+                                        <!-- Main Title -->
+                                        <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; color: white; animation: fadeInUp 0.8s ease-out 0.2s both;">
+                                            Message Envoyé avec <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Succès!</span>
+                                        </h1>
+
+                                        <!-- Subtitle -->
+                                        <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 600px; margin: 0 auto 3rem; animation: fadeInUp 0.8s ease-out 0.4s both;">
+                                            Merci de nous avoir contactés! Notre équipe a bien reçu votre message et vous répondra dans les plus brefs délais.
+                                        </p>
+
+                                        <!-- Info Cards -->
+                                        <div class="row g-4 mb-5" style="animation: fadeInUp 0.8s ease-out 0.6s both;">
+
+                                            <!-- Card 1: Response Time -->
+                                            <div class="col-md-4">
+                                                <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 16px; padding: 2rem; transition: all 0.3s ease;">
+                                                    <div style="width: 60px; height: 60px; background: rgba(255,107,53,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                                        <iconify-icon icon="solar:clock-circle-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                    </div>
+                                                    <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Réponse Rapide</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin: 0;">Nous répondons généralement sous 24h</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card 2: Email Confirmation -->
+                                            <div class="col-md-4">
+                                                <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.15); border-radius: 16px; padding: 2rem; transition: all 0.3s ease;">
+                                                    <div style="width: 60px; height: 60px; background: rgba(138,43,226,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                                        <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-secondary);"></iconify-icon>
+                                                    </div>
+                                                    <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Email de Confirmation</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin: 0;">Vérifiez votre boîte de réception</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card 3: Support -->
+                                            <div class="col-md-4">
+                                                <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.15); border-radius: 16px; padding: 2rem; transition: all 0.3s ease;">
+                                                    <div style="width: 60px; height: 60px; background: rgba(59,130,246,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                                        <iconify-icon icon="solar:chat-round-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-accent);"></iconify-icon>
+                                                    </div>
+                                                    <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Support 24/7</h4>
+                                                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin: 0;">Disponible à tout moment</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- WhatsApp CTA -->
+                                        <div style="background: linear-gradient(135deg, rgba(37,211,102,0.1), rgba(37,211,102,0.05)); backdrop-filter: blur(10px); border: 1px solid rgba(37,211,102,0.3); border-radius: 20px; padding: 2.5rem; margin-bottom: 3rem; animation: fadeInUp 0.8s ease-out 0.8s both;">
+                                            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                                    <iconify-icon icon="ph:whatsapp-logo-duotone" style="font-size: 1.75rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="color: white; font-size: 1.5rem; font-weight: 600; margin: 0;">Besoin d'une Réponse Immédiate?</h3>
+                                            </div>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 1.125rem; margin-bottom: 1.5rem;">
+                                                Contactez-nous directement sur WhatsApp pour une assistance instantanée
+                                            </p>
+                                            <a href="https://wa.me/221775867968?text=Bonjour%20HotCodes,%20j'ai%20envoyé%20un%20message%20via%20le%20formulaire" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 1rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(37,211,102,0.3);">
+                                                <iconify-icon icon="ph:whatsapp-logo-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                                Ouvrir WhatsApp
+                                            </a>
+                                        </div>
+
+                                        <!-- Action Buttons -->
+                                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease-out 1s both;">
+                                            <a href="/" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3);">
+                                                <iconify-icon icon="solar:home-bold-duotone" style="font-size: 1.25rem;"></iconify-icon>
+                                                Retour à l'Accueil
+                                            </a>
+                                            <a href="/services" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 1.25rem;"></iconify-icon>
+                                                Découvrir Nos Services
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CSS Animations -->
+                            <style>
+                                @keyframes pulseButton {
+                                    0% {
+                                        transform: scale(1);
+                                        box-shadow: 0 0 0 0 rgba(255,107,53,0.7);
+                                    }
+                                    50% {
+                                        transform: scale(1.05);
+                                        box-shadow: 0 0 0 20px rgba(255,107,53,0);
+                                    }
+                                    100% {
+                                        transform: scale(1);
+                                        box-shadow: 0 0 0 0 rgba(255,107,53,0);
+                                    }
+                                }
+
+                                @keyframes pulse {
+                                    0%, 100% {
+                                        transform: translate(-50%, -50%) scale(1);
+                                        opacity: 0.5;
+                                    }
+                                    50% {
+                                        transform: translate(-50%, -50%) scale(1.1);
+                                        opacity: 0.3;
+                                    }
+                                }
+
+                                @keyframes floatConfetti {
+                                    0%, 100% {
+                                        transform: translateY(0) rotate(0deg);
+                                        opacity: 0.3;
+                                    }
+                                    50% {
+                                        transform: translateY(-30px) rotate(180deg);
+                                        opacity: 0.6;
+                                    }
+                                }
+
+                                @keyframes scaleIn {
+                                    0% {
+                                        transform: scale(0);
+                                        opacity: 0;
+                                    }
+                                    100% {
+                                        transform: scale(1);
+                                        opacity: 1;
+                                    }
+                                }
+
+                                @keyframes fadeInUp {
+                                    0% {
+                                        transform: translateY(30px);
+                                        opacity: 0;
+                                    }
+                                    100% {
+                                        transform: translateY(0);
+                                        opacity: 1;
+                                    }
+                                }
+                            </style>
+
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>

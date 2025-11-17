@@ -1,0 +1,1406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Custom Helpdesk Team Page -->
+  <template
+    id="hotcodes_helpdesk_team"
+    name="HotCodes Helpdesk Team"
+    inherit_id="website_helpdesk.team"
+  >
+    <xpath expr="//div[@id='wrap']" position="replace">
+      <div id="wrap" style="background: #000">
+        <!-- Hero Section -->
+        <section
+          class="helpdesk-hero"
+          style="
+            min-height: 50vh;
+            background: linear-gradient(135deg, #000 0%, #0a0a0a 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 6rem 0 4rem;
+          "
+        >
+          <!-- Animated Background Pattern -->
+          <div
+            style="
+              position: absolute;
+              inset: 0;
+              background-image: linear-gradient(
+                  rgba(255, 107, 53, 0.05) 1px,
+                  transparent 1px
+                ),
+                linear-gradient(
+                  90deg,
+                  rgba(255, 107, 53, 0.05) 1px,
+                  transparent 1px
+                );
+              background-size: 50px 50px;
+              pointer-events: none;
+            "
+          ></div>
+
+          <!-- Gradient Orbs -->
+          <div
+            style="
+              position: absolute;
+              top: 10%;
+              left: 10%;
+              width: 300px;
+              height: 300px;
+              background: radial-gradient(
+                circle,
+                rgba(255, 107, 53, 0.15),
+                transparent
+              );
+              border-radius: 50%;
+              filter: blur(60px);
+              pointer-events: none;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              bottom: 10%;
+              right: 10%;
+              width: 400px;
+              height: 400px;
+              background: radial-gradient(
+                circle,
+                rgba(138, 43, 226, 0.15),
+                transparent
+              );
+              border-radius: 50%;
+              filter: blur(80px);
+              pointer-events: none;
+            "
+          ></div>
+
+          <div class="container" style="position: relative; z-index: 1">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 text-center">
+                <!-- Eyebrow -->
+                <div
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    background: rgba(255, 107, 53, 0.1);
+                    border: 1px solid rgba(255, 107, 53, 0.3);
+                    padding: 0.5rem 1.25rem;
+                    border-radius: 50px;
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  <iconify-icon
+                    icon="solar:chat-round-call-bold-duotone"
+                    style="font-size: 1.25rem; color: var(--hotcodes-primary)"
+                  ></iconify-icon>
+                  <span
+                    style="
+                      color: var(--hotcodes-primary);
+                      font-weight: 600;
+                      font-size: 0.95rem;
+                    "
+                    >Support Client</span
+                  >
+                </div>
+
+                <!-- Title -->
+                <h1
+                  style="
+                    font-size: clamp(2.5rem, 5vw, 4rem);
+                    font-weight: 700;
+                    color: white;
+                    margin-bottom: 1.5rem;
+                    line-height: 1.1;
+                  "
+                >
+                  Comment Pouvons-Nous <br />
+                  <span
+                    style="
+                      background: linear-gradient(
+                        135deg,
+                        var(--hotcodes-primary),
+                        var(--hotcodes-secondary)
+                      );
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                      background-clip: text;
+                    "
+                    >Vous Aider ?</span
+                  >
+                </h1>
+
+                <!-- Subtitle -->
+                <p
+                  style="
+                    font-size: 1.25rem;
+                    color: rgba(255, 255, 255, 0.7);
+                    margin-bottom: 2rem;
+                    line-height: 1.6;
+                  "
+                >
+                  Soumettez un ticket et notre équipe vous répondra dans les
+                  plus brefs délais
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Form Section -->
+        <section
+          class="py-5"
+          style="background: var(--bg-dark); position: relative; z-index: 1"
+        >
+          <div class="container py-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <!-- Building Blocks Area -->
+                <div
+                  class="oe_structure oe_empty w-100 mb-4"
+                  id="oe_structure_website_helpdesk_team_1"
+                  t-att-data-editor-message="editor_message"
+                />
+
+                <!-- Form Card -->
+                <div
+                  style="
+                    background: rgba(15, 15, 15, 0.7);
+                    backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255, 107, 53, 0.15);
+                    border-radius: 20px;
+                    padding: 3rem;
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                  "
+                >
+                  <t t-if="team.use_website_helpdesk_form">
+                    <!-- Force using our custom template -->
+                    <t t-call="theme_hotcodes.hotcodes_ticket_submit_form">
+                      <t t-set="team" t-value="team" />
+                    </t>
+                  </t>
+                </div>
+
+                <!-- Building Blocks Bottom -->
+                <div
+                  class="oe_structure oe_empty w-100 mt-4"
+                  id="oe_structure_website_helpdesk_team_2"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Info Section -->
+        <section
+          class="py-5"
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(255, 107, 53, 0.05),
+              rgba(138, 43, 226, 0.05)
+            );
+            position: relative;
+          "
+        >
+          <div class="container py-4">
+            <div class="row g-4">
+              <div class="col-md-4 text-center">
+                <div
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    background: linear-gradient(
+                      135deg,
+                      var(--hotcodes-primary),
+                      var(--hotcodes-secondary)
+                    );
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 1rem;
+                  "
+                >
+                  <iconify-icon
+                    icon="solar:clock-circle-bold-duotone"
+                    style="font-size: 2rem; color: white"
+                  ></iconify-icon>
+                </div>
+                <h3
+                  style="
+                    color: white;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  Réponse Rapide
+                </h3>
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem">
+                  Réponse sous 24h en moyenne
+                </p>
+              </div>
+              <div class="col-md-4 text-center">
+                <div
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    background: linear-gradient(
+                      135deg,
+                      var(--hotcodes-primary),
+                      var(--hotcodes-secondary)
+                    );
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 1rem;
+                  "
+                >
+                  <iconify-icon
+                    icon="solar:shield-check-bold-duotone"
+                    style="font-size: 2rem; color: white"
+                  ></iconify-icon>
+                </div>
+                <h3
+                  style="
+                    color: white;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  Support Expert
+                </h3>
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem">
+                  Équipe technique qualifiée
+                </p>
+              </div>
+              <div class="col-md-4 text-center">
+                <div
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    background: linear-gradient(
+                      135deg,
+                      var(--hotcodes-primary),
+                      var(--hotcodes-secondary)
+                    );
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 1rem;
+                  "
+                >
+                  <iconify-icon
+                    icon="solar:chat-round-dots-bold-duotone"
+                    style="font-size: 2rem; color: white"
+                  ></iconify-icon>
+                </div>
+                <h3
+                  style="
+                    color: white;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  Suivi en Temps Réel
+                </h3>
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem">
+                  Suivez l'état de votre ticket
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </xpath>
+  </template>
+
+  <!-- Custom Helpdesk Submit Form -->
+  <template
+    id="hotcodes_ticket_submit_form"
+    name="HotCodes: Submit a Ticket Form"
+    inherit_id="website_helpdesk.ticket_submit_form"
+  >
+    <xpath expr="//div[@class='container']" position="replace">
+      <div class="container">
+        <h2
+          style="
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+          "
+        >
+          <iconify-icon
+            icon="solar:document-add-bold-duotone"
+            style="
+              font-size: 2.5rem;
+              color: var(--hotcodes-primary);
+              vertical-align: middle;
+              margin-right: 0.5rem;
+            "
+          ></iconify-icon>
+          Soumettre un Ticket
+          <t t-if="multiple_teams"> - <t t-out="team.name" /> </t>
+        </h2>
+
+        <div class="oe_structure" id="oe_structure_whelpdesk_form_1" />
+        <span
+          class="hidden"
+          data-for="helpdesk_ticket_form"
+          t-att-data-values="{'team_id': team and team.id or ''}"
+        />
+
+        <div id="helpdesk_section">
+          <section
+            class="s_website_form"
+            data-vcss="001"
+            data-snippet="s_website_form"
+            data-name="Form"
+          >
+            <div class="container">
+              <form
+                id="helpdesk_ticket_form"
+                action="/website/form/"
+                method="post"
+                enctype="multipart/form-data"
+                class="o_mark_required"
+                data-mark="*"
+                data-pre-fill="true"
+                data-success-mode="redirect"
+                data-success-page="/your-ticket-has-been-submitted"
+                data-model_name="helpdesk.ticket"
+                hide-change-model="true"
+              >
+                <!-- CSRF Token -->
+                <input
+                  type="hidden"
+                  name="csrf_token"
+                  t-att-value="request.csrf_token()"
+                />
+
+                <div class="s_website_form_rows row s_col_no_bgcolor">
+                  <!-- Full Name -->
+                  <div
+                    class="mb-4 s_website_form_field col-12 s_website_form_required"
+                    data-type="char"
+                    data-name="Field"
+                  >
+                    <label
+                      class="form-label s_website_form_label"
+                      for="helpdesk1"
+                      style="
+                        color: rgba(255, 255, 255, 0.9);
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        margin-bottom: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:user-bold-duotone"
+                        style="
+                          font-size: 1.25rem;
+                          color: var(--hotcodes-primary);
+                        "
+                      ></iconify-icon>
+                      <span class="s_website_form_label_content"
+                        >Nom Complet</span
+                      >
+                      <span
+                        class="s_website_form_mark"
+                        style="color: var(--hotcodes-primary)"
+                      >
+                        *</span
+                      >
+                    </label>
+                    <div style="position: relative">
+                      <input
+                        type="text"
+                        class="form-control s_website_form_input hotcodes-input"
+                        name="partner_name"
+                        required="true"
+                        id="helpdesk1"
+                        style="
+                          background: rgba(255, 255, 255, 0.03);
+                          border: 2px solid rgba(255, 107, 53, 0.15);
+                          color: white;
+                          padding: 1rem 1.25rem;
+                          border-radius: 12px;
+                          font-size: 1rem;
+                          transition: all 0.3s ease;
+                          width: 100%;
+                        "
+                        placeholder="Entrez votre nom complet"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div
+                    class="mb-4 s_website_form_field col-12 s_website_form_required"
+                    data-type="email"
+                    data-name="Field"
+                  >
+                    <label
+                      class="form-label s_website_form_label"
+                      for="helpdesk2"
+                      style="
+                        color: rgba(255, 255, 255, 0.9);
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        margin-bottom: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:letter-bold-duotone"
+                        style="
+                          font-size: 1.25rem;
+                          color: var(--hotcodes-primary);
+                        "
+                      ></iconify-icon>
+                      <span class="s_website_form_label_content">Email</span>
+                      <span
+                        class="s_website_form_mark"
+                        style="color: var(--hotcodes-primary)"
+                      >
+                        *</span
+                      >
+                    </label>
+                    <div style="position: relative">
+                      <input
+                        type="email"
+                        class="form-control s_website_form_input hotcodes-input"
+                        name="partner_email"
+                        required="true"
+                        id="helpdesk2"
+                        style="
+                          background: rgba(255, 255, 255, 0.03);
+                          border: 2px solid rgba(255, 107, 53, 0.15);
+                          color: white;
+                          padding: 1rem 1.25rem;
+                          border-radius: 12px;
+                          font-size: 1rem;
+                          transition: all 0.3s ease;
+                          width: 100%;
+                        "
+                        placeholder="votre@email.com"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Phone -->
+                  <div
+                    class="mb-4 s_website_form_field col-md-6"
+                    data-type="char"
+                    data-name="Field"
+                  >
+                    <label
+                      class="form-label s_website_form_label"
+                      for="helpdesk3"
+                      style="
+                        color: rgba(255, 255, 255, 0.9);
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        margin-bottom: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:phone-bold-duotone"
+                        style="
+                          font-size: 1.25rem;
+                          color: var(--hotcodes-primary);
+                        "
+                      ></iconify-icon>
+                      <span class="s_website_form_label_content"
+                        >Téléphone</span
+                      >
+                    </label>
+                    <div style="position: relative">
+                      <input
+                        type="text"
+                        class="form-control s_website_form_input hotcodes-input"
+                        name="partner_phone"
+                        id="helpdesk3"
+                        style="
+                          background: rgba(255, 255, 255, 0.03);
+                          border: 2px solid rgba(255, 107, 53, 0.15);
+                          color: white;
+                          padding: 1rem 1.25rem;
+                          border-radius: 12px;
+                          font-size: 1rem;
+                          transition: all 0.3s ease;
+                          width: 100%;
+                        "
+                        placeholder="+221 XX XXX XX XX"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Company -->
+                  <div
+                    class="mb-4 s_website_form_field col-md-6"
+                    data-type="char"
+                    data-name="Field"
+                  >
+                    <label
+                      class="form-label s_website_form_label"
+                      for="helpdesk4"
+                      style="
+                        color: rgba(255, 255, 255, 0.9);
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        margin-bottom: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:buildings-2-bold-duotone"
+                        style="
+                          font-size: 1.25rem;
+                          color: var(--hotcodes-primary);
+                        "
+                      ></iconify-icon>
+                      <span class="s_website_form_label_content"
+                        >Entreprise</span
+                      >
+                    </label>
+                    <div style="position: relative">
+                      <input
+                        type="text"
+                        class="form-control s_website_form_input hotcodes-input"
+                        name="partner_company_name"
+                        id="helpdesk4"
+                        style="
+                          background: rgba(255, 255, 255, 0.03);
+                          border: 2px solid rgba(255, 107, 53, 0.15);
+                          color: white;
+                          padding: 1rem 1.25rem;
+                          border-radius: 12px;
+                          font-size: 1rem;
+                          transition: all 0.3s ease;
+                          width: 100%;
+                        "
+                        placeholder="Nom de votre entreprise"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Subject -->
+                  <div
+                    class="mb-4 s_website_form_field col-12 s_website_form_required"
+                    data-type="char"
+                    data-name="Field"
+                  >
+                    <label
+                      class="form-label s_website_form_label"
+                      for="helpdesk5"
+                      style="
+                        color: rgba(255, 255, 255, 0.9);
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        margin-bottom: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:document-text-bold-duotone"
+                        style="
+                          font-size: 1.25rem;
+                          color: var(--hotcodes-primary);
+                        "
+                      ></iconify-icon>
+                      <span class="s_website_form_label_content">Sujet</span>
+                      <span
+                        class="s_website_form_mark"
+                        style="color: var(--hotcodes-primary)"
+                      >
+                        *</span
+                      >
+                    </label>
+                    <div style="position: relative">
+                      <input
+                        type="text"
+                        class="form-control s_website_form_input hotcodes-input"
+                        name="name"
+                        required="true"
+                        id="helpdesk5"
+                        style="
+                          background: rgba(255, 255, 255, 0.03);
+                          border: 2px solid rgba(255, 107, 53, 0.15);
+                          color: white;
+                          padding: 1rem 1.25rem;
+                          border-radius: 12px;
+                          font-size: 1rem;
+                          transition: all 0.3s ease;
+                          width: 100%;
+                        "
+                        placeholder="Résumé de votre demande"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Description -->
+                  <div
+                    class="mb-4 s_website_form_field col-12 s_website_form_required"
+                    data-type="text"
+                    data-name="Field"
+                  >
+                    <label
+                      class="form-label s_website_form_label"
+                      for="helpdesk6"
+                      style="
+                        color: rgba(255, 255, 255, 0.9);
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        margin-bottom: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:chat-round-line-bold-duotone"
+                        style="
+                          font-size: 1.25rem;
+                          color: var(--hotcodes-primary);
+                        "
+                      ></iconify-icon>
+                      <span class="s_website_form_label_content"
+                        >Description</span
+                      >
+                      <span
+                        class="s_website_form_mark"
+                        style="color: var(--hotcodes-primary)"
+                      >
+                        *</span
+                      >
+                    </label>
+                    <div style="position: relative">
+                      <textarea
+                        class="form-control s_website_form_input hotcodes-input"
+                        name="description"
+                        required="true"
+                        id="helpdesk6"
+                        rows="6"
+                        style="
+                          background: rgba(255, 255, 255, 0.03);
+                          border: 2px solid rgba(255, 107, 53, 0.15);
+                          color: white;
+                          padding: 1rem 1.25rem;
+                          border-radius: 12px;
+                          font-size: 1rem;
+                          transition: all 0.3s ease;
+                          width: 100%;
+                          resize: vertical;
+                          min-height: 150px;
+                        "
+                        placeholder="Décrivez votre problème ou votre question en détail..."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Attachment -->
+                  <div
+                    class="mb-4 s_website_form_field col-12 s_website_form_custom"
+                    data-type="binary"
+                    data-name="Field"
+                  >
+                    <label
+                      class="form-label s_website_form_label"
+                      for="helpdesk7"
+                      style="
+                        color: rgba(255, 255, 255, 0.9);
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        margin-bottom: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:paperclip-bold-duotone"
+                        style="
+                          font-size: 1.25rem;
+                          color: var(--hotcodes-primary);
+                        "
+                      ></iconify-icon>
+                      <span class="s_website_form_label_content"
+                        >Pièce Jointe</span
+                      >
+                    </label>
+                    <div style="position: relative">
+                      <input
+                        type="file"
+                        class="form-control s_website_form_input hotcodes-input"
+                        name="Attachment"
+                        id="helpdesk7"
+                        style="
+                          background: rgba(255, 255, 255, 0.03);
+                          border: 2px solid rgba(255, 107, 53, 0.15);
+                          color: white;
+                          padding: 1rem 1.25rem;
+                          border-radius: 12px;
+                          font-size: 0.95rem;
+                          transition: all 0.3s ease;
+                          width: 100%;
+                        "
+                      />
+                    </div>
+                    <small
+                      style="
+                        color: rgba(255, 255, 255, 0.5);
+                        font-size: 0.875rem;
+                        margin-top: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:info-circle-bold-duotone"
+                        style="font-size: 1rem"
+                      ></iconify-icon>
+                      Formats acceptés: PDF, images, documents (max 10MB)
+                    </small>
+                  </div>
+
+                  <!-- Hidden Team ID -->
+                  <div
+                    class="mb-0 s_website_form_field col-12 s_website_form_custom d-none"
+                    data-type="char"
+                    data-name="Field"
+                  >
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                      <div class="col-sm">
+                        <input
+                          type="hidden"
+                          class="form-control s_website_form_input"
+                          name="team_id"
+                          id="helpdesk8"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div
+                    class="mb-0 col-12 s_website_form_submit text-center"
+                    data-name="Submit Button"
+                    style="margin-top: 2.5rem"
+                  >
+                    <a
+                      href="#"
+                      role="button"
+                      class="btn s_website_form_send hotcodes-submit-btn"
+                      style="
+                        background: linear-gradient(135deg, #ff6b35, #8a2be2);
+                        color: white;
+                        padding: 1.25rem 3.5rem;
+                        border-radius: 50px;
+                        font-weight: 700;
+                        font-size: 1.125rem;
+                        text-decoration: none;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.75rem;
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        box-shadow: 0 10px 40px rgba(255, 107, 53, 0.5),
+                          0 0 0 0 rgba(255, 107, 53, 0.4);
+                        border: none;
+                        position: relative;
+                        overflow: hidden;
+                      "
+                    >
+                      <span
+                        style="
+                          position: relative;
+                          z-index: 2;
+                          display: flex;
+                          align-items: center;
+                          gap: 0.75rem;
+                        "
+                      >
+                        <iconify-icon
+                          icon="solar:plain-2-bold-duotone"
+                          style="font-size: 1.5rem"
+                        ></iconify-icon>
+                        Envoyer le Ticket
+                      </span>
+                    </a>
+                    <span
+                      id="s_website_form_result"
+                      style="
+                        display: block;
+                        margin-top: 1.5rem;
+                        color: white;
+                        font-weight: 500;
+                      "
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <!-- Custom Styles for Form -->
+          <style>
+            :root {
+              --hotcodes-primary: #ff6b35;
+              --hotcodes-secondary: #8a2be2;
+            }
+
+            /* Input Focus Effects */
+            #helpdesk_section .hotcodes-input:focus {
+              outline: none !important;
+              border-color: #ff6b35 !important;
+              box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.15),
+                0 8px 20px rgba(255, 107, 53, 0.2) !important;
+              background: rgba(255, 255, 255, 0.05) !important;
+              transform: translateY(-2px) !important;
+            }
+
+            #helpdesk_section .hotcodes-input::placeholder {
+              color: rgba(255, 255, 255, 0.4) !important;
+              font-size: 0.95rem !important;
+            }
+
+            /* Submit Button Hover Effects */
+            #helpdesk_section .hotcodes-submit-btn::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(135deg, #8a2be2, #ff6b35);
+              opacity: 0;
+              transition: opacity 0.4s ease;
+              z-index: 1;
+            }
+
+            #helpdesk_section .hotcodes-submit-btn:hover {
+              transform: translateY(-3px) scale(1.02) !important;
+              box-shadow: 0 15px 50px rgba(255, 107, 53, 0.6),
+                0 0 0 8px rgba(255, 107, 53, 0.2) !important;
+            }
+
+            #helpdesk_section .hotcodes-submit-btn:hover::before {
+              opacity: 1;
+            }
+
+            #helpdesk_section .hotcodes-submit-btn:active {
+              transform: translateY(-1px) scale(0.98) !important;
+              box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5) !important;
+            }
+
+            /* Label Icon Animation */
+            #helpdesk_section .s_website_form_label:hover iconify-icon {
+              transform: scale(1.1) rotate(5deg);
+              transition: transform 0.3s ease;
+            }
+
+            /* File Input Styling */
+            #helpdesk_section input[type="file"].hotcodes-input {
+              cursor: pointer !important;
+            }
+
+            #helpdesk_section
+              input[type="file"].hotcodes-input::-webkit-file-upload-button {
+              background: linear-gradient(135deg, #ff6b35, #8a2be2) !important;
+              color: white !important;
+              border: none !important;
+              padding: 0.5rem 1.5rem !important;
+              border-radius: 8px !important;
+              font-weight: 600 !important;
+              cursor: pointer !important;
+              margin-right: 1rem !important;
+              transition: all 0.3s ease !important;
+            }
+
+            #helpdesk_section
+              input[type="file"].hotcodes-input::-webkit-file-upload-button:hover {
+              transform: scale(1.05);
+              box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            }
+
+            /* Textarea Resize Handle */
+            #helpdesk_section textarea.hotcodes-input {
+              scrollbar-width: thin;
+              scrollbar-color: #ff6b35 rgba(255, 255, 255, 0.1);
+            }
+
+            #helpdesk_section textarea.hotcodes-input::-webkit-scrollbar {
+              width: 8px;
+            }
+
+            #helpdesk_section textarea.hotcodes-input::-webkit-scrollbar-track {
+              background: rgba(255, 255, 255, 0.05);
+              border-radius: 10px;
+            }
+
+            #helpdesk_section textarea.hotcodes-input::-webkit-scrollbar-thumb {
+              background: #ff6b35;
+              border-radius: 10px;
+            }
+
+            #helpdesk_section
+              textarea.hotcodes-input::-webkit-scrollbar-thumb:hover {
+              background: #8a2be2;
+            }
+          </style>
+        </div>
+      </div>
+    </xpath>
+  </template>
+
+  <!-- Custom Ticket Submitted Page -->
+  <template
+    id="hotcodes_ticket_submitted"
+    name="HotCodes: Ticket Received"
+    inherit_id="website_helpdesk.ticket_submited"
+  >
+    <xpath expr="//div[@id='wrap']" position="replace">
+      <div
+        id="wrap"
+        style="
+          background: #000;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <section
+          class="py-5"
+          style="width: 100%; position: relative; overflow: hidden"
+        >
+          <!-- Animated Background -->
+          <div
+            style="
+              position: absolute;
+              inset: 0;
+              background-image: linear-gradient(
+                  rgba(255, 107, 53, 0.05) 1px,
+                  transparent 1px
+                ),
+                linear-gradient(
+                  90deg,
+                  rgba(255, 107, 53, 0.05) 1px,
+                  transparent 1px
+                );
+              background-size: 50px 50px;
+              pointer-events: none;
+            "
+          ></div>
+
+          <!-- Gradient Orbs -->
+          <div
+            style="
+              position: absolute;
+              top: 20%;
+              left: 10%;
+              width: 300px;
+              height: 300px;
+              background: radial-gradient(
+                circle,
+                rgba(255, 107, 53, 0.2),
+                transparent
+              );
+              border-radius: 50%;
+              filter: blur(60px);
+              pointer-events: none;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              bottom: 20%;
+              right: 10%;
+              width: 400px;
+              height: 400px;
+              background: radial-gradient(
+                circle,
+                rgba(138, 43, 226, 0.2),
+                transparent
+              );
+              border-radius: 50%;
+              filter: blur(80px);
+              pointer-events: none;
+            "
+          ></div>
+
+          <div class="container" style="position: relative; z-index: 1">
+            <!-- Building Blocks Top -->
+            <div
+              class="oe_structure"
+              id="oe_structure_website_helpdesk_thanks_you"
+            />
+
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Success Card -->
+                <div
+                  style="
+                    background: rgba(15, 15, 15, 0.8);
+                    backdrop-filter: blur(20px);
+                    border: 1px solid rgba(255, 107, 53, 0.2);
+                    border-radius: 24px;
+                    padding: 4rem 3rem;
+                    text-align: center;
+                    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+                  "
+                >
+                  <!-- Success Icon -->
+                  <div
+                    style="
+                      width: 100px;
+                      height: 100px;
+                      background: linear-gradient(
+                        135deg,
+                        rgba(34, 197, 94, 0.2),
+                        rgba(34, 197, 94, 0.1)
+                      );
+                      border: 2px solid rgba(34, 197, 94, 0.4);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto 2rem;
+                      animation: scaleIn 0.6s ease-out;
+                    "
+                  >
+                    <iconify-icon
+                      icon="solar:check-circle-bold-duotone"
+                      style="font-size: 4rem; color: #22c55e"
+                    ></iconify-icon>
+                  </div>
+
+                  <t
+                    t-if="request.session.get('form_builder_model_model', '') == 'helpdesk.ticket'"
+                  >
+                    <t
+                      t-set="ticket"
+                      t-value="request.website._website_form_last_record()"
+                    />
+                  </t>
+
+                  <!-- Title -->
+                  <h1
+                    style="
+                      font-size: clamp(2rem, 4vw, 3rem);
+                      font-weight: 700;
+                      color: white;
+                      margin-bottom: 1rem;
+                    "
+                  >
+                    Merci !
+                  </h1>
+
+                  <t t-if="ticket">
+                    <!-- Success Message -->
+                    <p
+                      style="
+                        font-size: 1.25rem;
+                        color: rgba(255, 255, 255, 0.8);
+                        margin-bottom: 0.5rem;
+                        line-height: 1.6;
+                      "
+                    >
+                      Votre ticket a été envoyé avec succès.
+                    </p>
+                    <p
+                      style="
+                        font-size: 1.125rem;
+                        color: rgba(255, 255, 255, 0.6);
+                        margin-bottom: 2.5rem;
+                        line-height: 1.6;
+                      "
+                    >
+                      Notre équipe vous répondra dans les plus brefs délais.
+                    </p>
+
+                    <!-- Ticket Reference -->
+                    <div
+                      style="
+                        background: rgba(255, 107, 53, 0.1);
+                        border: 1px solid rgba(255, 107, 53, 0.3);
+                        border-radius: 16px;
+                        padding: 1.5rem 2rem;
+                        margin-bottom: 2.5rem;
+                        display: inline-block;
+                      "
+                    >
+                      <div
+                        style="
+                          color: rgba(255, 255, 255, 0.6);
+                          font-size: 0.875rem;
+                          margin-bottom: 0.5rem;
+                          text-transform: uppercase;
+                          letter-spacing: 0.05em;
+                        "
+                      >
+                        Numéro de Ticket
+                      </div>
+                      <t t-if="request.session.uid">
+                        <a
+                          t-attf-href="/helpdesk/ticket/#{ticket.id}"
+                          t-att-title="'Ticket #' + ticket.sudo().ticket_ref"
+                          style="
+                            font-size: 2rem;
+                            font-weight: 700;
+                            color: var(--hotcodes-primary);
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            justify-content: center;
+                          "
+                        >
+                          # <span t-field="ticket.sudo().ticket_ref" />
+                          <iconify-icon
+                            icon="solar:arrow-right-bold"
+                            style="font-size: 1.5rem"
+                          ></iconify-icon>
+                        </a>
+                      </t>
+                      <span
+                        t-if="not request.session.get('uid')"
+                        style="
+                          font-size: 2rem;
+                          font-weight: 700;
+                          color: var(--hotcodes-primary);
+                        "
+                      >
+                        # <span t-field="ticket.sudo().ticket_ref" />
+                      </span>
+                    </div>
+                  </t>
+
+                  <!-- Info Cards -->
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.03);
+                          border: 1px solid rgba(255, 255, 255, 0.1);
+                          border-radius: 12px;
+                          padding: 1.5rem;
+                          text-align: left;
+                        "
+                      >
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            margin-bottom: 0.75rem;
+                          "
+                        >
+                          <div
+                            style="
+                              width: 40px;
+                              height: 40px;
+                              background: rgba(59, 130, 246, 0.2);
+                              border-radius: 8px;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                            "
+                          >
+                            <iconify-icon
+                              icon="solar:letter-bold-duotone"
+                              style="font-size: 1.5rem; color: #3b82f6"
+                            ></iconify-icon>
+                          </div>
+                          <h3
+                            style="
+                              color: white;
+                              font-size: 1.125rem;
+                              font-weight: 600;
+                              margin: 0;
+                            "
+                          >
+                            Email de Confirmation
+                          </h3>
+                        </div>
+                        <p
+                          style="
+                            color: rgba(255, 255, 255, 0.6);
+                            font-size: 0.95rem;
+                            margin: 0;
+                          "
+                        >
+                          Un email de confirmation vous a été envoyé avec les
+                          détails de votre ticket.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.03);
+                          border: 1px solid rgba(255, 255, 255, 0.1);
+                          border-radius: 12px;
+                          padding: 1.5rem;
+                          text-align: left;
+                        "
+                      >
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            margin-bottom: 0.75rem;
+                          "
+                        >
+                          <div
+                            style="
+                              width: 40px;
+                              height: 40px;
+                              background: rgba(34, 197, 94, 0.2);
+                              border-radius: 8px;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                            "
+                          >
+                            <iconify-icon
+                              icon="solar:clock-circle-bold-duotone"
+                              style="font-size: 1.5rem; color: #22c55e"
+                            ></iconify-icon>
+                          </div>
+                          <h3
+                            style="
+                              color: white;
+                              font-size: 1.125rem;
+                              font-weight: 600;
+                              margin: 0;
+                            "
+                          >
+                            Temps de Réponse
+                          </h3>
+                        </div>
+                        <p
+                          style="
+                            color: rgba(255, 255, 255, 0.6);
+                            font-size: 0.95rem;
+                            margin: 0;
+                          "
+                        >
+                          Nous vous répondrons sous 24h en moyenne pendant les
+                          jours ouvrables.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div
+                    class="d-flex gap-3 justify-content-center flex-wrap"
+                    style="margin-top: 2.5rem"
+                  >
+                    <a
+                      href="/"
+                      style="
+                        background: linear-gradient(
+                          135deg,
+                          var(--hotcodes-primary),
+                          var(--hotcodes-secondary)
+                        );
+                        color: white;
+                        padding: 1rem 2.5rem;
+                        border-radius: 50px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:home-2-bold-duotone"
+                        style="font-size: 1.25rem"
+                      ></iconify-icon>
+                      Retour à l'Accueil
+                    </a>
+                    <a
+                      href="/helpdesk"
+                      style="
+                        background: rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        color: white;
+                        padding: 1rem 2.5rem;
+                        border-radius: 50px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        transition: all 0.3s ease;
+                      "
+                    >
+                      <iconify-icon
+                        icon="solar:chat-round-dots-bold-duotone"
+                        style="font-size: 1.25rem"
+                      ></iconify-icon>
+                      Soumettre un Autre Ticket
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Building Blocks Bottom -->
+            <div
+              class="oe_structure"
+              id="oe_structure_website_helpdesk_thanks_you_bottom"
+              style="margin-top: 3rem"
+            />
+          </div>
+
+          <!-- CSS Animation -->
+          <style>
+            @keyframes scaleIn {
+              0% {
+                transform: scale(0);
+                opacity: 0;
+              }
+              50% {
+                transform: scale(1.1);
+              }
+              100% {
+                transform: scale(1);
+                opacity: 1;
+              }
+            }
+          </style>
+        </section>
+      </div>
+    </xpath>
+  </template>
+</odoo>

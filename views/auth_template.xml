@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Hotcodes Login Layout - Complete redesign inspired by contact page -->
+    <template id="hotcodes_login_layout" name="Hotcodes Login Layout" inherit_id="web.login_layout">
+        <!-- Add header navigation -->
+        <xpath expr="//t[@t-set='no_header']" position="replace">
+            <t t-set="no_header" t-value="False"/>
+        </xpath>
+
+        <!-- Replace entire container -->
+        <xpath expr="//div[@class='container py-5']" position="replace">
+            <!-- Animated Background Pattern -->
+            <div style="position: fixed; inset: 0; background-image: linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0;"></div>
+
+            <!-- Floating Icons -->
+            <div style="position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0;">
+                <div style="position: absolute; top: 15%; left: 8%; font-size: 3rem; color: rgba(255,107,53,0.08); animation: floatIcon 8s ease-in-out infinite;">
+                    <i class="fa fa-lock"></i>
+                </div>
+                <div style="position: absolute; top: 65%; right: 12%; font-size: 2.5rem; color: rgba(138,43,226,0.08); animation: floatIcon 10s ease-in-out infinite 2s;">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div style="position: absolute; bottom: 15%; left: 15%; font-size: 2rem; color: rgba(59,130,246,0.08); animation: floatIcon 12s ease-in-out infinite 4s;">
+                    <i class="fa fa-shield"></i>
+                </div>
+            </div>
+
+            <div class="container" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; padding: 3rem 0;">
+                <div class="row w-100 justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-5 col-xl-4">
+                        <!-- Login Card with Glassmorphism -->
+                        <div t-attf-class="{{login_card_classes}} o_database_list" style="background: linear-gradient(135deg, rgba(20, 20, 20, 0.95), rgba(15, 15, 15, 0.9)); backdrop-filter: blur(30px) saturate(180%); -webkit-backdrop-filter: blur(30px) saturate(180%); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 24px; box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) inset, 0 10px 40px rgba(255, 107, 53, 0.15); padding: 3rem 2.5rem; position: relative; overflow: hidden;">
+
+                            <!-- Decorative gradient overlay -->
+                            <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #ff6b35, #8a2be2, #3b82f6, #ff6b35); background-size: 200% 100%; animation: gradientShift 3s ease infinite;"></div>
+
+                            <!-- Logo Section -->
+                            <div class="text-center mb-4">
+                                <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height: 80px; max-width: 100%; width: auto; filter: brightness(1.2);"/>
+                            </div>
+
+                            <!-- Content -->
+                            <t t-out="0"/>
+
+                            <!-- Footer -->
+                            <div class="text-center mt-4 pt-3" t-if="not disable_footer" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                                <div style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.5);">
+                                    <t t-if="not disable_database_manager">
+                                        <a href="/web/database/manager" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; margin-right: 1rem; transition: color 0.2s;">Manage Databases</a>
+                                    </t>
+                                    <a href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" target="_blank" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; transition: color 0.2s;">Powered by <span style="color: #ff6b35;">Odoo</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Animations -->
+            <style>
+                @keyframes floatIcon {
+                    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+                    25% { transform: translate(10px, -10px) rotate(5deg); }
+                    50% { transform: translate(-5px, 5px) rotate(-5deg); }
+                    75% { transform: translate(5px, 10px) rotate(3deg); }
+                }
+
+                @keyframes gradientShift {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+            </style>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Login Page - Complete Form Replacement -->
+    <template id="hotcodes_login" name="Hotcodes Login" inherit_id="web.login">
+        <!-- Remove the UserSwitch component as it conflicts with our custom form -->
+        <xpath expr="//owl-component[@name='web.user_switch']" position="replace"/>
+
+        <!-- Replace the entire login form using contains for dynamic class -->
+        <xpath expr="//form[contains(@t-attf-class, 'oe_login_form')]" position="replace">
+            <div id="wrap" class="oe_structure oe_empty" style="background: transparent; min-height: calc(100vh - 200px); display: flex; align-items: center;">
+                <!-- Login Form Section -->
+                <section style="padding: 10rem 0 12rem 0; width: 100%;">
+                    <div class="container">
+                        <div class="row g-5">
+                            <!-- Left Side - Welcome Message -->
+                            <div class="col-lg-5">
+                                <div style="position: sticky; top: 2rem;">
+                                    <!-- Badge -->
+                                    <div class="mb-3">
+                                        <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); padding: 0.5rem 1.25rem; border-radius: 50px; color: #ff6b35; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:lock-password-bold-duotone" style="font-size: 1.25rem;"></iconify-icon>
+                                            CONNEXION SÉCURISÉE
+                                        </span>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <h2 style="font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; color: white;">
+                                        Bon <span style="background: linear-gradient(135deg, #ff6b35, #8a2be2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Retour</span>
+                                    </h2>
+
+                                    <!-- Description -->
+                                    <div style="color: rgba(255,255,255,0.7); font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem;">
+                                        Connectez-vous pour accéder à votre compte et gérer vos services avec notre plateforme puissante.
+                                    </div>
+
+                                    <!-- Features List -->
+                                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #ff6b35, #ff8c5a); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                <iconify-icon icon="solar:shield-check-bold-duotone" style="font-size: 1.75rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <div>
+                                                <h4 style="color: white; font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Accès Sécurisé</h4>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Vos données sont protégées par une sécurité de niveau entreprise</p>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #8a2be2, #a855f7); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                <iconify-icon icon="solar:bolt-bold-duotone" style="font-size: 1.75rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <div>
+                                                <h4 style="color: white; font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Performance Rapide</h4>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Accès ultra-rapide à tous vos outils</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Side - Login Form -->
+                            <div class="col-lg-7">
+                                <div style="background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.15); border-radius: 20px; padding: 2.5rem;">
+                                    <h3 style="color: white; font-size: 1.75rem; font-weight: 600; margin-bottom: 1rem;">
+                                        <iconify-icon icon="solar:user-circle-bold-duotone" style="color: #ff6b35; margin-right: 0.5rem; font-size: 2rem; vertical-align: middle;"></iconify-icon>
+                                        Connectez-vous à votre compte
+                                    </h3>
+                                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">
+                                        Entrez vos identifiants pour accéder à votre tableau de bord
+                                    </p>
+
+                                    <form role="form" t-attf-action="/web/login" method="post" onsubmit="this.action = '/web/login' + location.hash" data-captcha="login">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                        <!-- Database Selection -->
+                                        <div class="mb-4" t-if="databases and len(databases) &gt; 1">
+                                            <label for="db" style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                                                <iconify-icon icon="solar:database-bold-duotone" style="font-size: 1.25rem; color: #ff6b35;"></iconify-icon>
+                                                <span>Base de données</span>
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="text" name="db" t-att-value="request.db" id="db" class="form-control" required="required" readonly="readonly" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px 0 0 10px;"/>
+                                                <a role="button" href="/web/database/selector" class="btn" style="background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: #ff6b35; border-radius: 0 10px 10px 0;">
+                                                    Sélectionner <iconify-icon icon="solar:database-bold-duotone"></iconify-icon>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Email Field -->
+                                        <div class="mb-4">
+                                            <label for="login" style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                                                <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 1.25rem; color: #ff6b35;"></iconify-icon>
+                                                <span>Adresse Email</span>
+                                            </label>
+                                            <input type="text" placeholder="Entrez votre email" name="login" t-att-value="login" id="login" class="form-control" required="required" autocapitalize="off" autocomplete="username" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;"/>
+                                        </div>
+
+                                        <!-- Password Field -->
+                                        <div class="mb-4 o_caps_lock_warning">
+                                            <label for="password" style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                                                <iconify-icon icon="solar:lock-password-bold-duotone" style="font-size: 1.25rem; color: #ff6b35;"></iconify-icon>
+                                                <span>Mot de passe</span>
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="password" placeholder="Entrez votre mot de passe" name="password" id="password" class="form-control" required="required" autocomplete="current-password" t-att-autofocus="'autofocus' if login else None" maxlength="4096" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px 0 0 10px;"/>
+                                                <button type="button" class="btn o_show_password" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); border-radius: 0 10px 10px 0;">
+                                                    <iconify-icon icon="solar:eye-bold-duotone"></iconify-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Alert Messages -->
+                                        <p class="alert alert-danger" t-if="error" role="alert" style="background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.3); color: #fca5a5; border-radius: 10px; padding: 1rem;">
+                                            <t t-esc="error"/>
+                                        </p>
+                                        <p class="alert alert-success" t-if="message" role="status" style="background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #86efac; border-radius: 10px; padding: 1rem;">
+                                            <t t-esc="message"/>
+                                        </p>
+
+                                        <!-- Submit Button -->
+                                        <div class="d-grid mb-3">
+                                            <button type="submit" class="btn btn-primary" style="background: linear-gradient(135deg, #ff6b35, #ff8c5a); border: none; color: white; padding: 1rem 2rem; border-radius: 10px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:login-3-bold-duotone" style="margin-right: 0.5rem; font-size: 1.25rem; vertical-align: middle;"></iconify-icon>
+                                                Se connecter
+                                            </button>
+                                        </div>
+
+                                        <!-- Additional Links -->
+                                        <div class="text-center" style="padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                                            <a t-if="reset_password_enabled" t-attf-href="/web/reset_password?{{ keep_query() }}" style="color: #ff6b35; text-decoration: none; font-size: 0.95rem; margin-right: 1.5rem;">
+                                                <iconify-icon icon="solar:key-bold-duotone"></iconify-icon> Mot de passe oublié ?
+                                            </a>
+                                            <a t-if="signup_enabled" t-attf-href="/web/signup?{{ keep_query() }}" style="color: #8a2be2; text-decoration: none; font-size: 0.95rem;">
+                                                <iconify-icon icon="solar:user-plus-bold-duotone"></iconify-icon> Créer un compte
+                                            </a>
+                                        </div>
+
+                                        <input type="hidden" name="type" value="password"/>
+                                        <input type="hidden" name="redirect" t-att-value="redirect"/>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Signup Page - Complete Form Replacement -->
+    <template id="hotcodes_signup" name="Hotcodes Signup" inherit_id="auth_signup.signup">
+        <!-- Replace the entire signup form -->
+        <xpath expr="//form[@class='oe_signup_form']" position="replace">
+            <div id="wrap" class="oe_structure oe_empty" style="background: transparent; min-height: calc(100vh - 200px); display: flex; align-items: center;" t-if="not message">
+                <!-- Signup Form Section -->
+                <section style="padding: 10rem 0 12rem 0; width: 100%;">
+                    <div class="container">
+                        <div class="row g-5">
+                            <!-- Left Side - Welcome Message -->
+                            <div class="col-lg-5">
+                                <div style="position: sticky; top: 2rem;">
+                                    <!-- Badge -->
+                                    <div class="mb-3">
+                                        <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); padding: 0.5rem 1.25rem; border-radius: 50px; color: #8a2be2; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                            <iconify-icon icon="solar:user-plus-bold-duotone" style="font-size: 1.25rem;"></iconify-icon>
+                                            COMMENCER
+                                        </span>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <h2 style="font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; color: white;">
+                                        Créez Votre <span style="background: linear-gradient(135deg, #8a2be2, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Compte</span>
+                                    </h2>
+
+                                    <!-- Description -->
+                                    <div style="color: rgba(255,255,255,0.7); font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem;">
+                                        Rejoignez notre plateforme et débloquez des outils puissants pour développer votre entreprise.
+                                    </div>
+
+                                    <!-- Features List -->
+                                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #8a2be2, #a855f7); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: 1.75rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <div>
+                                                <h4 style="color: white; font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Configuration Rapide</h4>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Démarrez en quelques minutes, pas en heures</p>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6, #60a5fa); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                <iconify-icon icon="solar:star-bold-duotone" style="font-size: 1.75rem; color: white;"></iconify-icon>
+                                            </div>
+                                            <div>
+                                                <h4 style="color: white; font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Fonctionnalités Premium</h4>
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Accédez à tous les outils et intégrations</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Side - Signup Form -->
+                            <div class="col-lg-7">
+                                <div style="background: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(15, 15, 15, 0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.15); border-radius: 20px; padding: 2.5rem;">
+                                    <h3 style="color: white; font-size: 1.75rem; font-weight: 600; margin-bottom: 1rem;">
+                                        <iconify-icon icon="solar:user-circle-bold-duotone" style="color: #8a2be2; margin-right: 0.5rem; font-size: 2rem; vertical-align: middle;"></iconify-icon>
+                                        Créer un nouveau compte
+                                    </h3>
+                                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">
+                                        Remplissez vos informations pour commencer
+                                    </p>
+
+                                    <form role="form" method="post" data-captcha="signup">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                        <!-- Name Field -->
+                                        <div class="mb-4">
+                                            <label for="name" style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                                                <iconify-icon icon="solar:user-bold-duotone" style="font-size: 1.25rem; color: #8a2be2;"></iconify-icon>
+                                                <span>Nom Complet</span>
+                                            </label>
+                                            <input type="text" placeholder="Entrez votre nom complet" name="name" t-att-value="name" id="name" class="form-control" autofocus="autofocus" required="required" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;"/>
+                                        </div>
+
+                                        <!-- Email Field -->
+                                        <div class="mb-4">
+                                            <label for="login" style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                                                <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 1.25rem; color: #8a2be2;"></iconify-icon>
+                                                <span>Adresse Email</span>
+                                            </label>
+                                            <input type="text" placeholder="Entrez votre email" name="login" t-att-value="login" id="login" class="form-control" t-att-autofocus="'autofocus' if login else None" autocapitalize="off" required="required" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.875rem 1.25rem; border-radius: 10px;"/>
+                                        </div>
+
+                                        <!-- Password Fields -->
+                                        <t t-call="auth_signup.fields"/>
+
+                                        <!-- Alert Messages -->
+                                        <p class="alert alert-danger" t-if="error" role="alert" style="background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.3); color: #fca5a5; border-radius: 10px; padding: 1rem;">
+                                            <t t-esc="error"/>
+                                        </p>
+
+                                        <!-- Submit Button -->
+                                        <div class="d-grid mb-3">
+                                            <button type="submit" class="btn btn-primary" style="background: linear-gradient(135deg, #8a2be2, #3b82f6); border: none; color: white; padding: 1rem 2rem; border-radius: 10px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:user-plus-bold-duotone" style="margin-right: 0.5rem; font-size: 1.25rem; vertical-align: middle;"></iconify-icon>
+                                                S'inscrire
+                                            </button>
+                                        </div>
+
+                                        <!-- Additional Links -->
+                                        <div class="text-center" style="padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                                            <a t-attf-href="/web/login?{{ keep_query() }}" style="color: #8a2be2; text-decoration: none; font-size: 0.95rem;">
+                                                <iconify-icon icon="solar:login-3-bold-duotone"></iconify-icon> Vous avez déjà un compte ?
+                                            </a>
+                                        </div>
+
+                                        <input type="hidden" name="redirect" t-att-value="redirect"/>
+                                        <input type="hidden" name="token" t-att-value="token"/>
+
+                                        <!-- OAuth -->
+                                        <t t-call="web.login_oauth"/>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Hotcodes Reset Password Page -->
+    <template id="hotcodes_reset_password" name="Hotcodes Reset Password" inherit_id="auth_signup.reset_password">
+        <!-- Add welcome text above the form -->
+        <xpath expr="//div[@id='oe_structure_reset_password_top']" position="after">
+            <div class="text-center mb-4">
+                <!-- Badge -->
+                <div class="mb-3">
+                    <span style="display: inline-block; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: #3b82f6; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                        🔑 RESET PASSWORD
+                    </span>
+                </div>
+                <!-- Title -->
+                <h2 style="font-weight: 700; font-size: 2rem; margin-bottom: 0.75rem; color: white; line-height: 1.2;">
+                    Reset Your <span style="background: linear-gradient(135deg, #3b82f6, #ff6b35); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Password</span>
+                </h2>
+                <!-- Subtitle -->
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; margin-bottom: 0;">
+                    Enter your email to receive reset instructions
+                </p>
+            </div>
+        </xpath>
+
+        <!-- Customize Email Label with Icon -->
+        <xpath expr="//form[@class='oe_reset_password_form']//label[@for='login']" position="replace">
+            <label for="login" class="col-form-label" style="color: rgba(255, 255, 255, 0.9); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa fa-envelope" style="font-size: 1.25rem; color: #3b82f6;"></i>
+                <span>Email</span>
+            </label>
+        </xpath>
+
+        <!-- Customize Email Input -->
+        <xpath expr="//form[@class='oe_reset_password_form']//input[@id='login']" position="attributes">
+            <attribute name="style">background: rgba(255, 255, 255, 0.03); border: 2px solid rgba(59, 130, 246, 0.15); color: white; padding: 1rem 1.25rem; border-radius: 12px; font-size: 1rem; transition: all 0.3s ease;</attribute>
+        </xpath>
+
+        <!-- Customize Reset Button -->
+        <xpath expr="//form[@class='oe_reset_password_form']//button[@type='submit']" position="attributes">
+            <attribute name="style">background: linear-gradient(135deg, #3b82f6, #ff6b35); border: none; color: white; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; width: 100%;</attribute>
+        </xpath>
+    </template>
+
+</odoo>

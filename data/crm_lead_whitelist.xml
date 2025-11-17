@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Whitelist additional fields for website forms -->
+        <function model="ir.model.fields" name="formbuilder_whitelist">
+            <value>crm.lead</value>
+            <value eval="[
+                'function',
+                'x_employee_count',
+                'x_industry',
+            ]"/>
+        </function>
+    </data>
+</odoo>
+

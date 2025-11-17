@@ -1,0 +1,205 @@
+/* ============================================
+   Hotcodes Portal Custom Styles
+   ============================================ */
+
+/* Portal Frontend Layout - Navbar */
+.o_portal {
+  nav.navbar.navbar-expand.navbar-light.bg-light {
+    background: linear-gradient(
+      135deg,
+      rgba(20, 20, 20, 0.95),
+      rgba(15, 15, 15, 0.9)
+    ) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 107, 53, 0.15);
+
+    .navbar-brand img {
+      filter: brightness(1.2);
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.9);
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #ff6b35;
+      }
+    }
+
+    .dropdown-menu {
+      background: linear-gradient(
+        135deg,
+        rgba(20, 20, 20, 0.95),
+        rgba(15, 15, 15, 0.9)
+      );
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 107, 53, 0.15);
+
+      .dropdown-item {
+        color: rgba(255, 255, 255, 0.9);
+
+        &:hover {
+          background: rgba(255, 107, 53, 0.2);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/* Portal Breadcrumbs */
+.o_portal_submenu.breadcrumb {
+  li {
+    color: rgba(255, 255, 255, 0.9);
+
+    a {
+      color: #ff6b35;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #ff8c5a;
+      }
+    }
+
+    i.fa-home {
+      color: #ff6b35;
+    }
+  }
+}
+
+/* Portal Navbar / Searchbar */
+.o_portal_navbar {
+  .navbar-brand {
+    color: white !important;
+    font-weight: 700;
+  }
+
+  .btn-light {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px;
+
+    &:hover {
+      background: rgba(255, 107, 53, 0.2);
+      border-color: rgba(255, 107, 53, 0.4);
+    }
+  }
+
+  .dropdown-menu {
+    background: linear-gradient(
+      135deg,
+      rgba(20, 20, 20, 0.95),
+      rgba(15, 15, 15, 0.9)
+    );
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 107, 53, 0.15);
+
+    .dropdown-item {
+      color: rgba(255, 255, 255, 0.9);
+
+      &:hover {
+        background: rgba(255, 107, 53, 0.2);
+        color: white;
+      }
+
+      &.active {
+        background: rgba(255, 107, 53, 0.3);
+        color: white;
+      }
+    }
+  }
+}
+
+/* Portal Tables */
+.o_portal_my_doc_table {
+  color: white;
+
+  thead {
+    th {
+      color: #ff6b35;
+      border-bottom: 2px solid rgba(255, 107, 53, 0.3);
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      &:hover {
+        background: rgba(255, 107, 53, 0.1);
+      }
+
+      td {
+        color: rgba(255, 255, 255, 0.9);
+
+        a {
+          color: #ff6b35;
+          text-decoration: none;
+
+          &:hover {
+            color: #ff8c5a;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Portal Contact Details */
+.o_portal_contact_details {
+  a {
+    color: #ff6b35;
+    text-decoration: none;
+
+    &:hover {
+      color: #ff8c5a;
+    }
+  }
+
+  i.fa {
+    color: #ff6b35;
+  }
+
+  span {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Portal Security Page */
+.o_portal_security_body {
+  label {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+  }
+
+  input[type="password"],
+  input[type="text"] {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px;
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 107, 53, 0.4);
+      color: white;
+    }
+  }
+
+  button[type="submit"] {
+    background: linear-gradient(135deg, #ff6b35, #ff8c5a);
+    border: none;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+  }
+}

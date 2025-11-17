@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- ============================================================================
+       HOTCODES BLOG - FRAMER-INSPIRED DARK GLASSMORPHISM DESIGN SYSTEM
+       ============================================================================
+
+       This template provides comprehensive blog customizations for theme_hotcodes,
+       implementing a modern, Framer-inspired dark glassmorphism aesthetic with:
+
+       - Dark background with glassmorphic cards
+       - Smooth animations and hover effects
+       - Premium typography and spacing
+       - Responsive grid layouts
+       - Enhanced metadata display
+       - Modern navigation and filtering
+
+       ============================================================================ -->
+
+  <!-- ============================================================================
+       GLOBAL BLOG STYLES - FRAMER-INSPIRED DARK GLASSMORPHISM
+       ============================================================================ -->
+  <template
+    id="hotcodes_blog_global_styles"
+    name="Hotcodes Blog Global Styles"
+    inherit_id="website_blog.index"
+  >
+    <xpath expr="//div[@id='wrap']" position="before">
+      <style>
+        /* ========================================
+           BLOG - FRAMER-INSPIRED DARK GLASSMORPHISM
+           ======================================== */
+
+        /* Blog wrapper - Dark background */
+        .website_blog #wrap {
+          background: transparent !important;
+          min-height: 100vh;
+        }
+
+        /* Blog hero section - Centered title like Framer */
+        #o_wblog_blog_top {
+          text-align: center;
+          padding: 8rem 0 4rem;
+          position: relative;
+        }
+
+        #o_wblog_blog_top h1,
+        #o_wblog_blog_top h2,
+        #o_wblog_blog_top .o_wblog_post_title h1 {
+          color: white !important;
+          font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
+          font-weight: 700 !important;
+          margin-bottom: 1.5rem !important;
+          letter-spacing: -0.03em !important;
+          line-height: 1.1 !important;
+          animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #o_wblog_blog_top p,
+        #o_wblog_blog_top .lead,
+        #o_wblog_blog_top .o_wblog_post_subtitle {
+          color: rgba(255, 255, 255, 0.65) !important;
+          font-size: 1.25rem !important;
+          max-width: 700px;
+          margin: 0 auto 2.5rem;
+          line-height: 1.6 !important;
+          animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s backwards;
+        }
+
+        /* Blog posts container - Grid layout like Framer */
+        #o_wblog_posts_loop {
+          position: relative;
+        }
+
+        /* Blog post card wrapper - Transparent */
+        .o_wblog_post,
+        #o_wblog_posts_loop .card,
+        #o_wblog_posts_loop article {
+          background: transparent !important;
+          border: none !important;
+          margin-bottom: 2rem !important;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          height: 100% !important;
+        }
+
+        /* Blog post card - Apply glassmorphism to the card itself, not inner divs */
+        .o_wblog_post.card {
+          background: linear-gradient(
+            135deg,
+            rgba(20, 20, 20, 0.85) 0%,
+            rgba(15, 15, 15, 0.75) 100%
+          ) !important;
+          backdrop-filter: blur(30px) saturate(180%) !important;
+          -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+          border: 1px solid rgba(255, 255, 255, 0.08) !important;
+          border-radius: 24px !important;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
+            0 1px 2px rgba(255, 255, 255, 0.05) inset !important;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          overflow: hidden;
+          position: relative;
+        }
+
+        /* Remove backgrounds from inner divs - they should be transparent */
+        .o_wblog_post.card .card-body,
+        .o_wblog_post.card
+          > div:not(.o_record_cover_container):not(.card-footer) {
+          background: transparent !important;
+          border: none !important;
+          box-shadow: none !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+        }
+
+        /* Ensure card-body and inner divs have proper padding */
+        .o_wblog_post.card .card-body {
+          padding: 1.5rem !important;
+        }
+
+        .o_wblog_post.card
+          > div:not(.o_record_cover_container):not(.card-footer) {
+          padding: 0 1.5rem !important;
+        }
+
+        .o_wblog_post.card .card-footer,
+        .o_wblog_post.card .o_wblog_normalize_font {
+          padding: 0 1.5rem 1.5rem 1.5rem !important;
+          background: transparent !important;
+          border: none !important;
+        }
+
+        /* Framer-style hover effect - Smooth lift with glow */
+        .o_wblog_post.card:hover {
+          transform: translateY(-12px) scale(1.02) !important;
+          box-shadow: 0 20px 80px rgba(255, 107, 53, 0.3),
+            0 1px 2px rgba(255, 255, 255, 0.1) inset !important;
+          border-color: rgba(255, 107, 53, 0.3) !important;
+        }
+
+        /* Blog post cover image - Rounded with smooth scale */
+        .o_wblog_post img,
+        #o_wblog_posts_loop .card img,
+        #o_wblog_posts_loop article img,
+        .o_record_cover_container img {
+          border-radius: 16px !important;
+          width: 100% !important;
+          height: auto !important;
+          object-fit: cover !important;
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          margin-bottom: 1.5rem !important;
+        }
+
+        .o_wblog_post:hover img,
+        #o_wblog_posts_loop .card:hover img,
+        #o_wblog_posts_loop article:hover img {
+          transform: scale(1.05) !important;
+        }
+
+        /* Blog post title - Framer typography */
+        .o_wblog_post h2,
+        .o_wblog_post h3,
+        .o_wblog_post h4,
+        #o_wblog_posts_loop .card h2,
+        #o_wblog_posts_loop .card h3,
+        #o_wblog_posts_loop .card h4,
+        #o_wblog_posts_loop article h2,
+        #o_wblog_posts_loop article h3,
+        .o_wblog_post_name {
+          color: white !important;
+          font-weight: 700 !important;
+          font-size: clamp(1.25rem, 2vw, 1.75rem) !important;
+          margin-bottom: 1rem !important;
+          line-height: 1.25 !important;
+          letter-spacing: -0.02em !important;
+        }
+
+        /* Blog post excerpt - Subtle gray */
+        .o_wblog_post p,
+        #o_wblog_posts_loop .card p,
+        #o_wblog_posts_loop article p,
+        .o_wblog_post_teaser {
+          color: rgba(255, 255, 255, 0.65) !important;
+          font-size: 1rem !important;
+          line-height: 1.7 !important;
+          margin-bottom: 1.5rem !important;
+        }
+
+        /* Blog post meta - Small muted text with icons */
+        .o_wblog_post .o_wblog_post_meta,
+        #o_wblog_posts_loop .card .o_wblog_post_meta,
+        .o_wblog_post small,
+        #o_wblog_posts_loop .card small,
+        .o_wblog_post_date,
+        .o_wblog_post_author_name,
+        #o_wblog_post_info {
+          color: rgba(255, 255, 255, 0.45) !important;
+          font-size: 0.875rem !important;
+          font-weight: 500 !important;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        /* Author avatar styling */
+        .o_wblog_author_avatar,
+        .o_wblog_author_avatar_date {
+          border-radius: 50% !important;
+          border: 2px solid rgba(255, 107, 53, 0.3) !important;
+        }
+
+        /* Read more button - Framer-style orange glassmorphism */
+        .o_wblog_post a.btn,
+        #o_wblog_posts_loop .card a.btn,
+        #o_wblog_posts_loop article a.btn,
+        .website_blog .btn-primary {
+          background: linear-gradient(
+            135deg,
+            rgba(255, 107, 53, 0.25) 0%,
+            rgba(255, 107, 53, 0.15) 100%
+          ) !important;
+          backdrop-filter: blur(15px) saturate(180%) !important;
+          border: 1px solid rgba(255, 107, 53, 0.5) !important;
+          color: #ff6b35 !important;
+          font-weight: 600 !important;
+          padding: 0.75rem 1.75rem !important;
+          border-radius: 12px !important;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          text-decoration: none !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          gap: 0.5rem !important;
+          box-shadow: 0 4px 16px rgba(255, 107, 53, 0.15) !important;
+        }
+
+        .o_wblog_post a.btn:hover,
+        #o_wblog_posts_loop .card a.btn:hover,
+        #o_wblog_posts_loop article a.btn:hover,
+        .website_blog .btn-primary:hover {
+          background: linear-gradient(
+            135deg,
+            rgba(255, 107, 53, 0.4) 0%,
+            rgba(255, 107, 53, 0.25) 100%
+          ) !important;
+          border-color: rgba(255, 107, 53, 0.7) !important;
+          color: white !important;
+          transform: translateY(-2px) !important;
+          box-shadow: 0 8px 32px rgba(255, 107, 53, 0.35) !important;
+        }
+
+        /* Blog tags - Glassmorphism pills */
+        .website_blog .badge,
+        .o_wblog_post .badge,
+        #o_wblog_posts_loop .badge,
+        .o_wblog_post_tag,
+        .o_tag {
+          background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.05) 100%
+          ) !important;
+          backdrop-filter: blur(10px) !important;
+          border: 1px solid rgba(255, 255, 255, 0.15) !important;
+          color: rgba(255, 255, 255, 0.85) !important;
+          padding: 0.5rem 1rem !important;
+          border-radius: 20px !important;
+          font-size: 0.875rem !important;
+          font-weight: 500 !important;
+          transition: all 0.3s ease !important;
+          text-decoration: none !important;
+          display: inline-block !important;
+        }
+
+        .website_blog .badge:hover,
+        .o_wblog_post .badge:hover,
+        #o_wblog_posts_loop .badge:hover,
+        .o_wblog_post_tag:hover,
+        .o_tag:hover {
+          background: linear-gradient(
+            135deg,
+            rgba(255, 107, 53, 0.3) 0%,
+            rgba(255, 107, 53, 0.2) 100%
+          ) !important;
+          border-color: rgba(255, 107, 53, 0.5) !important;
+          color: #ff6b35 !important;
+          transform: translateY(-2px) !important;
+        }
+
+        /* Blog search and filters - Glassmorphism */
+        .website_blog .o_searchbar_form,
+        .website_blog .form-control,
+        .website_blog .form-select {
+          background: linear-gradient(
+            135deg,
+            rgba(20, 20, 20, 0.7) 0%,
+            rgba(15, 15, 15, 0.6) 100%
+          ) !important;
+          backdrop-filter: blur(20px) saturate(180%) !important;
+          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          border-radius: 12px !important;
+          color: white !important;
+          padding: 0.75rem 1.25rem !important;
+        }
+
+        .website_blog .form-control::placeholder {
+          color: rgba(255, 255, 255, 0.4) !important;
+        }
+
+        .website_blog .form-control:focus,
+        .website_blog .form-select:focus {
+          border-color: rgba(255, 107, 53, 0.5) !important;
+          box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1) !important;
+          outline: none !important;
+          background: linear-gradient(
+            135deg,
+            rgba(20, 20, 20, 0.85) 0%,
+            rgba(15, 15, 15, 0.75) 100%
+          ) !important;
+        }
+
+        /* Blog pagination - Glassmorphism */
+        .website_blog .pagination .page-link {
+          background: linear-gradient(
+            135deg,
+            rgba(20, 20, 20, 0.7) 0%,
+            rgba(15, 15, 15, 0.6) 100%
+          ) !important;
+          backdrop-filter: blur(15px) saturate(180%) !important;
+          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          color: rgba(255, 255, 255, 0.7) !important;
+          margin: 0 0.25rem !important;
+          border-radius: 8px !important;
+          transition: all 0.3s ease !important;
+        }
+
+        .website_blog .pagination .page-link:hover {
+          background: linear-gradient(
+            135deg,
+            rgba(255, 107, 53, 0.3) 0%,
+            rgba(255, 107, 53, 0.2) 100%
+          ) !important;
+          border-color: rgba(255, 107, 53, 0.5) !important;
+          color: #ff6b35 !important;
+          transform: translateY(-2px) !important;
+        }
+
+        .website_blog .pagination .page-item.active .page-link {
+          background: linear-gradient(
+            135deg,
+            rgba(255, 107, 53, 0.4) 0%,
+            rgba(255, 107, 53, 0.3) 100%
+          ) !important;
+          border-color: rgba(255, 107, 53, 0.6) !important;
+          color: white !important;
+        }
+
+        /* Blog sidebar - Glassmorphism */
+        #o_wblog_post_sidebar,
+        #o_wblog_sidebar,
+        .o_wblog_sidebar {
+          background: linear-gradient(
+            135deg,
+            rgba(20, 20, 20, 0.7) 0%,
+            rgba(15, 15, 15, 0.6) 100%
+          ) !important;
+          backdrop-filter: blur(25px) saturate(180%) !important;
+          border: 1px solid rgba(255, 255, 255, 0.08) !important;
+          border-radius: 20px !important;
+          padding: 2rem !important;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        #o_wblog_post_sidebar h3,
+        #o_wblog_post_sidebar h4,
+        #o_wblog_post_sidebar h5,
+        #o_wblog_post_sidebar h6,
+        #o_wblog_sidebar h3,
+        #o_wblog_sidebar h4,
+        #o_wblog_sidebar h5,
+        #o_wblog_sidebar h6,
+        .o_wblog_sidebar h3,
+        .o_wblog_sidebar h4,
+        .o_wblog_sidebar h5,
+        .o_wblog_sidebar h6 {
+          color: white !important;
+          font-weight: 700 !important;
+          margin-bottom: 1.5rem !important;
+          font-size: 1.125rem !important;
+          letter-spacing: -0.01em !important;
+        }
+
+        #o_wblog_post_sidebar a,
+        #o_wblog_sidebar a,
+        .o_wblog_sidebar a {
+          color: rgba(255, 255, 255, 0.7) !important;
+          text-decoration: none !important;
+          transition: all 0.3s ease !important;
+          display: inline-block;
+        }
+
+        #o_wblog_post_sidebar a:hover,
+        #o_wblog_sidebar a:hover,
+        .o_wblog_sidebar a:hover {
+          color: #ff6b35 !important;
+          transform: translateX(4px) !important;
+        }
+
+        .o_wblog_sidebar_block {
+          margin-bottom: 2rem !important;
+        }
+
+        /* Blog post content - Single post page */
+        #o_wblog_post_content {
+          color: rgba(255, 255, 255, 0.85) !important;
+        }
+
+        #o_wblog_post_content h1,
+        #o_wblog_post_content h2,
+        #o_wblog_post_content h3,
+        #o_wblog_post_content h4,
+        #o_wblog_post_content h5,
+        #o_wblog_post_content h6 {
+          color: white !important;
+          font-weight: 700 !important;
+          margin-top: 2rem !important;
+          margin-bottom: 1rem !important;
+          letter-spacing: -0.02em !important;
+        }
+
+        #o_wblog_post_content p {
+          color: rgba(255, 255, 255, 0.75) !important;
+          line-height: 1.8 !important;
+          margin-bottom: 1.5rem !important;
+          font-size: 1.0625rem !important;
+        }
+
+        #o_wblog_post_content a {
+          color: #ff6b35 !important;
+          text-decoration: none !important;
+          border-bottom: 1px solid rgba(255, 107, 53, 0.3) !important;
+          transition: all 0.3s ease !important;
+        }
+
+        #o_wblog_post_content a:hover {
+          color: #ff8555 !important;
+          border-bottom-color: rgba(255, 107, 53, 0.6) !important;
+        }
+
+        #o_wblog_post_content ul,
+        #o_wblog_post_content ol {
+          color: rgba(255, 255, 255, 0.75) !important;
+          line-height: 1.8 !important;
+          margin-bottom: 1.5rem !important;
+        }
+
+        #o_wblog_post_content blockquote {
+          border-left: 4px solid rgba(255, 107, 53, 0.5) !important;
+          padding-left: 1.5rem !important;
+          margin: 2rem 0 !important;
+          color: rgba(255, 255, 255, 0.65) !important;
+          font-style: italic;
+        }
+
+        #o_wblog_post_content code {
+          background: rgba(255, 107, 53, 0.1) !important;
+          color: #ff6b35 !important;
+          padding: 0.2rem 0.5rem !important;
+          border-radius: 4px !important;
+          font-size: 0.9em !important;
+        }
+
+        #o_wblog_post_content pre {
+          background: rgba(20, 20, 20, 0.7) !important;
+          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          border-radius: 12px !important;
+          padding: 1.5rem !important;
+          overflow-x: auto !important;
+        }
+
+        /* Blog cover - Full width hero */
+        .o_wblog_post_page_cover,
+        .o_record_cover_container {
+          border-radius: 0 !important;
+          overflow: hidden;
+          position: relative;
+          min-height: 60vh;
+        }
+
+        .o_wblog_post_page_cover::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.7) 100%
+          );
+          pointer-events: none;
+        }
+
+        /* Blog navigation bar styling */
+        .website_blog .navbar-nav .nav-link {
+          color: rgba(255, 255, 255, 0.7) !important;
+          transition: all 0.3s ease !important;
+          padding: 0.5rem 1rem !important;
+          border-radius: 8px !important;
+        }
+
+        .website_blog .navbar-nav .nav-link:hover,
+        .website_blog .navbar-nav .nav-link.active {
+          color: #ff6b35 !important;
+          background: rgba(255, 107, 53, 0.1) !important;
+        }
+
+        /* Breadcrumb styling */
+        .website_blog .breadcrumb {
+          background: transparent !important;
+          padding: 0 !important;
+        }
+
+        .website_blog .breadcrumb-item,
+        .website_blog .breadcrumb-item a {
+          color: rgba(255, 255, 255, 0.6) !important;
+          text-decoration: none !important;
+        }
+
+        .website_blog .breadcrumb-item.active {
+          color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .website_blog .breadcrumb-item + .breadcrumb-item::before {
+          color: rgba(255, 255, 255, 0.4) !important;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          #o_wblog_blog_top {
+            padding: 6rem 0 3rem;
+          }
+
+          #o_wblog_blog_top h1,
+          #o_wblog_blog_top h2 {
+            font-size: 2.5rem !important;
+          }
+
+          .o_wblog_post .card-body,
+          #o_wblog_posts_loop .card .card-body,
+          #o_wblog_posts_loop article > div {
+            padding: 1.5rem !important;
+          }
+
+          #o_wblog_post_sidebar,
+          #o_wblog_sidebar,
+          .o_wblog_sidebar {
+            margin-top: 2rem !important;
+          }
+        }
+      </style>
+    </xpath>
+  </template>
+
+  <!-- ============================================================================
+       BLOG HERO SECTION - CUSTOM HEADER WITH ANIMATED TITLE
+       ============================================================================ -->
+  <template
+    id="custom_blog_cover"
+    inherit_id="website_blog.blog_post_short"
+    name="Custom Blog Cover"
+    priority="16"
+  >
+    <xpath expr="//div[@id='o_wblog_blog_top']" position="replace">
+      <div id="o_wblog_blog_top">
+        <!-- Selectively display droppable-areas for 'all blogs' or single-blog pages -->
+        <t t-if="not tag and not date_begin and not search">
+          <div id="o_wblog_blog_top_droppable" />
+          <t t-if="blog">
+            <div class="container text-center py-5">
+              <div class="mb-4">
+                <iconify-icon
+                  icon="solar:document-text-bold-duotone"
+                  style="font-size: 4rem; color: var(--hotcodes-primary)"
+                />
+              </div>
+              <h1
+                t-field="blog.name"
+                class="mb-3"
+                style="
+                  color: white;
+                  font-size: clamp(2.5rem, 5vw, 4.5rem);
+                  font-weight: 700;
+                  letter-spacing: -0.03em;
+                "
+                placeholder="Blog Title"
+              />
+              <div
+                t-field="blog.subtitle"
+                class="lead"
+                style="
+                  color: rgba(255, 255, 255, 0.65);
+                  font-size: 1.25rem;
+                  max-width: 700px;
+                  margin: 0 auto;
+                "
+                placeholder="Fresh news, updates, stories, and inspiration."
+              />
+            </div>
+          </t>
+          <t t-elif="blogs">
+            <div class="container text-center py-5">
+              <div class="mb-4">
+                <iconify-icon
+                  icon="solar:documents-bold-duotone"
+                  style="font-size: 4rem; color: var(--hotcodes-primary)"
+                />
+              </div>
+              <h1
+                style="
+                  color: white;
+                  font-size: clamp(2.5rem, 5vw, 4.5rem);
+                  font-weight: 700;
+                  letter-spacing: -0.03em;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                Blog
+              </h1>
+              <p
+                style="
+                  color: rgba(255, 255, 255, 0.65);
+                  font-size: 1.25rem;
+                  max-width: 700px;
+                  margin: 0 auto;
+                "
+              >
+                Fresh news, updates, stories, and inspiration.
+              </p>
+            </div>
+          </t>
+        </t>
+        <t t-else="">
+          <!-- Droppable-area for filtered results (tags or date) -->
+          <div class="container text-center py-5">
+            <div class="mb-4">
+              <iconify-icon
+                icon="solar:filter-bold-duotone"
+                style="font-size: 4rem; color: var(--hotcodes-primary)"
+              />
+            </div>
+            <h1
+              style="
+                color: white;
+                font-size: clamp(2.5rem, 5vw, 4.5rem);
+                font-weight: 700;
+                letter-spacing: -0.03em;
+                margin-bottom: 1.5rem;
+              "
+            >
+              Filtered Results
+            </h1>
+            <p
+              style="
+                color: rgba(255, 255, 255, 0.65);
+                font-size: 1.25rem;
+                max-width: 700px;
+                margin: 0 auto;
+              "
+            >
+              Showing posts matching your criteria
+            </p>
+          </div>
+        </t>
+      </div>
+    </xpath>
+  </template>
+
+  <!-- ============================================================================
+       BLOG INDEX CONTENT - ENHANCED LAYOUT
+       ============================================================================ -->
+  <template
+    id="custom_blog_post_short"
+    name="Custom Blog Post Short"
+    inherit_id="website_blog.blog_post_short"
+    priority="17"
+  >
+    <xpath expr="//section[@id='o_wblog_index_content']" position="replace">
+      <section
+        id="o_wblog_index_content"
+        t-att-class="opt_blog_cards_design and 'o_wblog_page_cards_bg'"
+      >
+        <div class="container py-4">
+          <div t-if="original_search and posts" class="alert alert-warning mt8">
+            No results found for '<span t-out="original_search" /> '. Showing
+            results for '<span t-out="search" />
+            '.
+          </div>
+          <div
+            t-attf-class="row #{opt_blog_sidebar_show and 'justify-content-between' or 'justify-content-center'}"
+          >
+            <div
+              id="o_wblog_posts_loop_container"
+              t-attf-class="col #{'o_container_small mx-0' if opt_blog_list_view else ''}"
+            >
+              <t t-call="website_blog.posts_loop">
+                <t
+                  t-if="not blog"
+                  t-set="posts_list_show_parent_blog"
+                  t-value="True"
+                />
+              </t>
+
+              <t t-call="website.pager">
+                <t t-set="classname" t-valuef="justify-content-center" />
+                <t t-set="extraLinkClass" t-valuef="post_link" />
+              </t>
+            </div>
+          </div>
+        </div>
+      </section>
+    </xpath>
+  </template>
+
+  <!-- ============================================================================
+       ENHANCED POST METADATA DISPLAY (for blog post loop)
+       ============================================================================ -->
+  <template
+    id="custom_post_info"
+    name="Custom Post Info"
+    inherit_id="website_blog.post_info"
+  >
+    <xpath
+      expr="//div[@class='d-flex small flex-wrap mb-1 w-100']"
+      position="replace"
+    >
+      <div class="d-flex align-items-center gap-3 flex-wrap mb-2">
+        <div class="d-flex align-items-center gap-2">
+          <iconify-icon
+            icon="solar:calendar-bold-duotone"
+            style="font-size: 1rem; color: rgba(255, 107, 53, 0.7)"
+          />
+          <time
+            t-field="blog_post.post_date"
+            class="text-nowrap"
+            t-options="{'widget': 'datetime', 'date_only': 'true', 'format': 'medium'}"
+            style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem"
+          />
+        </div>
+        <div
+          t-if="is_view_active('website_blog.opt_posts_loop_show_stats')"
+          class="d-flex align-items-center gap-3"
+        >
+          <div class="d-flex align-items-center gap-2">
+            <iconify-icon
+              icon="solar:chat-round-dots-bold-duotone"
+              style="font-size: 1rem; color: rgba(255, 107, 53, 0.7)"
+            />
+            <span
+              class="text-nowrap"
+              style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem"
+              title="Comments"
+            >
+              <t t-out="len(blog_post.message_ids)" />
+            </span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <iconify-icon
+              icon="solar:eye-bold-duotone"
+              style="font-size: 1rem; color: rgba(255, 107, 53, 0.7)"
+            />
+            <span
+              class="text-nowrap"
+              style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem"
+              title="Views"
+            >
+              <t t-out="blog_post.visits" />
+            </span>
+          </div>
+        </div>
+        <div
+          t-if="posts_list_show_parent_blog"
+          class="d-flex align-items-center gap-2"
+        >
+          <iconify-icon
+            icon="solar:folder-bold-duotone"
+            style="font-size: 1rem; color: rgba(255, 107, 53, 0.7)"
+          />
+          <a
+            t-attf-href="/blog/#{slug(blog_post.blog_id)}"
+            t-field="blog_post.blog_id"
+            class="text-nowrap text-truncate"
+            style="
+              color: rgba(255, 255, 255, 0.6);
+              font-size: 0.875rem;
+              text-decoration: none;
+            "
+          />
+        </div>
+      </div>
+    </xpath>
+  </template>
+
+  <!-- ============================================================================
+       SINGLE BLOG POST - ENHANCED LAYOUT
+       ============================================================================ -->
+  <template
+    id="blog_post_complete"
+    name="Blog Post Complete"
+    inherit_id="website_blog.blog_post_complete"
+    active="True"
+    priority="18"
+  >
+    <xpath expr="//section[@id='o_wblog_post_main']" position="replace">
+      <section
+        id="o_wblog_post_main"
+        t-attf-class="container pt-4 pb-5 #{'anim' in request.params and 'o_wblog_post_main_transition'}"
+      >
+        <!-- Sidebar-enabled Layout -->
+        <div
+          t-if="opt_blog_post_sidebar"
+          t-attf-class="mx-auto #{opt_blog_post_readable and 'o_wblog_read_with_sidebar'}"
+        >
+          <div
+            t-attf-class="d-flex flex-column flex-lg-row #{opt_blog_post_readable and 'justify-content-between'}"
+          >
+            <div
+              id="o_wblog_post_content"
+              t-attf-class="#{opt_blog_post_readable and 'o_container_small mx-0 w-100 flex-shrink-0' or 'w-lg-75'}"
+            >
+              <t t-call="website_blog.blog_post_content" />
+            </div>
+            <div
+              id="o_wblog_post_sidebar_col"
+              t-attf-class="ps-lg-5 #{not opt_blog_post_readable and 'flex-grow-1 w-lg-25'}"
+            >
+              <t t-call="website_blog.blog_post_sidebar" />
+            </div>
+          </div>
+        </div>
+
+        <!-- No-Sidebar Layout -->
+        <div
+          t-if="not opt_blog_post_sidebar"
+          t-attf-class="#{opt_blog_post_readable and 'o_container_small'}"
+        >
+          <div class="d-flex flex-column flex-lg-row">
+            <div
+              id="o_wblog_post_content"
+              t-attf-class=" #{opt_blog_post_readable and 'o_container_small w-100 flex-shrink-0'}"
+            >
+              <t t-call="website_blog.blog_post_content" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </xpath>
+  </template>
+
+  <!-- ============================================================================
+       BLOG POST COVER - ENHANCED HERO IMAGE
+       ============================================================================ -->
+  <template
+    id="custom_blog_post_cover"
+    inherit_id="website_blog.blog_post_complete"
+    name="Custom Blog Post Cover"
+    priority="19"
+  >
+    <xpath expr="//section[@id='o_wblog_post_top']" position="replace">
+      <section id="o_wblog_post_top">
+        <div id="title" class="blog_header" t-ignore="True">
+          <t t-call="website.record_cover">
+            <t t-set="_record" t-value="blog_post" />
+            <t t-set="snippet_autofocus" t-value="True" />
+            <t t-set="use_filters" t-value="True" />
+            <t t-set="use_size" t-value="True" />
+            <t t-set="display_opt_name">Blog Post Cover</t>
+            <t
+              t-set="additionnal_classes"
+              t-value="'o_wblog_post_page_cover'"
+            />
+
+            <div
+              class="container text-center position-relative h-100 d-flex flex-column flex-grow-1 justify-content-around"
+            >
+              <div t-attf-class="o_wblog_post_title">
+                <h1
+                  t-field="blog_post.name"
+                  class="o_wblog_post_name o_editable_no_shadow"
+                  data-oe-expression="blog_post.name"
+                  t-att-data-blog-id="blog_post.id"
+                  placeholder="Blog Post Title"
+                  style="text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5)"
+                />
+                <div
+                  t-field="blog_post.subtitle"
+                  class="o_wblog_post_subtitle o_editable_no_shadow"
+                  placeholder="Subtitle"
+                  style="text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5)"
+                />
+              </div>
+              <t
+                t-set="resize_classes"
+                t-value="set(json.loads(_record.cover_properties).get('resize_class', '').split(' '))"
+              />
+              <a
+                t-if="{'o_full_screen_height', 'o_half_screen_height', 'cover_full', 'cover_mid'}.intersection(resize_classes)"
+                id="o_wblog_post_content_jump"
+                href="#o_wblog_post_main"
+                class="css_editable_mode_hidden d-flex justify-content-center align-items-center rounded-circle mx-auto mb-5 text-decoration-none"
+                style="
+                  width: 48px;
+                  height: 48px;
+                  background: rgba(255, 107, 53, 0.2);
+                  backdrop-filter: blur(10px);
+                  border: 1px solid rgba(255, 107, 53, 0.5);
+                  transition: all 0.3s ease;
+                "
+              >
+                <iconify-icon
+                  icon="solar:alt-arrow-down-bold"
+                  style="font-size: 1.5rem; color: white"
+                />
+              </a>
+            </div>
+          </t>
+        </div>
+      </section>
+    </xpath>
+  </template>
+
+  <!-- ============================================================================
+       ENHANCED BLOG POST INFO (for single blog post page)
+       ============================================================================ -->
+  <template
+    id="custom_blog_post_info"
+    name="Custom Blog Post Info"
+    inherit_id="website_blog.blog_post_info"
+    priority="20"
+  >
+    <xpath expr="//div[@id='o_wblog_post_info']" position="replace">
+      <div
+        id="o_wblog_post_info"
+        class="d-flex align-items-center gap-4 flex-wrap mb-4 pb-4"
+        style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
+      >
+        <div class="d-flex align-items-center gap-2">
+          <iconify-icon
+            icon="solar:calendar-bold-duotone"
+            style="font-size: 1.125rem; color: rgba(255, 107, 53, 0.7)"
+          />
+          <span
+            t-field="blog_post.post_date"
+            t-options="{'format': 'long', 'date_only': 'true'}"
+            style="color: rgba(255, 255, 255, 0.7); font-size: 0.9375rem"
+          />
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <iconify-icon
+            icon="solar:user-bold-duotone"
+            style="font-size: 1.125rem; color: rgba(255, 107, 53, 0.7)"
+          />
+          <span style="color: rgba(255, 255, 255, 0.7); font-size: 0.9375rem">
+            by
+            <t t-call="website_blog.post_author">
+              <t t-set="additionnal_classes" t-value="'d-inline-flex ms-1'" />
+              <t t-set="hide_date" t-value="True" />
+            </t>
+          </span>
+        </div>
+        <t t-if="is_view_active('website_blog.opt_blog_post_comment')">
+          <div
+            t-if="blog_post.message_ids"
+            class="d-flex align-items-center gap-2"
+          >
+            <iconify-icon
+              icon="solar:chat-round-dots-bold-duotone"
+              style="font-size: 1.125rem; color: rgba(255, 107, 53, 0.7)"
+            />
+            <a
+              href="#discussion"
+              style="
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: none;
+                font-size: 0.9375rem;
+              "
+            >
+              <t t-out="len(blog_post.message_ids)" />
+              <t t-if="len(blog_post.message_ids) > 1">Comments</t>
+              <t t-else="">Comment</t>
+            </a>
+          </div>
+          <div t-else="" class="d-flex align-items-center gap-2">
+            <iconify-icon
+              icon="solar:chat-round-dots-bold-duotone"
+              style="font-size: 1.125rem; color: rgba(255, 107, 53, 0.7)"
+            />
+            <span style="color: rgba(255, 255, 255, 0.5); font-size: 0.9375rem">
+              No comments yet
+            </span>
+          </div>
+        </t>
+      </div>
+    </xpath>
+  </template>
+
+  <!-- ============================================================================
+       ENHANCED SIDEBAR WITH GLASSMORPHISM
+       ============================================================================ -->
+  <template
+    id="blog_post_sidebar"
+    inherit_id="website_blog.blog_post_sidebar"
+    name="Blog Sidebar"
+    priority="21"
+  >
+    <xpath expr="//div[@id='o_wblog_post_sidebar']" position="replace">
+      <div id="o_wblog_post_sidebar">
+        <div class="oe_structure" id="oe_structure_blog_post_sidebar_1" />
+      </div>
+    </xpath>
+  </template>
+</odoo>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Demo Request Thank You Page -->
+    <record id="page_demo_thank_you" model="website.page">
+        <field name="name">Merci - Demande de Démonstration</field>
+        <field name="type">qweb</field>
+        <field name="url">/demo-thank-you</field>
+        <field name="website_indexed" eval="False"/>
+        <field name="is_published">True</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.demo_thank_you">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty" style="background: #000;">
+
+                        <!-- Success Hero Section -->
+                        <section class="thank-you-hero" style="min-height: 100vh; background: linear-gradient(135deg, #000 0%, #0a0a0a 100%); position: relative; overflow: hidden; display: flex; align-items: center; padding: 6rem 0;">
+
+                            <!-- Animated Background Pattern -->
+                            <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,107,53,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.05) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none;"></div>
+
+                            <!-- Floating Success Icons -->
+                            <div style="position: absolute; inset: 0; pointer-events: none; overflow: hidden;">
+                                <div style="position: absolute; top: 15%; left: 10%; font-size: 3rem; color: rgba(34,197,94,0.15); animation: floatIcon 8s ease-in-out infinite;">
+                                    <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                </div>
+                                <div style="position: absolute; top: 60%; right: 15%; font-size: 2.5rem; color: rgba(255,107,53,0.15); animation: floatIcon 10s ease-in-out infinite 2s;">
+                                    <iconify-icon icon="solar:calendar-mark-bold-duotone"></iconify-icon>
+                                </div>
+                                <div style="position: absolute; bottom: 20%; left: 20%; font-size: 2rem; color: rgba(59,130,246,0.15); animation: floatIcon 12s ease-in-out infinite 4s;">
+                                    <iconify-icon icon="solar:letter-opened-bold-duotone"></iconify-icon>
+                                </div>
+                            </div>
+
+                            <div class="container" style="position: relative; z-index: 10;">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 text-center">
+
+                                        <!-- Success Icon -->
+                                        <div class="mb-4" style="animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);">
+                                            <div style="display: inline-flex; align-items: center; justify-content: center; width: 120px; height: 120px; background: linear-gradient(135deg, rgba(34,197,94,0.2), rgba(34,197,94,0.05)); border: 2px solid rgba(34,197,94,0.3); border-radius: 50%; box-shadow: 0 20px 60px rgba(34,197,94,0.2);">
+                                                <iconify-icon icon="solar:check-circle-bold-duotone" style="font-size: 4rem; color: #22c55e;"></iconify-icon>
+                                            </div>
+                                        </div>
+
+                                        <!-- Success Badge -->
+                                        <div class="mb-3">
+                                            <span style="display: inline-block; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); color: #22c55e; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
+                                                ✓ DEMANDE ENREGISTRÉE
+                                            </span>
+                                        </div>
+
+                                        <!-- Title -->
+                                        <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; color: white;">
+                                            Merci pour Votre <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Demande</span>
+                                        </h1>
+
+                                        <!-- Success Message -->
+                                        <div style="background: rgba(15,15,15,0.7); backdrop-filter: blur(40px); border: 1px solid rgba(34,197,94,0.2); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+                                            <iconify-icon icon="solar:clock-circle-bold-duotone" style="font-size: 2.5rem; color: var(--hotcodes-primary); margin-bottom: 1rem;"></iconify-icon>
+                                            <h3 style="color: white; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">
+                                                Vous recevrez le lien de démonstration dans les 3 prochaines heures
+                                            </h3>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 1.125rem; line-height: 1.6; margin-bottom: 0;">
+                                                Notre équipe prépare votre démonstration personnalisée de Saytu. Vous recevrez un email avec le lien d'accès et toutes les informations nécessaires.
+                                            </p>
+                                        </div>
+
+                                        <!-- What's Next Section -->
+                                        <div style="background: rgba(15,15,15,0.5); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,53,0.15); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; text-align: left;">
+                                            <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">
+                                                <iconify-icon icon="solar:list-check-bold-duotone" style="vertical-align: middle; margin-right: 0.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                                Prochaines Étapes
+                                            </h4>
+                                            <div class="row g-3">
+                                                <div class="col-md-4">
+                                                    <div style="display: flex; gap: 1rem;">
+                                                        <div style="flex-shrink: 0; width: 40px; height: 40px; background: rgba(255,107,53,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                                            <span style="color: var(--hotcodes-primary); font-weight: 700; font-size: 1.125rem;">1</span>
+                                                        </div>
+                                                        <div>
+                                                            <h5 style="color: white; font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Vérifiez votre email</h5>
+                                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Vous recevrez une confirmation</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div style="display: flex; gap: 1rem;">
+                                                        <div style="flex-shrink: 0; width: 40px; height: 40px; background: rgba(255,107,53,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                                            <span style="color: var(--hotcodes-primary); font-weight: 700; font-size: 1.125rem;">2</span>
+                                                        </div>
+                                                        <div>
+                                                            <h5 style="color: white; font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Accédez à la démo</h5>
+                                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Cliquez sur le lien reçu</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div style="display: flex; gap: 1rem;">
+                                                        <div style="flex-shrink: 0; width: 40px; height: 40px; background: rgba(255,107,53,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                                            <span style="color: var(--hotcodes-primary); font-weight: 700; font-size: 1.125rem;">3</span>
+                                                        </div>
+                                                        <div>
+                                                            <h5 style="color: white; font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem;">Explorez Saytu</h5>
+                                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0;">Découvrez toutes les fonctionnalités</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- CTA Buttons -->
+                                        <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
+                                            <a href="/" class="btn" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 10px; font-weight: 600; text-decoration: none; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:home-2-bold-duotone" style="vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Retour à l'Accueil
+                                            </a>
+                                            <a href="/produits/saytu" class="btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 1rem 2rem; border-radius: 10px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:document-text-bold-duotone" style="vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                En Savoir Plus sur Saytu
+                                            </a>
+                                        </div>
+
+                                        <!-- Contact Support Card -->
+                                        <div style="background: rgba(15,15,15,0.5); backdrop-filter: blur(20px); border: 1px solid rgba(138,43,226,0.15); border-radius: 16px; padding: 2rem;">
+                                            <iconify-icon icon="solar:chat-round-call-bold-duotone" style="font-size: 2.5rem; color: #8a2be2; margin-bottom: 1rem;"></iconify-icon>
+                                            <h3 style="color: white; font-size: 1.5rem; font-weight: 600; margin: 0 0 0.5rem 0;">Besoin d'Aide Immédiate?</h3>
+                                            <p style="color: rgba(255,255,255,0.7); font-size: 1.125rem; margin-bottom: 1.5rem;">
+                                                Contactez-nous directement sur WhatsApp pour toute question
+                                            </p>
+                                            <a href="https://wa.me/221775867968?text=Bonjour%20HotCodes,%20j'ai%20demandé%20une%20démonstration%20de%20Saytu" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 1rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(37,211,102,0.3);">
+                                                <iconify-icon icon="mingcute:whatsapp-fill" style="font-size: 1.5rem;"></iconify-icon>
+                                                Contacter sur WhatsApp
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <!-- Animation Keyframes -->
+                    <style>
+                        @keyframes floatIcon {
+                            0%, 100% { transform: translateY(0px) rotate(0deg); }
+                            25% { transform: translateY(-20px) rotate(5deg); }
+                            50% { transform: translateY(-10px) rotate(-5deg); }
+                            75% { transform: translateY(-15px) rotate(3deg); }
+                        }
+
+                        @keyframes scaleIn {
+                            0% { transform: scale(0); opacity: 0; }
+                            100% { transform: scale(1); opacity: 1; }
+                        }
+                    </style>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>

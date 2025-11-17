@@ -4,13 +4,13 @@
     <template id="hotcodes_motion_demo_page" name="Motion.js Demo Page">
         <t t-call="website.layout">
             <div id="wrap" class="oe_structure oe_empty">
-                
+
                 <!-- Hero Section with Text Reveal -->
                 <section style="min-height: 100vh; background: #000; display: flex; align-items: center; position: relative; overflow: hidden; padding: 4rem 0;">
                     <!-- Morphing Background Blobs -->
                     <div data-motion="morph-blob" style="position: absolute; top: -10%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,107,53,0.3) 0%, transparent 70%); filter: blur(100px);"></div>
                     <div data-motion="morph-blob" style="position: absolute; bottom: -10%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(138,43,226,0.3) 0%, transparent 70%); filter: blur(100px);"></div>
-                    
+
                     <div class="container" style="position: relative; z-index: 10;">
                         <div class="row">
                             <div class="col-lg-8 mx-auto text-center">
@@ -18,12 +18,12 @@
                                 <h1 data-motion="text-reveal" style="font-size: 5rem; font-weight: 900; color: white; margin-bottom: 2rem; line-height: 1.1;">
                                     Motion.js
                                 </h1>
-                                
+
                                 <!-- Word-by-word reveal -->
                                 <p data-motion="word-reveal" style="font-size: 1.5rem; color: rgba(255,255,255,0.8); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
                                     Create stunning animations with just HTML attributes
                                 </p>
-                                
+
                                 <!-- Magnetic button with flare -->
                                 <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
                                     <button data-motion="magnetic flare" data-magnetic-strength="0.3" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1.5rem 3rem; border: none; border-radius: 14px; font-size: 1.25rem; font-weight: 700; cursor: pointer; box-shadow: 0 20px 60px rgba(255,107,53,0.4);">
@@ -51,7 +51,7 @@
                                 </p>
                             </div>
                         </div>
-                        
+
                         <!-- Stagger Grid -->
                         <div data-motion="scroll-stagger" class="row g-4">
                             <div class="col-md-4">
@@ -92,13 +92,14 @@
                                 </p>
                             </div>
                         </div>
-                        
+
                         <div class="row g-4 justify-content-center">
                             <div class="col-md-4">
                                 <div data-motion="card-tilt scroll-scale" style="background: linear-gradient(135deg, #FF6B35, #FF8C61); border-radius: 32px; padding: 3rem; min-height: 400px; transform-style: preserve-3d; box-shadow: 0 30px 80px rgba(0,0,0,0.5);">
                                     <h3 style="color: white; font-size: 2rem; font-weight: 900; margin-bottom: 1.5rem;">Premium</h3>
                                     <p style="color: rgba(255,255,255,0.9); font-size: 1.125rem; margin-bottom: 2rem;">Perfect for small teams and startups</p>
-                                    <div style="font-size: 3rem; font-weight: 900; color: white; margin-bottom: 2rem;">$49<span style="font-size: 1.25rem; font-weight: 400;">/mo</span></div>
+                                    <div style="font-size: 3rem; font-weight: 900; color: white; margin-bottom: 2rem;">$49<span style="font-size: 1.25rem; font-weight: 400;">/mo</span>
+                                    </div>
                                     <button style="background: white; color: #FF6B35; padding: 1rem 2rem; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; width: 100%;">Choose Plan</button>
                                 </div>
                             </div>
@@ -106,7 +107,8 @@
                                 <div data-motion="card-tilt scroll-scale" style="background: linear-gradient(135deg, #8A2BE2, #A855F7); border-radius: 32px; padding: 3rem; min-height: 400px; transform-style: preserve-3d; box-shadow: 0 30px 80px rgba(0,0,0,0.5);">
                                     <h3 style="color: white; font-size: 2rem; font-weight: 900; margin-bottom: 1.5rem;">Enterprise</h3>
                                     <p style="color: rgba(255,255,255,0.9); font-size: 1.125rem; margin-bottom: 2rem;">For large organizations and agencies</p>
-                                    <div style="font-size: 3rem; font-weight: 900; color: white; margin-bottom: 2rem;">$99<span style="font-size: 1.25rem; font-weight: 400;">/mo</span></div>
+                                    <div style="font-size: 3rem; font-weight: 900; color: white; margin-bottom: 2rem;">$99<span style="font-size: 1.25rem; font-weight: 400;">/mo</span>
+                                    </div>
                                     <button style="background: white; color: #8A2BE2; padding: 1rem 2rem; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; width: 100%;">Choose Plan</button>
                                 </div>
                             </div>
@@ -124,7 +126,7 @@
                                 </h2>
                             </div>
                         </div>
-                        
+
                         <div data-motion="scroll-stagger" class="row text-center">
                             <div class="col-md-4">
                                 <h2 style="font-size: 5rem; font-weight: 900; color: var(--hotcodes-primary); margin-bottom: 1rem;">
@@ -153,12 +155,15 @@
     </template>
 
     <!-- Website Page Record -->
+    <!-- Temporarily commented out due to database corruption issue -->
+    <!--
     <record id="hotcodes_motion_demo_page_record" model="website.page">
         <field name="name">Motion.js Demo</field>
         <field name="website_published" eval="True"/>
         <field name="url">/motion-demo</field>
         <field name="view_id" ref="hotcodes_motion_demo_page"/>
     </record>
+    -->
 
 </odoo>
 

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="theme_hotcodes.page_services" model="website.page">
+        <field name="name">Nos Services - Solutions Digitales Complètes</field>
+        <field name="type">qweb</field>
+        <field name="url">/services</field>
+        <field name="website_published">true</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_hotcodes.services_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure" style="background: var(--bg-dark);">
+
+                        <!-- Hero Section -->
+                        <section class="services-hero" style="min-height: 70vh; background: linear-gradient(135deg, #000 0%, #0a0a0a 100%); position: relative; overflow: hidden; display: flex; align-items: center; padding: 8rem 0 6rem;">
+
+                            <!-- Animated Background Pattern -->
+                            <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,107,53,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.05) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none;"></div>
+
+                            <!-- Gradient Orbs -->
+                            <div style="position: absolute; top: 20%; left: 10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
+                            <div style="position: absolute; bottom: 20%; right: 10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(138,43,226,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
+
+                            <div class="container" style="position: relative; z-index: 10;">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-10 text-center">
+
+                                        <!-- Eyebrow -->
+                                        <div class="mb-4" style="animation: fadeInUp 0.6s ease-out;">
+                                            <span style="display: inline-block; padding: 0.5rem 1.25rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 50px; color: var(--hotcodes-primary); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.5px;">
+                                                🚀 NOS EXPERTISES
+                                            </span>
+                                        </div>
+
+                                        <!-- Main Title -->
+                                        <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; color: white; animation: fadeInUp 0.8s ease-out 0.1s both;">
+                                            Solutions Digitales <br/>
+                                        <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Complètes</span>
+                                    </h1>
+
+                                    <!-- Subtitle -->
+                                    <p style="font-size: clamp(1.125rem, 2vw, 1.375rem); color: rgba(255,255,255,0.7); max-width: 800px; margin: 0 auto 2.5rem; line-height: 1.6; animation: fadeInUp 1s ease-out 0.2s both;">
+                                            De la conception à la mise en production, nous accompagnons votre transformation digitale avec des solutions sur mesure adaptées à vos besoins.
+                                    </p>
+
+                                    <!-- CTA Buttons -->
+                                    <div class="d-flex gap-3 justify-content-center flex-wrap" style="animation: fadeInUp 1.2s ease-out 0.3s both;">
+                                        <a href="/contactus" class="btn" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(255,107,53,0.3);">
+                                            <iconify-icon icon="solar:chat-round-call-bold-duotone" style="font-size: 1.25rem;"></iconify-icon>
+                                                Discuter de Votre Projet
+                                        </a>
+                                        <a href="#services-list" class="btn" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
+                                                Découvrir Nos Services
+                                            <iconify-icon icon="solar:arrow-down-bold-duotone" style="font-size: 1.25rem;"></iconify-icon>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Services Grid Section -->
+                    <section id="services-list" class="py-5" style="background: var(--bg-dark); position: relative;">
+                        <div class="container py-5">
+
+                            <!-- Section Header -->
+                            <div class="row mb-5">
+                                <div class="col-lg-8 mx-auto text-center">
+                                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: white; margin-bottom: 1rem;">
+                                            Nos Services
+                                    </h2>
+                                    <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); line-height: 1.6;">
+                                            Des solutions complètes pour tous vos besoins digitaux
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Services Grid -->
+                            <div class="row g-4">
+
+                                <!-- Service 1: Applications Natives -->
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/services/applications-natives" class="service-card-link" style="text-decoration: none; display: block; height: 100%;">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 20px; padding: 2.5rem; height: 100%; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;">
+                                            <!-- Hover Gradient -->
+                                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(138,43,226,0.1)); opacity: 0; transition: opacity 0.4s ease; pointer-events: none;"></div>
+
+                                            <div style="position: relative; z-index: 1;">
+                                                <div class="service-icon mb-4" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s ease;">
+                                                    <iconify-icon icon="solar:smartphone-2-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                        Applications Natives
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                        Développement d'applications mobiles iOS et Android performantes et intuitives.
+                                                </p>
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--hotcodes-primary); font-weight: 600;">
+                                                        En savoir plus
+                                                    <iconify-icon icon="solar:arrow-right-bold" style="font-size: 1.25rem; transition: transform 0.3s ease;"></iconify-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Service 2: Consulting Odoo -->
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/services/consulting" class="service-card-link" style="text-decoration: none; display: block; height: 100%;">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 20px; padding: 2.5rem; height: 100%; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;">
+                                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(138,43,226,0.1)); opacity: 0; transition: opacity 0.4s ease; pointer-events: none;"></div>
+
+                                            <div style="position: relative; z-index: 1;">
+                                                <div class="service-icon mb-4" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s ease;">
+                                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                        Conseil &amp; Implémentation ERP
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                        Expertise Odoo pour optimiser vos processus métier et digitaliser votre entreprise.
+                                                </p>
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--hotcodes-primary); font-weight: 600;">
+                                                        En savoir plus
+                                                    <iconify-icon icon="solar:arrow-right-bold" style="font-size: 1.25rem; transition: transform 0.3s ease;"></iconify-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Service 3: Développement Sur Mesure -->
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/services/developpement-sur-mesure" class="service-card-link" style="text-decoration: none; display: block; height: 100%;">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 20px; padding: 2.5rem; height: 100%; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;">
+                                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(138,43,226,0.1)); opacity: 0; transition: opacity 0.4s ease; pointer-events: none;"></div>
+
+                                            <div style="position: relative; z-index: 1;">
+                                                <div class="service-icon mb-4" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s ease;">
+                                                    <iconify-icon icon="solar:code-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                        Développement Sur Mesure
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                        Solutions personnalisées adaptées à vos besoins spécifiques et processus métier.
+                                                </p>
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--hotcodes-primary); font-weight: 600;">
+                                                        En savoir plus
+                                                    <iconify-icon icon="solar:arrow-right-bold" style="font-size: 1.25rem; transition: transform 0.3s ease;"></iconify-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Service 4: Sites Web -->
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/services/sites-web" class="service-card-link" style="text-decoration: none; display: block; height: 100%;">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 20px; padding: 2.5rem; height: 100%; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;">
+                                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(138,43,226,0.1)); opacity: 0; transition: opacity 0.4s ease; pointer-events: none;"></div>
+
+                                            <div style="position: relative; z-index: 1;">
+                                                <div class="service-icon mb-4" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s ease;">
+                                                    <iconify-icon icon="solar:global-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                        Sites Web &amp; E-commerce
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                        Sites web modernes, performants et optimisés pour la conversion.
+                                                </p>
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--hotcodes-primary); font-weight: 600;">
+                                                        En savoir plus
+                                                    <iconify-icon icon="solar:arrow-right-bold" style="font-size: 1.25rem; transition: transform 0.3s ease;"></iconify-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Service 5: Solutions IA -->
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/services/solutions-ia" class="service-card-link" style="text-decoration: none; display: block; height: 100%;">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 20px; padding: 2.5rem; height: 100%; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;">
+                                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(138,43,226,0.1)); opacity: 0; transition: opacity 0.4s ease; pointer-events: none;"></div>
+
+                                            <div style="position: relative; z-index: 1;">
+                                                <div class="service-icon mb-4" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s ease;">
+                                                    <iconify-icon icon="solar:cpu-bolt-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                        Solutions IA &amp; Automatisation
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                        Automatisation intelligente avec n8n et intégration d'IA pour optimiser vos workflows.
+                                                </p>
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--hotcodes-primary); font-weight: 600;">
+                                                        En savoir plus
+                                                    <iconify-icon icon="solar:arrow-right-bold" style="font-size: 1.25rem; transition: transform 0.3s ease;"></iconify-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Service 6: Business Intelligence -->
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/services/business-intelligence" class="service-card-link" style="text-decoration: none; display: block; height: 100%;">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 20px; padding: 2.5rem; height: 100%; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;">
+                                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(138,43,226,0.1)); opacity: 0; transition: opacity 0.4s ease; pointer-events: none;"></div>
+
+                                            <div style="position: relative; z-index: 1;">
+                                                <div class="service-icon mb-4" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s ease;">
+                                                    <iconify-icon icon="solar:chart-square-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                        Business Intelligence
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                        Tableaux de bord et analytics pour piloter votre activité avec des données en temps réel.
+                                                </p>
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--hotcodes-primary); font-weight: 600;">
+                                                        En savoir plus
+                                                    <iconify-icon icon="solar:arrow-right-bold" style="font-size: 1.25rem; transition: transform 0.3s ease;"></iconify-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Service 7: Support -->
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/services/support" class="service-card-link" style="text-decoration: none; display: block; height: 100%;">
+                                        <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 20px; padding: 2.5rem; height: 100%; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;">
+                                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(138,43,226,0.1)); opacity: 0; transition: opacity 0.4s ease; pointer-events: none;"></div>
+
+                                            <div style="position: relative; z-index: 1;">
+                                                <div class="service-icon mb-4" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s ease;">
+                                                    <iconify-icon icon="solar:shield-user-bold-duotone" style="font-size: 2rem; color: white;"></iconify-icon>
+                                                </div>
+                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">
+                                                        Support &amp; Maintenance
+                                                </h3>
+                                                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                                        Assistance technique continue pour garantir la performance de vos solutions.
+                                                </p>
+                                                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--hotcodes-primary); font-weight: 600;">
+                                                        En savoir plus
+                                                    <iconify-icon icon="solar:arrow-right-bold" style="font-size: 1.25rem; transition: transform 0.3s ease;"></iconify-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CTA Section -->
+                    <section class="py-5" style="background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(138,43,226,0.1)); position: relative;">
+                        <div class="container py-5">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 text-center">
+                                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: white; margin-bottom: 1.5rem;">
+                                            Prêt à Démarrer Votre Projet ?
+                                    </h2>
+                                    <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7); margin-bottom: 2.5rem; line-height: 1.6;">
+                                            Discutons de vos besoins et trouvons ensemble la solution idéale pour votre entreprise.
+                                    </p>
+                                    <a href="/contactus" class="btn" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1.25rem 3rem; border-radius: 50px; font-weight: 600; font-size: 1.125rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.75rem; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(255,107,53,0.4);">
+                                        <iconify-icon icon="solar:chat-round-call-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
+                                            Contactez-Nous
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CSS Animations -->
+                    <style>
+                            @keyframes fadeInUp {
+                                0% {
+                                    transform: translateY(30px);
+                                    opacity: 0;
+                                }
+                                100% {
+                                    transform: translateY(0);
+                                    opacity: 1;
+                                }
+                            }
+
+                            .service-card:hover {
+                                transform: translateY(-8px);
+                                border-color: rgba(255, 107, 53, 0.4) !important;
+                                box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+                            }
+
+                            .service-card:hover > div:first-child {
+                                opacity: 1;
+                            }
+
+                            .service-card:hover .service-icon {
+                                transform: scale(1.1) rotate(5deg);
+                            }
+
+                            .service-card:hover iconify-icon[icon="solar:arrow-right-bold"] {
+                                transform: translateX(5px);
+                            }
+                    </style>
+
+                </div>
+            </t>
+        </t>
+    </field>
+</record>
+</odoo>
+
