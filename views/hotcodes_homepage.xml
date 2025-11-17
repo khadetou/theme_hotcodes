@@ -3,554 +3,555 @@
     <template id="ecom_homepage" name="Homepage" inherit_id="website.homepage">
         <xpath expr="//t[@t-call='website.layout']" position="replace">
             <t t-call="website.layout" pageName.f="homepage">
-                <div class="oe_structure oe_empty" />
+                <div id="wrap" class="oe_structure">
 
-                <!-- Hero Section -->
-                <t t-call="theme_hotcodes.hotcodes_hero_homepage" />
+                    <!-- Hero Section -->
+                    <t t-call="theme_hotcodes.hotcodes_hero_homepage" />
 
-                <!-- Section 1: Services Overview -->
-                <section class="hotcodes-services-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
-                    <div class="container py-5">
-                        <div class="row mb-5">
-                            <div class="col-lg-8 mx-auto text-center">
-                                <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                    <!-- Section 1: Services Overview -->
+                    <section class="hotcodes-services-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                        <div class="container py-5">
+                            <div class="row mb-5">
+                                <div class="col-lg-8 mx-auto text-center">
+                                    <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
                                     Nos Expertises à Votre Service
-                                </h2>
-                                <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                    </h2>
+                                    <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
                                     Des solutions complètes pour digitaliser et optimiser votre
                                     entreprise
-                                </p>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row g-4">
-                            <!-- Service 1: Modules Odoo -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
-                                    <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
-                                        <iconify-icon icon="solar:settings-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                            <div class="row g-4">
+                                <!-- Service 1: Modules Odoo -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                            <iconify-icon icon="solar:settings-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
                                         Modules Odoo Sur Mesure
-                                    </h3>
-                                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                        </h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
                                         Développement de modules personnalisés pour adapter Odoo à
                                         vos processus
                                         métier
                                         spécifiques.
-                                    </p>
-                                    <a href="/services/modules-odoo" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
+                                        </p>
+                                        <a href="/services/modules-odoo" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
                                         En savoir plus
-                                        <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Service 2: Applications Mobiles -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
-                                    <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
-                                        <iconify-icon icon="solar:smartphone-2-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
+                                        </a>
                                     </div>
-                                    <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                </div>
+
+                                <!-- Service 2: Applications Mobiles -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                            <iconify-icon icon="solar:smartphone-2-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
                                         Applications Natives
-                                    </h3>
-                                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                        </h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
                                         Création d'applications mobiles (iOS/Android) et desktop
                                         performantes pour
                                         vos besoins
                                         métier.
-                                    </p>
-                                    <a href="/services/applications" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
+                                        </p>
+                                        <a href="/services/applications" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
                                         Voir nos réalisations
-                                        <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Service 3: Développement Web -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
-                                    <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
-                                        <iconify-icon icon="solar:global-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
+                                        </a>
                                     </div>
-                                    <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                </div>
+
+                                <!-- Service 3: Développement Web -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                            <iconify-icon icon="solar:global-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
                                         Sites Web Professionnels
-                                    </h3>
-                                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                        </h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
                                         Conception de sites web modernes, e-commerce et plateformes
                                         digitales
                                         adaptées au marché
                                         sénégalais.
-                                    </p>
-                                    <a href="/services/web" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
+                                        </p>
+                                        <a href="/services/web" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
                                         Découvrir
-                                        <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Service 4: Automatisation IA -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
-                                    <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
-                                        <iconify-icon icon="solar:cpu-bolt-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
+                                        </a>
                                     </div>
-                                    <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                </div>
+
+                                <!-- Service 4: Automatisation IA -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                            <iconify-icon icon="solar:cpu-bolt-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
                                         Automatisation Intelligente
-                                    </h3>
-                                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                        </h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
                                         Optimisez vos processus métier avec l'intelligence
                                         artificielle et
                                         l'automatisation des
                                         workflows.
-                                    </p>
-                                    <a href="/services/automatisation" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
+                                        </p>
+                                        <a href="/services/automatisation" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
                                         Explorer
-                                        <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Service 5: Conseil -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
-                                    <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
-                                        <iconify-icon icon="solar:chart-2-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
+                                        </a>
                                     </div>
-                                    <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                </div>
+
+                                <!-- Service 5: Conseil -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="service-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--hotcodes-primary);">
+                                            <iconify-icon icon="solar:chart-2-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
                                         Conseil en Organisation
-                                    </h3>
-                                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
+                                        </h3>
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">
                                         Accompagnement stratégique pour optimiser vos processus et
                                         maximiser votre
                                         efficacité
                                         opérationnelle.
-                                    </p>
-                                    <a href="/services/conseil" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
+                                        </p>
+                                        <a href="/services/conseil" style="color: var(--hotcodes-primary); text-decoration: none; font-weight: 400;">
                                         Nous consulter
-                                        <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
-                                    </a>
+                                            <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <!-- Section 3: Produits Phares -->
-                <section class="hotcodes-products-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
-                    <div class="container py-5">
-                        <div class="row mb-5">
-                            <div class="col-lg-8 mx-auto text-center">
-                                <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                    <!-- Section 3: Produits Phares -->
+                    <section class="hotcodes-products-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                        <div class="container py-5">
+                            <div class="row mb-5">
+                                <div class="col-lg-8 mx-auto text-center">
+                                    <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
                                     Nos Solutions ERP
-                                </h2>
-                                <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                    </h2>
+                                    <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
                                     Choisissez la solution adaptée à la taille de votre entreprise
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="row g-4 justify-content-center">
-                            <!-- Produit 1: Saytu -->
-                            <div class="col-lg-5 col-md-6">
-                                <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 2px solid var(--hotcodes-primary); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative; overflow: hidden;">
-                                    <div class="product-badge" style="position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 500;">
-                                        RECOMMANDÉ POUR PME/TPE
-                                    </div>
-
-                                    <div class="product-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
-                                        <iconify-icon icon="solar:case-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <h3 style="font-size: 2rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
-                                        Saytu
-                                    </h3>
-                                    <p style="font-size: 1.125rem; color: var(--hotcodes-accent); margin-bottom: 1.5rem;">
-                                        L'ERP Accessible pour Petites et Moyennes Entreprises
                                     </p>
+                                </div>
+                            </div>
 
-                                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.6;">
+                            <div class="row g-4 justify-content-center">
+                                <!-- Produit 1: Saytu -->
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 2px solid var(--hotcodes-primary); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative; overflow: hidden;">
+                                        <div class="product-badge" style="position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 500;">
+                                        RECOMMANDÉ POUR PME/TPE
+                                        </div>
+
+                                        <div class="product-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
+                                            <iconify-icon icon="solar:case-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 2rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                        Saytu
+                                        </h3>
+                                        <p style="font-size: 1.125rem; color: var(--hotcodes-accent); margin-bottom: 1.5rem;">
+                                        L'ERP Accessible pour Petites et Moyennes Entreprises
+                                        </p>
+
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.6;">
                                         Version optimisée d'Odoo open-source, spécialement conçue
                                         pour les PME et
                                         TPE
                                         sénégalaises. Toutes les fonctionnalités essentielles à prix
                                         abordable.
-                                    </p>
-
-                                    <div class="product-features mb-3">
-                                        <p style="color: white; font-weight: 500; margin-bottom: 1rem;">
-                                            <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.2em; vertical-align: middle;"></iconify-icon>
-                                            Fonctionnalités Clés:
                                         </p>
-                                        <ul style="color: rgba(255,255,255,0.7); list-style: none; padding-left: 0;">
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                Gestion commerciale complète
-                                            </li>
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                Comptabilité et facturation
-                                            </li>
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                Gestion des stocks
-                                            </li>
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                CRM et suivi clients
-                                            </li>
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                Tableau de bord analytique
-                                            </li>
-                                        </ul>
-                                    </div>
 
-                                    <div class="product-pricing mb-3">
-                                        <p style="color: white; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">
-                                            <iconify-icon icon="solar:dollar-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.2em; vertical-align: middle;"></iconify-icon>
+                                        <div class="product-features mb-3">
+                                            <p style="color: white; font-weight: 500; margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.2em; vertical-align: middle;"></iconify-icon>
+                                            Fonctionnalités Clés:
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.7); list-style: none; padding-left: 0;">
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                Gestion commerciale complète
+                                                </li>
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                Comptabilité et facturation
+                                                </li>
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                Gestion des stocks
+                                                </li>
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                CRM et suivi clients
+                                                </li>
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-primary); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                Tableau de bord analytique
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="product-pricing mb-3">
+                                            <p style="color: white; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">
+                                                <iconify-icon icon="solar:dollar-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.2em; vertical-align: middle;"></iconify-icon>
                                             À partir de: <span style="color: var(--hotcodes-accent);">[PRIX]
                                             FCFA/mois</span>
-                                        </p>
-                                        <p style="color: rgba(255,255,255,0.7);">
-                                            <iconify-icon icon="solar:gift-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                            </p>
+                                            <p style="color: rgba(255,255,255,0.7);">
+                                                <iconify-icon icon="solar:gift-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.1em; vertical-align: middle;"></iconify-icon>
                                             Essai gratuit: 30 jours sans engagement
-                                        </p>
-                                    </div>
+                                            </p>
+                                        </div>
 
-                                    <div class="product-actions d-flex gap-3 flex-wrap">
-                                        <a href="/produits/saytu" style="flex: 1; min-width: 150px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; transition: all 0.3s ease;">
+                                        <div class="product-actions d-flex gap-3 flex-wrap">
+                                            <a href="/produits/saytu" style="flex: 1; min-width: 150px; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; transition: all 0.3s ease;">
                                             Découvrir Saytu
-                                            <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
-                                        </a>
-                                        <a href="/produits/saytu#essai" style="flex: 1; min-width: 150px; background: rgba(255, 107, 53, 0.1); color: var(--hotcodes-primary); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; border: 1px solid var(--hotcodes-primary); transition: all 0.3s ease;">
-                                            <iconify-icon icon="solar:play-circle-bold-duotone" style="font-size: 1.1em; vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                                <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                            </a>
+                                            <a href="/produits/saytu#essai" style="flex: 1; min-width: 150px; background: rgba(255, 107, 53, 0.1); color: var(--hotcodes-primary); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; border: 1px solid var(--hotcodes-primary); transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:play-circle-bold-duotone" style="font-size: 1.1em; vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
                                             Essai Gratuit
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Produit 2: Odoo Enterprise -->
-                            <div class="col-lg-5 col-md-6">
-                                <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative; overflow: hidden;">
-                                    <div class="product-badge" style="position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, var(--hotcodes-accent), var(--hotcodes-primary)); color: var(--bg-dark); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+                                <!-- Produit 2: Odoo Enterprise -->
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative; overflow: hidden;">
+                                        <div class="product-badge" style="position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, var(--hotcodes-accent), var(--hotcodes-primary)); color: var(--bg-dark); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
                                         SOLUTION ENTREPRISE
-                                    </div>
+                                        </div>
 
-                                    <div class="product-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
-                                        <iconify-icon icon="solar:buildings-2-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <h3 style="font-size: 2rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                        <div class="product-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
+                                            <iconify-icon icon="solar:buildings-2-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 2rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
                                         Odoo Enterprise
-                                    </h3>
-                                    <p style="font-size: 1.125rem; color: var(--hotcodes-accent); margin-bottom: 1.5rem;">
+                                        </h3>
+                                        <p style="font-size: 1.125rem; color: var(--hotcodes-accent); margin-bottom: 1.5rem;">
                                         La Suite Complète pour Grandes Entreprises
-                                    </p>
+                                        </p>
 
-                                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.6;">
+                                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.6;">
                                         Solution ERP complète avec toutes les fonctionnalités
                                         avancées d'Odoo
                                         Enterprise. Support
                                         premium et personnalisation illimitée.
-                                    </p>
-
-                                    <div class="product-features mb-3">
-                                        <p style="color: white; font-weight: 500; margin-bottom: 1rem;">
-                                            <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.2em; vertical-align: middle;"></iconify-icon>
-                                            Fonctionnalités Avancées:
                                         </p>
-                                        <ul style="color: rgba(255,255,255,0.7); list-style: none; padding-left: 0;">
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                Tous les modules Odoo
-                                            </li>
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                Support technique prioritaire
-                                            </li>
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                Personnalisation complète
-                                            </li>
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                Formation de vos équipes
-                                            </li>
-                                            <li style="margin-bottom: 0.5rem;">
-                                                <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
-                                                Hébergement sécurisé
-                                            </li>
-                                        </ul>
-                                    </div>
 
-                                    <div class="product-pricing mb-3">
-                                        <p style="color: white; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">
-                                            <iconify-icon icon="solar:document-text-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.2em; vertical-align: middle;"></iconify-icon>
+                                        <div class="product-features mb-3">
+                                            <p style="color: white; font-weight: 500; margin-bottom: 1rem;">
+                                                <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.2em; vertical-align: middle;"></iconify-icon>
+                                            Fonctionnalités Avancées:
+                                            </p>
+                                            <ul style="color: rgba(255,255,255,0.7); list-style: none; padding-left: 0;">
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                Tous les modules Odoo
+                                                </li>
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                Support technique prioritaire
+                                                </li>
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                Personnalisation complète
+                                                </li>
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                Formation de vos équipes
+                                                </li>
+                                                <li style="margin-bottom: 0.5rem;">
+                                                    <iconify-icon icon="solar:check-read-bold-duotone" style="color: var(--hotcodes-accent); margin-right: 0.5rem; vertical-align: middle;"></iconify-icon>
+                                                Hébergement sécurisé
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="product-pricing mb-3">
+                                            <p style="color: white; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">
+                                                <iconify-icon icon="solar:document-text-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.2em; vertical-align: middle;"></iconify-icon>
                                             Tarification: <span style="color: var(--hotcodes-accent);">Sur devis
                                             personnalisé</span>
-                                        </p>
-                                        <p style="color: rgba(255,255,255,0.7);">
-                                            <iconify-icon icon="solar:user-speak-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                            </p>
+                                            <p style="color: rgba(255,255,255,0.7);">
+                                                <iconify-icon icon="solar:user-speak-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.1em; vertical-align: middle;"></iconify-icon>
                                             Accompagnement: Dédié et sur mesure
-                                        </p>
-                                    </div>
+                                            </p>
+                                        </div>
 
-                                    <div class="product-actions d-flex gap-3 flex-wrap">
-                                        <a href="/produits/enterprise" style="flex: 1; min-width: 150px; background: linear-gradient(135deg, var(--hotcodes-accent), var(--hotcodes-primary)); color: var(--bg-dark); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 600; transition: all 0.3s ease;">
+                                        <div class="product-actions d-flex gap-3 flex-wrap">
+                                            <a href="/produits/enterprise" style="flex: 1; min-width: 150px; background: linear-gradient(135deg, var(--hotcodes-accent), var(--hotcodes-primary)); color: var(--bg-dark); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 600; transition: all 0.3s ease;">
                                             Demander un Devis
-                                            <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
-                                        </a>
-                                        <a href="/produits/comparaison" style="flex: 1; min-width: 150px; background: rgba(255, 215, 0, 0.1); color: var(--hotcodes-accent); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; border: 1px solid var(--hotcodes-accent); transition: all 0.3s ease;">
-                                            <iconify-icon icon="solar:scale-bold-duotone" style="font-size: 1.1em; vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
+                                                <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                            </a>
+                                            <a href="/produits/comparaison" style="flex: 1; min-width: 150px; background: rgba(255, 215, 0, 0.1); color: var(--hotcodes-accent); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; border: 1px solid var(--hotcodes-accent); transition: all 0.3s ease;">
+                                                <iconify-icon icon="solar:scale-bold-duotone" style="font-size: 1.1em; vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
                                             Comparer les Offres
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
 
-                <!-- Section 4: Scroll Animation Section (Include existing template) -->
-                <t t-call="theme_hotcodes.scroll_animation_section_french" />
+                    <!-- Section 4: Scroll Animation Section (Include existing template) -->
+                    <t t-call="theme_hotcodes.scroll_animation_section_french" />
 
-                <!-- Section 5: Pourquoi HotCodes -->
-                <section class="hotcodes-why-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
-                    <div class="container py-5">
-                        <div class="row mb-5">
-                            <div class="col-lg-8 mx-auto text-center">
-                                <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                    <!-- Section 5: Pourquoi HotCodes -->
+                    <section class="hotcodes-why-section py-5" style="background: var(--bg-dark); position: relative; z-index: 1;">
+                        <div class="container py-5">
+                            <div class="row mb-5">
+                                <div class="col-lg-8 mx-auto text-center">
+                                    <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
                                     Pourquoi Choisir HotCodes ?
-                                </h2>
-                                <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                    </h2>
+                                    <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
                                     Votre partenaire de confiance pour la transformation digitale au
                                     Sénégal
-                                </p>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row g-4">
-                            <!-- Pilier 1: Expertise Locale -->
-                            <div class="col-lg-3 col-md-6">
-                                <div class="why-card text-center" style="background: rgba(15, 15, 15, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
-                                    <div class="why-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
-                                        <iconify-icon icon="solar:map-point-wave-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                            <div class="row g-4">
+                                <!-- Pilier 1: Expertise Locale -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="why-card text-center" style="background: rgba(15, 15, 15, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                        <div class="why-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
+                                            <iconify-icon icon="solar:map-point-wave-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
                                         Expertise Locale
-                                    </h3>
-                                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+                                        </h3>
+                                        <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
                                         Équipe basée à Dakar, connaissance approfondie du marché
                                         sénégalais et des
                                         réglementations locales (SYSCOHADA, fiscalité).
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Pilier 2: Support Réactif -->
-                            <div class="col-lg-3 col-md-6">
-                                <div class="why-card text-center" style="background: rgba(15, 15, 15, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
-                                    <div class="why-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
-                                        <iconify-icon icon="solar:bolt-bold-duotone"></iconify-icon>
+                                        </p>
                                     </div>
-                                    <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                </div>
+
+                                <!-- Pilier 2: Support Réactif -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="why-card text-center" style="background: rgba(15, 15, 15, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                        <div class="why-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
+                                            <iconify-icon icon="solar:bolt-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
                                         Support Réactif
-                                    </h3>
-                                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+                                        </h3>
+                                        <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
                                         Assistance technique en français, disponible par téléphone,
                                         email et
                                         WhatsApp.
                                         Temps de réponse &lt; 2h en jours ouvrés.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Pilier 3: Prix Compétitifs -->
-                            <div class="col-lg-3 col-md-6">
-                                <div class="why-card text-center" style="background: rgba(15, 15, 15, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
-                                    <div class="why-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
-                                        <iconify-icon icon="solar:wallet-money-bold-duotone"></iconify-icon>
+                                        </p>
                                     </div>
-                                    <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                </div>
+
+                                <!-- Pilier 3: Prix Compétitifs -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="why-card text-center" style="background: rgba(15, 15, 15, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                        <div class="why-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-primary);">
+                                            <iconify-icon icon="solar:wallet-money-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
                                         Prix Compétitifs
-                                    </h3>
-                                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+                                        </h3>
+                                        <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
                                         Tarification transparente en FCFA, paiement par Mobile Money
                                         accepté.
                                         Rapport
                                         qualité-prix imbattable sur le marché.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Pilier 4: Solutions Adaptées -->
-                            <div class="col-lg-3 col-md-6">
-                                <div class="why-card text-center" style="background: rgba(15, 15, 15, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
-                                    <div class="why-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
-                                        <iconify-icon icon="solar:target-bold-duotone"></iconify-icon>
+                                        </p>
                                     </div>
-                                    <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
+                                </div>
+
+                                <!-- Pilier 4: Solutions Adaptées -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="why-card text-center" style="background: rgba(15, 15, 15, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%; transition: all 0.3s ease;">
+                                        <div class="why-icon mb-3" style="font-size: 3rem; color: var(--hotcodes-accent);">
+                                            <iconify-icon icon="solar:target-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <h3 style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">
                                         Solutions Adaptées
-                                    </h3>
-                                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+                                        </h3>
+                                        <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
                                         Personnalisation complète selon vos besoins. De la TPE à la
                                         grande
                                         entreprise,
                                         nous avons la solution qui vous convient.
-                                    </p>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <!-- Section 6: Témoignages -->
-                <section class="hotcodes-testimonials-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
-                    <div class="container py-5">
-                        <div class="row mb-5">
-                            <div class="col-lg-8 mx-auto text-center">
-                                <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
+                    <!-- Section 6: Témoignages -->
+                    <section class="hotcodes-testimonials-section py-5" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%); position: relative; z-index: 1;">
+                        <div class="container py-5">
+                            <div class="row mb-5">
+                                <div class="col-lg-8 mx-auto text-center">
+                                    <h2 class="section-title mb-3" style="font-size: 2.5rem; font-weight: 600; color: white;">
                                     Ce Que Disent Nos Clients
-                                </h2>
-                                <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
+                                    </h2>
+                                    <p class="section-subtitle" style="font-size: 1.125rem; color: rgba(255,255,255,0.7);">
                                     Des entreprises sénégalaises qui nous font confiance
-                                </p>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row g-4">
-                            <!-- Témoignage 1 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
-                                    <div class="testimonial-quote mb-2" style="color: var(--hotcodes-primary); font-size: 2rem; line-height: 1;">
-                                        <iconify-icon icon="solar:chat-square-quote-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                            <div class="row g-4">
+                                <!-- Témoignage 1 -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                        <div class="testimonial-quote mb-2" style="color: var(--hotcodes-primary); font-size: 2rem; line-height: 1;">
+                                            <iconify-icon icon="solar:chat-square-quote-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
                                         "Saytu a transformé notre gestion commerciale. Interface
                                         simple, support
                                         excellent, et prix abordable. Exactement ce qu'il nous
                                         fallait !"
-                                    </p>
-                                    <div class="testimonial-author">
-                                        <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
                                             Amadou Diallo
-                                        </p>
-                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                            </p>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
                                             Directeur, PME Import-Export • Dakar
-                                        </p>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Témoignage 2 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
-                                    <div class="testimonial-quote mb-2" style="color: var(--hotcodes-primary); font-size: 2rem; line-height: 1;">
-                                        <iconify-icon icon="solar:chat-square-quote-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                                <!-- Témoignage 2 -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                        <div class="testimonial-quote mb-2" style="color: var(--hotcodes-primary); font-size: 2rem; line-height: 1;">
+                                            <iconify-icon icon="solar:chat-square-quote-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
                                         "L'équipe HotCodes a développé notre application mobile en
                                         un temps record.
                                         Professionnalisme et expertise au rendez-vous !"
-                                    </p>
-                                    <div class="testimonial-author">
-                                        <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
                                             Fatou Seck
-                                        </p>
-                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                            </p>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
                                             CEO, Startup Fintech • Thiès
-                                        </p>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Témoignage 3 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
-                                    <div class="testimonial-quote mb-2" style="color: var(--hotcodes-primary); font-size: 2rem; line-height: 1;">
-                                        <iconify-icon icon="solar:chat-square-quote-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                        <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
-                                    </div>
-                                    <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                                <!-- Témoignage 3 -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="testimonial-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.15); border-radius: 16px; padding: 2rem; height: 100%;">
+                                        <div class="testimonial-quote mb-2" style="color: var(--hotcodes-primary); font-size: 2rem; line-height: 1;">
+                                            <iconify-icon icon="solar:chat-square-quote-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <div class="testimonial-rating mb-3" style="color: var(--hotcodes-accent); font-size: 1.2rem;">
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                        </div>
+                                        <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
                                         "Migration vers Odoo Enterprise réussie grâce à HotCodes.
                                         Formation complète
                                         et
                                         accompagnement personnalisé. Très satisfait !"
-                                    </p>
-                                    <div class="testimonial-author">
-                                        <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <p style="color: white; font-weight: 500; margin-bottom: 0.25rem;">
                                             Moussa Ndiaye
-                                        </p>
-                                        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                                            </p>
+                                            <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
                                             DSI, Groupe Industriel • Saint-Louis
-                                        </p>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <!-- Section 7: CTA Final -->
-                <section class="hotcodes-cta-section py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; z-index: 1; overflow: hidden;">
-                    <div class="cta-background" style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;none&quot;/%3E%3Cpath d=&quot;M0 0L100 100M100 0L0 100&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;1&quot;/%3E%3C/svg%3E'); opacity: 0.3;">
-                    </div>
+                    <!-- Section 7: CTA Final -->
+                    <section class="hotcodes-cta-section py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; z-index: 1; overflow: hidden;">
+                        <div class="cta-background" style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;none&quot;/%3E%3Cpath d=&quot;M0 0L100 100M100 0L0 100&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;1&quot;/%3E%3C/svg%3E'); opacity: 0.3;">
+                        </div>
 
-                    <div class="container py-5" style="position: relative; z-index: 2;">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8 text-center">
-                                <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                        <div class="container py-5" style="position: relative; z-index: 2;">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 text-center">
+                                    <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
                                     Prêt à Digitaliser Votre Entreprise ?
-                                </h2>
-                                <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin-left: auto; margin-right: auto;">
+                                    </h2>
+                                    <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin-left: auto; margin-right: auto;">
                                     Rejoignez des centaines d'entreprises sénégalaises qui ont
                                     choisi HotCodes pour leur
                                     transformation digitale.
-                                </p>
+                                    </p>
 
-                                <div class="cta-actions d-flex gap-3 justify-content-center flex-wrap mb-4">
-                                    <a href="/produits/saytu" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                                        <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                    <div class="cta-actions d-flex gap-3 justify-content-center flex-wrap mb-4">
+                                        <a href="/produits/saytu" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                            <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
                                         Essayer Saytu Gratuitement
-                                    </a>
-                                    <a href="/contact" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid white; transition: all 0.3s ease;">
-                                        <iconify-icon icon="solar:user-speak-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                        </a>
+                                        <a href="/contact" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid white; transition: all 0.3s ease;">
+                                            <iconify-icon icon="solar:user-speak-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
                                         Parler à un Expert
-                                    </a>
-                                </div>
+                                        </a>
+                                    </div>
 
-                                <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem;">
-                                    <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Sans engagement •
-                                    <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Support en français •
-                                    <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Démo personnalisée disponible
-                                </p>
+                                    <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem;">
+                                        <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Sans engagement •
+                                        <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Support en français •
+                                        <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Démo personnalisée disponible
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
+                </div>
             </t>
         </xpath>
     </template>
