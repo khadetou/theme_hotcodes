@@ -7,10 +7,13 @@
                 <!-- Left Side: Text Content -->
                 <div class="scroll-text-container">
                     <div class="scroll-text-content">
-                        <!-- State 1 -->
+                        <!-- State 1: Design System -->
                         <div class="scroll-state" data-state="1">
                             <div class="scroll-state-inner">
-                                <span class="scroll-label">Design System</span>
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:palette-2-bold-duotone"></iconify-icon>
+                                    Design System
+                                </span>
                                 <h2 class="scroll-heading">Build with confidence</h2>
                                 <p class="scroll-description">
                                     Create stunning, consistent interfaces with our comprehensive
@@ -21,10 +24,28 @@
                             </div>
                         </div>
 
-                        <!-- State 2 -->
+                        <!-- State 2: Custom Development -->
                         <div class="scroll-state" data-state="2">
                             <div class="scroll-state-inner">
-                                <span class="scroll-label">Responsive Layouts</span>
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:code-bold-duotone"></iconify-icon>
+                                    Custom Development
+                                </span>
+                                <h2 class="scroll-heading">Tailored solutions</h2>
+                                <p class="scroll-description">
+                                    Bespoke modules and features developed specifically for your business needs.
+                                    Our expert team adapts every solution to your unique requirements.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 3: Responsive Layouts -->
+                        <div class="scroll-state" data-state="3">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:devices-bold-duotone"></iconify-icon>
+                                    Responsive Design
+                                </span>
                                 <h2 class="scroll-heading">Adapt to any screen</h2>
                                 <p class="scroll-description">
                                     Seamlessly responsive designs that look perfect on every device.
@@ -33,10 +54,13 @@
                             </div>
                         </div>
 
-                        <!-- State 3 -->
-                        <div class="scroll-state" data-state="3">
+                        <!-- State 4: Performance -->
+                        <div class="scroll-state" data-state="4">
                             <div class="scroll-state-inner">
-                                <span class="scroll-label">Performance</span>
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:speedometer-bold-duotone"></iconify-icon>
+                                    Performance
+                                </span>
                                 <h2 class="scroll-heading">Lightning fast</h2>
                                 <p class="scroll-description">
                                     Optimized for speed and efficiency. Smooth animations and
@@ -46,14 +70,62 @@
                             </div>
                         </div>
 
-                        <!-- State 4 -->
-                        <div class="scroll-state" data-state="4">
+                        <!-- State 5: AI Integration -->
+                        <div class="scroll-state" data-state="5">
                             <div class="scroll-state-inner">
-                                <span class="scroll-label">Developer Experience</span>
-                                <h2 class="scroll-heading">Built for developers</h2>
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:cpu-bolt-bold-duotone"></iconify-icon>
+                                    AI-Powered
+                                </span>
+                                <h2 class="scroll-heading">Intelligent automation</h2>
                                 <p class="scroll-description">
-                                    Clean, maintainable code with comprehensive documentation.
-                                    Start building in minutes, not hours.
+                                    Leverage cutting-edge AI to automate workflows and gain insights.
+                                    Smart features that learn and adapt to your business patterns.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 6: Security -->
+                        <div class="scroll-state" data-state="6">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:shield-check-bold-duotone"></iconify-icon>
+                                    Enterprise Security
+                                </span>
+                                <h2 class="scroll-heading">Protected and compliant</h2>
+                                <p class="scroll-description">
+                                    Bank-level security with role-based access control and audit trails.
+                                    Your data is encrypted, backed up, and always protected.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 7: Integration -->
+                        <div class="scroll-state" data-state="7">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
+                                    Seamless Integration
+                                </span>
+                                <h2 class="scroll-heading">Connect everything</h2>
+                                <p class="scroll-description">
+                                    Integrate with your existing tools and systems effortlessly.
+                                    APIs, webhooks, and connectors for all major platforms.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 8: Support -->
+                        <div class="scroll-state" data-state="8">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:headphones-round-sound-bold-duotone"></iconify-icon>
+                                    Dedicated Support
+                                </span>
+                                <h2 class="scroll-heading">Always here for you</h2>
+                                <p class="scroll-description">
+                                    24/7 technical support, comprehensive training, and personalized assistance.
+                                    We're committed to your success every step of the way.
                                 </p>
                             </div>
                         </div>
@@ -80,7 +152,7 @@
                             </div>
                         </div>
 
-                        <!-- Visual State 2: Responsive Layouts -->
+                        <!-- Visual State 2: Custom Development -->
                         <div class="scroll-visual" data-state="2">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-2"></div>
@@ -97,25 +169,93 @@
                             </div>
                         </div>
 
-                        <!-- Visual State 3: Performance -->
+                        <!-- Visual State 3: Responsive Design -->
                         <div class="scroll-visual" data-state="3">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-3"></div>
                                 <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
                                     <!-- Central Icon -->
-                                    <iconify-icon icon="solar:speedometer-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+                                    <iconify-icon icon="solar:devices-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
 
                                     <!-- Corner Icons -->
-                                    <iconify-icon icon="solar:bolt-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
-                                    <iconify-icon icon="solar:rocket-2-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
-                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
-                                    <iconify-icon icon="solar:graph-up-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:smartphone-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:tablet-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:laptop-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:monitor-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Visual State 4: Developer Experience -->
+                        <!-- Visual State 4: Performance -->
                         <div class="scroll-visual" data-state="4">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-4"></div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:speedometer-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-accent); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:bolt-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:rocket-2-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:graph-up-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 5: AI Integration -->
+                        <div class="scroll-visual" data-state="5">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-1"></div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:cpu-bolt-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:atom-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:magic-stick-3-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:lightbulb-bolt-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:brain-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 6: Security -->
+                        <div class="scroll-visual" data-state="6">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-2"></div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:shield-check-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-accent); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:lock-password-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:key-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:shield-keyhole-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:eye-scan-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 7: Integration -->
+                        <div class="scroll-visual" data-state="7">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-3"></div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:link-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:plug-circle-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:server-path-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:cloud-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 8: Support -->
+                        <div class="scroll-visual" data-state="8">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-4"></div>
                                 <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
@@ -126,7 +266,7 @@
                                     <iconify-icon icon="solar:chat-round-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
                                     <iconify-icon icon="solar:user-speak-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
                                     <iconify-icon icon="solar:phone-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
-                                    <iconify-icon icon="solar:shield-check-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:like-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
@@ -140,16 +280,15 @@
                 <div class="progress-dot" data-state="2"></div>
                 <div class="progress-dot" data-state="3"></div>
                 <div class="progress-dot" data-state="4"></div>
+                <div class="progress-dot" data-state="5"></div>
+                <div class="progress-dot" data-state="6"></div>
+                <div class="progress-dot" data-state="7"></div>
+                <div class="progress-dot" data-state="8"></div>
             </div>
         </section>
     </template>
 
-    <!-- Add to homepage -->
-    <!-- <template id="ecom_homepage_with_scroll_section" inherit_id="theme_hotcodes.ecom_homepage">
-        <xpath expr="//div[@class='oe_structure oe_empty']" position="before">
-            <t t-call="theme_hotcodes.scroll_animation_section" />
-        </xpath>
-    </template> -->
+
 
     <!-- French Version of Scroll Animation Section -->
     <template id="scroll_animation_section_french" name="Scroll Animation Section (French)">
@@ -162,7 +301,7 @@
                         <div class="scroll-state" data-state="1">
                             <div class="scroll-state-inner">
                                 <span class="scroll-label">
-                                    <iconify-icon icon="solar:palette-2-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                    <iconify-icon icon="solar:palette-2-bold-duotone"></iconify-icon>
                                     Design Moderne
                                 </span>
                                 <h2 class="scroll-heading">Interface Intuitive</h2>
@@ -180,7 +319,7 @@
                         <div class="scroll-state" data-state="2">
                             <div class="scroll-state-inner">
                                 <span class="scroll-label">
-                                    <iconify-icon icon="solar:code-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                    <iconify-icon icon="solar:code-bold-duotone"></iconify-icon>
                                     Développement Sur Mesure
                                 </span>
                                 <h2 class="scroll-heading">Solutions Personnalisées</h2>
@@ -193,11 +332,27 @@
                             </div>
                         </div>
 
-                        <!-- State 3: Performance -->
+                        <!-- State 3: Design Responsive -->
                         <div class="scroll-state" data-state="3">
                             <div class="scroll-state-inner">
                                 <span class="scroll-label">
-                                    <iconify-icon icon="solar:speedometer-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                    <iconify-icon icon="solar:devices-bold-duotone"></iconify-icon>
+                                    Design Responsive
+                                </span>
+                                <h2 class="scroll-heading">Adapté à Tous les Écrans</h2>
+                                <p class="scroll-description">
+                                    Interfaces parfaitement optimisées pour tous les appareils.
+                                    De l'ordinateur au smartphone, une expérience fluide et cohérente
+                                    sur toutes les plateformes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 4: Performance -->
+                        <div class="scroll-state" data-state="4">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:speedometer-bold-duotone"></iconify-icon>
                                     Performance Optimale
                                 </span>
                                 <h2 class="scroll-heading">Rapidité et Fiabilité</h2>
@@ -210,18 +365,62 @@
                             </div>
                         </div>
 
-                        <!-- State 4: Support -->
-                        <div class="scroll-state" data-state="4">
+                        <!-- State 5: Intelligence Artificielle -->
+                        <div class="scroll-state" data-state="5">
                             <div class="scroll-state-inner">
                                 <span class="scroll-label">
-                                    <iconify-icon icon="solar:headphones-round-sound-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem; color: var(--hotcodes-primary);"></iconify-icon>
+                                    <iconify-icon icon="solar:cpu-bolt-bold-duotone"></iconify-icon>
+                                    Intelligence Artificielle
+                                </span>
+                                <h2 class="scroll-heading">Automatisation Intelligente</h2>
+                                <p class="scroll-description">
+                                    Exploitez l'IA de pointe pour automatiser vos processus et obtenir des insights.
+                                    Fonctionnalités intelligentes qui apprennent et s'adaptent à votre entreprise.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 6: Sécurité -->
+                        <div class="scroll-state" data-state="6">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:shield-check-bold-duotone"></iconify-icon>
+                                    Sécurité Entreprise
+                                </span>
+                                <h2 class="scroll-heading">Protection et Conformité</h2>
+                                <p class="scroll-description">
+                                    Sécurité de niveau bancaire avec contrôle d'accès basé sur les rôles.
+                                    Vos données sont cryptées, sauvegardées et toujours protégées.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 7: Intégration -->
+                        <div class="scroll-state" data-state="7">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
+                                    Intégration Transparente
+                                </span>
+                                <h2 class="scroll-heading">Connectez Tout</h2>
+                                <p class="scroll-description">
+                                    Intégrez facilement vos outils et systèmes existants.
+                                    APIs, webhooks et connecteurs pour toutes les plateformes majeures.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- State 8: Support -->
+                        <div class="scroll-state" data-state="8">
+                            <div class="scroll-state-inner">
+                                <span class="scroll-label">
+                                    <iconify-icon icon="solar:headphones-round-sound-bold-duotone"></iconify-icon>
                                     Support Dédié
                                 </span>
                                 <h2 class="scroll-heading">Accompagnement Continu</h2>
                                 <p class="scroll-description">
-                                    Support technique en français, formation complète de vos équipes
-                                    et
-                                    accompagnement personnalisé. Nous sommes là pour votre réussite.
+                                    Support technique 24/7 en français, formation complète de vos équipes
+                                    et accompagnement personnalisé. Nous sommes là pour votre réussite.
                                 </p>
                             </div>
                         </div>
@@ -265,25 +464,93 @@
                             </div>
                         </div>
 
-                        <!-- Visual State 3: Performance Optimale -->
+                        <!-- Visual State 3: Responsive Design -->
                         <div class="scroll-visual" data-state="3">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-3"></div>
                                 <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
                                     <!-- Central Icon -->
-                                    <iconify-icon icon="solar:speedometer-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+                                    <iconify-icon icon="solar:devices-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
 
                                     <!-- Corner Icons -->
-                                    <iconify-icon icon="solar:bolt-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
-                                    <iconify-icon icon="solar:rocket-2-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
-                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
-                                    <iconify-icon icon="solar:graph-up-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:smartphone-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:tablet-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:laptop-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:monitor-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Visual State 4: Support Dédié -->
+                        <!-- Visual State 4: Performance Optimale -->
                         <div class="scroll-visual" data-state="4">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-4"></div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:speedometer-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-accent); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:bolt-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:rocket-2-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:chart-2-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:graph-up-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 5: Intelligence Artificielle -->
+                        <div class="scroll-visual" data-state="5">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-1"></div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:cpu-bolt-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:atom-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:magic-stick-3-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:lightbulb-bolt-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:brain-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 6: Sécurité -->
+                        <div class="scroll-visual" data-state="6">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-2"></div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:shield-check-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-accent); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:lock-password-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:key-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:shield-keyhole-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:eye-scan-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 7: Intégration -->
+                        <div class="scroll-visual" data-state="7">
+                            <div class="visual-card">
+                                <div class="visual-gradient gradient-3"></div>
+                                <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
+                                    <!-- Central Icon -->
+                                    <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 8rem; color: var(--hotcodes-primary); opacity: 0.9;"></iconify-icon>
+
+                                    <!-- Corner Icons -->
+                                    <iconify-icon icon="solar:link-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:plug-circle-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:server-path-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:cloud-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual State 8: Support Dédié -->
+                        <div class="scroll-visual" data-state="8">
                             <div class="visual-card">
                                 <div class="visual-gradient gradient-4"></div>
                                 <div class="visual-elements" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
@@ -294,7 +561,7 @@
                                     <iconify-icon icon="solar:chat-round-bold-duotone" style="position: absolute; top: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
                                     <iconify-icon icon="solar:user-speak-bold-duotone" style="position: absolute; top: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
                                     <iconify-icon icon="solar:phone-bold-duotone" style="position: absolute; bottom: 10%; left: 10%; font-size: 3rem; color: var(--hotcodes-accent); opacity: 0.3;"></iconify-icon>
-                                    <iconify-icon icon="solar:shield-check-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
+                                    <iconify-icon icon="solar:like-bold-duotone" style="position: absolute; bottom: 10%; right: 10%; font-size: 3rem; color: var(--hotcodes-primary); opacity: 0.3;"></iconify-icon>
                                 </div>
                             </div>
                         </div>
@@ -307,6 +574,10 @@
                     <div class="progress-dot" data-state="2"></div>
                     <div class="progress-dot" data-state="3"></div>
                     <div class="progress-dot" data-state="4"></div>
+                    <div class="progress-dot" data-state="5"></div>
+                    <div class="progress-dot" data-state="6"></div>
+                    <div class="progress-dot" data-state="7"></div>
+                    <div class="progress-dot" data-state="8"></div>
                 </div>
             </div>
         </section>

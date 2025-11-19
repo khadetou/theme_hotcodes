@@ -337,24 +337,65 @@
                             </div>
                         </section>
 
-                        <!-- CTA Section -->
-                        <section class="py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%); filter: blur(80px);"></div>
-                            <div style="position: absolute; bottom: -50%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,0,0,0.2), transparent 70%); filter: blur(80px);"></div>
+                        <!-- CTA Section - Dark Elegant -->
+                        <section class="py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%); position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center;">
+                            <div style="position: absolute; inset: 0; opacity: 0.08;">
+                                <div style="position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(255,107,53,0.3) 0%, transparent 70%); top: -200px; left: -200px; filter: blur(80px);"></div>
+                                <div style="position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(247,147,30,0.25) 0%, transparent 70%); bottom: -150px; right: -150px; filter: blur(80px);"></div>
+                                <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 50px 50px;"></div>
+                            </div>
                             <div class="container py-5 text-center" style="position: relative; z-index: 2;">
-                                <h2 class="mb-4" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: white;">Prêt à Transformer Vos Données ?</h2>
-                                <p class="mb-4" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin: 0 auto 2rem;">Discutons de votre projet BI et découvrez comment nous pouvons vous aider à prendre de meilleures décisions.</p>
-                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                                    <a href="/contact" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
-                                        <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
-                                        Demander un Devis
-                                    </a>
-                                    <a href="#solutions" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease;">
-                                        <iconify-icon icon="solar:eye-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
-                                        Voir les Solutions
-                                    </a>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-10">
+                                        <div class="mb-4" style="display: inline-block;">
+                                            <div style="background: rgba(255,107,53,0.1); color: #FF6B35; padding: 0.6rem 1.5rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,107,53,0.2);">
+                                                <iconify-icon icon="mingcute:message-3-fill" style="font-size: 1.1em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Contactez-nous
+                                            </div>
+                                        </div>
+                                        <h2 class="mb-4" style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.5px;">
+                                            Parlons de Votre <span style="color: #FF6B35;">Projet BI</span>
+                                        </h2>
+                                        <p class="mb-5" style="font-size: 1.15rem; color: rgba(255,255,255,0.7); max-width: 650px; margin: 0 auto 2rem; line-height: 1.6;">
+                                            Notre équipe est à votre écoute pour discuter de vos besoins et vous<br/>
+proposer des solutions Business Intelligence adaptées
+                                        </p>
+                                        <div class="mb-5">
+                                            <a href="/contact" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
+                                                <iconify-icon icon="mingcute:send-fill" style="font-size: 1.3em;"></iconify-icon>
+                                                <span>Envoyez-nous un Message</span>
+                                            </a>
+                                        </div>
+                                        <div class="row g-4 mt-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                                            <div class="col-md-4">
+                                                <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
+                                                    <iconify-icon icon="mingcute:location-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
+                                                    <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Adresse</p>
+                                                    <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">Dakar, Sénégal</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
+                                                    <iconify-icon icon="mingcute:phone-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
+                                                    <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Téléphone</p>
+                                                    <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">+221 77 586 79 68</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
+                                                    <iconify-icon icon="mingcute:mail-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
+                                                    <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Email</p>
+                                                    <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">contact@hotcodes.sn</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <style>
+                                .cta-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255,107,53,0.5) !important; }
+                                .feature-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.05) !important; border-color: rgba(255,107,53,0.3) !important; }
+                            </style>
                         </section>
                     </div>
                 </t>

@@ -46,10 +46,9 @@ div.o_mega_menu.dropdown-menu {
   position: absolute !important;
   width: 520px !important;
   max-width: 90vw !important;
-  left: 50% !important;
+  left: 47% !important;
   right: auto !important;
   transform: translateX(-50%) !important;
-  margin-top: 8px !important;
   padding: 8px !important;
 
   /* Border and radius */
@@ -142,6 +141,16 @@ div.o_mega_menu.dropdown-menu.show {
   position: relative;
   overflow: hidden;
   background: transparent !important;
+  outline: none !important;
+}
+
+/* Remove focus/active states that cause unwanted highlighting */
+.hotcodes-mega-card:focus,
+.hotcodes-mega-card:active,
+.hotcodes-mega-card:focus-visible {
+  outline: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 /* Card gradient overlay */
@@ -260,6 +269,142 @@ nav .o_mega_menu .hotcodes-mega-card p,
 }
 
 /* ========================================
+   PRICING CARDS ANIMATIONS & EFFECTS
+   ======================================== */
+
+/* Pulse glow animation for RECOMMANDÉ badge */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.6),
+      0 0 30px rgba(255, 107, 53, 0.3);
+  }
+}
+
+/* Fade-in stagger animation for pricing cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to pricing cards with stagger delay */
+.pricing-card-starter {
+  animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.pricing-card-business {
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.pricing-card-enterprise {
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.pricing-badge-recommended {
+  animation: pulse-glow 2s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+}
+
+/* Hover effect on badge */
+.pricing-badge-recommended:hover {
+  animation-play-state: paused;
+  box-shadow: 0 6px 24px rgba(255, 107, 53, 0.7),
+    0 0 40px rgba(255, 107, 53, 0.4);
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Enhanced pricing card styles */
+.pricing-card-starter,
+.pricing-card-business,
+.pricing-card-enterprise {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-card-starter:hover,
+.pricing-card-enterprise:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(255, 107, 53, 0.25);
+}
+
+.pricing-card-business:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 16px 50px rgba(255, 107, 53, 0.4);
+}
+
+/* Price text shadow for depth */
+.pricing-price-text {
+  text-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  letter-spacing: -2px;
+}
+
+.pricing-price-text-accent {
+  text-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+  letter-spacing: -1px;
+}
+
+/* Enhanced button hover effects */
+.pricing-btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Shine effect on primary button */
+.pricing-btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.pricing-btn-primary:hover::before {
+  left: 100%;
+}
+
+.pricing-btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.5);
+}
+
+.pricing-btn-secondary {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 107, 53, 0.2) !important;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+}
+
+.pricing-btn-accent {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-btn-accent:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 215, 0, 0.2) !important;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* ========================================
    RESPONSIVE STYLES
    ======================================== */
 
@@ -288,17 +433,70 @@ nav .o_mega_menu .hotcodes-mega-card p,
   }
 }
 
-/* Mobile: Responsive adjustments */
+/* ============================================
+   DESKTOP & MOBILE MEGA MENU SEPARATION
+   ============================================ */
+
+/* Desktop: Show desktop mega menu, hide mobile */
+@media (min-width: 992px) {
+  .hotcodes-mega-toggle-desktop {
+    display: inline-block !important;
+  }
+
+  .hotcodes-mega-toggle-mobile {
+    display: none !important;
+  }
+
+  .hotcodes-mega-desktop {
+    display: block !important;
+    /* Initial state: hidden */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /* Smooth transition for show/hide */
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .hotcodes-mega-mobile {
+    display: none !important;
+  }
+
+  /* Desktop mega menu: Show on hover (JavaScript will handle delay) */
+  .nav-item.position-static:hover > .hotcodes-mega-desktop {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+  }
+
+  /* Keep mega menu visible when hovering over it */
+  .hotcodes-mega-desktop:hover {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+  }
+}
+
+/* Mobile: Show mobile mega menu, hide desktop */
 @media (max-width: 991px) {
+  .hotcodes-mega-toggle-desktop {
+    display: none !important;
+  }
+
+  .hotcodes-mega-toggle-mobile {
+    display: inline-block !important;
+  }
+
+  .hotcodes-mega-desktop {
+    display: none !important;
+  }
+
+  .hotcodes-mega-mobile {
+    display: block !important;
+  }
+
   /* Mobile mega menu container */
-  .dropdown-menu.o_mega_menu,
-  div.o_mega_menu.dropdown-menu,
-  nav .dropdown-menu.o_mega_menu,
-  nav div.o_mega_menu.dropdown-menu,
-  .navbar .dropdown-menu.o_mega_menu,
-  .navbar div.o_mega_menu.dropdown-menu,
-  ul.navbar-nav .dropdown-menu.o_mega_menu,
-  ul.navbar-nav div.o_mega_menu.dropdown-menu {
+  .hotcodes-mega-mobile.o_mega_menu {
     /* Position: Static flow within navbar collapse */
     position: static !important;
     width: 100% !important;
@@ -307,22 +505,24 @@ nav .o_mega_menu .hotcodes-mega-card p,
     right: 0 !important;
     transform: none !important;
 
-    /* Mobile-friendly spacing */
-    margin-top: 8px !important;
+    /* Mobile-friendly spacing with indentation */
+    margin-top: 0 !important;
     margin-bottom: 8px !important;
-    padding: 12px !important;
+    margin-left: 16px !important;
+    padding: 8px 12px !important;
 
     /* Softer border radius for mobile */
-    border-radius: 12px !important;
+    border-radius: 8px !important;
 
-    /* Keep glassmorphism but adjust for mobile */
-    background: rgba(20, 20, 20, 0.98) !important;
-    background-color: rgba(20, 20, 20, 0.98) !important;
-    backdrop-filter: blur(20px) saturate(150%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+    /* Lighter background for mobile - more subtle */
+    background: rgba(255, 107, 53, 0.05) !important;
+    background-color: rgba(255, 107, 53, 0.05) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 
-    /* Lighter shadow for mobile */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 107, 53, 0.08) !important;
+    /* Subtle border instead of heavy shadow */
+    border: 1px solid rgba(255, 107, 53, 0.15) !important;
+    box-shadow: none !important;
 
     /* Ensure proper visibility control */
     display: none !important;
@@ -330,52 +530,188 @@ nav .o_mega_menu .hotcodes-mega-card p,
     visibility: hidden !important;
     pointer-events: none !important;
     transition: all 0.2s ease-in-out !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
   }
 
   /* Show state on mobile */
-  .dropdown-menu.o_mega_menu.show,
-  div.o_mega_menu.dropdown-menu.show,
-  nav .dropdown-menu.o_mega_menu.show,
-  nav div.o_mega_menu.dropdown-menu.show,
-  .navbar .dropdown-menu.o_mega_menu.show,
-  .navbar div.o_mega_menu.dropdown-menu.show,
-  ul.navbar-nav .dropdown-menu.o_mega_menu.show,
-  ul.navbar-nav div.o_mega_menu.dropdown-menu.show {
+  .hotcodes-mega-mobile.o_mega_menu.show {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: all !important;
+    max-height: 2000px !important;
   }
 
-  /* Mobile mega menu grid - single column */
-  .hotcodes-mega-menu-grid {
-    grid-template-columns: 1fr !important;
-    gap: 8px !important;
+  /* Mobile mega menu grid - single column list */
+  .hotcodes-mega-mobile .hotcodes-mega-menu-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
   }
 
-  /* Mobile mega menu cards - adjust padding */
-  .hotcodes-mega-card {
-    padding: 12px !important;
+  /* Mobile mega menu cards - compact list style */
+  .hotcodes-mega-mobile .hotcodes-mega-card {
+    padding: 10px 12px !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
   }
 
-  /* Mobile mega menu text - ensure readability */
-  .hotcodes-mega-card h4,
-  .hotcodes-mega-card .h4 {
-    font-size: 15px !important;
-    margin-bottom: 4px !important;
+  .hotcodes-mega-mobile .hotcodes-mega-card::before {
+    display: none !important;
   }
 
-  .hotcodes-mega-card p {
-    font-size: 13px !important;
-    line-height: 1.4 !important;
+  /* Remove focus/active states on mobile cards */
+  .hotcodes-mega-mobile .hotcodes-mega-card:focus,
+  .hotcodes-mega-mobile .hotcodes-mega-card:active,
+  .hotcodes-mega-mobile .hotcodes-mega-card:focus-visible {
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .hotcodes-mega-mobile .hotcodes-mega-card:hover {
+    background: rgba(255, 107, 53, 0.08) !important;
+  }
+
+  /* Mobile mega menu icon - smaller */
+  .hotcodes-mega-mobile .hotcodes-card-icon {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+  }
+
+  .hotcodes-mega-mobile .hotcodes-card-icon iconify-icon {
+    font-size: 1.2rem !important;
+  }
+
+  /* Mobile mega menu text - compact */
+  .hotcodes-mega-mobile .hotcodes-mega-card h4,
+  .hotcodes-mega-mobile .hotcodes-mega-card .h4 {
+    font-size: 14px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .hotcodes-mega-mobile .hotcodes-mega-card p {
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+    opacity: 0.7 !important;
   }
 
   /* Ensure mega menu toggle arrow works on mobile */
-  .o_mega_menu_toggle::after {
+  .hotcodes-mega-toggle-mobile::after {
     transition: transform 0.2s ease !important;
   }
 
-  .o_mega_menu_toggle.show::after {
+  .hotcodes-mega-toggle-mobile.active::after {
     transform: rotate(180deg) !important;
   }
+
+  /* Remove section padding on mobile */
+  .hotcodes-mega-mobile .s_mega_menu_hotcodes {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Remove container-fluid padding on mobile */
+  .hotcodes-mega-mobile .container-fluid {
+    padding: 0 !important;
+  }
+
+  /* Pricing cards responsive adjustments for mobile */
+  .pricing-card-starter,
+  .pricing-card-business,
+  .pricing-card-enterprise {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Smaller badges on mobile */
+  .pricing-badge-recommended,
+  .pricing-badge-economique,
+  .pricing-badge-premium {
+    font-size: 0.7rem;
+    padding: 0.4rem 1.2rem;
+    top: -12px;
+  }
+
+  /* Adjust price size on mobile */
+  .pricing-card-starter h2,
+  .pricing-card-enterprise h2 {
+    font-size: 2.5rem !important;
+  }
+
+  .pricing-card-business h2 {
+    font-size: 3rem !important;
+  }
+
+  /* Smaller buttons on mobile */
+  .pricing-btn-primary,
+  .pricing-btn-secondary,
+  .pricing-btn-accent {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (max-width: 992px) and (min-width: 576px) {
+  /* Stack cards vertically on tablets */
+  .pricing-card-starter,
+  .pricing-card-business,
+  .pricing-card-enterprise {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+  }
+
+  /* Adjust badge position for tablets */
+  .pricing-badge-recommended,
+  .pricing-badge-economique,
+  .pricing-badge-premium {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* Reduce hover effects on touch devices */
+@media (hover: none) {
+  .pricing-card-starter:hover,
+  .pricing-card-business:hover,
+  .pricing-card-enterprise:hover {
+    transform: none !important;
+  }
+
+  .pricing-btn-primary:hover,
+  .pricing-btn-secondary:hover,
+  .pricing-btn-accent:hover {
+    transform: none !important;
+  }
+
+  .pricing-badge-recommended:hover {
+    transform: translateX(-50%) !important;
+  }
+}
+
+/* Smooth transitions for pricing cards */
+.pricing-card-starter,
+.pricing-card-business,
+.pricing-card-enterprise {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Ensure smooth badge hover transition and proper centering */
+.pricing-badge-recommended {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
+}
+
+.pricing-badge-recommended iconify-icon {
+  flex-shrink: 0;
 }

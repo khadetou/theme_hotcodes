@@ -52,17 +52,17 @@
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/produits/enterprise" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/produits/odoo-enterprise" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Odoo Enterprise
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/produits/comparaison" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/produits/saytu#comparaison" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Comparer les Offres
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/tarifs" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/produits/saytu#tarifs" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Tarifs
                                     </a>
                                 </li>
@@ -125,12 +125,12 @@
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/equipe" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/about#equipe" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Notre Équipe
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/realisations" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                    <a href="/services#realisations" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
                                         Réalisations
                                     </a>
                                 </li>
@@ -140,8 +140,8 @@
                                     </a>
                                 </li>
                                 <li style="margin-bottom: 0.75rem;">
-                                    <a href="/carriere" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
-                                        Carrière
+                                    <a href="/contactus" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">
+                                        Nous Contacter
                                     </a>
                                 </li>
                             </ul>
@@ -184,18 +184,18 @@
                             <div class="col-md-6 text-center text-md-end">
                                 <ul style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
                                     <li>
-                                        <a href="/mentions-legales" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
-                                            Mentions Légales
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/confidentialite" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
+                                        <a href="/page/privacy" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
                                             Confidentialité
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/cgv" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
-                                            CGV
+                                        <a href="/page/terms" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
+                                            Conditions d'Utilisation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/contactus" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">
+                                            Contact
                                         </a>
                                     </li>
                                 </ul>

@@ -27,7 +27,7 @@
                                 <t t-set="_no_autohide_menu_mobile" t-valuef="True" />
                                 <t t-set="_nav_class" t-valuef="navbar-nav mx-auto" />
                                 <t t-foreach="website.menu_id.child_id" t-as="submenu">
-                                    <t t-call="website.submenu">
+                                    <t t-call="theme_hotcodes.hotcodes_submenu">
                                         <t t-set="item_class" t-valuef="nav-item" />
                                         <t t-set="link_class" t-valuef="nav-link" />
                                     </t>
@@ -36,9 +36,9 @@
 
                             <!-- Action Button - Right Column -->
                             <div class="navbar-actions ms-auto">
-                                <a href="/demande-demo" class="btn btn-primary" style="color: white !important;">
+                                <a href="/demande-demo" class="btn btn-primary" style="color: white !important; padding: 0.5rem 1.25rem; font-size: 0.9375rem;">
                                     Demander une Démo
-                                    <iconify-icon icon="solar:play-circle-bold-duotone" class="ms-1" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
+                                    <iconify-icon icon="solar:play-circle-bold-duotone" class="ms-1" style="font-size: 1em; vertical-align: middle;"></iconify-icon>
                                 </a>
                             </div>
                         </div>
@@ -47,5 +47,50 @@
             </header>
 
         </xpath>
+    </template>
+
+    <!-- Custom submenu template with separate desktop/mobile mega menus -->
+    <template id="hotcodes_submenu" name="Hotcodes Submenu">
+        <t t-set="show_dropdown" t-value="(submenu.is_mega_menu and submenu.is_visible) or submenu.child_id.filtered(lambda menu: menu.is_visible)"/>
+
+        <!-- Simple menu item (no dropdown) -->
+        <li t-if="submenu.is_visible and not (submenu.child_id or submenu.is_mega_menu)" t-attf-class="#{item_class or ''}" role="presentation">
+            <a t-att-href="submenu._clean_url()" t-attf-class="#{link_class or ''} #{submenu._is_active() and 'active'}" role="menuitem" t-ignore="true" t-att-target="'_blank' if submenu.new_window else None">
+                <span t-field="submenu.name"/>
+            </a>
+        </li>
+
+        <!-- Mega menu item -->
+        <li t-elif="show_dropdown and submenu.is_mega_menu" t-attf-class="#{item_class or ''} position-static dropdown" role="presentation">
+            <!-- Desktop: Hover-based mega menu toggle -->
+            <a href="#" t-attf-class="dropdown-toggle #{link_class or ''} o_mega_menu_toggle hotcodes-mega-toggle-desktop #{submenu._is_active() and 'active'}" role="menuitem">
+                <span t-field="submenu.name"/>
+            </a>
+
+            <!-- Mobile: Click-based mega menu toggle -->
+            <a href="#" t-attf-class="dropdown-toggle #{link_class or ''} o_mega_menu_toggle hotcodes-mega-toggle-mobile #{submenu._is_active() and 'active'}" t-attf-data-submenu-id="#{submenu.id}" role="menuitem">
+                <span t-field="submenu.name"/>
+            </a>
+
+            <!-- Desktop Mega Menu (hover-based, full glassmorphism) -->
+            <div t-attf-class="o_mega_menu dropdown-menu hotcodes-mega-desktop #{submenu.mega_menu_classes or ''}" data-name="Mega Menu Desktop" t-field="submenu.mega_menu_content" role="menuitem"/>
+
+            <!-- Mobile Mega Menu (click-based, simplified) -->
+            <div t-attf-class="o_mega_menu dropdown-menu hotcodes-mega-mobile #{submenu.mega_menu_classes or ''}" t-attf-data-submenu-id="#{submenu.id}" data-name="Mega Menu Mobile" role="menuitem">
+                <t t-raw="submenu.mega_menu_content"/>
+            </div>
+        </li>
+
+        <!-- Regular dropdown (not mega menu) -->
+        <li t-elif="show_dropdown" t-attf-class="#{item_class or ''} dropdown" role="presentation">
+            <a href="#" t-attf-class="dropdown-toggle #{link_class or ''} #{submenu._is_active() and 'active'}" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="menuitem">
+                <span t-field="submenu.name"/>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <t t-foreach="submenu.child_id" t-as="submenu">
+                    <t t-call="theme_hotcodes.hotcodes_submenu" item_class="None" link_class.f="dropdown-item"/>
+                </t>
+            </ul>
+        </li>
     </template>
 </odoo>

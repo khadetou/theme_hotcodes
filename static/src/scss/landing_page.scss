@@ -329,3 +329,17 @@
   }
 }
 
+// ============================================================================
+// Hero Section - Stats Cards Hover Effects
+// ============================================================================
+.hero-particle-network {
+  .row.g-3 > div > div {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
+      border-color: rgba(255, 107, 53, 0.4) !important;
+    }
+  }
+}

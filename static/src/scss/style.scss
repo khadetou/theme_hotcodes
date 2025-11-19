@@ -271,7 +271,7 @@ header {
           position: absolute;
           top: 100%;
           left: 50%;
-          transform: translateX(-50%) translateY(16px);
+          transform: translateX(-50%) translateY(8px);
           width: 640px;
           max-width: 90vw;
           background: rgba(15, 15, 15, 0.95);
@@ -279,7 +279,7 @@ header {
           border: 1px solid rgba(255, 255, 255, 0.08);
           border-radius: 16px;
           padding: 8px;
-          margin-top: 8px;
+          margin-top: 0;
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
             0 20px 40px rgba(0, 0, 0, 0.6), 0 0 80px rgba(255, 107, 53, 0.1);
           opacity: 0;

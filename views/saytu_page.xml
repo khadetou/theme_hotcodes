@@ -22,8 +22,8 @@
                             <t t-set="stat_1_label" t-value="'Modules Inclus'" />
                             <t t-set="stat_2_value" t-value="'30j'" />
                             <t t-set="stat_2_label" t-value="'Essai Gratuit'" />
-                            <t t-set="stat_3_value" t-value="'100%'" />
-                            <t t-set="stat_3_label" t-value="'Support FR'" />
+                            <t t-set="stat_3_value" t-value="'24/7'" />
+                            <t t-set="stat_3_label" t-value="'Support Dédié'" />
 
                             <!-- CTAs -->
                             <t t-set="hero_cta_primary_text" t-value="'Essai Gratuit 30 Jours'" />
@@ -60,8 +60,8 @@
                                             </div>
                                             <div class="col-6 col-md-4">
                                                 <div class="stat-card text-center" style="background: rgba(255, 215, 0, 0.1); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 12px; padding: 1.5rem;">
-                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-accent); margin-bottom: 0.25rem;">100%</div>
-                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Open Source</div>
+                                                    <div style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-accent); margin-bottom: 0.25rem;">99.9%</div>
+                                                    <div style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Uptime Garanti</div>
                                                 </div>
                                             </div>
                                             <div class="col-6 col-md-4">
@@ -272,157 +272,164 @@
                                 <div class="row g-4 justify-content-center">
                                     <!-- Plan Starter -->
                                     <div class="col-lg-4 col-md-6">
-                                        <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative;">
-                                            <div class="mb-4">
-                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                        <div class="product-card pricing-card-starter" style="background: linear-gradient(145deg, rgba(15, 15, 15, 0.9), rgba(20, 15, 15, 0.8)); backdrop-filter: blur(15px); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 24px; padding: 2.5rem; height: 100%; position: relative; overflow: hidden; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);">
+                                            <!-- Subtle glow effect -->
+                                            <div style="position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 107, 53, 0.05) 0%, transparent 70%); pointer-events: none;"></div>
+
+                                            <!-- Badge "ÉCONOMIQUE" -->
+                                            <div style="position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, #6B7280, #4B5563); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem;">
+                                                <iconify-icon icon="solar:wallet-bold-duotone" style="font-size: 1em;"></iconify-icon>
+                                                Économique
+                                            </div>
+
+                                            <div class="mb-4" style="position: relative; z-index: 1;">
+                                                <h3 style="font-size: 1.75rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">
                                                     Starter
                                                 </h3>
-                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">
                                                     Pour les très petites entreprises
                                                 </p>
                                             </div>
 
-                                            <div class="mb-4">
-                                                <div style="font-size: 3rem; font-weight: 700; color: var(--hotcodes-primary); line-height: 1;">
+                                            <div class="mb-4" style="position: relative; z-index: 1;">
+                                                <div class="pricing-price-text" style="font-size: 3.5rem; font-weight: 800; color: var(--hotcodes-primary); line-height: 1;">
                                                     35 000
-                                                    <span style="font-size: 1.25rem; font-weight: 400; color: rgba(255,255,255,0.6);">FCFA/mois</span>
+                                                    <span style="font-size: 1.25rem; font-weight: 400; color: rgba(255,255,255,0.6); letter-spacing: 0;">FCFA/mois</span>
                                                 </div>
                                             </div>
 
-                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    1 utilisateur
+                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem; position: relative; z-index: 1;">
+                                                <li style="color: rgba(255,255,255,0.85); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span>1 utilisateur</span>
                                                 </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Modules essentiels
+                                                <li style="color: rgba(255,255,255,0.85); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span>Modules essentiels</span>
                                                 </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    5 Go de stockage
+                                                <li style="color: rgba(255,255,255,0.85); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span>Support email</span>
                                                 </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Support email
-                                                </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Formation de base
+                                                <li style="color: rgba(255,255,255,0.85); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span>Formation de base</span>
                                                 </li>
                                             </ul>
 
-                                            <a href="/contact?plan=starter" style="display: block; background: rgba(255, 107, 53, 0.1); color: var(--hotcodes-primary); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; border: 1px solid var(--hotcodes-primary); transition: all 0.3s ease;">
+                                            <a href="/contact?plan=starter" class="pricing-btn-secondary" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: rgba(255, 107, 53, 0.1); color: var(--hotcodes-primary); padding: 1.125rem 1.5rem; border-radius: 14px; text-decoration: none; text-align: center; font-weight: 600; border: 1px solid var(--hotcodes-primary); position: relative; z-index: 1;">
+                                                <iconify-icon icon="solar:play-circle-bold-duotone" style="font-size: 1.3em;"></iconify-icon>
                                                 Commencer
-                                                <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
                                             </a>
                                         </div>
                                     </div>
 
                                     <!-- Plan Business (Recommandé) -->
                                     <div class="col-lg-4 col-md-6">
-                                        <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 2px solid var(--hotcodes-primary); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative; transform: scale(1.05);">
-                                            <div class="product-badge" style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);">
-                                                ⭐ RECOMMANDÉ
+                                        <div class="product-card pricing-card-business" style="background: linear-gradient(145deg, rgba(20, 15, 15, 0.95), rgba(25, 15, 10, 0.9)); backdrop-filter: blur(20px); border: 2px solid var(--hotcodes-primary); border-radius: 24px; padding: 2.5rem; height: 100%; position: relative; transform: scale(1.05); box-shadow: 0 12px 50px rgba(255, 107, 53, 0.3);">
+                                            <!-- Animated glow effect -->
+                                            <div style="position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 107, 53, 0.12) 0%, transparent 60%); pointer-events: none; overflow: hidden; border-radius: 24px;"></div>
+
+                                            <!-- Badge RECOMMANDÉ with pulse animation -->
+                                            <div class="pricing-badge-recommended" style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 0.625rem 1.75rem; border-radius: 25px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; z-index: 10; white-space: nowrap; min-width: fit-content; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);">
+                                                <iconify-icon icon="solar:star-bold-duotone" style="font-size: 1.2em; flex-shrink: 0;"></iconify-icon>
+                                                RECOMMANDÉ
                                             </div>
 
-                                            <div class="mb-4 mt-3">
-                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                            <div class="mb-4 mt-3" style="position: relative; z-index: 1;">
+                                                <h3 style="font-size: 1.75rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">
                                                     Business
                                                 </h3>
-                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">
                                                     Pour les PME en croissance
                                                 </p>
                                             </div>
 
-                                            <div class="mb-4">
-                                                <div style="font-size: 3rem; font-weight: 700; color: var(--hotcodes-primary); line-height: 1;">
+                                            <div class="mb-4" style="position: relative; z-index: 1;">
+                                                <div class="pricing-price-text" style="font-size: 3.75rem; font-weight: 900; color: var(--hotcodes-primary); line-height: 1;">
                                                     75 000
-                                                    <span style="font-size: 1.25rem; font-weight: 400; color: rgba(255,255,255,0.6);">FCFA/mois</span>
+                                                    <span style="font-size: 1.25rem; font-weight: 400; color: rgba(255,255,255,0.6); letter-spacing: 0;">FCFA/mois</span>
                                                 </div>
                                             </div>
 
-                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    5 utilisateurs
+                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem; position: relative; z-index: 1;">
+                                                <li style="color: rgba(255,255,255,0.9); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span style="font-weight: 500;">5 utilisateurs</span>
                                                 </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Tous les modules
+                                                <li style="color: rgba(255,255,255,0.9); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span style="font-weight: 500;">Tous les modules</span>
                                                 </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    50 Go de stockage
+                                                <li style="color: rgba(255,255,255,0.9); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span style="font-weight: 500;">Support prioritaire</span>
                                                 </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Support prioritaire
-                                                </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Formation complète
-                                                </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Personnalisation incluse
+                                                <li style="color: rgba(255,255,255,0.9); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-primary); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span style="font-weight: 500;">Formation complète</span>
                                                 </li>
                                             </ul>
 
-                                            <a href="/contact?plan=business" style="display: block; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);">
+                                            <a href="/contact?plan=business" class="pricing-btn-primary" style="display: flex; align-items: center; justify-content: center; gap: 0.625rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1.25rem 1.75rem; border-radius: 14px; text-decoration: none; text-align: center; font-weight: 700; box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4); position: relative; z-index: 1;">
+                                                <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: 1.4em;"></iconify-icon>
                                                 Essai Gratuit 30 Jours
-                                                <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
                                             </a>
                                         </div>
                                     </div>
 
                                     <!-- Plan Enterprise -->
                                     <div class="col-lg-4 col-md-6">
-                                        <div class="product-card" style="background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 20px; padding: 2.5rem; height: 100%; position: relative;">
-                                            <div class="mb-4">
-                                                <h3 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">
+                                        <div class="product-card pricing-card-enterprise" style="background: linear-gradient(145deg, rgba(15, 15, 15, 0.9), rgba(20, 18, 10, 0.8)); backdrop-filter: blur(15px); border: 1px solid rgba(255, 215, 0, 0.4); border-radius: 24px; padding: 2.5rem; height: 100%; position: relative; overflow: hidden; box-shadow: 0 8px 30px rgba(255, 215, 0, 0.15);">
+                                            <!-- Subtle gold glow effect -->
+                                            <div style="position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%); pointer-events: none;"></div>
+
+                                            <!-- Badge "PREMIUM" -->
+                                            <div style="position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, #FFD700, #FFA500); color: #1a1a1a; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);">
+                                                <iconify-icon icon="solar:crown-bold-duotone" style="font-size: 1em;"></iconify-icon>
+                                                Premium
+                                            </div>
+
+                                            <div class="mb-4" style="position: relative; z-index: 1;">
+                                                <h3 style="font-size: 1.75rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">
                                                     Enterprise
                                                 </h3>
-                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                                                <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">
                                                     Pour les grandes structures
                                                 </p>
                                             </div>
 
-                                            <div class="mb-4">
-                                                <div style="font-size: 2.5rem; font-weight: 700; color: var(--hotcodes-accent); line-height: 1;">
+                                            <div class="mb-4" style="position: relative; z-index: 1;">
+                                                <div class="pricing-price-text-accent" style="font-size: 3rem; font-weight: 800; color: var(--hotcodes-accent); line-height: 1;">
                                                     Sur devis
                                                 </div>
-                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-top: 0.5rem;">
+                                                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-top: 0.75rem;">
                                                     Tarification personnalisée
                                                 </p>
                                             </div>
 
-                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Utilisateurs illimités
+                                            <ul style="list-style: none; padding: 0; margin-bottom: 2rem; position: relative; z-index: 1;">
+                                                <li style="color: rgba(255,255,255,0.85); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span>Utilisateurs illimités</span>
                                                 </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Modules personnalisés
+                                                <li style="color: rgba(255,255,255,0.85); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span>Modules personnalisés</span>
                                                 </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Stockage illimité
+                                                <li style="color: rgba(255,255,255,0.85); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span>Support dédié 24/7</span>
                                                 </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Support dédié 24/7
-                                                </li>
-                                                <li style="color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.75rem; position: relative;">
-                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); position: absolute; left: 0; top: 2px; font-size: 1.2em;"></iconify-icon>
-                                                    Développement sur mesure
+                                                <li style="color: rgba(255,255,255,0.85); margin-bottom: 0.875rem; padding-left: 2rem; position: relative; display: flex; align-items: center; gap: 0.75rem;">
+                                                    <iconify-icon icon="solar:check-circle-bold-duotone" style="color: var(--hotcodes-accent); font-size: 1.3rem; flex-shrink: 0;"></iconify-icon>
+                                                    <span>Développement sur mesure</span>
                                                 </li>
                                             </ul>
 
-                                            <a href="/contact?plan=enterprise" style="display: block; background: rgba(255, 215, 0, 0.1); color: var(--hotcodes-accent); padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-align: center; font-weight: 500; border: 1px solid var(--hotcodes-accent); transition: all 0.3s ease;">
+                                            <a href="/contact?plan=enterprise" class="pricing-btn-accent" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: rgba(255, 215, 0, 0.1); color: var(--hotcodes-accent); padding: 1.125rem 1.5rem; border-radius: 14px; text-decoration: none; text-align: center; font-weight: 600; border: 1px solid var(--hotcodes-accent); position: relative; z-index: 1;">
+                                                <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 1.3em;"></iconify-icon>
                                                 Nous Contacter
-                                                <iconify-icon icon="solar:arrow-right-bold-duotone" style="font-size: 1.1em; vertical-align: middle;"></iconify-icon>
                                             </a>
                                         </div>
                                     </div>
@@ -531,72 +538,101 @@
                             </div>
                         </section>
 
-                        <!-- Section 5: CTA Final -->
-                        <section id="demo" class="saytu-cta-section py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; z-index: 1; overflow: hidden;">
-                            <div class="cta-background" style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;none&quot;/%3E%3Cpath d=&quot;M0 0L100 100M100 0L0 100&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;1&quot;/%3E%3C/svg%3E'); opacity: 0.3;">
+                        <!-- Section 5: CTA Final - Dark Elegant Design -->
+                        <section id="demo" class="saytu-cta-section py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%); position: relative; z-index: 1; overflow: hidden; min-height: 600px; display: flex; align-items: center;">
+
+                            <!-- Subtle Background Elements -->
+                            <div class="cta-background" style="position: absolute; inset: 0; opacity: 0.08;">
+                                <!-- Subtle Gradient Orbs -->
+                                <div style="position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(255,107,53,0.3) 0%, transparent 70%); top: -200px; left: -200px; filter: blur(80px);"></div>
+                                <div style="position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(247,147,30,0.25) 0%, transparent 70%); bottom: -150px; right: -150px; filter: blur(80px);"></div>
+
+                                <!-- Subtle Grid Pattern -->
+                                <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 50px 50px;"></div>
                             </div>
 
                             <div class="container py-5" style="position: relative; z-index: 2;">
                                 <div class="row justify-content-center">
-                                    <div class="col-lg-8 text-center">
-                                        <div class="mb-4" style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                                            <iconify-icon icon="solar:rocket-2-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
-                                            Offre Spéciale de Lancement
+                                    <div class="col-lg-10 text-center">
+
+                                        <!-- Badge Minimal -->
+                                        <div class="mb-4" style="display: inline-block;">
+                                            <div style="background: rgba(255,107,53,0.1); color: #FF6B35; padding: 0.6rem 1.5rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,107,53,0.2);">
+                                                <iconify-icon icon="mingcute:message-3-fill" style="font-size: 1.1em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Contactez-nous
+                                            </div>
                                         </div>
 
-                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-                                            Essayez Saytu Gratuitement Pendant 30 Jours
+                                        <!-- Title Clean -->
+                                        <h2 class="mb-4" style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.5px;">
+                                            Parlons de Votre <span style="color: #FF6B35;">Projet</span>
                                         </h2>
-                                        <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin-left: auto; margin-right: auto;">
-                                            Découvrez comment Saytu peut transformer la gestion de votre entreprise. Sans engagement, sans carte bancaire.
+
+                                        <!-- Description Clean -->
+                                        <p class="mb-5" style="font-size: 1.15rem; color: rgba(255,255,255,0.7); max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                                            Notre équipe est à votre écoute pour discuter de vos besoins et vous<br/>
+proposer des solutions adaptées
                                         </p>
 
-                                        <div class="cta-actions d-flex gap-3 justify-content-center flex-wrap mb-4">
-                                            <a href="/contact?action=trial" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                                                <iconify-icon icon="solar:play-circle-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
-                                                Démarrer l'Essai Gratuit
-                                            </a>
-                                            <a href="/contact?action=demo" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid white; transition: all 0.3s ease;">
-                                                <iconify-icon icon="solar:videocamera-record-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
-                                                Demander une Démo
+                                        <!-- CTA Button Simple -->
+                                        <div class="cta-actions mb-5">
+                                            <a href="/contact" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
+                                                <iconify-icon icon="mingcute:send-fill" style="font-size: 1.3em;"></iconify-icon>
+                                                <span>Envoyez-nous un Message</span>
                                             </a>
                                         </div>
 
-                                        <div class="cta-features row g-3 mt-4" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+                                        <!-- Contact Info Cards - Dark Elegant -->
+                                        <div class="cta-features row g-4 mt-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">
                                             <div class="col-md-4">
-                                                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 12px; padding: 1rem;">
-                                                    <iconify-icon icon="solar:shield-check-bold-duotone" style="font-size: 2rem; color: white; margin-bottom: 0.5rem;"></iconify-icon>
-                                                    <p style="color: white; font-size: 0.875rem; margin: 0; font-weight: 500;">
-                                                        Sans Engagement
+                                                <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
+                                                    <iconify-icon icon="mingcute:location-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
+                                                    <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Adresse</p>
+                                                    <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">
+                                                        Dakar, Sénégal
                                                     </p>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 12px; padding: 1rem;">
-                                                    <iconify-icon icon="solar:user-speak-bold-duotone" style="font-size: 2rem; color: white; margin-bottom: 0.5rem;"></iconify-icon>
-                                                    <p style="color: white; font-size: 0.875rem; margin: 0; font-weight: 500;">
-                                                        Support Inclus
+                                                <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
+                                                    <iconify-icon icon="mingcute:phone-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
+                                                    <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Téléphone</p>
+                                                    <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">
+                                                        +221 77 586 79 68
                                                     </p>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 12px; padding: 1rem;">
-                                                    <iconify-icon icon="solar:diploma-bold-duotone" style="font-size: 2rem; color: white; margin-bottom: 0.5rem;"></iconify-icon>
-                                                    <p style="color: white; font-size: 0.875rem; margin: 0; font-weight: 500;">
-                                                        Formation Gratuite
+                                                <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
+                                                    <iconify-icon icon="mingcute:mail-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
+                                                    <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Email</p>
+                                                    <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">
+                                                        contact@hotcodes.sn
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-top: 2rem;">
-                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Accès complet à toutes les fonctionnalités •
-                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Données sécurisées •
-                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Annulation en 1 clic
-                                        </p>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- CSS Animations -->
+                            <style>
+                                .cta-btn-primary:hover {
+                                    transform: translateY(-3px);
+                                    box-shadow: 0 15px 40px rgba(255,107,53,0.5) !important;
+                                }
+
+                                .feature-card:hover {
+                                    transform: translateY(-5px);
+                                    background: rgba(255,255,255,0.05) !important;
+                                    border-color: rgba(255,107,53,0.3) !important;
+                                }
+
+                                @media (max-width: 768px) {
+                                    .saytu-cta-section { min-height: 500px !important; }
+                                }
+                            </style>
                         </section>
 
                         <!-- Section 6: FAQ -->

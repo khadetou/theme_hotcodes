@@ -6,7 +6,7 @@
 // Main Scroll Section Container
 .hotcodes-scroll-section {
   position: relative;
-  min-height: 400vh; // Creates scroll space for 4 states
+  min-height: 800vh; // Creates scroll space for 8 states (100vh per state)
   padding-bottom: 100px; // Ensure last state is fully visible on desktop
   background: var(--bg-darker);
   overflow: visible;
@@ -14,26 +14,34 @@
 
   // Ambient glow effects (Fire-style)
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 20%;
     left: 10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(255, 107, 53, 0.15) 0%,
+      transparent 70%
+    );
     filter: blur(80px);
     pointer-events: none;
     z-index: 0;
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 20%;
     right: 10%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(255, 69, 0, 0.12) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(255, 69, 0, 0.12) 0%,
+      transparent 70%
+    );
     filter: blur(80px);
     pointer-events: none;
     z-index: 0;
@@ -77,8 +85,7 @@
       width: 100%;
       opacity: 0;
       visibility: hidden;
-      transition:
-        opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
         visibility 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 
       &.active {
@@ -97,20 +104,35 @@
       text-transform: uppercase;
       color: var(--hotcodes-primary);
       margin-bottom: 20px;
+
+      // Ensure iconify icons are visible
+      iconify-icon {
+        display: inline-block !important;
+        vertical-align: middle;
+        color: var(--hotcodes-primary) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        width: 1.2em !important;
+        height: 1.2em !important;
+        min-width: 1.2em !important;
+        min-height: 1.2em !important;
+        flex-shrink: 0;
+        font-size: inherit !important;
+      }
     }
 
     .scroll-heading {
       font-size: clamp(2.5rem, 5vw, 4rem); // Up to 64px
       font-weight: 300; // Thin, futuristic weight
-      font-family: 'Space Grotesk', 'Outfit', 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: "Space Grotesk", "Outfit", "Sora", -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.1;
       letter-spacing: -0.02em;
       margin: 0 0 20px 0;
 
       // Solid white color with subtle text shadow for fire effect
       color: #ffffff;
-      text-shadow:
-        0 0 20px rgba(255, 107, 53, 0.3),
+      text-shadow: 0 0 20px rgba(255, 107, 53, 0.3),
         0 0 40px rgba(255, 107, 53, 0.2);
 
       // Word animation wrapper
@@ -152,8 +174,7 @@
       height: 500px;
       opacity: 0;
       visibility: hidden;
-      transition:
-        opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
         visibility 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 
       &.active {
@@ -172,8 +193,7 @@
       border: 1px solid var(--border-color);
       border-radius: 24px;
       overflow: hidden;
-      box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.5),
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
       position: relative;
 
@@ -201,19 +221,35 @@
       animation: gradientPulse 4s ease-in-out infinite;
 
       &.gradient-1 {
-        background: radial-gradient(circle at 30% 30%, rgba(255, 107, 53, 0.3) 0%, transparent 60%);
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(255, 107, 53, 0.3) 0%,
+          transparent 60%
+        );
       }
 
       &.gradient-2 {
-        background: radial-gradient(circle at 70% 40%, rgba(255, 69, 0, 0.3) 0%, transparent 60%);
+        background: radial-gradient(
+          circle at 70% 40%,
+          rgba(255, 69, 0, 0.3) 0%,
+          transparent 60%
+        );
       }
 
       &.gradient-3 {
-        background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.25) 0%, transparent 60%);
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(255, 215, 0, 0.25) 0%,
+          transparent 60%
+        );
       }
 
       &.gradient-4 {
-        background: radial-gradient(circle at 60% 60%, rgba(255, 107, 53, 0.28) 0%, transparent 60%);
+        background: radial-gradient(
+          circle at 60% 60%,
+          rgba(255, 107, 53, 0.28) 0%,
+          transparent 60%
+        );
       }
     }
 
@@ -227,7 +263,11 @@
 
       .grid-item {
         aspect-ratio: 1;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.02)
+        );
         border: 1px solid var(--border-color);
         border-radius: 16px;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -236,10 +276,14 @@
 
         // Subtle inner glow (Fire theme)
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           inset: 0;
-          background: radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+          background: radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 107, 53, 0.1) 0%,
+            transparent 70%
+          );
           opacity: 0;
           transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -283,10 +327,14 @@
 
         // Subtle screen glow (Fire theme)
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           inset: 0;
-          background: radial-gradient(circle at 50% 30%, rgba(255, 107, 53, 0.08) 0%, transparent 60%);
+          background: radial-gradient(
+            circle at 50% 30%,
+            rgba(255, 107, 53, 0.08) 0%,
+            transparent 60%
+          );
         }
       }
     }
@@ -308,13 +356,17 @@
 
         // Animated fill bar using ::after pseudo-element
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           top: 0;
           height: 100%;
           width: 0;
-          background: linear-gradient(90deg, var(--hotcodes-primary), var(--hotcodes-secondary));
+          background: linear-gradient(
+            90deg,
+            var(--hotcodes-primary),
+            var(--hotcodes-secondary)
+          );
           border-radius: 7px;
           transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -324,11 +376,19 @@
           animation: fillBar1 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
         &:nth-child(2)::after {
-          background: linear-gradient(90deg, var(--hotcodes-secondary), var(--hotcodes-accent));
+          background: linear-gradient(
+            90deg,
+            var(--hotcodes-secondary),
+            var(--hotcodes-accent)
+          );
           animation: fillBar2 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
         }
         &:nth-child(3)::after {
-          background: linear-gradient(90deg, var(--hotcodes-accent), var(--hotcodes-primary));
+          background: linear-gradient(
+            90deg,
+            var(--hotcodes-accent),
+            var(--hotcodes-primary)
+          );
           animation: fillBar3 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
         }
       }
@@ -360,7 +420,11 @@
 
       .code-line {
         height: 10px;
-        background: linear-gradient(90deg, var(--hotcodes-primary), var(--hotcodes-secondary));
+        background: linear-gradient(
+          90deg,
+          var(--hotcodes-primary),
+          var(--hotcodes-secondary)
+        );
         border-radius: 5px;
         margin-bottom: 14px;
         opacity: 0;
@@ -408,7 +472,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     // Show when scroll section is in viewport
     &.visible {
@@ -445,8 +509,9 @@
   @media (max-width: 1024px) {
     // Remove sticky positioning - make it flow normally
     position: relative;
+    min-height: auto !important; // Override the 800vh for mobile
     height: auto;
-    padding: 60px 0 80px 0; // Added bottom padding to ensure last card is fully visible
+    padding: 40px 0 40px 0; // Reduced padding for mobile
 
     // Disable ambient glows on mobile for cleaner look
     &::before,
@@ -484,8 +549,8 @@
         transform: none;
         opacity: 1;
         visibility: visible;
-        margin-bottom: 40px;
-        padding: 30px;
+        margin-bottom: 20px; // Reduced from 40px
+        padding: 20px; // Reduced from 30px
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 107, 53, 0.1);
         border-radius: 16px;
@@ -510,34 +575,6 @@
       display: none; // Hide the separate visual container on mobile
     }
 
-    // Add small visual preview inside each text card
-    .scroll-state {
-      .scroll-state-inner {
-        position: relative;
-      }
-
-      // Optional: Add small icon or visual indicator per state
-      &[data-state="1"] .scroll-label::before {
-        content: "🎨";
-        margin-right: 8px;
-      }
-
-      &[data-state="2"] .scroll-label::before {
-        content: "📱";
-        margin-right: 8px;
-      }
-
-      &[data-state="3"] .scroll-label::before {
-        content: "⚡";
-        margin-right: 8px;
-      }
-
-      &[data-state="4"] .scroll-label::before {
-        content: "💻";
-        margin-right: 8px;
-      }
-    }
-
     // Hide progress indicator on mobile
     .scroll-progress-indicator {
       display: none;
@@ -546,7 +583,7 @@
 
   // Mobile refinements
   @media (max-width: 768px) {
-    padding: 40px 0 60px 0; // Increased bottom padding for mobile
+    padding: 30px 0 30px 0; // Reduced padding for mobile
 
     .scroll-section-wrapper {
       padding: 0 4%;
@@ -554,8 +591,8 @@
 
     .scroll-text-container {
       .scroll-state {
-        padding: 24px;
-        margin-bottom: 30px;
+        padding: 18px; // Reduced from 24px
+        margin-bottom: 16px; // Reduced from 30px
       }
 
       .scroll-label {
@@ -564,20 +601,20 @@
       }
 
       .scroll-heading {
-        font-size: 1.75rem !important;
-        margin-bottom: 14px;
+        font-size: 1.5rem !important; // Reduced from 1.75rem
+        margin-bottom: 10px; // Reduced from 14px
       }
 
       .scroll-description {
-        font-size: 15px !important;
-        line-height: 1.6;
+        font-size: 14px !important; // Reduced from 15px
+        line-height: 1.5; // Reduced from 1.6
       }
     }
   }
 
   // Small mobile refinements
   @media (max-width: 480px) {
-    padding: 30px 0 50px 0; // Increased bottom padding for small mobile
+    padding: 24px 0 24px 0; // Reduced padding for small mobile
 
     .scroll-section-wrapper {
       padding: 0 4%;
@@ -585,8 +622,8 @@
 
     .scroll-text-container {
       .scroll-state {
-        padding: 20px;
-        margin-bottom: 24px;
+        padding: 16px; // Reduced from 20px
+        margin-bottom: 14px; // Reduced from 24px
       }
 
       .scroll-label {
@@ -595,12 +632,12 @@
       }
 
       .scroll-heading {
-        font-size: 1.5rem !important;
-        margin-bottom: 12px;
+        font-size: 1.35rem !important; // Reduced from 1.5rem
+        margin-bottom: 8px; // Reduced from 12px
       }
 
       .scroll-description {
-        font-size: 14px !important;
+        font-size: 13px !important; // Reduced from 14px
         line-height: 1.5;
       }
     }
@@ -639,7 +676,8 @@
 }
 
 @keyframes gradientPulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
     filter: blur(60px);
   }
@@ -661,7 +699,8 @@
 }
 
 @keyframes deviceFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {

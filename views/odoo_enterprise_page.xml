@@ -478,45 +478,98 @@
                             </div>
                         </section>
 
-                        <!-- Section 5: CTA Final -->
-                        <section id="demo" class="enterprise-cta-section py-5" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); position: relative; z-index: 1; overflow: hidden;">
-                            <div class="cta-background" style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h100v100H0z&quot; fill=&quot;none&quot;/%3E%3Cpath d=&quot;M0 0L100 100M100 0L0 100&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;1&quot;/%3E%3C/svg%3E'); opacity: 0.3;">
+                        <!-- Section 5: CTA Final - Dark Elegant -->
+                        <section id="demo" class="enterprise-cta-section py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%); position: relative; z-index: 1; overflow: hidden; min-height: 600px; display: flex; align-items: center;">
+                            <!-- Subtle Background Elements -->
+                            <div class="cta-background" style="position: absolute; inset: 0; opacity: 0.08;">
+                                <!-- Subtle Gradient Orbs -->
+                                <div style="position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(255,107,53,0.3) 0%, transparent 70%); top: -200px; left: -200px; filter: blur(80px);"></div>
+                                <div style="position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(247,147,30,0.25) 0%, transparent 70%); bottom: -150px; right: -150px; filter: blur(80px);"></div>
+                                <!-- Subtle Grid Pattern -->
+                                <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 50px 50px;"></div>
                             </div>
 
                             <div class="container py-5" style="position: relative; z-index: 2;">
                                 <div class="row justify-content-center">
-                                    <div class="col-lg-8 text-center">
-                                        <div class="mb-4" style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                                            <iconify-icon icon="solar:crown-bold-duotone" style="vertical-align: middle; margin-right: 0.25rem;"></iconify-icon>
-                                            Expert Odoo Enterprise
+                                    <div class="col-lg-10 text-center">
+                                        <!-- Badge -->
+                                        <div class="mb-4" style="display: inline-block;">
+                                            <div style="background: rgba(255,107,53,0.1); color: #FF6B35; padding: 0.6rem 1.5rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,107,53,0.2);">
+                                                <iconify-icon icon="mingcute:message-3-fill" style="font-size: 1.1em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
+                                                Contactez-nous
+                                            </div>
                                         </div>
 
-                                        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 600; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-                                            Prêt à Transformer Votre Entreprise ?
+                                        <!-- Title -->
+                                        <h2 class="mb-4" style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.5px;">
+                                            Parlons de Votre <span style="color: #FF6B35;">Projet Odoo</span>
                                         </h2>
-                                        <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin-left: auto; margin-right: auto;">
-                                            Discutons de vos besoins et découvrez comment Odoo Enterprise peut révolutionner votre gestion.
+
+                                        <!-- Description -->
+                                        <p class="mb-5" style="font-size: 1.15rem; color: rgba(255,255,255,0.7); max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                                            Notre équipe est à votre écoute pour discuter de vos besoins et vous<br/>
+proposer des solutions Odoo Enterprise adaptées
                                         </p>
 
-                                        <div class="cta-actions d-flex gap-3 justify-content-center flex-wrap mb-4">
-                                            <a href="/contact?action=devis-enterprise" style="background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                                                <iconify-icon icon="solar:document-text-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
-                                                Demander un Devis
-                                            </a>
-                                            <a href="/contact?action=demo-enterprise" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid white; transition: all 0.3s ease;">
-                                                <iconify-icon icon="solar:videocamera-record-bold-duotone" style="font-size: 1.2em; vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>
-                                                Voir une Démo
+                                        <!-- CTA Button Simple -->
+                                        <div class="cta-actions mb-5">
+                                            <a href="/contact" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
+                                                <iconify-icon icon="mingcute:send-fill" style="font-size: 1.3em;"></iconify-icon>
+                                                <span>Envoyez-nous un Message</span>
                                             </a>
                                         </div>
 
-                                        <p style="color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-top: 2rem;">
-                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Consultation gratuite •
-                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Devis personnalisé •
-                                            <iconify-icon icon="solar:check-read-bold-duotone" style="vertical-align: middle;"></iconify-icon> Accompagnement complet
-                                        </p>
+                                        <!-- Contact Info Cards - Dark Elegant -->
+                                        <div class="cta-features row g-4 mt-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                                            <div class="col-md-4">
+                                                <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
+                                                    <iconify-icon icon="mingcute:location-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
+                                                    <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Adresse</p>
+                                                    <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">
+                                                        Dakar, Sénégal
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
+                                                    <iconify-icon icon="mingcute:phone-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
+                                                    <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Téléphone</p>
+                                                    <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">
+                                                        +221 77 586 79 68
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
+                                                    <iconify-icon icon="mingcute:mail-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
+                                                    <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Email</p>
+                                                    <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">
+                                                        contact@hotcodes.sn
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- CSS Animations -->
+                            <style>
+                                .cta-btn-primary:hover {
+                                    transform: translateY(-3px);
+                                    box-shadow: 0 15px 40px rgba(255,107,53,0.5) !important;
+                                }
+
+                                .feature-card:hover {
+                                    transform: translateY(-5px);
+                                    background: rgba(255,255,255,0.05) !important;
+                                    border-color: rgba(255,107,53,0.3) !important;
+                                }
+
+                                @media (max-width: 768px) {
+                                    .enterprise-cta-section { min-height: 500px !important; }
+                                }
+                            </style>
                         </section>
 
                         <!-- Section 6: FAQ -->

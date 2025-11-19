@@ -71,98 +71,155 @@ publicWidget.registry.HotCodesNavbar = publicWidget.Widget.extend({
     this._initOdooMegaMenuBehavior();
   },
 
-  _initOdooMegaMenuBehavior: function () {
-    const megaMenuToggles = this.el.querySelectorAll(".o_mega_menu_toggle");
-    const isMobile = () => window.innerWidth < 992;
+  _initDesktopMegaMenuHoverDelay: function () {
+    // Only apply on desktop (min-width: 992px)
+    if (window.innerWidth < 992) return;
 
-    megaMenuToggles.forEach((toggle) => {
+    const navItems = this.el.querySelectorAll(".nav-item.position-static");
+    const closeDelay = 300; // 300ms delay before closing
+
+    navItems.forEach((navItem) => {
+      const megaMenu = navItem.querySelector(".hotcodes-mega-desktop");
+      if (!megaMenu) return;
+
+      let closeTimeout = null;
+
+      // When mouse leaves the nav item
+      navItem.addEventListener("mouseleave", () => {
+        closeTimeout = setTimeout(() => {
+          megaMenu.style.opacity = "0";
+          megaMenu.style.visibility = "hidden";
+          megaMenu.style.pointerEvents = "none";
+        }, closeDelay);
+      });
+
+      // When mouse enters the nav item or mega menu, cancel close
+      const cancelClose = () => {
+        if (closeTimeout) {
+          clearTimeout(closeTimeout);
+          closeTimeout = null;
+        }
+        megaMenu.style.opacity = "1";
+        megaMenu.style.visibility = "visible";
+        megaMenu.style.pointerEvents = "all";
+      };
+
+      navItem.addEventListener("mouseenter", cancelClose);
+      megaMenu.addEventListener("mouseenter", cancelClose);
+
+      // When mouse leaves the mega menu
+      megaMenu.addEventListener("mouseleave", () => {
+        closeTimeout = setTimeout(() => {
+          megaMenu.style.opacity = "0";
+          megaMenu.style.visibility = "hidden";
+          megaMenu.style.pointerEvents = "none";
+        }, closeDelay);
+      });
+    });
+
+    // Re-initialize on window resize
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (window.innerWidth >= 992) {
+          this._initDesktopMegaMenuHoverDelay();
+        }
+      }, 250);
+    });
+  },
+
+  _initOdooMegaMenuBehavior: function () {
+    // Desktop: Add hover delay to prevent mega menu from closing too quickly
+    this._initDesktopMegaMenuHoverDelay();
+
+    // Mobile-only mega menu click behavior
+    // Desktop uses pure CSS hover (no JavaScript needed)
+    const mobileToggles = this.el.querySelectorAll(
+      ".hotcodes-mega-toggle-mobile"
+    );
+
+    // Helper function to close all mobile mega menus
+    const closeAllMobileMenus = () => {
+      this.el.querySelectorAll(".hotcodes-mega-mobile").forEach((menu) => {
+        menu.classList.remove("show");
+      });
+      this.el
+        .querySelectorAll(".hotcodes-mega-toggle-mobile")
+        .forEach((toggle) => {
+          toggle.classList.remove("active");
+        });
+    };
+
+    mobileToggles.forEach((toggle) => {
+      // Get submenu ID from data attribute
+      const submenuId = toggle.getAttribute("data-submenu-id");
+      if (!submenuId) return;
+
+      // Find the associated mobile mega menu
       const navItem = toggle.closest(".nav-item");
-      const megaMenu = navItem?.querySelector(".o_mega_menu");
+      const megaMenu = navItem?.querySelector(
+        `.hotcodes-mega-mobile[data-submenu-id="${submenuId}"]`
+      );
 
       if (!navItem || !megaMenu) return;
 
-      let hoverTimeout;
+      // Click handler for mobile
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
-      // Show mega menu
-      const showMenu = () => {
-        clearTimeout(hoverTimeout);
-        megaMenu.classList.add("show");
-        toggle.classList.add("show");
-        toggle.setAttribute("aria-expanded", "true");
-      };
+        // Close all other mobile mega menus
+        this.el.querySelectorAll(".hotcodes-mega-mobile").forEach((menu) => {
+          if (menu !== megaMenu) {
+            menu.classList.remove("show");
+          }
+        });
 
-      // Hide mega menu with delay
-      const hideMenu = () => {
-        hoverTimeout = setTimeout(() => {
-          megaMenu.classList.remove("show");
-          toggle.classList.remove("show");
-          toggle.setAttribute("aria-expanded", "false");
-        }, 100);
-      };
-
-      // Toggle mega menu (for mobile click)
-      const toggleMenu = () => {
-        const isOpen = megaMenu.classList.contains("show");
-        if (isOpen) {
-          hideMenu();
-        } else {
-          // Close other open mega menus on mobile
-          this.el.querySelectorAll(".o_mega_menu.show").forEach((menu) => {
-            if (menu !== megaMenu) {
-              menu.classList.remove("show");
-              const otherToggle = menu
-                .closest(".nav-item")
-                ?.querySelector(".o_mega_menu_toggle");
-              if (otherToggle) {
-                otherToggle.classList.remove("show");
-                otherToggle.setAttribute("aria-expanded", "false");
-              }
+        // Remove active class from all other toggles
+        this.el
+          .querySelectorAll(".hotcodes-mega-toggle-mobile")
+          .forEach((t) => {
+            if (t !== toggle) {
+              t.classList.remove("active");
             }
           });
-          showMenu();
-        }
-      };
 
-      // Desktop: Hover behavior
-      const enableDesktopHover = () => {
-        navItem.addEventListener("mouseenter", showMenu);
-        navItem.addEventListener("mouseleave", hideMenu);
-        megaMenu.addEventListener("mouseenter", showMenu);
-        megaMenu.addEventListener("mouseleave", hideMenu);
-      };
-
-      // Mobile: Click behavior
-      const enableMobileClick = () => {
-        toggle.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          toggleMenu();
-        });
-      };
-
-      // Initialize based on screen size
-      if (isMobile()) {
-        enableMobileClick();
-      } else {
-        enableDesktopHover();
-        // Prevent click on desktop
-        toggle.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-        });
-      }
-
-      // Handle window resize
-      let resizeTimeout;
-      window.addEventListener("resize", () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-          // Close all menus on resize
+        // Toggle current menu
+        const isOpen = megaMenu.classList.contains("show");
+        if (isOpen) {
           megaMenu.classList.remove("show");
-          toggle.classList.remove("show");
-          toggle.setAttribute("aria-expanded", "false");
-        }, 250);
+          toggle.classList.remove("active");
+        } else {
+          megaMenu.classList.add("show");
+          toggle.classList.add("active");
+        }
       });
+
+      // Prevent clicks inside mega menu from closing it
+      megaMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+    });
+
+    // Click-outside handler: Close mobile mega menus when clicking outside
+    document.addEventListener("click", (e) => {
+      // Check if click is outside all mobile mega menus and toggles
+      const isClickInsideMegaMenu = e.target.closest(".hotcodes-mega-mobile");
+      const isClickOnToggle = e.target.closest(".hotcodes-mega-toggle-mobile");
+
+      if (!isClickInsideMegaMenu && !isClickOnToggle) {
+        closeAllMobileMenus();
+      }
+    });
+
+    // Handle window resize - close all mobile menus
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        closeAllMobileMenus();
+      }, 250);
     });
   },
 
@@ -403,7 +460,101 @@ publicWidget.registry.HotCodesHero = publicWidget.Widget.extend({
   },
 });
 
+// Widget for Pricing Cards (only on pages that have them)
+publicWidget.registry.HotCodesPricing = publicWidget.Widget.extend({
+  selector:
+    ".pricing-card-starter, .pricing-card-business, .pricing-card-enterprise",
+  disabledInEditableMode: false,
+
+  start: function () {
+    this._super(...arguments);
+
+    if (this.editableMode || this.$el.hasClass("o_editable")) {
+      return;
+    }
+
+    this._initPricingInteractions();
+  },
+
+  _initPricingInteractions: function () {
+    const card = this.el;
+
+    // Add magnetic effect on mouse move (subtle)
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const deltaX = (x - centerX) / centerX;
+      const deltaY = (y - centerY) / centerY;
+
+      // Subtle tilt effect (max 3 degrees)
+      const tiltX = deltaY * 3;
+      const tiltY = -deltaX * 3;
+
+      card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-8px) scale(1.02)`;
+    });
+
+    // Reset on mouse leave
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+
+    // Add ripple effect on button click
+    const buttons = card.querySelectorAll(
+      ".pricing-btn-primary, .pricing-btn-secondary, .pricing-btn-accent"
+    );
+    buttons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const ripple = document.createElement("span");
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+
+        ripple.style.cssText = `
+          position: absolute;
+          width: ${size}px;
+          height: ${size}px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.5);
+          left: ${x}px;
+          top: ${y}px;
+          pointer-events: none;
+          transform: scale(0);
+          animation: ripple-effect 0.6s ease-out;
+        `;
+
+        button.style.position = "relative";
+        button.style.overflow = "hidden";
+        button.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+  },
+});
+
+// Add ripple animation to CSS dynamically
+if (!document.getElementById("pricing-ripple-animation")) {
+  const style = document.createElement("style");
+  style.id = "pricing-ripple-animation";
+  style.textContent = `
+    @keyframes ripple-effect {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 export default {
   HotCodesNavbar: publicWidget.registry.HotCodesNavbar,
   HotCodesHero: publicWidget.registry.HotCodesHero,
+  HotCodesPricing: publicWidget.registry.HotCodesPricing,
 };
