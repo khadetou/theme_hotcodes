@@ -513,7 +513,7 @@ proposer des solutions Odoo Enterprise adaptées
 
                                         <!-- CTA Button Simple -->
                                         <div class="cta-actions mb-5">
-                                            <a href="/contact" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
+                                            <a href="/contactus" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
                                                 <iconify-icon icon="mingcute:send-fill" style="font-size: 1.3em;"></iconify-icon>
                                                 <span>Envoyez-nous un Message</span>
                                             </a>

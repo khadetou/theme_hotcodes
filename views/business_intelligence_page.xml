@@ -18,38 +18,38 @@
                             <t t-set="hero_subtitle" t-value="'Tableaux de bord interactifs, rapports personnalisés et analyses avancées pour piloter votre activité avec des données fiables en temps réel.'" />
                             <t t-set="hero_description" t-value="'De la collecte à la visualisation, nous créons des solutions BI sur mesure qui transforment vos données brutes en insights actionnables.'" />
                             <t t-set="hero_cta_primary_text" t-value="'Démarrer Votre Projet BI'" />
-                            <t t-set="hero_cta_primary_url" t-value="'/contact'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contactus'" />
                             <t t-set="hero_cta_secondary_text" t-value="'Voir Nos Solutions'" />
                             <t t-set="hero_cta_secondary_url" t-value="'#solutions'" />
                             <t t-set="hero_note" t-value="'✓ Dashboards Temps Réel • ✓ Rapports Automatisés • ✓ Analytics Avancés'" />
                         </t>
 
                         <!-- Stats Section -->
-                        <section class="py-5" style="background: linear-gradient(180deg, #000 0%, #0a0a0a 100%); position: relative;">
+                        <section class="bi-stats-section py-5" style="background: linear-gradient(180deg, #000 0%, #0a0a0a 100%); position: relative;">
                             <div class="container py-5">
                                 <div class="row g-4 text-center">
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="p-4">
-                                            <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">500+</div>
-                                            <div style="color: rgba(255,255,255,0.7); font-size: 1rem;">Dashboards Créés</div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <div class="stat-card p-4">
+                                            <div class="stat-number" style="font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">500+</div>
+                                            <div class="stat-label" style="color: rgba(255,255,255,0.7);">Dashboards Créés</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="p-4">
-                                            <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">2M+</div>
-                                            <div style="color: rgba(255,255,255,0.7); font-size: 1rem;">Données Analysées/Jour</div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <div class="stat-card p-4">
+                                            <div class="stat-number" style="font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">2M+</div>
+                                            <div class="stat-label" style="color: rgba(255,255,255,0.7);">Données Analysées/Jour</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="p-4">
-                                            <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">98%</div>
-                                            <div style="color: rgba(255,255,255,0.7); font-size: 1rem;">Satisfaction Client</div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <div class="stat-card p-4">
+                                            <div class="stat-number" style="font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">98%</div>
+                                            <div class="stat-label" style="color: rgba(255,255,255,0.7);">Satisfaction Client</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="p-4">
-                                            <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">24/7</div>
-                                            <div style="color: rgba(255,255,255,0.7); font-size: 1rem;">Monitoring Temps Réel</div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <div class="stat-card p-4">
+                                            <div class="stat-number" style="font-weight: 700; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">24/7</div>
+                                            <div class="stat-label" style="color: rgba(255,255,255,0.7);">Monitoring Temps Réel</div>
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                         </section>
 
                         <!-- Solutions Section -->
-                        <section id="solutions" class="py-5" style="background: var(--bg-dark); position: relative;">
+                        <section id="solutions" class="bi-solutions-section py-5" style="background: var(--bg-dark); position: relative;">
                             <div class="container py-5">
                                 <div class="text-center mb-5">
                                     <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">NOS SOLUTIONS</span>
@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="row g-4">
                                     <div class="col-lg-4 col-md-6">
-                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                        <div class="solution-card h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 16px; transition: all 0.3s ease;">
                                             <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255,107,53,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                                                 <iconify-icon icon="solar:chart-2-bold-duotone" style="font-size: 2rem; color: var(--hotcodes-primary);"></iconify-icon>
                                             </div>
@@ -90,7 +90,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6">
-                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                        <div class="solution-card h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; transition: all 0.3s ease;">
                                             <div class="mb-3" style="width: 60px; height: 60px; background: rgba(138,43,226,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                                                 <iconify-icon icon="solar:graph-new-up-bold-duotone" style="font-size: 2rem; color: #8A2BE2;"></iconify-icon>
                                             </div>
@@ -113,7 +113,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6">
-                                        <div class="h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.2); border-radius: 16px; transition: all 0.3s ease;">
+                                        <div class="solution-card h-100 p-4" style="background: rgba(15,15,15,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.2); border-radius: 16px; transition: all 0.3s ease;">
                                             <div class="mb-3" style="width: 60px; height: 60px; background: rgba(59,130,246,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                                                 <iconify-icon icon="solar:database-bold-duotone" style="font-size: 2rem; color: #3B82F6;"></iconify-icon>
                                             </div>
@@ -140,7 +140,7 @@
                         </section>
 
                         <!-- Technologies Section -->
-                        <section class="py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); position: relative;">
+                        <section class="bi-tech-grid py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); position: relative;">
                             <div class="container py-5">
                                 <div class="text-center mb-5">
                                     <span style="display: inline-block; background: rgba(138,43,226,0.15); border: 1px solid rgba(138,43,226,0.3); color: #8A2BE2; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">TECHNOLOGIES</span>
@@ -150,49 +150,49 @@
                                 </div>
                                 <div class="row g-4">
                                     <div class="col-lg-3 col-md-4 col-6">
-                                        <div class="p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                        <div class="tech-card p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
                                             <iconify-icon icon="simple-icons:powerbi" style="font-size: 3rem; color: #F2C811; margin-bottom: 1rem;"></iconify-icon>
                                             <div style="color: white; font-weight: 600; font-size: 0.95rem;">Power BI</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-6">
-                                        <div class="p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                        <div class="tech-card p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
                                             <iconify-icon icon="simple-icons:tableau" style="font-size: 3rem; color: #E97627; margin-bottom: 1rem;"></iconify-icon>
                                             <div style="color: white; font-weight: 600; font-size: 0.95rem;">Tableau</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-6">
-                                        <div class="p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                        <div class="tech-card p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
                                             <iconify-icon icon="simple-icons:looker" style="font-size: 3rem; color: #4285F4; margin-bottom: 1rem;"></iconify-icon>
                                             <div style="color: white; font-weight: 600; font-size: 0.95rem;">Looker</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-6">
-                                        <div class="p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                        <div class="tech-card p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
                                             <iconify-icon icon="simple-icons:metabase" style="font-size: 3rem; color: #509EE3; margin-bottom: 1rem;"></iconify-icon>
                                             <div style="color: white; font-weight: 600; font-size: 0.95rem;">Metabase</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-6">
-                                        <div class="p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                        <div class="tech-card p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
                                             <iconify-icon icon="simple-icons:apachesuperset" style="font-size: 3rem; color: #20A6C9; margin-bottom: 1rem;"></iconify-icon>
                                             <div style="color: white; font-weight: 600; font-size: 0.95rem;">Superset</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-6">
-                                        <div class="p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                        <div class="tech-card p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
                                             <iconify-icon icon="simple-icons:grafana" style="font-size: 3rem; color: #F46800; margin-bottom: 1rem;"></iconify-icon>
                                             <div style="color: white; font-weight: 600; font-size: 0.95rem;">Grafana</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-6">
-                                        <div class="p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                        <div class="tech-card p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
                                             <iconify-icon icon="simple-icons:elasticsearch" style="font-size: 3rem; color: #005571; margin-bottom: 1rem;"></iconify-icon>
                                             <div style="color: white; font-weight: 600; font-size: 0.95rem;">Elasticsearch</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-6">
-                                        <div class="p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
+                                        <div class="tech-card p-4 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
                                             <iconify-icon icon="simple-icons:python" style="font-size: 3rem; color: #3776AB; margin-bottom: 1rem;"></iconify-icon>
                                             <div style="color: white; font-weight: 600; font-size: 0.95rem;">Python Analytics</div>
                                         </div>
@@ -202,10 +202,10 @@
                         </section>
 
                         <!-- Features Section -->
-                        <section class="py-5" style="background: var(--bg-dark); position: relative;">
+                        <section class="bi-features-section py-5" style="background: var(--bg-dark); position: relative;">
                             <div class="container py-5">
                                 <div class="row align-items-center g-5">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 order-2 order-lg-1">
                                         <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">FONCTIONNALITÉS</span>
                                         <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; color: white; margin-bottom: 1.5rem; line-height: 1.2;">Des Dashboards <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Puissants</span> et Intuitifs</h2>
                                         <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem; line-height: 1.7;">Créez des tableaux de bord qui transforment vos données complexes en visualisations claires et actionnables.</p>
@@ -239,9 +239,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 order-1 order-lg-2">
                                         <!-- Dashboard Mockup -->
-                                        <div style="position: relative; background: rgba(15,15,15,0.95); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; box-shadow: 0 30px 80px rgba(0,0,0,0.5);">
+                                        <div class="dashboard-mockup" style="position: relative; background: rgba(15,15,15,0.95); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; box-shadow: 0 30px 80px rgba(0,0,0,0.5);">
                                             <div class="mb-3">
                                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                                                     <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin: 0;">Performance Overview</h4>
@@ -250,26 +250,26 @@
                                                 <!-- KPI Cards -->
                                                 <div class="row g-3 mb-4">
                                                     <div class="col-6">
-                                                        <div style="background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; padding: 1rem;">
-                                                            <div style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-bottom: 0.5rem;">REVENUE</div>
-                                                            <div style="color: var(--hotcodes-primary); font-size: 1.75rem; font-weight: 700;">$124K</div>
-                                                            <div style="color: #28CA42; font-size: 0.75rem; margin-top: 0.25rem;">
+                                                        <div class="kpi-card" style="background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 10px; padding: 1rem;">
+                                                            <div class="kpi-label" style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-bottom: 0.5rem;">REVENUE</div>
+                                                            <div class="kpi-value" style="color: var(--hotcodes-primary); font-size: 1.75rem; font-weight: 700;">$124K</div>
+                                                            <div class="kpi-change" style="color: #28CA42; font-size: 0.75rem; margin-top: 0.25rem;">
                                                                 <iconify-icon icon="solar:arrow-up-bold" style="font-size: 0.8rem;"></iconify-icon> +18.2%
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
-                                                        <div style="background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; padding: 1rem;">
-                                                            <div style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-bottom: 0.5rem;">USERS</div>
-                                                            <div style="color: #8A2BE2; font-size: 1.75rem; font-weight: 700;">8.4K</div>
-                                                            <div style="color: #28CA42; font-size: 0.75rem; margin-top: 0.25rem;">
+                                                        <div class="kpi-card" style="background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); border-radius: 10px; padding: 1rem;">
+                                                            <div class="kpi-label" style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-bottom: 0.5rem;">USERS</div>
+                                                            <div class="kpi-value" style="color: #8A2BE2; font-size: 1.75rem; font-weight: 700;">8.4K</div>
+                                                            <div class="kpi-change" style="color: #28CA42; font-size: 0.75rem; margin-top: 0.25rem;">
                                                                 <iconify-icon icon="solar:arrow-up-bold" style="font-size: 0.8rem;"></iconify-icon> +24.5%
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!-- Chart -->
-                                                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 1.25rem;">
+                                                <div class="chart-container" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 1.25rem;">
                                                     <div style="color: rgba(255,255,255,0.7); font-size: 0.875rem; margin-bottom: 1rem; font-weight: 500;">Growth Trend</div>
                                                     <div style="display: flex; align-items: flex-end; gap: 0.5rem; height: 120px;">
                                                         <div style="flex: 1; background: linear-gradient(180deg, rgba(255,107,53,0.5), rgba(255,107,53,0.2)); border-radius: 6px 6px 0 0; height: 45%;"></div>
@@ -288,7 +288,7 @@
                         </section>
 
                         <!-- Process Section -->
-                        <section class="py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); position: relative;">
+                        <section class="bi-process-section py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); position: relative;">
                             <div class="container py-5">
                                 <div class="text-center mb-5">
                                     <span style="display: inline-block; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: #3B82F6; padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">NOTRE PROCESSUS</span>
@@ -298,8 +298,8 @@
                                 </div>
                                 <div class="row g-4">
                                     <div class="col-lg-3 col-md-6">
-                                        <div class="text-center p-4">
-                                            <div style="width: 80px; height: 80px; background: rgba(255,107,53,0.15); border: 2px solid rgba(255,107,53,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; position: relative;">
+                                        <div class="process-step text-center p-4">
+                                            <div class="process-number" style="width: 80px; height: 80px; background: rgba(255,107,53,0.15); border: 2px solid rgba(255,107,53,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; position: relative;">
                                                 <span style="font-size: 2rem; font-weight: 700; color: var(--hotcodes-primary);">1</span>
                                             </div>
                                             <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Analyse</h4>
@@ -307,8 +307,8 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-6">
-                                        <div class="text-center p-4">
-                                            <div style="width: 80px; height: 80px; background: rgba(138,43,226,0.15); border: 2px solid rgba(138,43,226,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                                        <div class="process-step text-center p-4">
+                                            <div class="process-number" style="width: 80px; height: 80px; background: rgba(138,43,226,0.15); border: 2px solid rgba(138,43,226,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
                                                 <span style="font-size: 2rem; font-weight: 700; color: #8A2BE2;">2</span>
                                             </div>
                                             <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Design</h4>
@@ -316,8 +316,8 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-6">
-                                        <div class="text-center p-4">
-                                            <div style="width: 80px; height: 80px; background: rgba(59,130,246,0.15); border: 2px solid rgba(59,130,246,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                                        <div class="process-step text-center p-4">
+                                            <div class="process-number" style="width: 80px; height: 80px; background: rgba(59,130,246,0.15); border: 2px solid rgba(59,130,246,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
                                                 <span style="font-size: 2rem; font-weight: 700; color: #3B82F6;">3</span>
                                             </div>
                                             <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Développement</h4>
@@ -325,8 +325,8 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-6">
-                                        <div class="text-center p-4">
-                                            <div style="width: 80px; height: 80px; background: rgba(255,215,0,0.15); border: 2px solid rgba(255,215,0,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                                        <div class="process-step text-center p-4">
+                                            <div class="process-number" style="width: 80px; height: 80px; background: rgba(255,215,0,0.15); border: 2px solid rgba(255,215,0,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
                                                 <span style="font-size: 2rem; font-weight: 700; color: #FFD700;">4</span>
                                             </div>
                                             <h4 style="color: white; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Formation</h4>
@@ -338,7 +338,7 @@
                         </section>
 
                         <!-- CTA Section - Dark Elegant -->
-                        <section class="py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%); position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center;">
+                        <section class="bi-cta-section py-5" style="background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%); position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center;">
                             <div style="position: absolute; inset: 0; opacity: 0.08;">
                                 <div style="position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(255,107,53,0.3) 0%, transparent 70%); top: -200px; left: -200px; filter: blur(80px);"></div>
                                 <div style="position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(247,147,30,0.25) 0%, transparent 70%); bottom: -150px; right: -150px; filter: blur(80px);"></div>
@@ -361,7 +361,7 @@
 proposer des solutions Business Intelligence adaptées
                                         </p>
                                         <div class="mb-5">
-                                            <a href="/contact" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
+                                            <a href="/contactus" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
                                                 <iconify-icon icon="mingcute:send-fill" style="font-size: 1.3em;"></iconify-icon>
                                                 <span>Envoyez-nous un Message</span>
                                             </a>

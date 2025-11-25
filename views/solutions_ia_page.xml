@@ -198,7 +198,7 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                        <a href="/contact" data-motion="magnetic flare" data-magnetic-strength="0.3" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); border-radius: 12px; color: white; text-decoration: none; font-weight: 600;">
+                                        <a href="/contactus" data-motion="magnetic flare" data-magnetic-strength="0.3" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); border-radius: 12px; color: white; text-decoration: none; font-weight: 600;">
                                                 Automatiser mes Emails
                                             <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
                                         </a>
@@ -312,7 +312,7 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                        <a href="/contact" data-motion="magnetic flare" data-magnetic-strength="0.3" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%); border-radius: 12px; color: white; text-decoration: none; font-weight: 600;">
+                                        <a href="/contactus" data-motion="magnetic flare" data-magnetic-strength="0.3" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%); border-radius: 12px; color: white; text-decoration: none; font-weight: 600;">
                                             Automatiser mes Données
                                             <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
                                         </a>
@@ -557,7 +557,7 @@ from scratch
                                     <button style="padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: rgba(255,255,255,0.7); font-size: 0.875rem; cursor: pointer;">Resume</button>
                                     <button style="padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: rgba(255,255,255,0.7); font-size: 0.875rem; cursor: pointer;">Portfolio</button>
                                 </div>
-                                <a href="/contact" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: white; border-radius: 12px; color: #0a0a0a; text-decoration: none; font-weight: 600;">
+                                <a href="/contactus" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: white; border-radius: 12px; color: #0a0a0a; text-decoration: none; font-weight: 600;">
                                         See All AI tools
                                     <iconify-icon icon="solar:arrow-down-linear"></iconify-icon>
                                 </a>
@@ -711,7 +711,7 @@ from scratch
 proposer des solutions d'automatisation et d'IA adaptées
                                     </p>
                                     <div class="mb-5">
-                                        <a href="/contact" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
+                                        <a href="/contactus" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
                                             <iconify-icon icon="mingcute:send-fill" style="font-size: 1.3em;"></iconify-icon>
                                             <span>Envoyez-nous un Message</span>
                                         </a>

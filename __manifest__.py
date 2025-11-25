@@ -105,6 +105,8 @@
             "theme_hotcodes/static/src/scss/survey_custom.scss",
             "theme_hotcodes/static/src/scss/auth_custom.scss",
             "theme_hotcodes/static/src/scss/portal_custom.scss",
+            "theme_hotcodes/static/src/scss/saytu_page.scss",
+            "theme_hotcodes/static/src/scss/business_intelligence_page.scss",
             "theme_hotcodes/static/src/js/main.js",
             "theme_hotcodes/static/src/js/scroll_animation.js",
             "theme_hotcodes/static/src/js/text_animations.js",

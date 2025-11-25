@@ -319,7 +319,7 @@
                                 <h2 class="mb-4" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: white;">Besoin d'Assistance ?</h2>
                                 <p class="mb-4" style="font-size: 1.25rem; color: rgba(255,255,255,0.95); max-width: 600px; margin: 0 auto 2rem;">Notre équipe est prête à vous accompagner. Contactez-nous pour discuter de vos besoins en support.</p>
                                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                                    <a href="/contact" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                                    <a href="/contactus" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: var(--hotcodes-primary); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">
                                         <iconify-icon icon="solar:phone-calling-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
                                         Nous Contacter
                                     </a>

@@ -843,3 +843,28 @@ header {
     }
   }
 }
+
+//------------------------------------------------------------------------------
+// Hero Sections - Uniform Spacing from Header
+//------------------------------------------------------------------------------
+// Add consistent padding-top to all hero sections to create space between header and hero
+// Header height is approximately 70px, so we add 80px padding for breathing room
+
+section[class*="hero-"],
+.hero-floating-cards,
+.hero-particle-network,
+.hero-morphing-blobs,
+.hero-video-background,
+.hero-split-screen,
+.hero-gradient-waves,
+.hero-hexagon-grid,
+.hero-circular-orbit,
+.hero-code-matrix,
+.services-hero {
+  padding-top: 80px !important;
+
+  // Mobile: Reduce padding for smaller screens
+  @media (max-width: 768px) {
+    padding-top: 70px !important;
+  }
+}

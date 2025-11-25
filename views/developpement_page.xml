@@ -18,7 +18,7 @@
                             <t t-set="hero_title_part2" t-value="'Solutions Sur Mesure'" />
                             <t t-set="hero_subtitle" t-value="'Développement d\'applications web, mobiles et modules Odoo personnalisés pour transformer vos idées en solutions digitales performantes et évolutives.'" />
                             <t t-set="hero_cta_primary_text" t-value="'Démarrer un Projet'" />
-                            <t t-set="hero_cta_primary_url" t-value="'/contact?service=developpement'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contactus?service=developpement'" />
                             <t t-set="hero_cta_secondary_text" t-value="'Voir Nos Réalisations'" />
                             <t t-set="hero_cta_secondary_url" t-value="'/realisations'" />
                             <t t-set="hero_note" t-value="'✓ Technologies Modernes • ✓ Code de Qualité • ✓ Support 24/7'" />
@@ -559,7 +559,7 @@ proposer des solutions de développement adaptées
                                         </p>
 
                                         <div class="cta-actions mb-5">
-                                            <a href="/contact" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
+                                            <a href="/contactus" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
                                                 <iconify-icon icon="mingcute:send-fill" style="font-size: 1.3em;"></iconify-icon>
                                                 <span>Envoyez-nous un Message</span>
                                             </a>

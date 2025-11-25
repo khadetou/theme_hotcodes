@@ -55,7 +55,7 @@
 
                             <!-- CTAs -->
                             <div style="display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeInUp 1s ease-out 0.4s backwards;">
-                                <a t-att-href="hero_cta_primary_url or '/contact'" data-motion="magnetic flare" data-magnetic-strength="0.3" class="btn-primary-animated" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: #000; padding: clamp(1rem, 2vw, 1.25rem) clamp(1.5rem, 4vw, 2.5rem); border-radius: 12px; text-decoration: none; font-weight: 600; font-size: clamp(1rem, 2vw, 1.125rem); transition: all 0.3s ease; box-shadow: 0 10px 40px rgba(255,255,255,0.1);">
+                                <a t-att-href="hero_cta_primary_url or '/contactus'" data-motion="magnetic flare" data-magnetic-strength="0.3" class="btn-primary-animated" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: #000; padding: clamp(1rem, 2vw, 1.25rem) clamp(1.5rem, 4vw, 2.5rem); border-radius: 12px; text-decoration: none; font-weight: 600; font-size: clamp(1rem, 2vw, 1.125rem); transition: all 0.3s ease; box-shadow: 0 10px 40px rgba(255,255,255,0.1);">
                                     <t t-out="hero_cta_primary_text or 'Join the program'"/>
                                 </a>
                                 <a t-att-href="hero_cta_secondary_url or '#benefits'" data-motion="magnetic" data-magnetic-strength="0.3" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); color: white; padding: clamp(1rem, 2vw, 1.25rem) clamp(1.5rem, 4vw, 2.5rem); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; text-decoration: none; font-weight: 600; font-size: clamp(1rem, 2vw, 1.125rem); transition: all 0.3s ease;">
@@ -152,7 +152,7 @@
 
                         <!-- CTA Buttons -->
                         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.75rem; animation: slideInLeft 1s ease-out 0.6s backwards;">
-                            <a t-att-href="hero_cta_primary_url or '/contact'" data-motion="magnetic flare" data-magnetic-strength="0.3" class="btn-glow hero-cta-primary" style="position: relative; display: inline-flex; align-items: center; gap: 0.45rem; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.9375rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease; overflow: hidden;">
+                            <a t-att-href="hero_cta_primary_url or '/contactus'" data-motion="magnetic flare" data-magnetic-strength="0.3" class="btn-glow hero-cta-primary" style="position: relative; display: inline-flex; align-items: center; gap: 0.45rem; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.9375rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease; overflow: hidden;">
                                 <span style="position: relative; z-index: 1;">
                                     <t t-out="hero_cta_primary_text or 'Démarrer Maintenant'"/>
                                 </span>
@@ -316,7 +316,7 @@
 
                         <!-- CTA Group -->
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; animation: slideInLeft 1s ease-out 0.6s backwards;">
-                            <a t-att-href="hero_cta_primary_url or '/contact'" style="position: relative; display: inline-flex; align-items: center; gap: 1rem; background: white; color: #000; padding: clamp(1rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 3rem); border-radius: 14px; text-decoration: none; font-weight: 700; font-size: clamp(1rem, 2vw, 1.125rem); box-shadow: 0 20px 60px rgba(255,255,255,0.2); transition: all 0.3s ease; overflow: hidden;">
+                            <a t-att-href="hero_cta_primary_url or '/contactus'" style="position: relative; display: inline-flex; align-items: center; gap: 1rem; background: white; color: #000; padding: clamp(1rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 3rem); border-radius: 14px; text-decoration: none; font-weight: 700; font-size: clamp(1rem, 2vw, 1.125rem); box-shadow: 0 20px 60px rgba(255,255,255,0.2); transition: all 0.3s ease; overflow: hidden;">
                                 <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: clamp(1.25rem, 2vw, 1.5rem);"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Commencer Gratuitement'"/>
                             </a>
@@ -502,7 +502,7 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-10">
                         <!-- Typing Animation Effect -->
-                        <h1 style="font-size: 5rem; font-weight: 900; color: white; line-height: 1.2; margin-bottom: 2rem; animation: fadeInUp 1s ease-out;">
+                        <h1 style="font-size: clamp(2rem, 8vw, 5rem); font-weight: 900; color: white; line-height: 1.2; margin-bottom: 2rem; animation: fadeInUp 1s ease-out;">
                             <t t-esc="hero_title_part1 or 'Créez des'"/>
                             <br/>
                             <span style="position: relative; display: inline-block; color: var(--hotcodes-primary);">
@@ -512,14 +512,14 @@
                             </span>
                         </h1>
 
-                        <p style="font-size: 1.5rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 3rem; line-height: 1.8; animation: fadeInUp 1s ease-out 0.3s backwards;">
+                        <p style="font-size: clamp(1rem, 3vw, 1.5rem); color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 3rem; line-height: 1.8; animation: fadeInUp 1s ease-out 0.3s backwards;">
                             <t t-esc="hero_subtitle or 'Des solutions web innovantes qui transforment vos idées en réalité digitale'"/>
                         </p>
 
                         <!-- CTA with Icon Animation -->
-                        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1s ease-out 0.6s backwards;">
-                            <a t-att-href="hero_cta_primary_url or '/contact'" style="position: relative; display: inline-flex; align-items: center; gap: 1rem; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); color: white; padding: 1.75rem 3.5rem; border-radius: 16px; text-decoration: none; font-weight: 700; font-size: 1.25rem; box-shadow: 0 25px 70px rgba(255,107,53,0.4); transition: all 0.4s ease;">
-                                <iconify-icon icon="solar:rocket-2-bold" style="font-size: 1.75rem; animation: bounce 2s ease-in-out infinite;"></iconify-icon>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1s ease-out 0.6s backwards;">
+                            <a t-att-href="hero_cta_primary_url or '/contactus'" class="hero-cta-btn" style="position: relative; display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: clamp(0.9rem, 2.5vw, 1.125rem); box-shadow: 0 20px 50px rgba(255,107,53,0.3); transition: all 0.4s ease;">
+                                <iconify-icon icon="solar:rocket-2-bold" style="font-size: clamp(1.25rem, 4vw, 1.5rem); animation: bounce 2s ease-in-out infinite;"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Lancer Votre Projet'"/>
                             </a>
                         </div>
@@ -576,7 +576,7 @@
 
                         <!-- CTA Buttons -->
                         <div style="display: flex; gap: 0.875rem; flex-wrap: wrap; margin-bottom: 1.5rem; animation: slideInLeft 1s ease-out 0.6s backwards;">
-                            <a t-att-href="hero_cta_primary_url or '/contact'" style="display: inline-flex; align-items: center; gap: 0.625rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
+                            <a t-att-href="hero_cta_primary_url or '/contactus'" style="display: inline-flex; align-items: center; gap: 0.625rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
                                 <t t-esc="hero_cta_primary_text or 'Get Started'"/>
                                 <iconify-icon icon="solar:arrow-right-bold" style="font-size: 1.2rem;"></iconify-icon>
                             </a>
@@ -781,7 +781,7 @@
 
                         <!-- CTA Buttons -->
                         <div class="d-flex gap-3 mb-4 flex-wrap" style="animation: fadeInUp 0.8s ease-out 0.8s backwards;">
-                            <a t-att-href="hero_cta_primary_url or '/contact'" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
+                            <a t-att-href="hero_cta_primary_url or '/contactus'" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
                                 <iconify-icon icon="solar:phone-calling-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Demander un Support'"/>
                             </a>
@@ -926,7 +926,7 @@
 
                         <!-- CTA Buttons -->
                         <div class="d-flex gap-3 mb-4 flex-wrap" style="animation: fadeInUp 0.8s ease-out 0.8s backwards;">
-                            <a t-att-href="hero_cta_primary_url or '/contact'" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
+                            <a t-att-href="hero_cta_primary_url or '/contactus'" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
                                 <iconify-icon icon="solar:calendar-mark-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Planifier un Audit Gratuit'"/>
                             </a>
@@ -1063,7 +1063,7 @@
                                 <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Découvrir Nos Services'"/>
                             </a>
-                            <a t-att-href="hero_cta_secondary_url or '/contact'" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease;">
+                            <a t-att-href="hero_cta_secondary_url or '/contactus'" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease;">
                                 <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
                                 <t t-esc="hero_cta_secondary_text or 'Nous Contacter'"/>
                             </a>
@@ -1696,7 +1696,7 @@
 
                         <!-- CTA Buttons -->
                         <div class="d-flex gap-3 flex-wrap mb-3" style="animation: fadeInUp 0.8s ease-out 0.6s backwards;">
-                            <a t-att-href="hero_cta_primary_url or '/contact'" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-block;">
+                            <a t-att-href="hero_cta_primary_url or '/contactus'" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-block;">
                                 <t t-esc="hero_cta_primary_text or 'Démarrer un Projet'"/>
                             </a>
                             <a t-att-href="hero_cta_secondary_url or '/realisations'" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1.125rem; border: 2px solid rgba(255,255,255,0.1); transition: all 0.3s ease; display: inline-block;">

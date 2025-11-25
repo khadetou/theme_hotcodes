@@ -16,7 +16,7 @@
                             <t t-set="hero_title_part2" t-value="'Haute Performance'" />
                             <t t-set="hero_subtitle" t-value="'Créez des applications mobiles et desktop exceptionnelles pour iOS, Android, Windows, macOS et Linux. Solutions natives optimisées qui offrent une expérience utilisateur fluide et performante.'" />
                             <t t-set="hero_cta_primary_text" t-value="'Démarrer Mon Projet'" />
-                            <t t-set="hero_cta_primary_url" t-value="'/contact'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contactus'" />
                             <t t-set="hero_cta_secondary_text" t-value="'Voir Nos Réalisations'" />
                             <t t-set="hero_cta_secondary_url" t-value="'#portfolio'" />
                         </t>
@@ -461,7 +461,7 @@ proposer des solutions natives performantes
                                         </p>
 
                                         <div data-motion="scroll-fade" class="mb-5">
-                                            <a href="/contact" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
+                                            <a href="/contactus" class="cta-btn-primary" style="background: #FF6B35; color: white; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-flex; align-items: center; gap: 0.75rem;">
                                                 <iconify-icon icon="mingcute:send-fill" style="font-size: 1.3em;"></iconify-icon>
                                                 <span>Envoyez-nous un Message</span>
                                             </a>
