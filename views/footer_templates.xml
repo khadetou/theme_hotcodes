@@ -11,7 +11,7 @@
                             <div class="footer-brand mb-3">
 
                                 <a href="/" class="o_footer_logo logo">
-                                    <img src="/theme_hotcodes/static/src/img/logos.svg" class="img-fluid d-block me-auto" aria-label="Logo of MyCompany" title="MyCompany" role="img" style="width: 50% !important;"/>
+                                    <img src="/theme_hotcodes/static/src/img/logos.png" class="img-fluid d-block me-auto" aria-label="Logo of MyCompany" title="MyCompany" role="img" style="width: 50% !important;"/>
                                 </a>
 
                                 <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1.5rem; font-size: 0.95rem;">

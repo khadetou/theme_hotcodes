@@ -12,7 +12,7 @@
 
 
                         <a class="navbar-brand hotcodes-logo" href="/">
-                            <img src="/theme_hotcodes/static/src/img/logos.svg" class="img-fluid" aria-label="Logo of MyCompany" title="MyCompany" role="img"/>
+                            <img src="/theme_hotcodes/static/src/img/logos.png" class="img-fluid" aria-label="Logo of MyCompany" title="MyCompany" role="img"/>
                         </a>
 
                         <!-- Mobile Toggle Button -->
