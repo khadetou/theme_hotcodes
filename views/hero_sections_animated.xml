@@ -15,7 +15,7 @@
                 <div class="row align-items-center">
                     <!-- Left Content -->
                     <div class="col-lg-6 mb-5 mb-lg-0">
-                        <div class="hero-content" style="animation: fadeInUp 1s ease-out;">
+                        <div class="hero-content">
                             <h1 data-motion="word-reveal" style="font-size: clamp(2.5rem, 7vw, 4rem); font-weight: 800; color: white; line-height: 1.1; margin-bottom: 1.5rem;">
                                 <t t-out="hero_title_part1 or 'Framer for'"/>
                                 <br/>
@@ -26,7 +26,7 @@
                             </h1>
 
                             <!-- Feature List with Icons -->
-                            <div class="feature-list mb-4" style="animation: fadeInUp 1s ease-out 0.2s backwards;">
+                            <div class="feature-list mb-4">
                                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
                                     <div style="width: 24px; height: 24px; background: var(--hotcodes-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                                         <iconify-icon icon="solar:check-circle-bold" style="color: white; font-size: 1rem;"></iconify-icon>
@@ -54,7 +54,7 @@
                             </div>
 
                             <!-- CTAs -->
-                            <div style="display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeInUp 1s ease-out 0.4s backwards;">
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                                 <a t-att-href="hero_cta_primary_url or '/contactus'" data-motion="magnetic flare" data-magnetic-strength="0.3" class="btn-primary-animated" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: #000; padding: clamp(1rem, 2vw, 1.25rem) clamp(1.5rem, 4vw, 2.5rem); border-radius: 12px; text-decoration: none; font-weight: 600; font-size: clamp(1rem, 2vw, 1.125rem); transition: all 0.3s ease; box-shadow: 0 10px 40px rgba(255,255,255,0.1);">
                                     <t t-out="hero_cta_primary_text or 'Join the program'"/>
                                 </a>
@@ -117,8 +117,8 @@
             <div class="container" style="position: relative; z-index: 10;">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-7">
-                        <!-- Animated Badge -->
-                        <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 50px; padding: 0.4rem 1.2rem; margin-bottom: 1.25rem; animation: slideDown 1s ease-out;">
+                        <!-- Badge -->
+                        <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); border-radius: 50px; padding: 0.4rem 1.2rem; margin-bottom: 1.25rem;">
                             <div style="width: 7px; height: 7px; background: var(--hotcodes-primary); border-radius: 50%; animation: pulse 2s ease-in-out infinite;"></div>
                             <span style="color: rgba(255,255,255,0.9); font-size: 0.8125rem; font-weight: 600;">
                                 <t t-out="hero_badge or '🚀 Nouveau: Automatisation IA avec n8n'"/>
@@ -126,7 +126,7 @@
                         </div>
 
                         <!-- Main Title with Gradient Text -->
-                        <h1 data-motion="word-reveal" class="hero-particle-title" style="font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.25rem; animation: slideInLeft 1s ease-out 0.2s backwards;">
+                        <h1 data-motion="word-reveal" class="hero-particle-title" style="font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.25rem;">
                             <t t-if="hero_title_part1 and hero_title_part2">
                                 <!-- Split title: part 1 white, part 2 gradient -->
                                 <span style="color: white;">
@@ -146,12 +146,12 @@
                         </h1>
 
                         <!-- Subtitle -->
-                        <p style="font-size: clamp(0.9375rem, 2vw, 1.0625rem); color: rgba(255,255,255,0.8); margin-bottom: 1.75rem; max-width: 550px; line-height: 1.65; animation: slideInLeft 1s ease-out 0.4s backwards;">
+                        <p style="font-size: clamp(0.9375rem, 2vw, 1.0625rem); color: rgba(255,255,255,0.8); margin-bottom: 1.75rem; max-width: 550px; line-height: 1.65;">
                             <t t-out="hero_subtitle or 'Automatisation intelligente, workflows n8n, et IA générative pour propulser votre croissance'"/>
                         </p>
 
                         <!-- CTA Buttons -->
-                        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.75rem; animation: slideInLeft 1s ease-out 0.6s backwards;">
+                        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.75rem;">
                             <a t-att-href="hero_cta_primary_url or '/contactus'" data-motion="magnetic flare" data-magnetic-strength="0.3" class="btn-glow hero-cta-primary" style="position: relative; display: inline-flex; align-items: center; gap: 0.45rem; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.9375rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease; overflow: hidden;">
                                 <span style="position: relative; z-index: 1;">
                                     <t t-out="hero_cta_primary_text or 'Démarrer Maintenant'"/>
@@ -167,7 +167,7 @@
                         </div>
 
                         <!-- Stats Row -->
-                        <div data-motion="scroll-stagger" class="row g-3" style="animation: slideInLeft 1s ease-out 0.8s backwards;">
+                        <div data-motion="scroll-stagger" class="row g-3">
                             <div class="col-4">
                                 <div style="padding: clamp(0.625rem, 1.5vw, 1rem); background: linear-gradient(135deg, rgba(255,107,53,0.08) 0%, rgba(138,43,226,0.05) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,107,53,0.2); border-radius: 12px; transition: all 0.3s ease;">
                                     <div data-motion="counter" style="font-size: clamp(1.25rem, 3vw, 1.875rem); font-weight: 800; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.25rem;">
@@ -291,31 +291,31 @@
             <div class="container" style="position: relative; z-index: 10; padding: 2rem 1rem;">
                 <div class="row align-items-center">
                     <div class="col-lg-7">
-                        <!-- Small animated text -->
-                        <div style="display: inline-block; margin-bottom: 1.5rem; animation: slideInLeft 1s ease-out;">
+                        <!-- Small text -->
+                        <div style="display: inline-block; margin-bottom: 1.5rem;">
                             <span style="color: var(--hotcodes-primary); font-weight: 600; font-size: clamp(0.875rem, 2vw, 1rem); letter-spacing: 2px; text-transform: uppercase;">
                                 <t t-esc="hero_eyebrow or '✨ Solutions IA &amp; Automatisation'"/>
                             </span>
                         </div>
 
                         <!-- Main Headline -->
-                        <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 2rem; animation: slideInLeft 1s ease-out 0.2s backwards;">
+                        <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 2rem;">
                             <t t-esc="hero_title_part1 or 'Automatisez'"/>
                             <br/>
                             <span style="position: relative; display: inline-block;">
                                 <t t-esc="hero_title_part2 or 'Tout avec l\'IA'"/>
-                                <!-- Animated underline -->
-                                <div style="position: absolute; bottom: -10px; left: 0; width: 100%; height: clamp(4px, 1vw, 8px); background: linear-gradient(90deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); border-radius: 4px; animation: expandWidth 1.5s ease-out 1s backwards;"></div>
+                                <!-- Underline -->
+                                <div style="position: absolute; bottom: -10px; left: 0; width: 100%; height: clamp(4px, 1vw, 8px); background: linear-gradient(90deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); border-radius: 4px;"></div>
                             </span>
                         </h1>
 
                         <!-- Description -->
-                        <p style="font-size: clamp(1rem, 2.5vw, 1.25rem); color: rgba(255,255,255,0.8); margin-bottom: 3rem; max-width: 600px; line-height: 1.8; animation: slideInLeft 1s ease-out 0.4s backwards;">
+                        <p style="font-size: clamp(1rem, 2.5vw, 1.25rem); color: rgba(255,255,255,0.8); margin-bottom: 3rem; max-width: 600px; line-height: 1.8;">
                             <t t-esc="hero_subtitle or 'Créez des workflows intelligents avec n8n, intégrez l\'IA générative et automatisez vos processus métier en quelques clics.'"/>
                         </p>
 
                         <!-- CTA Group -->
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; animation: slideInLeft 1s ease-out 0.6s backwards;">
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
                             <a t-att-href="hero_cta_primary_url or '/contactus'" style="position: relative; display: inline-flex; align-items: center; gap: 1rem; background: white; color: #000; padding: clamp(1rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 3rem); border-radius: 14px; text-decoration: none; font-weight: 700; font-size: clamp(1rem, 2vw, 1.125rem); box-shadow: 0 20px 60px rgba(255,255,255,0.2); transition: all 0.3s ease; overflow: hidden;">
                                 <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: clamp(1.25rem, 2vw, 1.5rem);"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Commencer Gratuitement'"/>
@@ -327,7 +327,7 @@
                         </div>
 
                         <!-- Trust Badges -->
-                        <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; animation: slideInLeft 1s ease-out 0.8s backwards;">
+                        <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
                             <div style="display: flex; align-items: center; gap: 0.5rem;">
                                 <div style="display: flex;">
                                     <iconify-icon icon="solar:star-bold" style="color: #FFD700; font-size: clamp(1rem, 2vw, 1.25rem);"></iconify-icon>
@@ -501,8 +501,8 @@
             <div class="container" style="position: relative; z-index: 10;">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-10">
-                        <!-- Typing Animation Effect -->
-                        <h1 style="font-size: clamp(2rem, 8vw, 5rem); font-weight: 900; color: white; line-height: 1.2; margin-bottom: 2rem; animation: fadeInUp 1s ease-out;">
+                        <!-- Title -->
+                        <h1 style="font-size: clamp(2rem, 8vw, 5rem); font-weight: 900; color: white; line-height: 1.2; margin-bottom: 2rem;">
                             <t t-esc="hero_title_part1 or 'Créez des'"/>
                             <br/>
                             <span style="position: relative; display: inline-block; color: var(--hotcodes-primary);">
@@ -512,12 +512,12 @@
                             </span>
                         </h1>
 
-                        <p style="font-size: clamp(1rem, 3vw, 1.5rem); color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 3rem; line-height: 1.8; animation: fadeInUp 1s ease-out 0.3s backwards;">
+                        <p style="font-size: clamp(1rem, 3vw, 1.5rem); color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 3rem; line-height: 1.8;">
                             <t t-esc="hero_subtitle or 'Des solutions web innovantes qui transforment vos idées en réalité digitale'"/>
                         </p>
 
                         <!-- CTA with Icon Animation -->
-                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1s ease-out 0.6s backwards;">
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                             <a t-att-href="hero_cta_primary_url or '/contactus'" class="hero-cta-btn" style="position: relative; display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary) 0%, var(--hotcodes-secondary) 100%); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: clamp(0.9rem, 2.5vw, 1.125rem); box-shadow: 0 20px 50px rgba(255,107,53,0.3); transition: all 0.4s ease;">
                                 <iconify-icon icon="solar:rocket-2-bold" style="font-size: clamp(1.25rem, 4vw, 1.5rem); animation: bounce 2s ease-in-out infinite;"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Lancer Votre Projet'"/>
@@ -525,7 +525,7 @@
                         </div>
 
                         <!-- Scroll Down Indicator -->
-                        <div style="margin-top: 5rem; animation: fadeInUp 1s ease-out 0.9s backwards;">
+                        <div style="margin-top: 5rem;">
                             <div style="display: inline-flex; flex-direction: column; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.5); cursor: pointer;">
                                 <span style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 2px;">Scroll</span>
                                 <div style="width: 2px; height: 40px; background: linear-gradient(180deg, var(--hotcodes-primary) 0%, transparent 100%); animation: scrollLine 2s ease-in-out infinite;"></div>
@@ -546,14 +546,14 @@
                     <div style="max-width: 550px; margin: 0 auto; width: 100%;">
                         <!-- Eyebrow Badge (Optional) -->
                         <t t-if="hero_eyebrow">
-                            <div style="margin-bottom: 1.25rem; animation: fadeIn 1s ease-out;">
+                            <div style="margin-bottom: 1.25rem;">
                                 <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px;">
                                     <t t-esc="hero_eyebrow"/>
                                 </span>
                             </div>
                         </t>
 
-                        <h1 style="font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 900; color: white; line-height: 1.15; margin-bottom: 1.25rem; animation: slideInLeft 1s ease-out 0.2s backwards;">
+                        <h1 style="font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 900; color: white; line-height: 1.15; margin-bottom: 1.25rem;">
                             <t t-esc="hero_title_part1 or 'Build'"/>
                             <br/>
                             <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
@@ -563,19 +563,19 @@
                             <t t-esc="hero_title_part3 or 'Faster'"/>
                         </h1>
 
-                        <p style="font-size: clamp(0.95rem, 1.5vw, 1.05rem); color: rgba(255,255,255,0.8); margin-bottom: 1.25rem; line-height: 1.6; animation: slideInLeft 1s ease-out 0.4s backwards;">
+                        <p style="font-size: clamp(0.95rem, 1.5vw, 1.05rem); color: rgba(255,255,255,0.8); margin-bottom: 1.25rem; line-height: 1.6;">
                             <t t-esc="hero_subtitle or 'Développement web moderne avec les dernières technologies. De l\'idée au déploiement.'"/>
                         </p>
 
                         <!-- Additional Description (Optional) -->
                         <t t-if="hero_description">
-                            <p style="font-size: clamp(0.875rem, 1.3vw, 0.95rem); color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; line-height: 1.6; animation: slideInLeft 1s ease-out 0.5s backwards;">
+                            <p style="font-size: clamp(0.875rem, 1.3vw, 0.95rem); color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; line-height: 1.6;">
                                 <t t-esc="hero_description"/>
                             </p>
                         </t>
 
                         <!-- CTA Buttons -->
-                        <div style="display: flex; gap: 0.875rem; flex-wrap: wrap; margin-bottom: 1.5rem; animation: slideInLeft 1s ease-out 0.6s backwards;">
+                        <div style="display: flex; gap: 0.875rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
                             <a t-att-href="hero_cta_primary_url or '/contactus'" style="display: inline-flex; align-items: center; gap: 0.625rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
                                 <t t-esc="hero_cta_primary_text or 'Get Started'"/>
                                 <iconify-icon icon="solar:arrow-right-bold" style="font-size: 1.2rem;"></iconify-icon>
@@ -590,7 +590,7 @@
 
                         <!-- Note/Trust Indicators (Optional) -->
                         <t t-if="hero_note">
-                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.5; animation: slideInLeft 1s ease-out 0.7s backwards;">
+                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.5;">
                                 <t t-esc="hero_note"/>
                             </p>
                         </t>
@@ -599,12 +599,12 @@
 
                 <!-- Right Side - Visual -->
                 <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center" style="position: relative; background: linear-gradient(135deg, rgba(255,107,53,0.08) 0%, rgba(138,43,226,0.08) 100%); padding: clamp(2rem, 3vw, 3rem);">
-                    <!-- Animated Background Shapes -->
+                    <!-- Background Shapes -->
                     <div style="position: absolute; top: 20%; left: 10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,107,53,0.15), transparent 70%); filter: blur(60px); animation: float 8s ease-in-out infinite;"></div>
                     <div style="position: absolute; bottom: 20%; right: 10%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(138,43,226,0.15), transparent 70%); filter: blur(60px); animation: float 10s ease-in-out infinite reverse;"></div>
 
                     <!-- ERP Dashboard Mockup -->
-                    <div data-motion="scroll-scale" style="position: relative; width: 100%; max-width: 600px; animation: slideInRight 1s ease-out 0.4s backwards;">
+                    <div data-motion="scroll-scale" style="position: relative; width: 100%; max-width: 600px;">
                         <!-- Browser Window Frame -->
                         <div style="background: rgba(15,15,15,0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.5);">
                             <!-- Browser Chrome -->
@@ -752,14 +752,14 @@
                 <div class="row align-items-center">
                     <div class="col-lg-7 col-md-12">
                         <!-- Eyebrow Badge -->
-                        <div class="mb-4" style="animation: fadeInUp 0.8s ease-out;">
+                        <div class="mb-4">
                             <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
                                 <t t-esc="hero_eyebrow or '🛟 Support &amp; Maintenance'"/>
                             </span>
                         </div>
 
                         <!-- Main Title with Split Lines -->
-                        <h1 class="mb-4" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.15; color: white; animation: fadeInUp 0.8s ease-out 0.2s backwards;">
+                        <h1 class="mb-4" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.15; color: white;">
                             <t t-esc="hero_title_part1 or 'Assistance Technique'"/>
                             <br/>
                             <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
@@ -770,17 +770,17 @@
                         </h1>
 
                         <!-- Subtitle -->
-                        <p class="mb-4" style="font-size: clamp(1rem, 1.5vw, 1.125rem); color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 600px; animation: fadeInUp 0.8s ease-out 0.4s backwards;">
+                        <p class="mb-4" style="font-size: clamp(1rem, 1.5vw, 1.125rem); color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 600px;">
                             <t t-esc="hero_subtitle or 'Support réactif 24/7, maintenance proactive et accompagnement sur le long terme pour assurer la disponibilité et la performance de vos solutions.'"/>
                         </p>
 
                         <!-- Description -->
-                        <p class="mb-4" style="font-size: clamp(0.95rem, 1.3vw, 1rem); color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 550px; animation: fadeInUp 0.8s ease-out 0.6s backwards;">
+                        <p class="mb-4" style="font-size: clamp(0.95rem, 1.3vw, 1rem); color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 550px;">
                             <t t-esc="hero_description or 'Équipe locale en français, interventions rapides, SLA garantis et expertise technique pour vous accompagner au quotidien.'"/>
                         </p>
 
                         <!-- CTA Buttons -->
-                        <div class="d-flex gap-3 mb-4 flex-wrap" style="animation: fadeInUp 0.8s ease-out 0.8s backwards;">
+                        <div class="d-flex gap-3 mb-4 flex-wrap">
                             <a t-att-href="hero_cta_primary_url or '/contactus'" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
                                 <iconify-icon icon="solar:phone-calling-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Demander un Support'"/>
@@ -792,7 +792,7 @@
                         </div>
 
                         <!-- Trust Note -->
-                        <div style="animation: fadeInUp 0.8s ease-out 1s backwards;">
+                        <div>
                             <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin: 0;">
                                 <t t-esc="hero_note or '✓ Support 24/7 • ✓ Équipe Locale • ✓ SLA Garantis'"/>
                             </p>
@@ -800,7 +800,7 @@
                     </div>
 
                     <!-- Right Side - Support Stats Cards -->
-                    <div class="col-lg-5 col-md-12 d-none d-lg-block" style="animation: fadeInRight 1s ease-out 0.5s backwards;">
+                    <div class="col-lg-5 col-md-12 d-none d-lg-block">
                         <div style="position: relative; padding: 2rem;">
                             <!-- Stats Cards Stack -->
                             <div style="position: relative;">
@@ -897,14 +897,14 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <!-- Eyebrow Badge -->
-                        <div class="mb-4" style="animation: fadeInUp 0.8s ease-out;">
+                        <div class="mb-4">
                             <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
                                 <t t-esc="hero_eyebrow or '🎯 Conseil &amp; Implémentation'"/>
                             </span>
                         </div>
 
                         <!-- Main Title with Split Lines -->
-                        <h1 class="mb-4" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.15; color: white; animation: fadeInUp 0.8s ease-out 0.2s backwards;">
+                        <h1 class="mb-4" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.15; color: white;">
                             <t t-esc="hero_title_part1 or 'Conseil &amp; Implémentation'"/>
                             <br/>
                             <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
@@ -915,17 +915,17 @@
                         </h1>
 
                         <!-- Subtitle -->
-                        <p class="mb-4" style="font-size: clamp(1rem, 1.5vw, 1.125rem); color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 600px; animation: fadeInUp 0.8s ease-out 0.4s backwards;">
+                        <p class="mb-4" style="font-size: clamp(1rem, 1.5vw, 1.125rem); color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 600px;">
                             <t t-esc="hero_subtitle or 'Accompagnement expert pour réussir votre projet ERP. De l\'audit initial à l\'optimisation continue, nous vous guidons à chaque étape de votre transformation digitale.'"/>
                         </p>
 
                         <!-- Description -->
-                        <p class="mb-4" style="font-size: clamp(0.95rem, 1.3vw, 1rem); color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 550px; animation: fadeInUp 0.8s ease-out 0.6s backwards;">
+                        <p class="mb-4" style="font-size: clamp(0.95rem, 1.3vw, 1rem); color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 550px;">
                             <t t-esc="hero_description or 'Méthodologie éprouvée, expertise reconnue et accompagnement complet pour garantir le succès de votre transformation.'"/>
                         </p>
 
                         <!-- CTA Buttons -->
-                        <div class="d-flex gap-3 mb-4 flex-wrap" style="animation: fadeInUp 0.8s ease-out 0.8s backwards;">
+                        <div class="d-flex gap-3 mb-4 flex-wrap">
                             <a t-att-href="hero_cta_primary_url or '/contactus'" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
                                 <iconify-icon icon="solar:calendar-mark-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Planifier un Audit Gratuit'"/>
@@ -937,7 +937,7 @@
                         </div>
 
                         <!-- Trust Note -->
-                        <div style="animation: fadeInUp 0.8s ease-out 1s backwards;">
+                        <div>
                             <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin: 0;">
                                 <t t-esc="hero_note or '✓ Expertise Reconnue • ✓ Méthodologie Éprouvée • ✓ Résultats Garantis'"/>
                             </p>
@@ -945,7 +945,7 @@
                     </div>
 
                     <!-- Right Side - Consulting Process Visualization -->
-                    <div class="col-lg-6 col-md-12 d-none d-lg-block" style="animation: fadeInRight 1s ease-out 0.5s backwards;">
+                    <div class="col-lg-6 col-md-12 d-none d-lg-block">
                         <div style="position: relative; padding: 2rem;">
                             <!-- Process Flow Diagram -->
                             <div style="position: relative;">
@@ -1030,14 +1030,14 @@
                 <div class="row align-items-center">
                     <div class="col-lg-7 col-md-12">
                         <!-- Eyebrow Badge -->
-                        <div class="mb-4" style="animation: fadeInUp 0.8s ease-out;">
+                        <div class="mb-4">
                             <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px;">
                                 <t t-esc="hero_eyebrow or '🚀 À Propos de HotCodes'"/>
                             </span>
                         </div>
 
                         <!-- Main Title with Split Lines -->
-                        <h1 class="mb-4" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.15; color: white; animation: fadeInUp 0.8s ease-out 0.2s backwards;">
+                        <h1 class="mb-4" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.15; color: white;">
                             <t t-esc="hero_title_part1 or 'Votre Partenaire de'"/>
                             <br/>
                             <span style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
@@ -1048,17 +1048,17 @@
                         </h1>
 
                         <!-- Subtitle -->
-                        <p class="mb-4" style="font-size: clamp(1rem, 1.5vw, 1.125rem); color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 650px; animation: fadeInUp 0.8s ease-out 0.4s backwards;">
+                        <p class="mb-4" style="font-size: clamp(1rem, 1.5vw, 1.125rem); color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 650px;">
                             <t t-esc="hero_subtitle or 'Depuis 2023, nous accompagnons les entreprises sénégalaises dans leur transformation digitale avec des solutions innovantes et adaptées au contexte local.'"/>
                         </p>
 
                         <!-- Description -->
-                        <p class="mb-4" style="font-size: clamp(0.95rem, 1.3vw, 1rem); color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 600px; animation: fadeInUp 0.8s ease-out 0.6s backwards;">
+                        <p class="mb-4" style="font-size: clamp(0.95rem, 1.3vw, 1rem); color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 600px;">
                             <t t-esc="hero_description or 'Une équipe passionnée, une expertise reconnue, et un engagement total pour votre réussite.'"/>
                         </p>
 
                         <!-- CTA Buttons -->
-                        <div class="d-flex gap-3 mb-4 flex-wrap" style="animation: fadeInUp 0.8s ease-out 0.8s backwards;">
+                        <div class="d-flex gap-3 mb-4 flex-wrap">
                             <a t-att-href="hero_cta_primary_url or '/services'" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 30px rgba(255,107,53,0.3); transition: all 0.3s ease;">
                                 <iconify-icon icon="solar:widget-5-bold-duotone" style="font-size: 1.5rem;"></iconify-icon>
                                 <t t-esc="hero_cta_primary_text or 'Découvrir Nos Services'"/>
@@ -1070,7 +1070,7 @@
                         </div>
 
                         <!-- Trust Note -->
-                        <div style="animation: fadeInUp 0.8s ease-out 1s backwards;">
+                        <div>
                             <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin: 0;">
                                 <t t-esc="hero_note or '✓ +2 Ans d\'Expérience • ✓ 100% Satisfaction Client • ✓ Support 24/7'"/>
                             </p>
@@ -1078,7 +1078,7 @@
                     </div>
 
                     <!-- Right Side - Stats Cards -->
-                    <div class="col-lg-5 col-md-12 d-none d-lg-block" style="animation: fadeInRight 1s ease-out 0.5s backwards;">
+                    <div class="col-lg-5 col-md-12 d-none d-lg-block">
                         <div style="position: relative; padding: 2rem;">
                             <!-- Stats Grid -->
                             <div class="row g-3">
@@ -1672,14 +1672,14 @@
                     <!-- Left Side - Content -->
                     <div class="col-lg-7">
                         <!-- Eyebrow Badge -->
-                        <div style="animation: fadeInUp 0.8s ease-out;">
+                        <div>
                             <span style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); color: var(--hotcodes-primary); padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 1.5rem;">
                                 <t t-esc="hero_eyebrow or '💻 DÉVELOPPEMENT SUR MESURE'"/>
                             </span>
                         </div>
 
                         <!-- Title -->
-                        <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease-out 0.2s backwards;">
+                        <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem;">
                             <span style="color: white;">
                                 <t t-esc="hero_title_part1 or 'Code de Qualité,'"/>
                             </span>
@@ -1690,12 +1690,12 @@
                         </h1>
 
                         <!-- Subtitle -->
-                        <p style="font-size: 1.25rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 2rem; max-width: 600px; animation: fadeInUp 0.8s ease-out 0.4s backwards;">
+                        <p style="font-size: 1.25rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 2rem; max-width: 600px;">
                             <t t-esc="hero_subtitle or 'Développement d\'applications web, mobiles et modules Odoo personnalisés pour transformer vos idées en solutions digitales performantes.'"/>
                         </p>
 
                         <!-- CTA Buttons -->
-                        <div class="d-flex gap-3 flex-wrap mb-3" style="animation: fadeInUp 0.8s ease-out 0.6s backwards;">
+                        <div class="d-flex gap-3 flex-wrap mb-3">
                             <a t-att-href="hero_cta_primary_url or '/contactus'" style="background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255,107,53,0.3); display: inline-block;">
                                 <t t-esc="hero_cta_primary_text or 'Démarrer un Projet'"/>
                             </a>
@@ -1705,7 +1705,7 @@
                         </div>
 
                         <!-- Trust Note -->
-                        <div style="animation: fadeInUp 0.8s ease-out 0.8s backwards;">
+                        <div>
                             <p style="font-size: 0.875rem; color: rgba(255,255,255,0.5); margin: 0;">
                                 <t t-esc="hero_note or '✓ Technologies Modernes • ✓ Code de Qualité • ✓ Support 24/7'"/>
                             </p>

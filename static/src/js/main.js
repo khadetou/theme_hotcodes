@@ -19,21 +19,19 @@ publicWidget.registry.HotCodesNavbar = publicWidget.Widget.extend({
       return;
     }
 
-    // If Motion.js is not available, show content immediately without animations
-    if (!this.Motion) {
-      this._showNavbarWithoutAnimations();
-      this._initScrollEffects();
-      return;
-    }
-
-    const { animate, stagger } = this.Motion;
-    this._initNavbarAnimations(animate, stagger);
-    this._initDropdownAnimations(animate, stagger);
+    // Show navbar immediately without entry animations (for browser compatibility)
+    this._showNavbarWithoutAnimations();
     this._initScrollEffects();
+
+    // If Motion.js is available, still use it for dropdown and hover animations
+    if (this.Motion) {
+      const { animate, stagger } = this.Motion;
+      this._initDropdownAnimations(animate, stagger);
+    }
   },
 
   _showNavbarWithoutAnimations: function () {
-    // Fallback: show navbar immediately if Motion.js fails to load
+    // Show navbar immediately without any entry animations
     this.el.classList.add("loaded");
     this.el.style.opacity = "1";
     this.el.style.transform = "none";
@@ -223,15 +221,8 @@ publicWidget.registry.HotCodesNavbar = publicWidget.Widget.extend({
     });
   },
 
-  _initNavbarAnimations: function (animate, stagger) {
-    // Navbar - add loaded class immediately, then animate
-    this.el.classList.add("loaded");
-    animate(
-      this.el,
-      { y: [-100, 0], opacity: [0, 1] },
-      { duration: 0.8, easing: [0.22, 0.61, 0.36, 1] }
-    );
-  },
+  // Note: _initNavbarAnimations removed to eliminate entry animations for browser compatibility
+  // Header now appears immediately without any slide-down or fade-in effects
 
   _initDropdownAnimations: function (animate, stagger) {
     // Animate old custom mega-dropdown cards
@@ -357,20 +348,16 @@ publicWidget.registry.HotCodesHero = publicWidget.Widget.extend({
       return;
     }
 
-    // If Motion.js is not available, show content immediately without animations
-    if (!this.Motion) {
-      this._showContentWithoutAnimations();
-      return;
-    }
-
-    const { animate, stagger } = this.Motion;
-    this._initAnimations(animate, stagger);
+    // Show hero content immediately without entry animations (for browser compatibility)
+    this._showContentWithoutAnimations();
+    // Note: Entry animations removed for cross-browser compatibility
+    // Interactive animations (hover effects, scroll-triggered) remain available if Motion.js is present
   },
 
   _showContentWithoutAnimations: function () {
-    // Fallback: show all content immediately if Motion.js fails to load
+    // Show all hero content immediately without any entry animations
     const elementsToShow = this.el.querySelectorAll(
-      ".hero-title, .hero-subtitle, .hero-actions .btn"
+      ".hero-title, .hero-subtitle, .hero-actions .btn, .gradient-text"
     );
     elementsToShow.forEach((el) => {
       el.classList.add("loaded");
@@ -402,62 +389,8 @@ publicWidget.registry.HotCodesHero = publicWidget.Widget.extend({
     return Motion;
   },
 
-  _initAnimations: function (animate, stagger) {
-    const heroTitle = this.el.querySelector(".hero-title");
-    const heroSubtitle = this.el.querySelector(".hero-subtitle");
-    const heroButtons = this.el.querySelectorAll(".hero-actions .btn");
-
-    // Hero title - split into characters and animate
-    const titleElements = this.el.querySelectorAll(".gradient-text");
-    titleElements.forEach((el, index) => {
-      const text = el.textContent;
-      el.innerHTML = text
-        .split("")
-        .map(
-          (char) =>
-            `<span class="char">${char === " " ? "&nbsp;" : char}</span>`
-        )
-        .join("");
-
-      const chars = el.querySelectorAll(".char");
-      animate(
-        chars,
-        { opacity: [0, 1], y: [40, 0] },
-        {
-          duration: 0.7,
-          delay: stagger(0.03, { start: 0.2 + index * 0.15 }),
-          easing: [0.25, 0.1, 0.25, 1],
-        }
-      ).finished.then(() => {
-        chars.forEach((char) => char.classList.add("loaded"));
-      });
-    });
-
-    if (heroTitle) {
-      heroTitle.classList.add("loaded");
-    }
-
-    // Subtitle
-    if (heroSubtitle) {
-      heroSubtitle.classList.add("loaded");
-      animate(
-        heroSubtitle,
-        { opacity: [0, 1], y: [20, 0] },
-        { duration: 0.8, delay: 0.8, easing: "ease-out" }
-      );
-    }
-
-    // Buttons
-    if (heroButtons.length) {
-      animate(
-        heroButtons,
-        { opacity: [0, 1], y: [20, 0] },
-        { duration: 0.6, delay: stagger(0.1, { start: 1 }) }
-      ).finished.then(() => {
-        heroButtons.forEach((btn) => btn.classList.add("loaded"));
-      });
-    }
-  },
+  // Note: _initAnimations function removed to eliminate entry animations for browser compatibility
+  // Hero content now appears immediately without any fade-in or slide-in effects
 });
 
 // Widget for Pricing Cards (only on pages that have them)
