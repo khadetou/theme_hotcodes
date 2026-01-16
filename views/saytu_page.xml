@@ -317,7 +317,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="/contact?plan=starter" class="pricing-btn-secondary" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: rgba(255, 107, 53, 0.1); color: var(--hotcodes-primary); padding: 1.125rem 1.5rem; border-radius: 14px; text-decoration: none; text-align: center; font-weight: 600; border: 1px solid var(--hotcodes-primary); position: relative; z-index: 1;">
+                                            <a href="/contactus?plan=starter" class="pricing-btn-secondary" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: rgba(255, 107, 53, 0.1); color: var(--hotcodes-primary); padding: 1.125rem 1.5rem; border-radius: 14px; text-decoration: none; text-align: center; font-weight: 600; border: 1px solid var(--hotcodes-primary); position: relative; z-index: 1;">
                                                 <iconify-icon icon="solar:play-circle-bold-duotone" style="font-size: 1.3em;"></iconify-icon>
                                                 Commencer
                                             </a>
@@ -371,7 +371,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="/contact?plan=business" class="pricing-btn-primary" style="display: flex; align-items: center; justify-content: center; gap: 0.625rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1.25rem 1.75rem; border-radius: 14px; text-decoration: none; text-align: center; font-weight: 700; box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4); position: relative; z-index: 1;">
+                                            <a href="/contactus?plan=business" class="pricing-btn-primary" style="display: flex; align-items: center; justify-content: center; gap: 0.625rem; background: linear-gradient(135deg, var(--hotcodes-primary), var(--hotcodes-secondary)); color: white; padding: 1.25rem 1.75rem; border-radius: 14px; text-decoration: none; text-align: center; font-weight: 700; box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4); position: relative; z-index: 1;">
                                                 <iconify-icon icon="solar:rocket-2-bold-duotone" style="font-size: 1.4em;"></iconify-icon>
                                                 Essai Gratuit 30 Jours
                                             </a>
@@ -427,7 +427,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="/contact?plan=enterprise" class="pricing-btn-accent" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: rgba(255, 215, 0, 0.1); color: var(--hotcodes-accent); padding: 1.125rem 1.5rem; border-radius: 14px; text-decoration: none; text-align: center; font-weight: 600; border: 1px solid var(--hotcodes-accent); position: relative; z-index: 1;">
+                                            <a href="/contactus?plan=enterprise" class="pricing-btn-accent" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: rgba(255, 215, 0, 0.1); color: var(--hotcodes-accent); padding: 1.125rem 1.5rem; border-radius: 14px; text-decoration: none; text-align: center; font-weight: 600; border: 1px solid var(--hotcodes-accent); position: relative; z-index: 1;">
                                                 <iconify-icon icon="solar:letter-bold-duotone" style="font-size: 1.3em;"></iconify-icon>
                                                 Nous Contacter
                                             </a>
@@ -607,7 +607,7 @@ proposer des solutions adaptées
                                                     <iconify-icon icon="mingcute:mail-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
                                                     <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Email</p>
                                                     <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">
-                                                        contact@hotcodes.sn
+                                                        contact@hotcodes.io
                                                     </p>
                                                 </div>
                                             </div>

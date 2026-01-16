@@ -18,7 +18,7 @@
                             <t t-set="feature_2" t-value="'Économisez 80% de temps sur les tâches répétitives et manuelles'" />
                             <t t-set="feature_3" t-value="'Support expert n8n et formation complète de votre équipe'" />
                             <t t-set="hero_cta_primary_text" t-value="'Automatiser Mon Entreprise'" />
-                            <t t-set="hero_cta_primary_url" t-value="'/contact'" />
+                            <t t-set="hero_cta_primary_url" t-value="'/contactus'" />
                             <t t-set="hero_cta_secondary_text" t-value="'Voir les Cas d\'Usage'" />
                             <t t-set="hero_cta_secondary_url" t-value="'#use-cases'" />
                         </t>
@@ -735,7 +735,7 @@ proposer des solutions d'automatisation et d'IA adaptées
                                             <div class="feature-card" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem 1.5rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease;">
                                                 <iconify-icon icon="mingcute:mail-fill" style="font-size: 2.5rem; color: #FF6B35; margin-bottom: 1rem; display: block;"></iconify-icon>
                                                 <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Email</p>
-                                                <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">contact@hotcodes.sn</p>
+                                                <p style="color: white; font-size: 1rem; margin: 0; font-weight: 500;">contact@hotcodes.io</p>
                                             </div>
                                         </div>
                                     </div>

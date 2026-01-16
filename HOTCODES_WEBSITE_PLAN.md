@@ -870,7 +870,7 @@ pour digitaliser et optimiser votre activité.
 **À fournir:**
 - [ ] Adresse exacte à Dakar (rue, quartier, ville)
 - [ ] Numéro de téléphone principal (+221 XX XXX XX XX)
-- [ ] Email de contact (contact@hotcodes.sn)
+- [ ] Email de contact (contact@hotcodes.io)
 - [ ] Horaires d'ouverture (ex: Lun-Ven 8h-18h)
 - [ ] Coordonnées GPS pour carte Google Maps
 
@@ -1142,7 +1142,7 @@ pour entreprises sénégalaises.
 ```
 📍 Adresse: [Adresse Dakar]
 📞 Téléphone: +221 XX XXX XX XX
-📧 Email: contact@hotcodes.sn
+📧 Email: contact@hotcodes.io
 🕐 Horaires: Lun-Ven 8h-18h
 ```
 
